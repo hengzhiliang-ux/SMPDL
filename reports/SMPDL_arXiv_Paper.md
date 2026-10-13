@@ -5,7 +5,7 @@
 **Date:** 2026-10-13 GMT+8  
 **Version:** v15  
 **License:** CC BY-NC-SA 4.0  
-**Content Fingerprint (SHA-256 of report corpus, 146 files):** `6972fc672051d67258fdd5c5250d7574b3d75abde1a0040712cf6d94dd9d27b8`
+**Content Fingerprint (SHA-256 of report corpus, 146 files):** `3f1a4c6c1ee04b3c67ed129ffa58aed02c2c3ca53a34583f292a70d31cecb7fe`
 
 ---
 

@@ -12,8 +12,8 @@
 - **首发时间**：2026-10-12 GMT+8
 - **最后更新**：2026-10-13 GMT+8
 - **许可协议**：[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)（署名-非商用-相同方式共享）
-- **Zenodo 记录**：https://zenodo.org/records/23344975
-- **DOI**：10.5281/zenodo.23344975
+- **Zenodo 记录**：https://zenodo.org/records/23353609
+- **DOI**：10.5281/zenodo.23353609
 - **Concept DOI**：10.5281/zenodo.23318734
 - **论文版本**：v15（在 v14 的 141 份 curated 报告基础上补入 5 份遗漏文档：Andrews-Curtis 人工清单、3 份 OpenAI 撤回事件审计、arXiv 论文源文件，curated 报告数扩展至 146）
 
@@ -24,7 +24,7 @@
 以下 146 份报告内容拼接后的 SHA-256 摘要：
 
 ```
-05a6bab7ef29f1080b50e8e5e8038fea707f518f555319c835b596a348024819
+3f1a4c6c1ee04b3c67ed129ffa58aed02c2c3ca53a34583f292a70d31cecb7fe
 ```
 
 ### 纳入指纹计算的文件清单
@@ -344,7 +344,7 @@ cat \
 预期输出：
 
 ```
-05a6bab7ef29f1080b50e8e5e8038fea707f518f555319c835b596a348024819  -
+3f1a4c6c1ee04b3c67ed129ffa58aed02c2c3ca53a34583f292a70d31cecb7fe  -
 ```
 
 ---
