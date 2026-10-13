@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "title": "SMPDL v2.5: A Three-Layer Dependency-and-Logic Audit for Mathematical Proofs and AI-Generated Claims — Isomorphism H1–H10 Sample Reports",
+    "upload_type": "publication",
+    "publication_type": "workingpaper",
+    "description": "This release adds 30 new S/M/P × D/L audit reports and 4 meta-analyses covering the 'same proof skeleton, different axiomatic bases' phenomenon across geometry, analysis, combinatorics, algebra, set theory, logic, type theory and computable analysis. Curated reports increased from 107 to 141. The archive contains all 141 Markdown reports plus the attribution/fingerprint file.",
+    "creators": [
+      {
+        "name": "CAMPANASILVAE",
+        "affiliation": "Göttingen Mathematical History Index Project"
+      }
+    ],
+    "license": "CC-BY-NC-SA-4.0",
+    "keywords": [
+      "mathematical proof",
+      "formal verification",
+      "AI-generated mathematics",
+      "isomorphism",
+      "axiomatic bases",
+      "SMPDL",
+      "Göttingen"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/hengzhiliang-ux/SMPDL",
+        "relation": "isSupplementTo",
+        "resource_type": "software"
+      }
+    ],
+    "version": "v2.5",
+    "language": "zho"
+  }
+}

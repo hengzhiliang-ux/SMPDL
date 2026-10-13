@@ -24,12 +24,12 @@
 
 | 项目 | 值 |
 |---|---|
-| 方法论版本 | v2.3 |
-| 论文版本 | v12 |
-| 页面版本 | v5.91 |
+| 方法论版本 | v2.5 |
+| 论文版本 | v14 |
+| 页面版本 | v5.93 |
 | DOI | [10.5281/zenodo.23339747](https://doi.org/10.5281/zenodo.23339747)（v12 DOI） |
-| curated 样本 | 97 份 |
-| 联合 SHA-256 | `3a365aff1760cb0ed3e48502886ebba53c71174af2d4f4bad9c7834af3504be2` |
+| curated 样本 | 141 份 |
+| 联合 SHA-256 | `9afb6a321d1164f1d62798ba8d1711ea947d3813fff297e7759b91861d47957c` |
 
 ---
 
@@ -64,9 +64,35 @@ SMPDL 将数学证明审查拆分为三层（语义 S / 数学 M / 编程 P）�
 
 ---
 
+
+---
+
+## v2.5 新增同构-异基础案例组（H1–H10）
+
+新增 30 份审计报告与 4 份元分析文档，将 curated 报告数从 107 扩展至 **141**：
+
+- H1：欧氏 ↔ 球面几何（三角形内角和）
+- H2：微分 ↔ 差分方程（指数增长模型）
+- H3：有限 ↔ 无限图（最小度 ≥ 2 与环存在性）
+- H4：交换 ↔ 非交换环（二项式幂）
+- H5：特征 0 ↔ 特征 p（Freshman's Dream）
+- H6：标准 ↔ 非标准分析（导数定义）
+- H7：经典 ↔ 直觉主义逻辑（存在性证明）
+- H8：ZFC ↔ ZF（向量空间基存在性）
+- H9：集合论 ↔ 类型论（n + 0 = n）
+- H10：经典 ↔ 可计算分析（中间值定理）
+
+新增元分析文档：
+- `SMPDL_HistoricalOrder_Index.md`：数学史顺序索引
+- `SMPDL_HistoricalAssumption_CognitiveLogic.md`：假设基础认知历史逻辑
+- `SMPDL_TuningParameter_Matrix.md`：调参来源矩阵
+- `SMPDL_HistoricalMigration_Skeleton.md`：数学史迁移骨架分析
+
+完整清单见 `reports/SMPDL_Audit_SampleSuite.md`。
+
 ## 下载归档
 
-- [SMPDL_v2.3_sample_reports_97files.zip](archives/SMPDL_v2.3_sample_reports_97files.zip) — 97 份 curated 报告官方归档（最新）
+- [SMPDL_v2.5_sample_reports_141files.zip](archives/SMPDL_v2.5_sample_reports_141files.zip) — 141 份 curated 报告官方归档（最新）
 - [SMPDL_v2.2_sample_reports_96files.zip](archives/SMPDL_v2.2_sample_reports_96files.zip) — 96 份 curated 报告历史归档
 - [SMPDL_v2.1_sample_reports_86files.zip](archives/SMPDL_v2.1_sample_reports_86files.zip) — 86 份 curated 报告历史归档
 - [SMPDL_v2.0_sample_reports_76files.zip](archives/SMPDL_v2.0_sample_reports_76files.zip) — 76 份 curated 报告历史归档

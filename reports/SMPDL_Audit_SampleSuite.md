@@ -1,6 +1,6 @@
 # SMPDL 结构审查样本总览
 
-> 基于 Göttingen S/M/P × D/L v2.3  
+> 基于 Göttingen S/M/P × D/L v2.5  
 > 日期：2026-10-13
 
 ---
@@ -78,7 +78,28 @@
 | OpenAI Kazhdan–Lusztig 组合不变性 | AI 生成研究级声明，已完成 Lean 形式化 | 🟡 中风险 | S*L/M*D 范围 | Coxeter 群类/区间同构定义未说明 |
 | OpenAI 强瘦生成树确定性构造 | AI 生成研究级声明，已完成 Lean 形式化 | 🟡 中风险 | S*L/M*D 构造 | 确定性算法/thinness 常数/运行时间未披露 |
 | OpenAI Tingley 球面等距问题 | AI 生成研究级声明，已完成 Lean 形式化 | 🟡 中风险 | S*L/S*D 适用范围 | Banach 空间类/延拓构造/非严格凸情形未披露 |
+| OpenAI Deligne–Drinfeld 猜想 | AI 生成研究级声明，已完成 Lean 形式化 | 🔴 高风险 | S*L/M*D 范围 | 正则化转运/图复形推论未形式化 |
+| OpenAI Erdős–Pomerance 联合 Dickman 猜想 | AI 生成研究级声明，已完成 Lean 形式化 | 🟡 中风险 | S*L/M*D 一致性 | 固定参数 a,b；误差项一致性未披露 |
+| OpenAI 大素数间隙正密度 | AI 生成研究级声明，已完成 Lean 形式化 | 🔴 高风险 | S*L/M*L 主定理 gap | 形式化仅覆盖 prime-ratio 推论，非主定理 |
+| OpenAI 高余维 Riesz 变换可求长性 | AI 生成研究级声明，已完成 Lean 形式化 | 🔴 高风险 | S*D/M*D 范围 | 变分/主值推论未形式化；常数依赖未披露 |
+| OpenAI Erdős 相似性猜想 dyadic 情形 | AI 生成研究级声明，已完成 Lean 形式化 | 🟡 中风险 | S*L/T1 范围潜移 | 形式化仅 q=1/2，手稿声称一般 q∈(0,1) |
+| OpenAI 对数 Brunn–Minkowski 不等式 | AI 生成研究级声明，已完成 Lean 形式化 | 🔴 高风险 | S*L/M*D 完整度 | 等号分类/B-猜想/L_p 扩展未形式化 |
+| OpenAI Unique Games 猜想 | AI 生成研究级声明，已完成 Lean 形式化 | 🔴 高风险 | S*D/M*D 底层依赖 | PCP/Long Code/Invariance 形式化状态不明 |
+| OpenAI 平面不同距离与单位距离界 | AI 生成研究级声明，已完成 Lean 形式化 | 🟡 中风险 | S*L/T1 范围潜移 | 形式化未覆盖单位距离 power-saving 部分 |
+| OpenAI Benjamini–Schramm 非唯一性猜想 | AI 生成研究级声明，已完成 Lean 形式化 | 🔴 高风险 | S*D/M*D 阈值等价 | p_u 与 p_{2→2} 关系/定量依赖待补 |
+| OpenAI Connes 双中心化子猜想 | AI 生成研究级声明，已完成 Lean 形式化 | 🔴 高风险 | S*L/M*L 主定理 gap | 形式化仅为有界恢复引理，非双中心化子猜想 |
 | 十个最有希望样本数学史回溯 | 方法论扩展 · 历史谱系 | 🟢 通过 | 全绿 | 为 10 份 Lean 形式化样本定位最接近的经典构造与证明方法 |
+| H1 · 欧氏 ↔ 球面几何三角形内角和 | 同构-异基础 · 几何 | 🟢 通过 | 全绿 | 曲率 K 改变平行公设与角度和结论 |
+| H2 · 微分 ↔ 差分方程指数增长 | 同构-异基础 · 分析离散化 | 🟢 通过 | 全绿 | 步长 h 连接连续指数与几何序列 |
+| H3 · 有限 ↔ 无限图环存在性 | 同构-异基础 · 组合 | 🟢 通过 | 全绿 | 有限性假设失效导致结论反转 |
+| H4 · 交换 ↔ 非交换环二项式幂 | 同构-异基础 · 代数 | 🟢 通过 | 全绿 | 乘法交换律决定 (ab)ⁿ 展开形式 |
+| H5 · 特征 0 ↔ 特征 p Freshman Dream | 同构-异基础 · 域论 | 🟢 通过 | 全绿 | char(R) 改变二项式展开中间项 |
+| H6 · 标准 ↔ 非标准分析导数 | 同构-异基础 · 分析基础 | 🟢 通过 | 全绿 | ε-δ 极限与无穷小量等价表述 |
+| H7 · 经典 ↔ 直觉主义存在性证明 | 同构-异基础 · 逻辑 | 🟢 通过 | 全绿 | LEM 决定“存在”的构造性语义 |
+| H8 · ZFC ↔ ZF 向量空间基 | 同构-异基础 · 集合论 | 🟢 通过 | 全绿 | AC 决定任意向量空间基的存在性 |
+| H9 · 集合论 ↔ 类型论 n+0=n | 同构-异基础 · 计算基础 | 🟢 通过 | 全绿 | 外延相等与 identity type 证明结构不同 |
+| H10 · 经典 ↔ 可计算分析 IVT | 同构-异基础 · 可计算性 | 🟢 通过 | 全绿 | 可计算性约束把存在性证明升级为算法 |
+| H-Meta · 历史/认知/调参/迁移分析 | 方法论扩展 · 基础元分析 | 🟢 通过 | 全绿 | 四份文档支撑 H1–H10 的审校与教学 |
 
 ---
 
@@ -488,6 +509,72 @@
 
 ---
 
+### 5.13 第六批：继续扩大的 Lean 形式化高风险/中风险样本
+
+本批 10 份样本继续从 OpenAI 700+ 库中**已完成 Lean 形式化**的族中选取，重点覆盖算术几何、解析数论、调和分析、凸几何、计算复杂性、组合几何、概率渗流与算子代数等领域中**声明极强但形式化范围可能存在显著 gap**的族。
+
+#### 5.13.1 Deligne–Drinfeld 猜想
+
+- **文件**：`SMP_ProofAnalysis_OpenAI_DeligneDrinfeld_Conjecture.md`
+- **声明**：有理 Grothendieck–Teichmüller 李代数在 Ihara 括号下按权自由生成。
+- **审计要点**：🔴 高风险。形式化仅覆盖反对称性、三项方程、四股 pentagon 及权完备化同构；正则化转运命题与图复形推论未包含，手稿若称「完全解决」则范围潜移。
+
+#### 5.13.2 Erdős–Pomerance 联合 Dickman 猜想
+
+- **文件**：`SMP_ProofAnalysis_OpenAI_ErdosPomerance_JointDickman.md`
+- **声明**：相邻整数最大素因子对数尺度渐近独立；P^+(n)<P^+(n+1) 密度 1/2。
+- **审计要点**：🟡 中风险。形式化覆盖固定参数 a,b 的联合 Dickman 律；误差项对参数的一致性及更一般依赖结构仍需补充。
+
+#### 5.13.3 大素数间隙正密度
+
+- **文件**：`SMP_ProofAnalysis_OpenAI_LargePrimeGaps_PositiveDensity.md`
+- **声明**：对任意 C>0，正比例连续素数间隙超过 C log p_n。
+- **审计要点**：🔴 高风险。形式化仅证明 prime-ratio 增加集有正下密度，主定理（大间隙正密度）未直接形式化，存在显著 scope gap。
+
+#### 5.13.4 高余维 Riesz 变换与可求长性
+
+- **文件**：`SMP_ProofAnalysis_OpenAI_RieszTransform_Rectifiability.md`
+- **声明**：高余维 Riesz 变换一致 L^2 有界 ⇒ 一致 n-可求长。
+- **审计要点**：🔴 高风险。形式化覆盖 big pieces of Lipschitz images，但未包含变分与主值推论；定量常数依赖未披露。
+
+#### 5.13.5 Erdős 相似性猜想 dyadic 情形
+
+- **文件**：`SMP_ProofAnalysis_OpenAI_ErdosSimilarity_Dyadic.md`
+- **声明**：对任意 q∈(0,1)，可构造测度接近 1 的紧集回避 {q^n} 的仿射拷贝。
+- **审计要点**：🟡 中风险。形式化仅覆盖 q=1/2 的 dyadic 情形；手稿声称一般几何级数，推广证明待补。
+
+#### 5.13.6 对数 Brunn–Minkowski 不等式
+
+- **文件**：`SMP_ProofAnalysis_OpenAI_LogBrunnMinkowski.md`
+- **声明**：origin-symmetric 凸体的对数 Wulff 组合体积满足几何平均下界。
+- **审计要点**：🔴 高风险。形式化覆盖主不等式，但等号分类（Hanner 多面体）、B-猜想与 L_p 扩展未包含。
+
+#### 5.13.7 Unique Games 猜想与最优近似阈值
+
+- **文件**：`SMP_ProofAnalysis_OpenAI_UniqueGames_Conjecture.md`
+- **声明**：证明 Khot 的 Unique Games 猜想及 Max-Cut/Vertex Cover/Min-UnCut/有向反馈顶点集的最优 hardness。
+- **审计要点**：🔴 高风险。形式化覆盖核心归约与多个 hardness gap，但 PCP 定理、Long Code、Invariance Principle 等底层组件的形式化状态与标准 UGC 表述等价性待查。
+
+#### 5.13.8 平面不同距离与单位距离界
+
+- **文件**：`SMP_ProofAnalysis_OpenAI_PlanarDistinctDistances.md`
+- **声明**：弱 pinned Erdős 距离猜想及单位距离对数 O(n^{4/3-δ})。
+- **审计要点**：🟡 中风险。形式化覆盖弱 pinned 距离部分，单位距离 power-saving 定理未包含；δ 的具体值未披露。
+
+#### 5.13.9 Benjamini–Schramm 非唯一性猜想
+
+- **文件**：`SMP_ProofAnalysis_OpenAI_BenjaminiSchramm_Nonuniqueness.md`
+- **声明**：非 amenable 准传递图上 Bernoulli 渗流满足 p_c < p_u。
+- **审计要点**：🔴 高风险。形式化覆盖 p_c < p_{2→2} ≤ p_u 及多个临界估计，但 p_u 与 p_{2→2} 的等价性证明及下界对图参数的显式依赖待补。
+
+#### 5.13.10 Connes 双中心化子猜想
+
+- **文件**：`SMP_ProofAnalysis_OpenAI_ConnesBicentralizer.md`
+- **声明**：对每个可分预对偶 III_1 因子与忠实正规态，Connes 双中心化子猜想成立。
+- **审计要点**：🔴 高风险。形式化仅覆盖有界恢复引理，绝对双中心化子猜想本身未形式化，主定理 gap 显著。
+
+---
+
 ## 6. 语料级审计方法论
 
 ### 6.1 OpenAI 700+ 数学证明库
@@ -555,19 +642,151 @@
 | 展示「适用范围定义不清」风险（代数组合） | OpenAI Kazhdan–Lusztig 组合不变性 |
 | 展示「存在性 vs 确定性算法混淆」风险 | OpenAI 强瘦生成树确定性构造 |
 | 展示「适用范围定义不清」风险（泛函分析） | OpenAI Tingley 球面等距问题 |
+| 展示「Lean 形式化 ≠ 纸面主定理」scope gap 风险（算术几何/ motives） | OpenAI Deligne–Drinfeld 猜想 |
+| 展示「Lean 形式化 ≠ 纸面主定理」scope gap 风险（解析数论联合分布） | OpenAI Erdős–Pomerance 联合 Dickman 猜想 |
+| 展示「推论形式化通过 ≠ 主定理得证」风险 | OpenAI 大素数间隙正密度 |
+| 展示「Lean 形式化 ≠ 纸面主定理」scope gap 风险（调和分析/几何测度） | OpenAI 高余维 Riesz 变换可求长性 |
+| 展示「特殊情形通过 ≠ 一般猜想解决」风险 | OpenAI Erdős 相似性猜想 dyadic 情形 |
+| 展示「主不等式通过 ≠ 完整猜想解决」风险（凸几何） | OpenAI 对数 Brunn–Minkowski 不等式 |
+| 展示「复杂性 hardness 归约底层依赖未形式化」风险 | OpenAI Unique Games 猜想 |
+| 展示「同族多定理中部分未形式化」风险（组合几何） | OpenAI 平面不同距离与单位距离界 |
+| 展示「临界阈值等价性与定量依赖待补」风险（概率渗流） | OpenAI Benjamini–Schramm 非唯一性猜想 |
+| 展示「技术性引理通过 ≠ 核心猜想得证」风险（算子代数） | OpenAI Connes 双中心化子猜想 |
+| 展示「单条公理改变恒等式结构」风险 | H4 交换 ↔ 非交换环二项式幂 |
+| 展示「域特征改变系数可除性」风险 | H5 特征 0 ↔ 特征 p Freshman's Dream |
+| 展示「逻辑规则改变存在语义」风险 | H7 经典 ↔ 直觉主义存在性证明 |
+| 展示「选择公理决定存在性可证性」风险 | H8 ZFC ↔ ZF 向量空间基 |
+| 展示「基础框架改变证明结构」风险 | H9 集合论 ↔ 类型论 n+0=n |
+| 展示「可计算性约束升级存在性证明」价值 | H10 经典 ↔ 可计算分析 IVT |
+| 展示「论域有限性反转组合结论」风险 | H3 有限 ↔ 无限图环存在性 |
+| 展示「连续-离散参数迁移」教学方法 | H2 微分 ↔ 差分方程指数增长 |
+| 展示「几何曲率改变角度和」直观案例 | H1 欧氏 ↔ 球面三角形内角和 |
 
 ---
 
-## 8. 高风险 / 中风险声明的人类科学家审查指南
+## 8. 同构-异基础案例组（H1–H10）
+
+本组收录 10 对“同证明骨架、异数学基础”的 SMPDL 审计案例，覆盖几何、分析、组合、代数、逻辑、集合论、计算基础与可计算性等领域。每组含两份单体审计报告与一份对比报告，并统一按 S/M/P × D/L v1.5 框架完成。
+
+### 8.1 几何：欧氏 ↔ 球面（H1）
+
+- **文件**：
+  - `SMP_ProofAnalysis_Euclidean_TriangleAngleSum.md` —— 欧氏三角形内角和 = 180°
+  - `SMP_ProofAnalysis_Spherical_TriangleAngleSum.md` —— 球面三角形内角和 = π + Area/R²
+  - `SMPDL_Compare_EuclideanVsSpherical_TriangleAngleSum_PrePostFix.md` —— 对比审计
+- **调参旋钮**：曲率 K（欧氏 K=0，球面 K=1/R²）
+- **迁移类型**：参数迁移
+- **SMPDL 标签**：`S-ISO / M-ISO / P-BISIM`
+
+### 8.2 分析离散化：微分 ↔ 差分方程（H2）
+
+- **文件**：
+  - `SMP_ProofAnalysis_DifferentialEquation_ExponentialGrowth.md` —— dP/dt = kP
+  - `SMP_ProofAnalysis_DifferenceEquation_ExponentialGrowth.md` —— Pₙ₊₁ = (1+hk)Pₙ
+  - `SMPDL_Compare_DifferentialVsDifference_ExponentialGrowth_PrePostFix.md` —— 对比审计
+- **调参旋钮**：步长 h
+- **迁移类型**：参数迁移
+- **SMPDL 标签**：`S-ISO / M-BISIM / P-BISIM`
+
+### 8.3 组合：有限 ↔ 无限图（H3）
+
+- **文件**：
+  - `SMP_ProofAnalysis_FiniteGraph_CycleByMinDegree.md` —— δ≥2 ⇒ 存在环
+  - `SMP_ProofAnalysis_InfiniteGraph_CycleByMinDegree.md` —— δ≥2 ⇏ 存在环
+  - `SMPDL_Compare_FiniteVsInfinite_GraphCycle_PrePostFix.md` —— 对比审计
+- **调参旋钮**：论域有限性
+- **迁移类型**：断裂迁移
+- **SMPDL 标签**：`S-ISO / M-BISIM / P-BISIM`
+
+### 8.4 代数：交换 ↔ 非交换环（H4）
+
+- **文件**：
+  - `SMP_ProofAnalysis_CommutativeRing_BinomialPower.md` —— (ab)ⁿ = aⁿbⁿ
+  - `SMP_ProofAnalysis_NonCommutativeRing_BinomialPower.md` —— (ab)ⁿ = a(ba)ⁿ⁻¹b
+  - `SMPDL_Compare_CommutativeVsNonCommutative_BinomialPower_PrePostFix.md` —— 对比审计
+- **调参旋钮**：乘法交换律
+- **迁移类型**：公理迁移
+- **SMPDL 标签**：`S-BISIM / M-BISIM / P-BISIM`
+
+### 8.5 域论：特征 0 ↔ 特征 p（H5）
+
+- **文件**：
+  - `SMP_ProofAnalysis_Characteristic0_FreshmanDream.md` —— 完整二项式展开
+  - `SMP_ProofAnalysis_CharacteristicP_FreshmanDream.md` —— Freshman's Dream
+  - `SMPDL_Compare_Char0vsCharP_FreshmanDream_PrePostFix.md` —— 对比审计
+- **调参旋钮**：char(R)
+- **迁移类型**：参数迁移
+- **SMPDL 标签**：`S-ISO / M-ISO / P-BISIM`
+
+### 8.6 分析基础：标准 ↔ 非标准分析（H6）
+
+- **文件**：
+  - `SMP_ProofAnalysis_StandardAnalysis_DerivativeLimit.md` —— ε-δ 导数
+  - `SMP_ProofAnalysis_NonstandardAnalysis_DerivativeInfinitesimal.md` —— 无穷小导数
+  - `SMPDL_Compare_StandardVsNonstandard_Derivative_PrePostFix.md` —— 对比审计
+- **调参旋钮**：数系 / 无穷小量
+- **迁移类型**：语义迁移
+- **SMPDL 标签**：`S-ISO / M-ISO / P-BISIM`
+
+### 8.7 逻辑：经典 ↔ 直觉主义（H7）
+
+- **文件**：
+  - `SMP_ProofAnalysis_ClassicalLogic_ExistenceWitness.md` —— LEM 非构造性存在
+  - `SMP_ProofAnalysis_IntuitionisticLogic_ExistenceWitness.md` —— 构造性 witness
+  - `SMPDL_Compare_ClassicalVsIntuitionistic_ExistenceWitness_PrePostFix.md` —— 对比审计
+- **调参旋钮**：排中律 LEM
+- **迁移类型**：公理迁移
+- **SMPDL 标签**：`S-BISIM / M-ISO / P-ISO`
+
+### 8.8 集合论：ZFC ↔ ZF（H8）
+
+- **文件**：
+  - `SMP_ProofAnalysis_ZFC_VectorSpaceBasis.md` —— AC ⇒ 任意向量空间有基
+  - `SMP_ProofAnalysis_ZF_VectorSpaceBasis.md` —— 无 AC 不可证
+  - `SMPDL_Compare_ZFCvsZF_VectorSpaceBasis_PrePostFix.md` —— 对比审计
+- **调参旋钮**：选择公理 AC
+- **迁移类型**：公理迁移 / 断裂迁移
+- **SMPDL 标签**：`S-BISIM / M-BISIM / P-BISIM`
+
+### 8.9 计算基础：集合论 ↔ 类型论（H9）
+
+- **文件**：
+  - `SMP_ProofAnalysis_SetTheory_NatPlusZero.md` —— n+0=n（外延相等）
+  - `SMP_ProofAnalysis_TypeTheory_NatPlusZero.md` —— n+0=n（identity type）
+  - `SMPDL_Compare_SetTheoryVsTypeTheory_NatPlusZero_PrePostFix.md` —— 对比审计
+- **调参旋钮**：基础框架
+- **迁移类型**：语义迁移
+- **SMPDL 标签**：`S-ISO / M-BISIM / P-BISIM`
+
+### 8.10 可计算性：经典 ↔ 可计算分析（H10）
+
+- **文件**：
+  - `SMP_ProofAnalysis_ClassicalAnalysis_IntermediateValue.md` —— IVT 纯存在性
+  - `SMP_ProofAnalysis_ComputableAnalysis_IntermediateValue.md` —— 可计算 IVT + 二分法
+  - `SMPDL_Compare_ClassicalVsComputable_IntermediateValue_PrePostFix.md` —— 对比审计
+- **调参旋钮**：可计算性约束
+- **迁移类型**：升级迁移
+- **SMPDL 标签**：`S-ISO / M-BISIM / P-BISIM`
+
+### 8.11 元分析文档
+
+- **历史顺序索引**：`SMPDL_HistoricalOrder_Index.md`
+- **认知历史逻辑**：`SMPDL_HistoricalAssumption_CognitiveLogic.md`
+- **调参来源矩阵**：`SMPDL_TuningParameter_Matrix.md`
+- **迁移骨架分析**：`SMPDL_HistoricalMigration_Skeleton.md`
+
+---
+
+## 9. 高风险 / 中风险声明的人类科学家审查指南
 
 - **文件**：`SMPDL_HumanReview_HighMidRisk_Guide.md`
 - **要点**：五岗位（A/B/C/D/E）针对高风险与中低风险声明的具体审查动作；TRAP-CHECK 七类陷阱的专项扫描；针对本批次 OpenAI 六个样本的逐条审查建议。
 
 ---
 
-## 9. 署名与许可
+## 10. 署名与许可
 
-**Göttingen S/M/P × D/L 数学证明审查方法论** · v2.2  
+**Göttingen S/M/P × D/L 数学证明审查方法论** · v2.5  
 **作者**：CAMPANASILVAE · fecit · MMXXVI  
 **首发时间**：2026-10-12 GMT+8 · **更新**：2026-10-13  
 **许可协议**：[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)（署名-非商用-相同方式共享）  

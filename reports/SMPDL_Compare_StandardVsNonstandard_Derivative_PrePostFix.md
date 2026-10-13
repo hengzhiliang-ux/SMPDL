@@ -1,0 +1,175 @@
+# SMPDL 基础对比审计：标准分析 vs 非标准分析导数定义
+
+> **对比对象**
+> - "PreFix" 版本：标准分析中导数的 ε-δ 极限定义（见 `SMP_ProofAnalysis_StandardAnalysis_DerivativeLimit.md`）
+> - "PostFix" 版本：非标准分析中导数的无穷小定义（见 `SMP_ProofAnalysis_NonstandardAnalysis_DerivativeInfinitesimal.md`）
+> 
+> **审计日期**：2026-10-13  
+> **审计框架**：Göttingen S/M/P × D/L v1.5  
+> **总体评价**：⚪ ↔ ⚪ 两个版本在各自公理体系内均正确；结论相同（f′ 值一致），但基础假设与证明工具不同。
+
+---
+
+## 1. 版本声明对比
+
+| 维度 | 标准分析（PreFix） | 非标准分析（PostFix） |
+|---|---|---|
+| **主声明** | f′(x) = lim_{h→0} [f(x+h)−f(x)]/h | f′(x) = st( [*f(x+ε)−*f(x)]/ε ) |
+| **基础数域** | 完备 Archimedean 域 ℝ | 非 Archimedean 扩张 *ℝ |
+| **核心工具** | ε-δ 极限 | 无穷小量 + 标准部分 st |
+| **极限概念** | 用 ∀ε>0 ∃δ>0 严格化“趋近” | 用无穷小“无限接近”替代 |
+| **基础强度** | 实数完备性 | 超滤子存在性（依赖弱选择公理） |
+| **结论类型** | 标准实数 L | 标准实数 st(Q) |
+| **教学隐喻** | “要多接近有多接近” | “无穷小增量” |
+| **形式化成熟度** | Mathlib/Lean 4 原生支持 | Isabelle/HOL 较成熟；Lean 需额外构造 |
+
+---
+
+## 2. PreFix 版本 SMPDL 速览（标准分析）
+
+详见 `SMP_ProofAnalysis_StandardAnalysis_DerivativeLimit.md`。
+
+- **S*D**：自然语言依赖“函数 → 差商 → h 趋近于 0 → 极限 → 导数”的语义链。
+- **S*L**：ε-δ 语言已把“趋近”隐喻严格化。
+- **M*D**：ℝ 完备性 → ε-δ 极限 → 差商极限 → 导数。
+- **M*L**：逻辑完整；极限不存在时导数无定义。
+- **P*D / P*L**：Mathlib 提供 `deriv` / `DifferentiableAt`，filter 表述与 ε-δ 等价。
+
+**PreFix 判定**：⚪ 已确认正确（在标准分析体系内）。
+
+---
+
+## 3. PostFix 版本 SMPDL 六格审计（非标准分析）
+
+### 3.1 S*D — 语义依存
+
+| 节点 | 前驱 | 状态 |
+|---|---|---|
+| 超实数域 *ℝ | 超滤子 / 公理化 | ✅ |
+| 无穷小 ε ≈ 0 | *ℝ 中的非零元素 | ✅ |
+| 超实延拓 *f | 转移原理 | ✅ |
+| 差商 [*f(x+ε)−*f(x)]/ε | 超实函数求值 | ✅ |
+| 标准部分 st | 有限超实数到 ℝ 的投影 | ✅ |
+| 导数 f′(x) = st(…) | 标准部分唯一 | ✅ |
+
+### 3.2 S*L — 语义逻辑结构
+
+- 非标准分析把“趋近 0”替换为“等于某个无穷小”。
+- 关键语义差异：标准分析中 h 是变量，取遍标准实数；非标准分析中 ε 是固定形态的非标准常元（或任意无穷小）。
+- ⚠️ “无穷小”容易被误解为“很小的标准数”，这是主要 S*L 风险。
+
+### 3.3 M*D — 数学依存
+
+```text
+NonstandardDerivative
+    │
+    ├── Standard real analysis (base)
+    │
+    ├── Nonstandard extension *ℝ
+    │       └── via ultrapower or axiomatic hyperreals
+    │
+    ├── Transfer principle
+    │       └── f extends to *f
+    │
+    ├── Infinitesimal ε
+    │
+    ├── Standard part st
+    │
+    └── Definition: f'(x) = st( [*f(x+ε) − *f(x)] / ε )
+```
+
+- 依赖关系闭合，但元构造（超滤子）位于非标准分析基础层。
+
+### 3.4 M*L — 数学逻辑结构
+
+| 检查项 | 标准分析 | 非标准分析 | 差异说明 |
+|---|---|---|---|
+| 数域 | ℝ（Archimedean） | *ℝ（非 Archimedean） | 基础扩张 |
+| 极限工具 | ε-δ | 无穷小 + st | 工具不同 |
+| 导数定义 | lim_{h→0} Q(h) | st(Q(ε)) | 形式不同，值相同 |
+| 存在性 | 依赖 ℝ 完备性 | 依赖 *ℝ 构造 + 超滤子 | 基础强度不同 |
+| 良定义 | 极限唯一 | 对所有非零无穷小 ε 标准部分相同 | 等价条件 |
+| 等价性 | — | Robinson 转移原理可证等价 | 元定理 |
+
+### 3.5 P*D / P*L — 编程层
+
+- 标准分析在 Lean/Mathlib 中有原生 `deriv`。
+- 非标准分析在 Isabelle/HOL 中有 `Nonstandard_Analysis` 库；在 Lean 4 中需额外构造超滤子与超实数。
+- 两个版本的 P 层最终都输出标准实数，但路径不同。
+
+---
+
+## 4. 跨层映射检查（PostFix vs PreFix）
+
+| 映射 | 标准（PreFix） | 非标准（PostFix） | 变化 |
+|---|---|---|---|
+| S → M | “h 趋近于 0” → ε-δ 量词 | “无穷小 ε” → *ℝ 元素 | 核心语义工具改变 |
+| M → P | `Tendsto Q (𝓝 0) (𝓝 L)` | `st(( *f (x+ε) − *f x) / ε)` | 形式化依赖库不同 |
+| S ↔ P | 极限谓词 → filter | 无穷小 → hyperreal | 语义-代码桥梁不同 |
+| S ↔ S | f′ = lim Q(h) | f′ = st(Q(ε)) | 结论形式不同 |
+| M ↔ M | ℝ 完备性 | *ℝ 构造 + 超滤子 | 数学基础不同 |
+| 结论值 | 标准实数 L | 标准实数 st(Q) | **相等**（Robinson 等价定理） |
+
+**跨层结论**：两个版本的 S/M/P 层各自自洽，层间映射关系不同；差异根源于基础假设（Archimedean 完备域 vs 非 Archimedean 超实扩张）。结论值一致，但证明工具与语义解释不同。
+
+---
+
+## 5. 判定：PostFix 是否为真？
+
+| 维度 | 标准（PreFix） | 非标准（PostFix） |
+|---|---|---|
+| 自然语言声明真实性 | ⚪ 真 | ⚪ 真 |
+| 证明正确性 | ⚪ 正确 | ⚪ 正确 |
+| 形式化验证 | ✅ Mathlib `deriv` | 🟡 Isabelle 成熟；Lean 需额外构造 |
+| 与已知数学兼容性 | ✅ 与标准分析兼容 | ✅ 与非标准分析 + 转移原理兼容 |
+| 基础强度 | 实数完备性 | 超滤子存在性（弱 AC） |
+| 结论一致性 | L | st(Q) = L | Robinson 等价定理保证 |
+
+**SMPDL 判定（PostFix）**：⚪ **低风险 / 已确认正确**。非标准分析版本不是对标准版本的“修复”，而是“用非 Archimedean 基础重新表述同一概念”。
+
+---
+
+## 6. 变化类型归类
+
+- **变化方式**：**基础假设迁移**（foundation shift），而非证明错误修复。
+- **核心假设差异**：
+  - 标准分析：实数 ℝ 是完备 Archimedean 有序域；极限用 ε-δ 语言。
+  - 非标准分析：存在包含真正无穷小量的超实数域 *ℝ；极限用“标准部分”操作替代。
+- **证明骨架相似性**：两者都从差商出发，通过一个“极限过程”得到导数；一个用 ∀ε∃δ，一个用固定形态的无穷小 ε。
+- **SMPDL 同构标签建议**：`S-ISO / M-ISO / P-BISIM`。
+  - S-ISO：结论语义相同（导数作为标准实数）。
+  - M-ISO：导数概念等价（Robinson 定理）。
+  - P-BISIM：形式化路径不同（Mathlib filter vs 超实数构造），但最终可证等价。
+- **关键 lesson**：同一数学概念可以在不同基础假设下有多种严格表述；SMPDL 的任务是显式标注 `AxiomaticBase` 并验证层间映射的一致性。
+
+---
+
+## 7. 人类科学家可执行的验证动作
+
+1. **B 岗位**：核对 Robinson 的转移原理与 Keisler 教材中“非标准导数等价于标准导数”的证明。
+2. **C 岗位**：对具体函数（如 f(x)=x²）分别用 ε-δ 与无穷小两种方法计算 f′(x)，验证结果一致。
+3. **D 岗位**：检查两份报告的 `AxiomaticBase` 字段是否已显式声明（`StandardAnalysis` vs `NonstandardAnalysis`）。
+4. **E 岗位**：在 Isabelle/HOL 的非标准分析库中形式化 f(x)=x² 的导数，并与标准导数比较。
+5. **F 岗位**：生成两份报告的 PDF 并对比“无穷小”与“极限”术语的使用范围。
+
+---
+
+## 8. 文献引用纪律检查
+
+| 引用对象 | 真实性 | 支持性 | 说明 |
+|---|---|---|---|
+| Rudin / Spivak 标准分析教材 | ✅ | ✅ | 标准 ε-δ 导数来源。 |
+| Robinson (1966) *Non-standard Analysis* | ✅ | ✅ | 非标准分析奠基之作。 |
+| Keisler, *Elementary Calculus: An Infinitesimal Approach* | ✅ | ✅ | 无穷小教学方法来源。 |
+| Isabelle/HOL Nonstandard_Analysis | ✅ | ✅ | 形式化层参考。 |
+| Mathlib `deriv` / `DifferentiableAt` | ✅ | ✅ | 标准分析形式化层参考。 |
+
+**核查结论**：所有引用对象真实存在，支持方向与本对比报告一致。
+
+---
+
+## 9. 署名与许可
+
+**Göttingen S/M/P × D/L · v1.5 · CAMPANASILVAE · fecit · MMXXVI · CC BY-NC-SA 4.0**
+
+搬运、改写或教学引用请注明来源与本页面链接。

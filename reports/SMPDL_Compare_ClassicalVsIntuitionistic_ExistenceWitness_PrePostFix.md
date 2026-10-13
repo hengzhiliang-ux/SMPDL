@@ -1,0 +1,166 @@
+# SMPDL 基础对比审计：经典逻辑 vs 直觉主义逻辑存在性证明
+
+> **对比对象**
+> - “PreFix” 版本：经典非构造性证明（见 `SMP_ProofAnalysis_ClassicalLogic_ExistenceWitness.md`）
+> - “PostFix” 版本：直觉主义/构造性证明（见 `SMP_ProofAnalysis_IntuitionisticLogic_ExistenceWitness.md`）
+> 
+> **审计日期**：2026-10-13  
+> **审计框架**：Göttingen S/M/P × D/L v1.5  
+> **总体评价**：⚪ ↔ ⚪ 两个版本在各自逻辑基础内均正确；差异不是“证明错了”，而是“存在”语义与可提取信息不同。
+
+---
+
+## 1. 版本声明对比
+
+| 维度 | 经典版本（PreFix） | 直觉主义/构造性版本（PostFix） |
+|---|---|---|
+| **主声明** | ∃ a,b ∉ ℚ, a^b ∈ ℚ | ∃ a,b ∉ ℚ, a^b ∈ ℚ |
+| **“存在”语义** | ∃ = ¬∀¬（非构造性） | ∃ = 可给出具体 witness |
+| ** witness 是否显式** | 否 | 是：a = √2, b = log₂ 9 |
+| **核心逻辑工具** | 排中律（LEM）+ 情况分析 | 显式构造 + 计算验证 |
+| **关键中间对象** | x = √2^√2（有理性未知） | b = log₂ 9（直接构造并证无理） |
+| **可计算性** | 不可计算 | 可计算（可逼近到任意精度） |
+| **形式化难度** | 在经典 Lean 中简单 | 在纯构造性库中较复杂 |
+
+---
+
+## 2. PreFix 版本 SMPDL 速览（经典逻辑）
+
+详见 `SMP_ProofAnalysis_ClassicalLogic_ExistenceWitness.md`。
+
+- **S*D**：自然语言依赖“令 x = √2^√2 → x 要么有理要么无理 → 分别给出 witness”。
+- **S*L**：“存在”为非构造性语义；LEM 被隐性使用。
+- **M*D**：核心依赖 `irrational_sqrt_two`、`Real.rpow_mul`、`Classical.em`。
+- **M*L**：逻辑结构完整，但在直觉主义/构造性基础下不合法。
+- **P*D / P*L**：经典 Lean 可形式化；`#print axioms` 显示依赖 `Classical.choice` 或 `Classical.em`。
+
+**PreFix 判定**：⚪ 已确认正确（经典逻辑内），但 🟡 中风险（非构造性）。
+
+---
+
+## 3. PostFix 版本 SMPDL 六格审计（直觉主义/构造性逻辑）
+
+### 3.1 S*D — 语义依存
+
+| 节点 | 前驱 | 状态 |
+|---|---|---|
+| 命题 ∃ a,b ∉ ℚ, a^b ∈ ℚ | 待构造 witness | ✅ |
+| a := √2 | `irrational_sqrt_two` | ✅ |
+| b := log₂ 9 | 定义：满足 2^b = 9 的唯一实数 | ✅ |
+| b ∉ ℚ | 证明否定（2^p = 9^q 矛盾） | ✅ |
+| a^b = 3 | 指数律 + 计算 | ✅ |
+| 结论 | a, b, 3 与验证共同构成 witness | ✅ |
+
+### 3.2 S*L — 语义逻辑结构
+
+- “存在”被解释为 Brouwer-Heyting-Kolmogorov（BHK）意义下的构造性存在：要证明 ∃，必须给出一个对象及验证其性质的证明。
+- 无 LEM 使用；所有推理在直觉主义自然演绎中合法。
+- ⚠️ 教学风险：学生可能误以为 log₂ 9 需要“闭式公式”才算构造；实际上，由方程 2^x = 9 唯一确定的、可逼近的实数已经是构造性对象。
+
+### 3.3 M*D — 数学依存
+
+```text
+IntuitionisticExistenceWitness
+    │
+    ├── √2 ∉ ℚ
+    │
+    ├── b := log₂ 9  (unique x with 2^x = 9)
+    │       │
+    │       └── Proof of existence and uniqueness via monotonicity/continuity
+    │
+    ├── b ∉ ℚ  (proof by contradiction of negation)
+    │
+    ├── (√2)^(log₂ 9) = 3  (via real exponentiation laws)
+    │
+    └── Witness + verification
+```
+
+- 依赖关系闭合；无悬空前提。
+
+### 3.4 M*L — 数学逻辑结构
+
+| 检查项 | 经典版本 | 直觉主义版本 | 差异说明 |
+|---|---|---|---|
+| 量词范围 | 相同 | 相同 | 结论一致 |
+| 边界情况 | 无特殊边界 | 需保证 log₂ 9 良定义（2 > 0, 2 ≠ 1, 9 > 0） | 构造性版本更关注前提显式化 |
+| 隐藏假设 | 依赖 LEM | 不依赖 LEM | 核心逻辑差异 |
+| 证明合法性 | 经典逻辑内有效 | 直觉主义/构造性逻辑内有效 | 基础不同 |
+| 可计算信息 | 不提供 | 提供 witness | 信息量差异 |
+
+### 3.5 P*D / P*L — 编程层
+
+- 经典版本：Mathlib 中已有 `irrational_sqrt_two` 与 `Real.rpow_mul`，证明简短。
+- 直觉主义版本：需要构造性实数、构造性对数和构造性指数库；CoRN/TypeTopology 中更成熟，Mathlib 中尚需补充。
+- 形式化后，直觉主义版本的证明项（proof term）会“更大”，因为它必须携带 witness 和验证。
+
+---
+
+## 4. 跨层映射检查（PostFix vs PreFix）
+
+| 映射 | 经典（PreFix） | 直觉主义/构造性（PostFix） | 变化 |
+|---|---|---|---|
+| S → M | “存在” = ¬∀¬ | “存在” = witness + verification | 语义层根本差异 |
+| M → P | `by_cases` / `Classical.em` | 显式 `use` 与 `have` 构造 witness | 证明项结构不同 |
+| S ↔ P | 结论为 ∃ 命题 | 结论为 ∃ 命题 + 计算验证 | P 层信息量更大 |
+| S ↔ S | 结论字面相同 | 结论字面相同 | `S-BISIM`（结论相同） |
+| M ↔ M | 依赖 LEM | 不依赖 LEM | `M-ISO`（工具不同） |
+| P ↔ P | 经典 Lean 证明项 | 构造性证明项 | `P-ISO`（目标相同）但实现不同 |
+
+**跨层结论**：两个版本的 S/M/P 层各自自洽，但“存在”的 S ↔ M 映射不同：经典版本把 ∃ 翻译为¬∀¬，而直觉主义版本把 ∃ 翻译为 witness + proof pair。
+
+---
+
+## 5. 判定：PostFix 是否为真？
+
+| 维度 | 经典（PreFix） | 直觉主义/构造性（PostFix） |
+|---|---|---|
+| 自然语言声明真实性 | ⚪ 真 | ⚪ 真 |
+| 证明正确性 | ⚪ 正确 | ⚪ 正确 |
+| 形式化验证 | ⚪ 经典 Lean 可验证 | 🟡 纯构造性库较复杂 |
+| 与已知数学兼容性 | ✅ 与经典逻辑兼容 | ✅ 与构造性数学兼容 |
+| 可提取算法 | ❌ 无 | ✅ 可计算 witness |
+| 教学信息量 | 中（展示非构造性技巧） | 高（展示构造性 witness） |
+
+**SMPDL 判定（PostFix）**：⚪ **低风险 / 已确认正确**。直觉主义版本不仅成立，而且比经典版本提供更多数学信息（显式 witness）。
+
+---
+
+## 6. 变化类型归类
+
+- **变化方式**：**基础假设迁移**（foundation shift）+ **证明策略升级**（提供 witness）。
+- **核心假设差异**：
+  - 经典：接受 LEM，允许对无法判定的命题进行情况分析。
+  - 直觉主义/构造性：不接受 LEM；要求 ∃ 命题必须伴随显式 witness。
+- **证明骨架相似性**：两者都证明同一个存在性命题，但经典版本使用“间接存在”，构造性版本使用“直接构造”。
+- **SMPDL 同构标签建议**：`S-BISIM`（结论语义相似）、`M-ISO`（数学工具不同）、`P-ISO`（目标相同但程序不同）。
+- **关键 lesson**：同一命题在不同逻辑基础下可能有不同的“正确证明”。审稿或教学时，必须先确认作者使用的 `AxiomaticBase`，再评判证明是否合法。
+
+---
+
+## 7. 人类研究者可执行的验证动作
+
+1. **B 岗位**：核对经典版本中 `Real.rpow_mul` 与 `(√2^√2)^√2 = √2^2 = 2` 的代数细节是否完整。
+2. **C 岗位**：验证直觉主义版本中 log₂ 9 的无理性证明是否为“证明否定”（intuitionistically valid），并确认 2^p = 9^q 矛盾的构造性细节。
+3. **D 岗位**：检查两份报告的 `AxiomaticBase` 字段是否已显式声明为 `ClassicalLogic` 与 `IntuitionisticLogic`。
+4. **E 岗位**：对两份 Markdown 报告做 diff，确认 LEM 依赖、witness 显式性、风险等级等关键差异是否准确标注。
+
+---
+
+## 8. 文献引用纪律检查
+
+| 引用对象 | 真实性 | 支持性 | 说明 |
+|---|---|---|---|
+| Bishop, *Constructive Analysis* | ✅ | ✅ | 构造性分析标准参考。 |
+| Heyting 直觉主义逻辑 / BHK 解释 | ✅ | ✅ | ∃ 的构造性语义来源。 |
+| 经典非构造性证明 folklore | ✅ | ⚠️ 间接 | 作为对比对象。 |
+| Gelfond-Schneider 定理 | ✅ | ⚠️ 可选 | 可进一步说明 √2^√2 的超越性，非必需。 |
+
+**核查结论**：引用对象真实存在，支持方向与本对比报告一致。
+
+---
+
+## 9. 署名与许可
+
+**Göttingen S/M/P × D/L · v1.5 · CAMPANASILVAE · fecit · MMXXVI · CC BY-NC-SA 4.0**
+
+搬运、改写或教学引用请注明来源与本页面链接。
