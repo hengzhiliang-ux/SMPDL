@@ -2,7 +2,7 @@
 
 > Göttingen S/M/P × D/L 数学证明审查方法论 · OpenAI 700+ 数学证明高危样本审计
 
-[![DOI](https://zenodo.org/badge/DOI-10.5281/zenodo.23339747.svg)](https://doi.org/10.5281/zenodo.23339747)
+[![DOI](https://zenodo.org/badge/DOI-10.5281/zenodo.23344975.svg)](https://doi.org/10.5281/zenodo.23344975)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
 
 ---
@@ -12,7 +12,7 @@
 | 入口 | 链接 |
 |---|---|
 | **GitHub Pages 首页** | `https://hengzhiliang-ux.github.io/SMPDL` |
-| **Zenodo 论文/数据记录** | https://zenodo.org/records/23335515 |
+| **Zenodo 论文/数据记录** | https://zenodo.org/records/23344975 |
 | **WorkBuddy 交互页面** | https://riemann-lecturer-04390.app.workbuddy.host/ |
 | **97 份报告联合 SHA-256** | `3a365aff1760cb0ed3e48502886ebba53c71174af2d4f4bad9c7834af3504be2` |
 
@@ -185,7 +185,7 @@
 | 方法论版本 | v2.5 |
 | 论文版本 | v14 |
 | 页面版本 | v5.93 |
-| DOI | [10.5281/zenodo.23339747](https://doi.org/10.5281/zenodo.23339747) |
+| DOI | [10.5281/zenodo.23344975](https://doi.org/10.5281/zenodo.23344975) |
 | 报告数量 | 141 份 curated |
 | 联合 SHA-256 | `9afb6a321d1164f1d62798ba8d1711ea947d3813fff297e7759b91861d47957c` |
 
@@ -210,8 +210,8 @@
   title={A Three-Layer Dependency-and-Logic Audit for Mathematical Proofs and AI-Generated Claims: The S/M/P × D/L Framework},
   author={CAMPANASILVAE},
   year={2026},
-  howpublished={\url{https://doi.org/10.5281/zenodo.23339747}},
-  doi={10.5281/zenodo.23339747}
+  howpublished={\url{https://doi.org/10.5281/zenodo.23344975}},
+  doi={10.5281/zenodo.23344975}
 }
 ```
 
