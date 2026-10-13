@@ -14,7 +14,7 @@
 | **GitHub Pages 首页** | `https://hengzhiliang-ux.github.io/SMPDL` |
 | **Zenodo 论文/数据记录** | https://zenodo.org/records/23335515 |
 | **WorkBuddy 交互页面** | https://riemann-lecturer-04390.app.workbuddy.host/ |
-| **96 份报告联合 SHA-256** | `b6ab5dfd9f0e5f469b8d67b02e6ceac20bcff58fd980f132667a85d2e3af10c8` |
+| **97 份报告联合 SHA-256** | `3a365aff1760cb0ed3e48502886ebba53c71174af2d4f4bad9c7834af3504be2` |
 
 ---
 
@@ -39,11 +39,12 @@
 ├── LICENSE                                # CC BY-NC-SA 4.0
 ├── DISCLAIMER.md                          # OpenAI 原始内容引用声明
 ├── _config.yml                            # GitHub Pages / Jekyll 配置
-├── reports/                               # 99 份 Markdown 报告
-│   ├── SMPDL_Framework.md                 # 方法论框架 v2.2
+├── reports/                               # 100 份 Markdown 报告
+│   ├── SMPDL_Framework.md                 # 方法论框架 v2.3
 │   ├── SMPDL_Audit_SampleSuite.md           # 样本总览表
 │   ├── SMPDL_ATTRIBUTION.md                 # 署名、指纹、DOI
 │   ├── SMPDL_Citation_Discipline.md         # 文献引用纪律
+│   ├── SMPDL_HistoryRetrospective_10PromisingSamples.md # 十个最有希望样本数学史回溯
 │   ├── SMP_ProofAnalysis_*.md               # 经典证明/猜想审计
 │   ├── SMPDL_Construct_*.md                 # 构造尝试（含反前视）
 │   ├── SMP_ProofAnalysis_OpenAI_*.md        # OpenAI 样本审计
@@ -51,7 +52,8 @@
 ├── archives/                              # 官方归档 zip
 │   ├── SMPDL_v2.0_sample_reports_76files.zip
 │   ├── SMPDL_v2.1_sample_reports_86files.zip
-│   └── SMPDL_v2.2_sample_reports_96files.zip
+│   ├── SMPDL_v2.2_sample_reports_96files.zip
+│   └── SMPDL_v2.3_sample_reports_97files.zip
 └── zenodo/                                # Zenodo metadata
     ├── zenodo_metadata_v2.0.json
     ├── zenodo_metadata_v2.1.json
@@ -64,7 +66,7 @@
 
 ### 方法论与指南
 
-- [SMPDL_Framework.md](reports/SMPDL_Framework.md) — 方法论框架 v2.0
+- [SMPDL_Framework.md](reports/SMPDL_Framework.md) — 方法论框架 v2.3
 - [SMPDL_Audit_SampleSuite.md](reports/SMPDL_Audit_SampleSuite.md) — 样本总览与教学分组
 - [SMPDL_ATTRIBUTION.md](reports/SMPDL_ATTRIBUTION.md) — 署名、许可、指纹、DOI
 - [SMPDL_Citation_Discipline.md](reports/SMPDL_Citation_Discipline.md) — 文献引用纪律
@@ -76,6 +78,7 @@
 - [SMPDL_ProofConstruction_AntiForesight.md](reports/SMPDL_ProofConstruction_AntiForesight.md) — 反前视构造协议
 - [SMP_Isomorphism_Checklist.md](reports/SMP_Isomorphism_Checklist.md) — 同构检查清单
 - [SMP_OpenAI700_Corpus_AuditMethodology.md](reports/SMP_OpenAI700_Corpus_AuditMethodology.md) — OpenAI 语料审计方法论
+- [SMPDL_HistoryRetrospective_10PromisingSamples.md](reports/SMPDL_HistoryRetrospective_10PromisingSamples.md) — 十个最有希望样本数学史回溯
 - [SMP_RH_Diagnostic_ProofDirections.md](reports/SMP_RH_Diagnostic_ProofDirections.md) — RH 证明方向诊断
 - [SMP_NearestProven_Theorems_UnsolvedConjectures.md](reports/SMP_NearestProven_Theorems_UnsolvedConjectures.md) — 邻近定理与开放猜想
 

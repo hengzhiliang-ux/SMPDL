@@ -24,12 +24,12 @@
 
 | 项目 | 值 |
 |---|---|
-| 方法论版本 | v2.2 |
-| 论文版本 | v11 |
-| 页面版本 | v5.89 |
-| DOI | [10.5281/zenodo.23335515](https://doi.org/10.5281/zenodo.23335515) |
-| curated 样本 | 96 份 |
-| 联合 SHA-256 | `8aa5b1f92d4be2fae0e0878bf88e6e2f32af448ecc04e55e955f7ea372071d8b` |
+| 方法论版本 | v2.3 |
+| 论文版本 | v12 |
+| 页面版本 | v5.90 |
+| DOI | [10.5281/zenodo.23335515](https://doi.org/10.5281/zenodo.23335515)（v9 DOI 沿用，待 v12 Zenodo 新记录发布） |
+| curated 样本 | 97 份 |
+| 联合 SHA-256 | `3a365aff1760cb0ed3e48502886ebba53c71174af2d4f4bad9c7834af3504be2` |
 
 ---
 
@@ -66,10 +66,11 @@ SMPDL 将数学证明审查拆分为三层（语义 S / 数学 M / 编程 P）�
 
 ## 下载归档
 
-- [SMPDL_v2.2_sample_reports_96files.zip](archives/SMPDL_v2.2_sample_reports_96files.zip) — 96 份 curated 报告官方归档
+- [SMPDL_v2.3_sample_reports_97files.zip](archives/SMPDL_v2.3_sample_reports_97files.zip) — 97 份 curated 报告官方归档（最新）
+- [SMPDL_v2.2_sample_reports_96files.zip](archives/SMPDL_v2.2_sample_reports_96files.zip) — 96 份 curated 报告历史归档
 - [SMPDL_v2.1_sample_reports_86files.zip](archives/SMPDL_v2.1_sample_reports_86files.zip) — 86 份 curated 报告历史归档
 - [SMPDL_v2.0_sample_reports_76files.zip](archives/SMPDL_v2.0_sample_reports_76files.zip) — 76 份 curated 报告历史归档
-- [Zenodo 记录](https://zenodo.org/records/23335515) — 持久 DOI 与元数据
+- [Zenodo 记录](https://zenodo.org/records/23335515) — 持久 DOI 与元数据（v9 DOI 沿用）
 
 ---
 

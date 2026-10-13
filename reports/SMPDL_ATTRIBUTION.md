@@ -7,20 +7,20 @@
 ## 基本信息
 
 - **方法论名称**：Göttingen S/M/P × D/L 数学证明审查方法论
-- **版本**：v2.2
+- **版本**：v2.3
 - **作者**：CAMPANASILVAE · fecit · MMXXVI
 - **首发时间**：2026-10-12 GMT+8
 - **许可协议**：[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)（署名-非商用-相同方式共享）
 - **Zenodo 记录**：https://zenodo.org/records/23335515
 - **DOI**：10.5281/zenodo.23335515
 - **Concept DOI**：10.5281/zenodo.23318734
-- **论文版本**：v11（同步扩展 SMPDL 文献引用纪律至全部 96 份报告；新增 10 份结构相对完善但仍有补证需求的 Lean 形式化 OpenAI 700+ 库抽样审计）
+- **论文版本**：v12（新增 1 份《十个最有希望 Lean 样本数学史回溯》方法论扩展报告，将 curated 报告数从 96 扩展至 97，并为 10 份 Lean 形式化样本定位最接近的经典构造与证明方法）
 
 ---
 
 ## 联合内容指纹
 
-以下 96 份报告内容拼接后的 SHA-256 摘要：
+以下 97 份报告内容拼接后的 SHA-256 摘要：
 
 ```
 8aa5b1f92d4be2fae0e0878bf88e6e2f32af448ecc04e55e955f7ea372071d8b
@@ -125,6 +125,7 @@
 | 94 | `SMP_ProofAnalysis_OpenAI_KazhdanLusztig_CombinatorialInvariance.md` | OpenAI Kazhdan–Lusztig 组合不变性 |
 | 95 | `SMP_ProofAnalysis_OpenAI_StrongThinSpanningTrees.md` | OpenAI 强瘦生成树确定性构造 |
 | 96 | `SMP_ProofAnalysis_OpenAI_Tingley_SphereIsometry.md` | OpenAI Tingley 球面等距问题 |
+| 97 | `SMPDL_HistoryRetrospective_10PromisingSamples.md` | 十个最有希望 Lean 样本数学史回溯 |
 ---
 
 ## 使用声明
@@ -235,12 +236,13 @@ cat \
   SMP_ProofAnalysis_OpenAI_KazhdanLusztig_CombinatorialInvariance.md \
   SMP_ProofAnalysis_OpenAI_StrongThinSpanningTrees.md \
   SMP_ProofAnalysis_OpenAI_Tingley_SphereIsometry.md \
+  SMPDL_HistoryRetrospective_10PromisingSamples.md \
   | sha256sum
 ```
 
 预期输出：
 
 ```
-8aa5b1f92d4be2fae0e0878bf88e6e2f32af448ecc04e55e955f7ea372071d8b  -
+3a365aff1760cb0ed3e48502886ebba53c71174af2d4f4bad9c7834af3504be2  -
 ```
 
