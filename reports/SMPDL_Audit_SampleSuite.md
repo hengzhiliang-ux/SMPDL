@@ -1,6 +1,6 @@
 # SMPDL 结构审查样本总览
 
-> 基于 Göttingen S/M/P × D/L v2.6  
+> 基于 Göttingen S/M/P × D/L v2.4  
 > 日期：2026-10-13
 
 ---
@@ -89,17 +89,6 @@
 | OpenAI Benjamini–Schramm 非唯一性猜想 | AI 生成研究级声明，已完成 Lean 形式化 | 🔴 高风险 | S*D/M*D 阈值等价 | p_u 与 p_{2→2} 关系/定量依赖待补 |
 | OpenAI Connes 双中心化子猜想 | AI 生成研究级声明，已完成 Lean 形式化 | 🔴 高风险 | S*L/M*L 主定理 gap | 形式化仅为有界恢复引理，非双中心化子猜想 |
 | 十个最有希望样本数学史回溯 | 方法论扩展 · 历史谱系 | 🟢 通过 | 全绿 | 为 10 份 Lean 形式化样本定位最接近的经典构造与证明方法 |
-| H1 · 欧氏 ↔ 球面几何三角形内角和 | 同构-异基础 · 几何 | 🟢 通过 | 全绿 | 曲率 K 改变平行公设与角度和结论 |
-| H2 · 微分 ↔ 差分方程指数增长 | 同构-异基础 · 分析离散化 | 🟢 通过 | 全绿 | 步长 h 连接连续指数与几何序列 |
-| H3 · 有限 ↔ 无限图环存在性 | 同构-异基础 · 组合 | 🟢 通过 | 全绿 | 有限性假设失效导致结论反转 |
-| H4 · 交换 ↔ 非交换环二项式幂 | 同构-异基础 · 代数 | 🟢 通过 | 全绿 | 乘法交换律决定 (ab)ⁿ 展开形式 |
-| H5 · 特征 0 ↔ 特征 p Freshman Dream | 同构-异基础 · 域论 | 🟢 通过 | 全绿 | char(R) 改变二项式展开中间项 |
-| H6 · 标准 ↔ 非标准分析导数 | 同构-异基础 · 分析基础 | 🟢 通过 | 全绿 | ε-δ 极限与无穷小量等价表述 |
-| H7 · 经典 ↔ 直觉主义存在性证明 | 同构-异基础 · 逻辑 | 🟢 通过 | 全绿 | LEM 决定“存在”的构造性语义 |
-| H8 · ZFC ↔ ZF 向量空间基 | 同构-异基础 · 集合论 | 🟢 通过 | 全绿 | AC 决定任意向量空间基的存在性 |
-| H9 · 集合论 ↔ 类型论 n+0=n | 同构-异基础 · 计算基础 | 🟢 通过 | 全绿 | 外延相等与 identity type 证明结构不同 |
-| H10 · 经典 ↔ 可计算分析 IVT | 同构-异基础 · 可计算性 | 🟢 通过 | 全绿 | 可计算性约束把存在性证明升级为算法 |
-| H-Meta · 历史/认知/调参/迁移分析 | 方法论扩展 · 基础元分析 | 🟢 通过 | 全绿 | 四份文档支撑 H1–H10 的审校与教学 |
 
 ---
 
@@ -652,141 +641,19 @@
 | 展示「同族多定理中部分未形式化」风险（组合几何） | OpenAI 平面不同距离与单位距离界 |
 | 展示「临界阈值等价性与定量依赖待补」风险（概率渗流） | OpenAI Benjamini–Schramm 非唯一性猜想 |
 | 展示「技术性引理通过 ≠ 核心猜想得证」风险（算子代数） | OpenAI Connes 双中心化子猜想 |
-| 展示「单条公理改变恒等式结构」风险 | H4 交换 ↔ 非交换环二项式幂 |
-| 展示「域特征改变系数可除性」风险 | H5 特征 0 ↔ 特征 p Freshman's Dream |
-| 展示「逻辑规则改变存在语义」风险 | H7 经典 ↔ 直觉主义存在性证明 |
-| 展示「选择公理决定存在性可证性」风险 | H8 ZFC ↔ ZF 向量空间基 |
-| 展示「基础框架改变证明结构」风险 | H9 集合论 ↔ 类型论 n+0=n |
-| 展示「可计算性约束升级存在性证明」价值 | H10 经典 ↔ 可计算分析 IVT |
-| 展示「论域有限性反转组合结论」风险 | H3 有限 ↔ 无限图环存在性 |
-| 展示「连续-离散参数迁移」教学方法 | H2 微分 ↔ 差分方程指数增长 |
-| 展示「几何曲率改变角度和」直观案例 | H1 欧氏 ↔ 球面三角形内角和 |
 
 ---
 
-## 8. 同构-异基础案例组（H1–H10）
-
-本组收录 10 对“同证明骨架、异数学基础”的 SMPDL 审计案例，覆盖几何、分析、组合、代数、逻辑、集合论、计算基础与可计算性等领域。每组含两份单体审计报告与一份对比报告，并统一按 S/M/P × D/L v1.5 框架完成。
-
-### 8.1 几何：欧氏 ↔ 球面（H1）
-
-- **文件**：
-  - `SMP_ProofAnalysis_Euclidean_TriangleAngleSum.md` —— 欧氏三角形内角和 = 180°
-  - `SMP_ProofAnalysis_Spherical_TriangleAngleSum.md` —— 球面三角形内角和 = π + Area/R²
-  - `SMPDL_Compare_EuclideanVsSpherical_TriangleAngleSum_PrePostFix.md` —— 对比审计
-- **调参旋钮**：曲率 K（欧氏 K=0，球面 K=1/R²）
-- **迁移类型**：参数迁移
-- **SMPDL 标签**：`S-ISO / M-ISO / P-BISIM`
-
-### 8.2 分析离散化：微分 ↔ 差分方程（H2）
-
-- **文件**：
-  - `SMP_ProofAnalysis_DifferentialEquation_ExponentialGrowth.md` —— dP/dt = kP
-  - `SMP_ProofAnalysis_DifferenceEquation_ExponentialGrowth.md` —— Pₙ₊₁ = (1+hk)Pₙ
-  - `SMPDL_Compare_DifferentialVsDifference_ExponentialGrowth_PrePostFix.md` —— 对比审计
-- **调参旋钮**：步长 h
-- **迁移类型**：参数迁移
-- **SMPDL 标签**：`S-ISO / M-BISIM / P-BISIM`
-
-### 8.3 组合：有限 ↔ 无限图（H3）
-
-- **文件**：
-  - `SMP_ProofAnalysis_FiniteGraph_CycleByMinDegree.md` —— δ≥2 ⇒ 存在环
-  - `SMP_ProofAnalysis_InfiniteGraph_CycleByMinDegree.md` —— δ≥2 ⇏ 存在环
-  - `SMPDL_Compare_FiniteVsInfinite_GraphCycle_PrePostFix.md` —— 对比审计
-- **调参旋钮**：论域有限性
-- **迁移类型**：断裂迁移
-- **SMPDL 标签**：`S-ISO / M-BISIM / P-BISIM`
-
-### 8.4 代数：交换 ↔ 非交换环（H4）
-
-- **文件**：
-  - `SMP_ProofAnalysis_CommutativeRing_BinomialPower.md` —— (ab)ⁿ = aⁿbⁿ
-  - `SMP_ProofAnalysis_NonCommutativeRing_BinomialPower.md` —— (ab)ⁿ = a(ba)ⁿ⁻¹b
-  - `SMPDL_Compare_CommutativeVsNonCommutative_BinomialPower_PrePostFix.md` —— 对比审计
-- **调参旋钮**：乘法交换律
-- **迁移类型**：公理迁移
-- **SMPDL 标签**：`S-BISIM / M-BISIM / P-BISIM`
-
-### 8.5 域论：特征 0 ↔ 特征 p（H5）
-
-- **文件**：
-  - `SMP_ProofAnalysis_Characteristic0_FreshmanDream.md` —— 完整二项式展开
-  - `SMP_ProofAnalysis_CharacteristicP_FreshmanDream.md` —— Freshman's Dream
-  - `SMPDL_Compare_Char0vsCharP_FreshmanDream_PrePostFix.md` —— 对比审计
-- **调参旋钮**：char(R)
-- **迁移类型**：参数迁移
-- **SMPDL 标签**：`S-ISO / M-ISO / P-BISIM`
-
-### 8.6 分析基础：标准 ↔ 非标准分析（H6）
-
-- **文件**：
-  - `SMP_ProofAnalysis_StandardAnalysis_DerivativeLimit.md` —— ε-δ 导数
-  - `SMP_ProofAnalysis_NonstandardAnalysis_DerivativeInfinitesimal.md` —— 无穷小导数
-  - `SMPDL_Compare_StandardVsNonstandard_Derivative_PrePostFix.md` —— 对比审计
-- **调参旋钮**：数系 / 无穷小量
-- **迁移类型**：语义迁移
-- **SMPDL 标签**：`S-ISO / M-ISO / P-BISIM`
-
-### 8.7 逻辑：经典 ↔ 直觉主义（H7）
-
-- **文件**：
-  - `SMP_ProofAnalysis_ClassicalLogic_ExistenceWitness.md` —— LEM 非构造性存在
-  - `SMP_ProofAnalysis_IntuitionisticLogic_ExistenceWitness.md` —— 构造性 witness
-  - `SMPDL_Compare_ClassicalVsIntuitionistic_ExistenceWitness_PrePostFix.md` —— 对比审计
-- **调参旋钮**：排中律 LEM
-- **迁移类型**：公理迁移
-- **SMPDL 标签**：`S-BISIM / M-ISO / P-ISO`
-
-### 8.8 集合论：ZFC ↔ ZF（H8）
-
-- **文件**：
-  - `SMP_ProofAnalysis_ZFC_VectorSpaceBasis.md` —— AC ⇒ 任意向量空间有基
-  - `SMP_ProofAnalysis_ZF_VectorSpaceBasis.md` —— 无 AC 不可证
-  - `SMPDL_Compare_ZFCvsZF_VectorSpaceBasis_PrePostFix.md` —— 对比审计
-- **调参旋钮**：选择公理 AC
-- **迁移类型**：公理迁移 / 断裂迁移
-- **SMPDL 标签**：`S-BISIM / M-BISIM / P-BISIM`
-
-### 8.9 计算基础：集合论 ↔ 类型论（H9）
-
-- **文件**：
-  - `SMP_ProofAnalysis_SetTheory_NatPlusZero.md` —— n+0=n（外延相等）
-  - `SMP_ProofAnalysis_TypeTheory_NatPlusZero.md` —— n+0=n（identity type）
-  - `SMPDL_Compare_SetTheoryVsTypeTheory_NatPlusZero_PrePostFix.md` —— 对比审计
-- **调参旋钮**：基础框架
-- **迁移类型**：语义迁移
-- **SMPDL 标签**：`S-ISO / M-BISIM / P-BISIM`
-
-### 8.10 可计算性：经典 ↔ 可计算分析（H10）
-
-- **文件**：
-  - `SMP_ProofAnalysis_ClassicalAnalysis_IntermediateValue.md` —— IVT 纯存在性
-  - `SMP_ProofAnalysis_ComputableAnalysis_IntermediateValue.md` —— 可计算 IVT + 二分法
-  - `SMPDL_Compare_ClassicalVsComputable_IntermediateValue_PrePostFix.md` —— 对比审计
-- **调参旋钮**：可计算性约束
-- **迁移类型**：升级迁移
-- **SMPDL 标签**：`S-ISO / M-BISIM / P-BISIM`
-
-### 8.11 元分析文档
-
-- **历史顺序索引**：`SMPDL_HistoricalOrder_Index.md`
-- **认知历史逻辑**：`SMPDL_HistoricalAssumption_CognitiveLogic.md`
-- **调参来源矩阵**：`SMPDL_TuningParameter_Matrix.md`
-- **迁移骨架分析**：`SMPDL_HistoricalMigration_Skeleton.md`
-
----
-
-## 9. 高风险 / 中风险声明的人类科学家审查指南
+## 8. 高风险 / 中风险声明的人类科学家审查指南
 
 - **文件**：`SMPDL_HumanReview_HighMidRisk_Guide.md`
 - **要点**：五岗位（A/B/C/D/E）针对高风险与中低风险声明的具体审查动作；TRAP-CHECK 七类陷阱的专项扫描；针对本批次 OpenAI 六个样本的逐条审查建议。
 
 ---
 
-## 10. 署名与许可
+## 9. 署名与许可
 
-**Göttingen S/M/P × D/L 数学证明审查方法论** · v2.5  
+**Göttingen S/M/P × D/L 数学证明审查方法论** · v2.2  
 **作者**：CAMPANASILVAE · fecit · MMXXVI  
 **首发时间**：2026-10-12 GMT+8 · **更新**：2026-10-13  
 **许可协议**：[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)（署名-非商用-相同方式共享）  

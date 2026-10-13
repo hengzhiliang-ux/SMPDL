@@ -24,12 +24,12 @@
 
 | 项目 | 值 |
 |---|---|
-| 方法论版本 | v2.6 |
-| 论文版本 | v15 |
-| 页面版本 | v5.97 |
-| DOI | [10.5281/zenodo.23353609](https://doi.org/10.5281/zenodo.23353609)（v15 · Zenodo 记录 23353609） |
-| curated 样本 | 146 份 |
-| 联合 SHA-256 | `3f1a4c6c1ee04b3c67ed129ffa58aed02c2c3ca53a34583f292a70d31cecb7fe` |
+| 方法论版本 | v2.4 |
+| 论文版本 | v13 |
+| 页面版本 | v5.92 |
+| DOI | [10.5281/zenodo.23339747](https://doi.org/10.5281/zenodo.23339747)（v12 DOI 沿用，待 v13 Zenodo 新记录发布） |
+| curated 样本 | 107 份 |
+| 联合 SHA-256 | `055a1154abae60bd2dfd6a4b6b48c492b6ee23c69458f0da036fc20fc581e870` |
 
 ---
 
@@ -52,13 +52,18 @@ SMPDL 将数学证明审查拆分为三层（语义 S / 数学 M / 编程 P）�
 - 已被人类数学家证伪/撤回的声明
 - 修复前后对比
 
-最新 5 份高危样本（第五批：结构相对完善但仍有补证需求）：
+最新 10 份高危样本（第六批：继续扩大的 Lean 形式化高风险/中风险样本）：
 
-1. [四次多项式无平方值与幂自由值](reports/SMP_ProofAnalysis_OpenAI_Squarefree_Quartics.md)
-2. [Jacobsthal 函数二次上界](reports/SMP_ProofAnalysis_OpenAI_Jacobsthal_QuadraticBound.md)
-3. [totient 原像数目渐近公式](reports/SMP_ProofAnalysis_OpenAI_Totient_Asymptotic.md)
-4. [高斯素数图有界连通分支](reports/SMP_ProofAnalysis_OpenAI_GaussianPrime_BoundedComponents.md)
-5. [平面图与有界树宽图 L1 嵌入](reports/SMP_ProofAnalysis_OpenAI_Planar_L1_Embeddings.md)
+1. [Deligne–Drinfeld 猜想](reports/SMP_ProofAnalysis_OpenAI_DeligneDrinfeld_Conjecture.md)
+2. [Erdős–Pomerance 联合 Dickman 猜想](reports/SMP_ProofAnalysis_OpenAI_ErdosPomerance_JointDickman.md)
+3. [大素数间隙正密度](reports/SMP_ProofAnalysis_OpenAI_LargePrimeGaps_PositiveDensity.md)
+4. [高余维 Riesz 变换可求长性](reports/SMP_ProofAnalysis_OpenAI_RieszTransform_Rectifiability.md)
+5. [Erdős 相似性猜想 dyadic 情形](reports/SMP_ProofAnalysis_OpenAI_ErdosSimilarity_Dyadic.md)
+6. [对数 Brunn–Minkowski 不等式](reports/SMP_ProofAnalysis_OpenAI_LogBrunnMinkowski.md)
+7. [Unique Games 猜想](reports/SMP_ProofAnalysis_OpenAI_UniqueGames_Conjecture.md)
+8. [平面不同距离与单位距离界](reports/SMP_ProofAnalysis_OpenAI_PlanarDistinctDistances.md)
+9. [Benjamini–Schramm 非唯一性猜想](reports/SMP_ProofAnalysis_OpenAI_BenjaminiSchramm_Nonuniqueness.md)
+10. [Connes 双中心化子猜想](reports/SMP_ProofAnalysis_OpenAI_ConnesBicentralizer.md)
 
 完整样本清单见 [reports/SMPDL_Audit_SampleSuite.md](reports/SMPDL_Audit_SampleSuite.md)。
 
@@ -114,8 +119,7 @@ SMPDL 将数学证明审查拆分为三层（语义 S / 数学 M / 编程 P）�
 
 ## 下载归档
 
-- [SMPDL_v2.6_sample_reports_146files.zip](archives/SMPDL_v2.6_sample_reports_146files.zip) — 146 份 curated 报告官方归档（最新）
-- [SMPDL_v2.5_sample_reports_141files.zip](archives/SMPDL_v2.5_sample_reports_141files.zip) — 141 份 curated 报告历史归档
+- [SMPDL_v2.4_sample_reports_107files.zip](archives/SMPDL_v2.4_sample_reports_107files.zip) — 107 份 curated 报告官方归档（最新）
 - [SMPDL_v2.2_sample_reports_96files.zip](archives/SMPDL_v2.2_sample_reports_96files.zip) — 96 份 curated 报告历史归档
 - [SMPDL_v2.1_sample_reports_86files.zip](archives/SMPDL_v2.1_sample_reports_86files.zip) — 86 份 curated 报告历史归档
 - [SMPDL_v2.0_sample_reports_76files.zip](archives/SMPDL_v2.0_sample_reports_76files.zip) — 76 份 curated 报告历史归档
