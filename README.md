@@ -2,7 +2,7 @@
 
 > Göttingen S/M/P × D/L 数学证明审查方法论 · OpenAI 700+ 数学证明高危样本审计
 
-[![DOI](https://zenodo.org/badge/DOI-10.5281/zenodo.23335515.svg)](https://doi.org/10.5281/zenodo.23335515)
+[![DOI](https://zenodo.org/badge/DOI-10.5281/zenodo.23339747.svg)](https://doi.org/10.5281/zenodo.23339747)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
 
 ---
@@ -158,8 +158,8 @@
 |---|---|
 | 方法论版本 | v2.3 |
 | 论文版本 | v12 |
-| 页面版本 | v5.90 |
-| DOI | [10.5281/zenodo.23335515](https://doi.org/10.5281/zenodo.23335515) |
+| 页面版本 | v5.91 |
+| DOI | [10.5281/zenodo.23339747](https://doi.org/10.5281/zenodo.23339747) |
 | 报告数量 | 97 份 curated |
 | 联合 SHA-256 | `3a365aff1760cb0ed3e48502886ebba53c71174af2d4f4bad9c7834af3504be2` |
 
@@ -184,8 +184,8 @@
   title={A Three-Layer Dependency-and-Logic Audit for Mathematical Proofs and AI-Generated Claims: The S/M/P × D/L Framework},
   author={CAMPANASILVAE},
   year={2026},
-  howpublished={\url{https://doi.org/10.5281/zenodo.23335515}},
-  doi={10.5281/zenodo.23335515}
+  howpublished={\url{https://doi.org/10.5281/zenodo.23339747}},
+  doi={10.5281/zenodo.23339747}
 }
 ```
 

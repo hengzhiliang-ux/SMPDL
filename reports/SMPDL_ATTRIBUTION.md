@@ -11,8 +11,8 @@
 - **作者**：CAMPANASILVAE · fecit · MMXXVI
 - **首发时间**：2026-10-12 GMT+8
 - **许可协议**：[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)（署名-非商用-相同方式共享）
-- **Zenodo 记录**：https://zenodo.org/records/23335515
-- **DOI**：10.5281/zenodo.23335515
+- **Zenodo 记录**：https://zenodo.org/records/23339747
+- **DOI**：10.5281/zenodo.23339747
 - **Concept DOI**：10.5281/zenodo.23318734
 - **论文版本**：v12（新增 1 份《十个最有希望 Lean 样本数学史回溯》方法论扩展报告，将 curated 报告数从 96 扩展至 97，并为 10 份 Lean 形式化样本定位最接近的经典构造与证明方法）
 

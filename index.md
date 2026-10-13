@@ -2,7 +2,7 @@
 
 > Göttingen S/M/P × D/L 数学证明审查方法论
 
-[![DOI](https://zenodo.org/badge/DOI-10.5281/zenodo.23335515.svg)](https://doi.org/10.5281/zenodo.23335515)
+[![DOI](https://zenodo.org/badge/DOI-10.5281/zenodo.23339747.svg)](https://doi.org/10.5281/zenodo.23339747)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
 
 ---
@@ -26,8 +26,8 @@
 |---|---|
 | 方法论版本 | v2.3 |
 | 论文版本 | v12 |
-| 页面版本 | v5.90 |
-| DOI | [10.5281/zenodo.23335515](https://doi.org/10.5281/zenodo.23335515)（v9 DOI 沿用，待 v12 Zenodo 新记录发布） |
+| 页面版本 | v5.91 |
+| DOI | [10.5281/zenodo.23339747](https://doi.org/10.5281/zenodo.23339747)（v12 DOI） |
 | curated 样本 | 97 份 |
 | 联合 SHA-256 | `3a365aff1760cb0ed3e48502886ebba53c71174af2d4f4bad9c7834af3504be2` |
 
@@ -70,7 +70,7 @@ SMPDL 将数学证明审查拆分为三层（语义 S / 数学 M / 编程 P）�
 - [SMPDL_v2.2_sample_reports_96files.zip](archives/SMPDL_v2.2_sample_reports_96files.zip) — 96 份 curated 报告历史归档
 - [SMPDL_v2.1_sample_reports_86files.zip](archives/SMPDL_v2.1_sample_reports_86files.zip) — 86 份 curated 报告历史归档
 - [SMPDL_v2.0_sample_reports_76files.zip](archives/SMPDL_v2.0_sample_reports_76files.zip) — 76 份 curated 报告历史归档
-- [Zenodo 记录](https://zenodo.org/records/23335515) — 持久 DOI 与元数据（v9 DOI 沿用）
+- [Zenodo 记录](https://zenodo.org/records/23339747) — 持久 DOI 与元数据（v12 DOI）
 
 ---
 
