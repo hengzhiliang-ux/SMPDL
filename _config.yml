@@ -10,10 +10,7 @@ kramdown:
 plugins:
   - jekyll-feed
 exclude:
-  - archives/
   - zenodo/
   - .gitignore
   - LICENSE
   - README.md
-  - "*.zip"
-  - "*.json"
