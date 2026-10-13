@@ -362,7 +362,7 @@ theorem riemannHypothesis_MomentsRoute :
 **Göttingen S/M/P × D/L 数学证明审查方法论** · v1.3  \
 **作者**：CAMPANASILVAE · fecit · MMXXVI  \
 **首发时间**：2026-10-12 GMT+8  \
-**永久记录**：Zenodo [10.5281/zenodo.23318852](https://doi.org/10.5281/zenodo.23318852)  \
+**永久记录**：Zenodo [10.5281/zenodo.23344975](https://doi.org/10.5281/zenodo.23344975)  \
 **内容指纹清单**：见 `SMPDL_ATTRIBUTION.md`  \
 **许可协议**：[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)（署名-非商用-相同方式共享）
 

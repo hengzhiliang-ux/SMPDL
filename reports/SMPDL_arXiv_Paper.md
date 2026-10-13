@@ -2,10 +2,10 @@
 
 **Authors:** CAMPANASILVAE · fecit · MMXXVI  
 **Affiliation:** Göttingen Mathematical History Index Project  
-**Date:** 2026-10-12 GMT+8  
-**Version:** v3  
+**Date:** 2026-10-13 GMT+8  
+**Version:** v15  
 **License:** CC BY-NC-SA 4.0  
-**Content Fingerprint (SHA-256 of report corpus, 46 files):** `79b7481f2a3cd3ad3119f8b09788fdf02b31e345e4b139aa2ad142e7b2bff107`
+**Content Fingerprint (SHA-256 of report corpus, 146 files):** `6972fc672051d67258fdd5c5250d7574b3d75abde1a0040712cf6d94dd9d27b8`
 
 ---
 

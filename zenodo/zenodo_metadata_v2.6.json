@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "title": "SMPDL v2.6: A Three-Layer Dependency-and-Logic Audit for Mathematical Proofs and AI-Generated Claims — 146 Curated Sample Reports",
+    "upload_type": "publication",
+    "publication_type": "workingpaper",
+    "description": "This release expands the Göttingen S/M/P × D/L curated corpus from 141 to 146 Markdown reports by adding the Andrews-Curtis human checklist, three OpenAI withdrawal-event audits, and the arXiv paper source. It also fixes stale internal DOI references and an attribution table formatting issue. The archive contains all 146 reports plus the attribution/fingerprint file.",
+    "creators": [
+      {
+        "name": "CAMPANASILVAE",
+        "affiliation": "Göttingen Mathematical History Index Project"
+      }
+    ],
+    "license": "CC-BY-NC-SA-4.0",
+    "keywords": [
+      "mathematical proof",
+      "formal verification",
+      "AI-generated mathematics",
+      "isomorphism",
+      "axiomatic bases",
+      "SMPDL",
+      "Göttingen"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/hengzhiliang-ux/SMPDL",
+        "relation": "isSupplementTo",
+        "resource_type": "software"
+      }
+    ],
+    "version": "v2.6",
+    "language": "zho"
+  }
+}

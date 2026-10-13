@@ -1,6 +1,6 @@
 # SMPDL 结构审查样本总览
 
-> 基于 Göttingen S/M/P × D/L v2.5  
+> 基于 Göttingen S/M/P × D/L v2.6  
 > 日期：2026-10-13
 
 ---

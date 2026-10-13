@@ -5,7 +5,7 @@
 **标注人**：CAMPANASILVAE  
 **说明**：本清单逐条指明 ACC 防前视构造中哪些环节必须由人工完成、哪些可由机器辅助、以及所需的 SMPDL 人工角色（A/B/C/D/E 见 `SMPDL_HumanRoles_Definitions.md`）。未特别标注的机械化步骤仍须由人工最终确认（CLOSED 需人工签收）。
 
-> **指纹说明**：本文件是当前 46 份语料之外的新增方法论注释，暂不纳入 `SMPDL_ATTRIBUTION.md` 的联合指纹，以免破坏已锁定并即将上传 Zenodo v3 的论文指纹 `79b7481f2a3cd3ad3119f8b09788fdf02b31e345e4b139aa2ad142e7b2bff107`。
+> **指纹说明**：本文件已纳入 SMPDL v2.6  curated 语料（146 份报告），联合指纹见 `SMPDL_ATTRIBUTION.md`。
 
 ---
 

@@ -14,7 +14,7 @@
 | **GitHub Pages 首页** | `https://hengzhiliang-ux.github.io/SMPDL` |
 | **Zenodo 论文/数据记录** | https://zenodo.org/records/23344975 |
 | **WorkBuddy 交互页面** | https://riemann-lecturer-04390.app.workbuddy.host/ |
-| **141 份报告联合 SHA-256** | `9afb6a321d1164f1d62798ba8d1711ea947d3813fff297e7759b91861d47957c` |
+| **146 份报告联合 SHA-256** | `9afb6a321d1164f1d62798ba8d1711ea947d3813fff297e7759b91861d47957c` |
 
 ---
 
@@ -39,7 +39,7 @@
 ├── LICENSE                                # CC BY-NC-SA 4.0
 ├── DISCLAIMER.md                          # OpenAI 原始内容引用声明
 ├── _config.yml                            # GitHub Pages / Jekyll 配置
-├── reports/                               # 100 份 Markdown 报告
+├── reports/                               # 146 份 Markdown 报告
 │   ├── SMPDL_Framework.md                 # 方法论框架 v2.3
 │   ├── SMPDL_Audit_SampleSuite.md           # 样本总览表
 │   ├── SMPDL_ATTRIBUTION.md                 # 署名、指纹、DOI
@@ -50,10 +50,10 @@
 │   ├── SMP_ProofAnalysis_OpenAI_*.md        # OpenAI 样本审计
 │   └── SMPDL_Compare_OpenAI_*_PrePostFix.md # 修复前后对比
 ├── archives/                              # 官方归档 zip
-│   ├── SMPDL_v2.0_sample_reports_76files.zip
-│   ├── SMPDL_v2.1_sample_reports_86files.zip
-│   ├── SMPDL_v2.2_sample_reports_96files.zip
-│   └── SMPDL_v2.5_sample_reports_141files.zip
+│   ├── SMPDL_v2.6_sample_reports_146files.zip
+│   ├── SMPDL_v2.6_sample_reports_146files.zip
+│   ├── SMPDL_v2.6_sample_reports_146files.zip
+│   └── SMPDL_v2.6_sample_reports_146files.zip
 └── zenodo/                                # Zenodo metadata
     ├── zenodo_metadata_v2.0.json
     ├── zenodo_metadata_v2.1.json
@@ -178,16 +178,38 @@
 
 完整清单见 `reports/SMPDL_Audit_SampleSuite.md`。
 
+
+---
+
+## v2.6 补全 curated 语料并修复元数据
+
+在 v2.5 的 141 份 curated 报告基础上补入 5 份遗漏文档，扩展至 **146**：
+
+- `SMPDL_Construct_AndrewsCurtis_HumanChecklist.md` — Andrews-Curtis 构造人工清单
+- `SMP_ProofAnalysis_OpenAI_WeilClasses_SignError.md` — OpenAI Weil 类代数性撤回事件审计
+- `SMP_ProofAnalysis_OpenAI_KugaSatake_DependentGap.md` — OpenAI Kuga-Satake 对应代数性撤回事件审计
+- `SMP_ProofAnalysis_OpenAI_HodgeK3_Withdrawal.md` — OpenAI K3 曲面乘积 Hodge 猜想撤回事件审计
+- `SMPDL_arXiv_Paper.md` — SMPDL 方法论 arXiv 论文源文件
+
+同时修复：
+- ATTRIBUTION 清单表格分隔符格式错误；
+- 2 份旧报告仍指向 Zenodo v1 DOI；
+- `SMPDL_HistoricalAssumption_CognitiveLogic.md` 中「9 组」→「10 组」笔误。
+
+新联合 SHA-256：`05a6bab7ef29f1080b50e8e5e8038fea707f518f555319c835b596a348024819`。
+
+> Zenodo v2.6 新 DOI 将在发布后立即回填本页面。
+
 ## 版本信息
 
 | 项目 | 当前值 |
 |---|---|
-| 方法论版本 | v2.5 |
-| 论文版本 | v14 |
-| 页面版本 | v5.93 |
+| 方法论版本 | v2.6 |
+| 论文版本 | v15 |
+| 页面版本 | v5.96 |
 | DOI | [10.5281/zenodo.23344975](https://doi.org/10.5281/zenodo.23344975) |
-| 报告数量 | 141 份 curated |
-| 联合 SHA-256 | `9afb6a321d1164f1d62798ba8d1711ea947d3813fff297e7759b91861d47957c` |
+| 报告数量 | 146 份 curated |
+| 联合 SHA-256 | `05a6bab7ef29f1080b50e8e5e8038fea707f518f555319c835b596a348024819` |
 
 ---
 
@@ -196,7 +218,7 @@
 1. **阅读总览**：从 [SMPDL_Audit_SampleSuite.md](reports/SMPDL_Audit_SampleSuite.md) 开始，了解样本分类与教学分组。
 2. **学习方法论**：阅读 [SMPDL_Framework.md](reports/SMPDL_Framework.md) 与 [SMPDL_Citation_Discipline.md](reports/SMPDL_Citation_Discipline.md)。
 3. **查看审计结论**：点击上方报告清单中的任意链接，GitHub 会自动渲染 Markdown。
-4. **下载完整归档**：访问 [archives/SMPDL_v2.0_sample_reports_76files.zip](archives/SMPDL_v2.0_sample_reports_76files.zip) 或 Zenodo 记录。
+4. **下载完整归档**：访问 [archives/SMPDL_v2.6_sample_reports_146files.zip](archives/SMPDL_v2.6_sample_reports_146files.zip) 或 Zenodo 记录。
 5. **验证指纹**：在 `reports/` 目录下按 [SMPDL_ATTRIBUTION.md](reports/SMPDL_ATTRIBUTION.md) 中的顺序 `cat` 所有文件并计算 SHA-256。
 
 ---

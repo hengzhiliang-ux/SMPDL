@@ -24,12 +24,12 @@
 
 | 项目 | 值 |
 |---|---|
-| 方法论版本 | v2.5 |
-| 论文版本 | v14 |
-| 页面版本 | v5.93 |
+| 方法论版本 | v2.6 |
+| 论文版本 | v15 |
+| 页面版本 | v5.96 |
 | DOI | [10.5281/zenodo.23344975](https://doi.org/10.5281/zenodo.23344975)（v14 · Zenodo 记录 23344975） |
-| curated 样本 | 141 份 |
-| 联合 SHA-256 | `9afb6a321d1164f1d62798ba8d1711ea947d3813fff297e7759b91861d47957c` |
+| curated 样本 | 146 份 |
+| 联合 SHA-256 | `05a6bab7ef29f1080b50e8e5e8038fea707f518f555319c835b596a348024819` |
 
 ---
 
@@ -90,12 +90,34 @@ SMPDL 将数学证明审查拆分为三层（语义 S / 数学 M / 编程 P）�
 
 完整清单见 `reports/SMPDL_Audit_SampleSuite.md`。
 
+
+---
+
+## v2.6 补全 curated 语料并修复元数据
+
+在 v2.5 的 141 份 curated 报告基础上补入 5 份遗漏文档，扩展至 **146**：
+
+- `SMPDL_Construct_AndrewsCurtis_HumanChecklist.md` — Andrews-Curtis 构造人工清单
+- `SMP_ProofAnalysis_OpenAI_WeilClasses_SignError.md` — OpenAI Weil 类代数性撤回事件审计
+- `SMP_ProofAnalysis_OpenAI_KugaSatake_DependentGap.md` — OpenAI Kuga-Satake 对应代数性撤回事件审计
+- `SMP_ProofAnalysis_OpenAI_HodgeK3_Withdrawal.md` — OpenAI K3 曲面乘积 Hodge 猜想撤回事件审计
+- `SMPDL_arXiv_Paper.md` — SMPDL 方法论 arXiv 论文源文件
+
+同时修复：
+- ATTRIBUTION 清单表格分隔符格式错误；
+- 2 份旧报告仍指向 Zenodo v1 DOI；
+- `SMPDL_HistoricalAssumption_CognitiveLogic.md` 中「9 组」→「10 组」笔误。
+
+新联合 SHA-256：`05a6bab7ef29f1080b50e8e5e8038fea707f518f555319c835b596a348024819`。
+
+> Zenodo v2.6 新 DOI 将在发布后立即回填本页面。
+
 ## 下载归档
 
-- [SMPDL_v2.5_sample_reports_141files.zip](archives/SMPDL_v2.5_sample_reports_141files.zip) — 141 份 curated 报告官方归档（最新）
-- [SMPDL_v2.2_sample_reports_96files.zip](archives/SMPDL_v2.2_sample_reports_96files.zip) — 96 份 curated 报告历史归档
-- [SMPDL_v2.1_sample_reports_86files.zip](archives/SMPDL_v2.1_sample_reports_86files.zip) — 86 份 curated 报告历史归档
-- [SMPDL_v2.0_sample_reports_76files.zip](archives/SMPDL_v2.0_sample_reports_76files.zip) — 76 份 curated 报告历史归档
+- [SMPDL_v2.6_sample_reports_146files.zip](archives/SMPDL_v2.6_sample_reports_146files.zip) — 146 份 curated 报告官方归档（最新）
+- [SMPDL_v2.6_sample_reports_146files.zip](archives/SMPDL_v2.6_sample_reports_146files.zip) — 96 份 curated 报告历史归档
+- [SMPDL_v2.6_sample_reports_146files.zip](archives/SMPDL_v2.6_sample_reports_146files.zip) — 86 份 curated 报告历史归档
+- [SMPDL_v2.6_sample_reports_146files.zip](archives/SMPDL_v2.6_sample_reports_146files.zip) — 76 份 curated 报告历史归档
 - [Zenodo 记录](https://zenodo.org/records/23344975) — 持久 DOI 与元数据（v14 · 记录 23344975）
 
 ---

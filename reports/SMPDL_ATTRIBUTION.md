@@ -7,29 +7,31 @@
 ## 基本信息
 
 - **方法论名称**：Göttingen S/M/P × D/L 数学证明审查方法论
-- **版本**：v2.5
+- **版本**：v2.6
 - **作者**：CAMPANASILVAE · fecit · MMXXVI
 - **首发时间**：2026-10-12 GMT+8
+- **最后更新**：2026-10-13 GMT+8
 - **许可协议**：[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)（署名-非商用-相同方式共享）
 - **Zenodo 记录**：https://zenodo.org/records/23344975
 - **DOI**：10.5281/zenodo.23344975
 - **Concept DOI**：10.5281/zenodo.23318734
-- **论文版本**：v14（新增同构-异基础案例组 H1–H10 共 30 份审计报告 + 4 份元分析文档，将 curated 报告数从 107 扩展至 141；领域覆盖几何、分析离散化、组合、代数、域论、分析基础、逻辑、集合论、计算基础与可计算性）
+- **论文版本**：v15（在 v14 的 141 份 curated 报告基础上补入 5 份遗漏文档：Andrews-Curtis 人工清单、3 份 OpenAI 撤回事件审计、arXiv 论文源文件，curated 报告数扩展至 146）
 
 ---
 
 ## 联合内容指纹
 
-以下 141 份报告内容拼接后的 SHA-256 摘要：
+以下 146 份报告内容拼接后的 SHA-256 摘要：
 
 ```
-9afb6a321d1164f1d62798ba8d1711ea947d3813fff297e7759b91861d47957c
+05a6bab7ef29f1080b50e8e5e8038fea707f518f555319c835b596a348024819
 ```
 
 ### 纳入指纹计算的文件清单
 
 | 序号 | 文件名 | 说明 |
-|---| 1 | `SMP_Isomorphism_Checklist.md` | 检查标准总清单 v1.3 |
+|---|---|---|
+| 1 | `SMP_Isomorphism_Checklist.md` | 检查标准总清单 v1.3 |
 | 2 | `SMPDL_Framework.md` | S/M/P × D/L 统一框架 |
 | 3 | `SMPDL_ResearchProof_AppelHaken_FourColor.md` | 研究级证明审查：Appel–Haken 四色定理 |
 | 4 | `SMPDL_Retro_Review.md` | 旧案例重审：欧几里得 / 等腰 / Kempe / RH |
@@ -170,6 +172,12 @@
 | 139 | `SMPDL_HistoricalAssumption_CognitiveLogic.md` | 假设基础认知历史逻辑 |
 | 140 | `SMPDL_TuningParameter_Matrix.md` | 调参来源矩阵 |
 | 141 | `SMPDL_HistoricalMigration_Skeleton.md` | 数学史迁移骨架分析 |
+| 142 | `SMPDL_Construct_AndrewsCurtis_HumanChecklist.md` | Andrews-Curtis 构造尝试：人工补全/检验清单 |
+| 143 | `SMP_ProofAnalysis_OpenAI_HodgeK3_Withdrawal.md` | OpenAI K3 曲面乘积有理 Hodge 猜想撤回事件审计 |
+| 144 | `SMP_ProofAnalysis_OpenAI_KugaSatake_DependentGap.md` | OpenAI K3 曲面 Kuga-Satake 对应代数性撤回事件审计 |
+| 145 | `SMP_ProofAnalysis_OpenAI_WeilClasses_SignError.md` | OpenAI 分裂阿贝尔八维簇 Weil 类代数性撤回事件审计 |
+| 146 | `SMPDL_arXiv_Paper.md` | SMPDL 方法论 arXiv 论文源文件（Markdown 版） |
+
 ---
 
 ## 使用声明
@@ -325,12 +333,21 @@ cat \
   SMPDL_HistoricalAssumption_CognitiveLogic.md \
   SMPDL_TuningParameter_Matrix.md \
   SMPDL_HistoricalMigration_Skeleton.md \
+  SMPDL_Construct_AndrewsCurtis_HumanChecklist.md \
+  SMP_ProofAnalysis_OpenAI_HodgeK3_Withdrawal.md \
+  SMP_ProofAnalysis_OpenAI_KugaSatake_DependentGap.md \
+  SMP_ProofAnalysis_OpenAI_WeilClasses_SignError.md \
+  SMPDL_arXiv_Paper.md \
   | sha256sum
 ```
 
 预期输出：
 
 ```
-9afb6a321d1164f1d62798ba8d1711ea947d3813fff297e7759b91861d47957c  -
+05a6bab7ef29f1080b50e8e5e8038fea707f518f555319c835b596a348024819  -
 ```
 
+---
+
+**Göttingen S/M/P × D/L 数学证明审查方法论 · v2.6**  
+**作者**：CAMPANASILVAE · fecit · MMXXVI
