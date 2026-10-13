@@ -23,7 +23,7 @@
 以下 97 份报告内容拼接后的 SHA-256 摘要：
 
 ```
-8aa5b1f92d4be2fae0e0878bf88e6e2f32af448ecc04e55e955f7ea372071d8b
+3a365aff1760cb0ed3e48502886ebba53c71174af2d4f4bad9c7834af3504be2
 ```
 
 ### 纳入指纹计算的文件清单
