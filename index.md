@@ -2,7 +2,7 @@
 
 > Göttingen S/M/P × D/L 数学证明审查方法论
 
-[![DOI](https://zenodo.org/badge/DOI-10.5281/zenodo.23339747.svg)](https://doi.org/10.5281/zenodo.23339747)
+[![DOI](https://zenodo.org/badge/DOI-10.5281/zenodo.23344975.svg)](https://doi.org/10.5281/zenodo.23344975)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
 
 ---
@@ -15,7 +15,7 @@
 | **方法论框架** | [reports/SMPDL_Framework.md](reports/SMPDL_Framework.md) |
 | **文献引用纪律** | [reports/SMPDL_Citation_Discipline.md](reports/SMPDL_Citation_Discipline.md) |
 | **署名与指纹** | [reports/SMPDL_ATTRIBUTION.md](reports/SMPDL_ATTRIBUTION.md) |
-| **Zenodo 记录** | https://zenodo.org/records/23335515 |
+| **Zenodo 记录** | https://zenodo.org/records/23344975 |
 | **WorkBuddy 交互页** | https://riemann-lecturer-04390.app.workbuddy.host/ |
 
 ---
@@ -27,7 +27,7 @@
 | 方法论版本 | v2.5 |
 | 论文版本 | v14 |
 | 页面版本 | v5.93 |
-| DOI | [10.5281/zenodo.23339747](https://doi.org/10.5281/zenodo.23339747)（v12 DOI） |
+| DOI | [10.5281/zenodo.23344975](https://doi.org/10.5281/zenodo.23344975)（v12 DOI） |
 | curated 样本 | 141 份 |
 | 联合 SHA-256 | `9afb6a321d1164f1d62798ba8d1711ea947d3813fff297e7759b91861d47957c` |
 
@@ -96,7 +96,7 @@ SMPDL 将数学证明审查拆分为三层（语义 S / 数学 M / 编程 P）�
 - [SMPDL_v2.2_sample_reports_96files.zip](archives/SMPDL_v2.2_sample_reports_96files.zip) — 96 份 curated 报告历史归档
 - [SMPDL_v2.1_sample_reports_86files.zip](archives/SMPDL_v2.1_sample_reports_86files.zip) — 86 份 curated 报告历史归档
 - [SMPDL_v2.0_sample_reports_76files.zip](archives/SMPDL_v2.0_sample_reports_76files.zip) — 76 份 curated 报告历史归档
-- [Zenodo 记录](https://zenodo.org/records/23339747) — 持久 DOI 与元数据（v12 DOI）
+- [Zenodo 记录](https://zenodo.org/records/23344975) — 持久 DOI 与元数据（v12 DOI）
 
 ---
 
