@@ -7,23 +7,23 @@
 ## 基本信息
 
 - **方法论名称**：Göttingen S/M/P × D/L 数学证明审查方法论
-- **版本**：v2.0
+- **版本**：v2.1
 - **作者**：CAMPANASILVAE · fecit · MMXXVI
 - **首发时间**：2026-10-12 GMT+8
 - **许可协议**：[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)（署名-非商用-相同方式共享）
 - **Zenodo 记录**：https://zenodo.org/records/23335515
 - **DOI**：10.5281/zenodo.23335515
 - **Concept DOI**：10.5281/zenodo.23318734
-- **论文版本**：v9（同步扩展 SMPDL 文献引用纪律至全部 76 份报告；新增 15 份 OpenAI 700+ 库高危抽样审计）
+- **论文版本**：v10（同步扩展 SMPDL 文献引用纪律至全部 86 份报告；新增 10 份已完成 Lean 形式化但仍高风险的 OpenAI 700+ 库高危抽样审计）
 
 ---
 
 ## 联合内容指纹
 
-以下 76 份报告内容拼接后的 SHA-256 摘要：
+以下 86 份报告内容拼接后的 SHA-256 摘要：
 
 ```
-747378ee121e2693060d471f72e018d41526c507a561a32287f5a4adb971536c
+be26f9d200470a8b3521ad667d633e04b23a3c83ef44e1140db3483a0e5bd624
 ```
 
 ### 纳入指纹计算的文件清单
@@ -106,7 +106,16 @@
 | 74 | `SMP_ProofAnalysis_OpenAI_Padic_SectionConjecture.md` | OpenAI p-adic section 猜想 |
 | 75 | `SMP_ProofAnalysis_OpenAI_DuffinSchaeffer_Inhomogeneous.md` | OpenAI 弱非齐次 Duffin–Schaeffer |
 | 76 | `SMP_ProofAnalysis_OpenAI_Modularity_ImaginaryQuadratic.md` | OpenAI 虚二次域椭圆曲线模性 |
-
+| 77 | `SMP_ProofAnalysis_OpenAI_Logspace_Derandomization_L_RL_BPL.md` | OpenAI 对数空间精确去随机化 L=RL=BPL |
+| 78 | `SMP_ProofAnalysis_OpenAI_MatrixMultiplication_Exponent_9_4.md` | OpenAI 矩阵乘法指数 ω≤9/4 |
+| 79 | `SMP_ProofAnalysis_OpenAI_Hilbert16_LimitCycles.md` | OpenAI Hilbert 第 16 问题极限环一致有界 |
+| 80 | `SMP_ProofAnalysis_OpenAI_Mahler_Conjecture_General.md` | OpenAI 一般凸体 Mahler 猜想 |
+| 81 | `SMP_ProofAnalysis_OpenAI_ThompsonGroup_Nonamenable.md` | OpenAI Thompson 群 F 非可均化 |
+| 82 | `SMP_ProofAnalysis_OpenAI_BogomolovPop_Reconstruction.md` | OpenAI Bogomolov–Pop 函数域重建 |
+| 83 | `SMP_ProofAnalysis_OpenAI_Falconer_DistanceConjecture.md` | OpenAI Falconer 距离猜想 |
+| 84 | `SMP_ProofAnalysis_OpenAI_Ostmann_InverseGoldbach.md` | OpenAI Ostmann 逆 Goldbach 猜想 |
+| 85 | `SMP_ProofAnalysis_OpenAI_ReciprocalSum_Szemeredi.md` | OpenAI Erdős 倒数和与拟多项式 Szemerédi 界 |
+| 86 | `SMP_ProofAnalysis_OpenAI_ShortEgyptianFractions.md` | OpenAI 短 Egyptian 分数 |
 ---
 
 ## 使用声明
@@ -197,11 +206,22 @@ cat \
   SMP_ProofAnalysis_OpenAI_Padic_SectionConjecture.md \
   SMP_ProofAnalysis_OpenAI_DuffinSchaeffer_Inhomogeneous.md \
   SMP_ProofAnalysis_OpenAI_Modularity_ImaginaryQuadratic.md \
+  SMP_ProofAnalysis_OpenAI_Logspace_Derandomization_L_RL_BPL.md \
+  SMP_ProofAnalysis_OpenAI_MatrixMultiplication_Exponent_9_4.md \
+  SMP_ProofAnalysis_OpenAI_Hilbert16_LimitCycles.md \
+  SMP_ProofAnalysis_OpenAI_Mahler_Conjecture_General.md \
+  SMP_ProofAnalysis_OpenAI_ThompsonGroup_Nonamenable.md \
+  SMP_ProofAnalysis_OpenAI_BogomolovPop_Reconstruction.md \
+  SMP_ProofAnalysis_OpenAI_Falconer_DistanceConjecture.md \
+  SMP_ProofAnalysis_OpenAI_Ostmann_InverseGoldbach.md \
+  SMP_ProofAnalysis_OpenAI_ReciprocalSum_Szemeredi.md \
+  SMP_ProofAnalysis_OpenAI_ShortEgyptianFractions.md \
   | sha256sum
 ```
 
 预期输出：
 
 ```
-747378ee121e2693060d471f72e018d41526c507a561a32287f5a4adb971536c  -
+be26f9d200470a8b3521ad667d633e04b23a3c83ef44e1140db3483a0e5bd624  -
 ```
+
