@@ -11,7 +11,7 @@
 
 | 入口 | 链接 |
 |---|---|
-| **GitHub Pages 首页** | `https://USERNAME.github.io/REPO_NAME`（部署后替换） |
+| **GitHub Pages 首页** | `https://hengzhiliang-ux.github.io/SMPDL` |
 | **Zenodo 论文/数据记录** | https://zenodo.org/records/23333543 |
 | **WorkBuddy 交互页面** | https://riemann-lecturer-04390.app.workbuddy.host/ |
 | **66 份报告联合 SHA-256** | `873f89d0668bedde2633ac1017adac2722584762860ec1a4b89c6f0a075ef4c6` |

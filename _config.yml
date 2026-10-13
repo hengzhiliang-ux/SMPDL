@@ -1,7 +1,7 @@
 title: SMPDL / OpenAI 700+ Math Corpus Audit
 description: Göttingen S/M/P × D/L framework audit of mathematical proofs and AI-generated claims.
-url: "https://USERNAME.github.io"
-baseurl: "/REPO_NAME"
+url: "https://hengzhiliang-ux.github.io"
+baseurl: "/SMPDL"
 theme: minima
 markdown: kramdown
 kramdown:
