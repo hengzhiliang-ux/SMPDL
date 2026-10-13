@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "title": "A Three-Layer Dependency-and-Logic Audit for Mathematical Proofs and AI-Generated Claims: The S/M/P × D/L Framework",
+    "publication_date": "2026-10-13",
+    "description": "We introduce a structured audit framework for mathematical proofs, conjectures, and AI-generated mathematical claims. The framework operates on three layers—Semantic, Mathematical, and Programming—and for each layer examines two complementary dimensions: internal Dependency relations and internal Logic-structure discipline. The resulting S/M/P × D/L matrix provides six elementary audit cells (S*D, S*L, M*D, M*L, P*D, P*L) plus cross-layer mapping checks. Version 8 extends the Citation Discipline (Authenticity Check + Support Check) to all 66 curated reports and adds five new high-risk audits from the OpenAI 700+ mathematical manuscript corpus: full BSD from low Selmer corank, quasi-Riemann hypothesis, rational Hodge conjecture for CM abelian varieties, Hilbert's tenth problem over ℚ, and isomorphism of free group factors. The attached SMPDL_v1.9_sample_reports_66files.zip contains 66 markdown reports used to compute the joint SHA-256 fingerprint 873f89d0668bedde2633ac1017adac2722584762860ec1a4b89c6f0a075ef4c6.",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "CAMPANASILVAE",
+        "affiliation": "Göttingen Mathematical History Index Project"
+      }
+    ],
+    "keywords": [
+      "mathematical proof audit",
+      "AI-generated proof verification",
+      "anti-foresight proof construction",
+      "machine-assisted proving",
+      "human-machine division of labor",
+      "autoformalisation fidelity",
+      "proof fallacies",
+      "disproved conjectures",
+      "Andrews-Curtis conjecture",
+      "Navier-Stokes",
+      "Riemann Hypothesis",
+      "four-color theorem",
+      "Lean",
+      "OpenAI 700+ corpus",
+      "Selmer converse",
+      "Kähler MMP",
+      "Gaussian free field",
+      "taming implies compatibility",
+      "Ashkin-Teller",
+      "citation discipline",
+      "source verification",
+      "Birch-Swinnerton-Dyer",
+      "Hodge conjecture",
+      "Hilbert tenth problem",
+      "free group factors"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "10.5281/zenodo.23318734",
+        "relation": "isVersionOf",
+        "scheme": "doi"
+      }
+    ],
+    "license": "cc-by-nc-sa-4.0",
+    "imprint_publisher": "Zenodo",
+    "upload_type": "publication",
+    "publication_type": "workingpaper"
+  }
+}
