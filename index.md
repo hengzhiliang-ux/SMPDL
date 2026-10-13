@@ -26,8 +26,8 @@
 |---|---|
 | 方法论版本 | v2.6 |
 | 论文版本 | v15 |
-| 页面版本 | v5.96 |
-| DOI | [10.5281/zenodo.23353609](https://doi.org/10.5281/zenodo.23353609)（v14 · Zenodo 记录 23344975） |
+| 页面版本 | v5.97 |
+| DOI | [10.5281/zenodo.23353609](https://doi.org/10.5281/zenodo.23353609)（v15 · Zenodo 记录 23353609） |
 | curated 样本 | 146 份 |
 | 联合 SHA-256 | `3f1a4c6c1ee04b3c67ed129ffa58aed02c2c3ca53a34583f292a70d31cecb7fe` |
 
@@ -110,15 +110,16 @@ SMPDL 将数学证明审查拆分为三层（语义 S / 数学 M / 编程 P）�
 
 新联合 SHA-256：`3f1a4c6c1ee04b3c67ed129ffa58aed02c2c3ca53a34583f292a70d31cecb7fe`。
 
-> Zenodo v2.6 新 DOI 将在发布后立即回填本页面。
+> Zenodo v2.6.1 DOI 与指纹已回填本页面。
 
 ## 下载归档
 
 - [SMPDL_v2.6_sample_reports_146files.zip](archives/SMPDL_v2.6_sample_reports_146files.zip) — 146 份 curated 报告官方归档（最新）
-- [SMPDL_v2.6_sample_reports_146files.zip](archives/SMPDL_v2.6_sample_reports_146files.zip) — 96 份 curated 报告历史归档
-- [SMPDL_v2.6_sample_reports_146files.zip](archives/SMPDL_v2.6_sample_reports_146files.zip) — 86 份 curated 报告历史归档
-- [SMPDL_v2.6_sample_reports_146files.zip](archives/SMPDL_v2.6_sample_reports_146files.zip) — 76 份 curated 报告历史归档
-- [Zenodo 记录](https://zenodo.org/records/23353609) — 持久 DOI 与元数据（v14 · 记录 23344975）
+- [SMPDL_v2.5_sample_reports_141files.zip](archives/SMPDL_v2.5_sample_reports_141files.zip) — 141 份 curated 报告历史归档
+- [SMPDL_v2.2_sample_reports_96files.zip](archives/SMPDL_v2.2_sample_reports_96files.zip) — 96 份 curated 报告历史归档
+- [SMPDL_v2.1_sample_reports_86files.zip](archives/SMPDL_v2.1_sample_reports_86files.zip) — 86 份 curated 报告历史归档
+- [SMPDL_v2.0_sample_reports_76files.zip](archives/SMPDL_v2.0_sample_reports_76files.zip) — 76 份 curated 报告历史归档
+- [Zenodo 记录](https://zenodo.org/records/23353609) — 持久 DOI 与元数据（v15 · 记录 23353609）
 
 ---
 
