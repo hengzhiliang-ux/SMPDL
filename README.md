@@ -14,7 +14,7 @@
 | **GitHub Pages 首页** | `https://hengzhiliang-ux.github.io/SMPDL` |
 | **Zenodo 论文/数据记录** | https://zenodo.org/records/23344975 |
 | **WorkBuddy 交互页面** | https://riemann-lecturer-04390.app.workbuddy.host/ |
-| **146 份报告联合 SHA-256** | `9afb6a321d1164f1d62798ba8d1711ea947d3813fff297e7759b91861d47957c` |
+| `05a6bab7ef29f1080b50e8e5e8038fea707f518f555319c835b596a348024819` |
 
 ---
 
