@@ -2,7 +2,7 @@
 
 > Göttingen S/M/P × D/L 数学证明审查方法论 · OpenAI 700+ 数学证明高危样本审计
 
-[![DOI](https://zenodo.org/badge/DOI-10.5281/zenodo.23333543.svg)](https://doi.org/10.5281/zenodo.23333543)
+[![DOI](https://zenodo.org/badge/DOI-10.5281/zenodo.23335515.svg)](https://doi.org/10.5281/zenodo.23335515)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
 
 ---
@@ -12,9 +12,9 @@
 | 入口 | 链接 |
 |---|---|
 | **GitHub Pages 首页** | `https://hengzhiliang-ux.github.io/SMPDL` |
-| **Zenodo 论文/数据记录** | https://zenodo.org/records/23333543 |
+| **Zenodo 论文/数据记录** | https://zenodo.org/records/23335515 |
 | **WorkBuddy 交互页面** | https://riemann-lecturer-04390.app.workbuddy.host/ |
-| **66 份报告联合 SHA-256** | `873f89d0668bedde2633ac1017adac2722584762860ec1a4b89c6f0a075ef4c6` |
+| **76 份报告联合 SHA-256** | `747378ee121e2693060d471f72e018d41526c507a561a32287f5a4adb971536c` |
 
 ---
 
@@ -39,8 +39,8 @@
 ├── LICENSE                                # CC BY-NC-SA 4.0
 ├── DISCLAIMER.md                          # OpenAI 原始内容引用声明
 ├── _config.yml                            # GitHub Pages / Jekyll 配置
-├── reports/                               # 69 份 Markdown 报告
-│   ├── SMPDL_Framework.md                 # 方法论框架 v1.9
+├── reports/                               # 79 份 Markdown 报告
+│   ├── SMPDL_Framework.md                 # 方法论框架 v2.0
 │   ├── SMPDL_Audit_SampleSuite.md           # 样本总览表
 │   ├── SMPDL_ATTRIBUTION.md                 # 署名、指纹、DOI
 │   ├── SMPDL_Citation_Discipline.md         # 文献引用纪律
@@ -49,9 +49,9 @@
 │   ├── SMP_ProofAnalysis_OpenAI_*.md        # OpenAI 样本审计
 │   └── SMPDL_Compare_OpenAI_*_PrePostFix.md # 修复前后对比
 ├── archives/                              # 官方归档 zip
-│   └── SMPDL_v1.9_sample_reports_66files.zip
+│   └── SMPDL_v2.0_sample_reports_76files.zip
 └── zenodo/                                # Zenodo metadata
-    └── zenodo_metadata_v1.9.json
+    └── zenodo_metadata_v2.0.json
 ```
 
 ---
@@ -60,7 +60,7 @@
 
 ### 方法论与指南
 
-- [SMPDL_Framework.md](reports/SMPDL_Framework.md) — 方法论框架 v1.9
+- [SMPDL_Framework.md](reports/SMPDL_Framework.md) — 方法论框架 v2.0
 - [SMPDL_Audit_SampleSuite.md](reports/SMPDL_Audit_SampleSuite.md) — 样本总览与教学分组
 - [SMPDL_ATTRIBUTION.md](reports/SMPDL_ATTRIBUTION.md) — 署名、许可、指纹、DOI
 - [SMPDL_Citation_Discipline.md](reports/SMPDL_Citation_Discipline.md) — 文献引用纪律
@@ -149,12 +149,12 @@
 
 | 项目 | 当前值 |
 |---|---|
-| 方法论版本 | v1.9 |
-| 论文版本 | v8 |
-| 页面版本 | v5.86 |
-| DOI | [10.5281/zenodo.23333543](https://doi.org/10.5281/zenodo.23333543) |
+| 方法论版本 | v2.0 |
+| 论文版本 | v9 |
+| 页面版本 | v5.87 |
+| DOI | [10.5281/zenodo.23335515](https://doi.org/10.5281/zenodo.23335515) |
 | 报告数量 | 66 份 curated + 3 份辅助 |
-| 联合 SHA-256 | `873f89d0668bedde2633ac1017adac2722584762860ec1a4b89c6f0a075ef4c6` |
+| 联合 SHA-256 | `747378ee121e2693060d471f72e018d41526c507a561a32287f5a4adb971536c` |
 
 ---
 
@@ -163,7 +163,7 @@
 1. **阅读总览**：从 [SMPDL_Audit_SampleSuite.md](reports/SMPDL_Audit_SampleSuite.md) 开始，了解样本分类与教学分组。
 2. **学习方法论**：阅读 [SMPDL_Framework.md](reports/SMPDL_Framework.md) 与 [SMPDL_Citation_Discipline.md](reports/SMPDL_Citation_Discipline.md)。
 3. **查看审计结论**：点击上方报告清单中的任意链接，GitHub 会自动渲染 Markdown。
-4. **下载完整归档**：访问 [archives/SMPDL_v1.9_sample_reports_66files.zip](archives/SMPDL_v1.9_sample_reports_66files.zip) 或 Zenodo 记录。
+4. **下载完整归档**：访问 [archives/SMPDL_v2.0_sample_reports_76files.zip](archives/SMPDL_v2.0_sample_reports_76files.zip) 或 Zenodo 记录。
 5. **验证指纹**：在 `reports/` 目录下按 [SMPDL_ATTRIBUTION.md](reports/SMPDL_ATTRIBUTION.md) 中的顺序 `cat` 所有文件并计算 SHA-256。
 
 ---
@@ -177,8 +177,8 @@
   title={A Three-Layer Dependency-and-Logic Audit for Mathematical Proofs and AI-Generated Claims: The S/M/P × D/L Framework},
   author={CAMPANASILVAE},
   year={2026},
-  howpublished={\url{https://doi.org/10.5281/zenodo.23333543}},
-  doi={10.5281/zenodo.23333543}
+  howpublished={\url{https://doi.org/10.5281/zenodo.23335515}},
+  doi={10.5281/zenodo.23335515}
 }
 ```
 

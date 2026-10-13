@@ -7,23 +7,23 @@
 ## 基本信息
 
 - **方法论名称**：Göttingen S/M/P × D/L 数学证明审查方法论
-- **版本**：v1.8
+- **版本**：v2.0
 - **作者**：CAMPANASILVAE · fecit · MMXXVI
 - **首发时间**：2026-10-12 GMT+8
 - **许可协议**：[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)（署名-非商用-相同方式共享）
-- **Zenodo 记录**：https://zenodo.org/records/23333543
-- **DOI**：10.5281/zenodo.23331604
+- **Zenodo 记录**：https://zenodo.org/records/23335515
+- **DOI**：10.5281/zenodo.23335515
 - **Concept DOI**：10.5281/zenodo.23318734
-- **论文版本**：v7（同步引入 SMPDL 文献引用纪律：真实性核查 + 支持性核查，纳入 S/M/P × D/L 框架与 Göttingen 数学史检索纪律）
+- **论文版本**：v9（同步扩展 SMPDL 文献引用纪律至全部 76 份报告；新增 15 份 OpenAI 700+ 库高危抽样审计）
 
 ---
 
 ## 联合内容指纹
 
-以下 61 份报告内容拼接后的 SHA-256 摘要：
+以下 76 份报告内容拼接后的 SHA-256 摘要：
 
 ```
-30d9a578c9bcc6cd8c38e2e370c5285097767030aa774fa426d49c8942b46750
+747378ee121e2693060d471f72e018d41526c507a561a32287f5a4adb971536c
 ```
 
 ### 纳入指纹计算的文件清单
@@ -91,6 +91,21 @@
 | 59 | `SMPDL_Compare_OpenAI_AshkinTeller_JointScaling_PrePostFix.md` | 修复前后对比：OpenAI Ashkin–Teller 联合 scaling limit（09-25→10-06） |
 | 60 | `SMPDL_Compare_OpenAI_FiniteOrdinaryMMP_PrePostFix.md` | 修复前后对比：OpenAI 有限普通 Kähler MMP（09-24→10-06） |
 | 61 | `SMPDL_Citation_Discipline.md` | 方法论纪律：文献引用真实性核查与支持性核查 |
+| 62 | `SMP_ProofAnalysis_OpenAI_BSD_LowSelmerCorank.md` | OpenAI 低 Selmer 秩完整 BSD 公式 |
+| 63 | `SMP_ProofAnalysis_OpenAI_QuasiRiemannHypothesis.md` | OpenAI 准 Riemann 假设 |
+| 64 | `SMP_ProofAnalysis_OpenAI_Hodge_CM_AbelianVarieties.md` | OpenAI CM 阿贝尔簇 Hodge 猜想 |
+| 65 | `SMP_ProofAnalysis_OpenAI_HilbertTenth_Rationals.md` | OpenAI 有理数域 Hilbert 第十问题 |
+| 66 | `SMP_ProofAnalysis_OpenAI_FreeGroupFactors_Isomorphism.md` | OpenAI 自由群因子同构 |
+| 67 | `SMP_ProofAnalysis_OpenAI_Catalan_Irrationality.md` | OpenAI Catalan 常数无理 |
+| 68 | `SMP_ProofAnalysis_OpenAI_Goldfeld_Density_Twists.md` | OpenAI Goldfeld 密度猜想与 2-逆命题 |
+| 69 | `SMP_ProofAnalysis_OpenAI_Chowla_Elliott_TwoPoint.md` | OpenAI Chowla/Elliott 两点相关 |
+| 70 | `SMP_ProofAnalysis_OpenAI_FontaineMazur_Prime2.md` | OpenAI p=2 Fontaine–Mazur 模性 |
+| 71 | `SMP_ProofAnalysis_OpenAI_GeometricLanglands_PosChar.md` | OpenAI 正特征受限几何 Langlands |
+| 72 | `SMP_ProofAnalysis_OpenAI_ZilberPink_Abelian.md` | OpenAI 阿贝尔簇 Zilber–Pink |
+| 73 | `SMP_ProofAnalysis_OpenAI_Pi_IrrationalityExponent2.md` | OpenAI π 的无理性指数为 2 |
+| 74 | `SMP_ProofAnalysis_OpenAI_Padic_SectionConjecture.md` | OpenAI p-adic section 猜想 |
+| 75 | `SMP_ProofAnalysis_OpenAI_DuffinSchaeffer_Inhomogeneous.md` | OpenAI 弱非齐次 Duffin–Schaeffer |
+| 76 | `SMP_ProofAnalysis_OpenAI_Modularity_ImaginaryQuadratic.md` | OpenAI 虚二次域椭圆曲线模性 |
 
 ---
 
@@ -167,11 +182,26 @@ cat \
   SMPDL_Compare_OpenAI_AshkinTeller_JointScaling_PrePostFix.md \
   SMPDL_Compare_OpenAI_FiniteOrdinaryMMP_PrePostFix.md \
   SMPDL_Citation_Discipline.md \
+  SMP_ProofAnalysis_OpenAI_BSD_LowSelmerCorank.md \
+  SMP_ProofAnalysis_OpenAI_QuasiRiemannHypothesis.md \
+  SMP_ProofAnalysis_OpenAI_Hodge_CM_AbelianVarieties.md \
+  SMP_ProofAnalysis_OpenAI_HilbertTenth_Rationals.md \
+  SMP_ProofAnalysis_OpenAI_FreeGroupFactors_Isomorphism.md \
+  SMP_ProofAnalysis_OpenAI_Catalan_Irrationality.md \
+  SMP_ProofAnalysis_OpenAI_Goldfeld_Density_Twists.md \
+  SMP_ProofAnalysis_OpenAI_Chowla_Elliott_TwoPoint.md \
+  SMP_ProofAnalysis_OpenAI_FontaineMazur_Prime2.md \
+  SMP_ProofAnalysis_OpenAI_GeometricLanglands_PosChar.md \
+  SMP_ProofAnalysis_OpenAI_ZilberPink_Abelian.md \
+  SMP_ProofAnalysis_OpenAI_Pi_IrrationalityExponent2.md \
+  SMP_ProofAnalysis_OpenAI_Padic_SectionConjecture.md \
+  SMP_ProofAnalysis_OpenAI_DuffinSchaeffer_Inhomogeneous.md \
+  SMP_ProofAnalysis_OpenAI_Modularity_ImaginaryQuadratic.md \
   | sha256sum
 ```
 
 预期输出：
 
 ```
-30d9a578c9bcc6cd8c38e2e370c5285097767030aa774fa426d49c8942b46750  -
+747378ee121e2693060d471f72e018d41526c507a561a32287f5a4adb971536c  -
 ```
