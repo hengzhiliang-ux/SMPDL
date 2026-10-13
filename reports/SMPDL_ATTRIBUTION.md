@@ -7,23 +7,23 @@
 ## 基本信息
 
 - **方法论名称**：Göttingen S/M/P × D/L 数学证明审查方法论
-- **版本**：v2.3
+- **版本**：v2.5
 - **作者**：CAMPANASILVAE · fecit · MMXXVI
 - **首发时间**：2026-10-12 GMT+8
 - **许可协议**：[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)（署名-非商用-相同方式共享）
-- **Zenodo 记录**：https://zenodo.org/records/23339747
-- **DOI**：10.5281/zenodo.23339747
+- **Zenodo 记录**：https://zenodo.org/records/23344975
+- **DOI**：10.5281/zenodo.23344975
 - **Concept DOI**：10.5281/zenodo.23318734
-- **论文版本**：v12（新增 1 份《十个最有希望 Lean 样本数学史回溯》方法论扩展报告，将 curated 报告数从 96 扩展至 97，并为 10 份 Lean 形式化样本定位最接近的经典构造与证明方法）
+- **论文版本**：v14（新增同构-异基础案例组 H1–H10 共 30 份审计报告 + 4 份元分析文档，将 curated 报告数从 107 扩展至 141；领域覆盖几何、分析离散化、组合、代数、域论、分析基础、逻辑、集合论、计算基础与可计算性）
 
 ---
 
 ## 联合内容指纹
 
-以下 97 份报告内容拼接后的 SHA-256 摘要：
+以下 141 份报告内容拼接后的 SHA-256 摘要：
 
 ```
-3a365aff1760cb0ed3e48502886ebba53c71174af2d4f4bad9c7834af3504be2
+9afb6a321d1164f1d62798ba8d1711ea947d3813fff297e7759b91861d47957c
 ```
 
 ### 纳入指纹计算的文件清单
@@ -126,6 +126,50 @@
 | 95 | `SMP_ProofAnalysis_OpenAI_StrongThinSpanningTrees.md` | OpenAI 强瘦生成树确定性构造 |
 | 96 | `SMP_ProofAnalysis_OpenAI_Tingley_SphereIsometry.md` | OpenAI Tingley 球面等距问题 |
 | 97 | `SMPDL_HistoryRetrospective_10PromisingSamples.md` | 十个最有希望 Lean 样本数学史回溯 |
+| 98 | `SMP_ProofAnalysis_OpenAI_DeligneDrinfeld_Conjecture.md` | OpenAI Deligne–Drinfeld 猜想 |
+| 99 | `SMP_ProofAnalysis_OpenAI_ErdosPomerance_JointDickman.md` | OpenAI Erdős–Pomerance 联合 Dickman 猜想 |
+| 100 | `SMP_ProofAnalysis_OpenAI_LargePrimeGaps_PositiveDensity.md` | OpenAI 大素数间隙正密度 |
+| 101 | `SMP_ProofAnalysis_OpenAI_RieszTransform_Rectifiability.md` | OpenAI 高余维 Riesz 变换可求长性 |
+| 102 | `SMP_ProofAnalysis_OpenAI_ErdosSimilarity_Dyadic.md` | OpenAI Erdős 相似性猜想 dyadic 情形 |
+| 103 | `SMP_ProofAnalysis_OpenAI_LogBrunnMinkowski.md` | OpenAI 对数 Brunn–Minkowski 不等式 |
+| 104 | `SMP_ProofAnalysis_OpenAI_UniqueGames_Conjecture.md` | OpenAI Unique Games 猜想 |
+| 105 | `SMP_ProofAnalysis_OpenAI_PlanarDistinctDistances.md` | OpenAI 平面不同距离与单位距离界 |
+| 106 | `SMP_ProofAnalysis_OpenAI_BenjaminiSchramm_Nonuniqueness.md` | OpenAI Benjamini–Schramm 非唯一性猜想 |
+| 107 | `SMP_ProofAnalysis_OpenAI_ConnesBicentralizer.md` | OpenAI Connes 双中心化子猜想 |
+| 108 | `SMP_ProofAnalysis_Euclidean_TriangleAngleSum.md` | 欧氏几何三角形内角和 |
+| 109 | `SMP_ProofAnalysis_Spherical_TriangleAngleSum.md` | 球面几何三角形内角和 |
+| 110 | `SMPDL_Compare_EuclideanVsSpherical_TriangleAngleSum_PrePostFix.md` | 欧氏 vs 球面三角形内角和对比 |
+| 111 | `SMP_ProofAnalysis_ClassicalLogic_ExistenceWitness.md` | 经典逻辑存在性证明 |
+| 112 | `SMP_ProofAnalysis_IntuitionisticLogic_ExistenceWitness.md` | 直觉主义逻辑存在性证明 |
+| 113 | `SMPDL_Compare_ClassicalVsIntuitionistic_ExistenceWitness_PrePostFix.md` | 经典 vs 直觉主义存在性证明对比 |
+| 114 | `SMP_ProofAnalysis_Characteristic0_FreshmanDream.md` | 特征 0 二项式展开 |
+| 115 | `SMP_ProofAnalysis_CharacteristicP_FreshmanDream.md` | 特征 p Freshman's Dream |
+| 116 | `SMPDL_Compare_Char0vsCharP_FreshmanDream_PrePostFix.md` | 特征 0 vs 特征 p 对比 |
+| 117 | `SMP_ProofAnalysis_CommutativeRing_BinomialPower.md` | 交换环二项式幂 |
+| 118 | `SMP_ProofAnalysis_NonCommutativeRing_BinomialPower.md` | 非交换环二项式幂 |
+| 119 | `SMPDL_Compare_CommutativeVsNonCommutative_BinomialPower_PrePostFix.md` | 交换 vs 非交换二项式幂对比 |
+| 120 | `SMP_ProofAnalysis_ZFC_VectorSpaceBasis.md` | ZFC 向量空间基 |
+| 121 | `SMP_ProofAnalysis_ZF_VectorSpaceBasis.md` | ZF 向量空间基 |
+| 122 | `SMPDL_Compare_ZFCvsZF_VectorSpaceBasis_PrePostFix.md` | ZFC vs ZF 向量空间基对比 |
+| 123 | `SMP_ProofAnalysis_StandardAnalysis_DerivativeLimit.md` | 标准分析导数定义 |
+| 124 | `SMP_ProofAnalysis_NonstandardAnalysis_DerivativeInfinitesimal.md` | 非标准分析导数定义 |
+| 125 | `SMPDL_Compare_StandardVsNonstandard_Derivative_PrePostFix.md` | 标准 vs 非标准分析导数对比 |
+| 126 | `SMP_ProofAnalysis_FiniteGraph_CycleByMinDegree.md` | 有限图最小度环存在性 |
+| 127 | `SMP_ProofAnalysis_InfiniteGraph_CycleByMinDegree.md` | 无限图最小度环存在性 |
+| 128 | `SMPDL_Compare_FiniteVsInfinite_GraphCycle_PrePostFix.md` | 有限 vs 无限图环存在性对比 |
+| 129 | `SMP_ProofAnalysis_SetTheory_NatPlusZero.md` | 集合论自然数加法单位元 |
+| 130 | `SMP_ProofAnalysis_TypeTheory_NatPlusZero.md` | 类型论自然数加法单位元 |
+| 131 | `SMPDL_Compare_SetTheoryVsTypeTheory_NatPlusZero_PrePostFix.md` | 集合论 vs 类型论自然数加法单位元对比 |
+| 132 | `SMP_ProofAnalysis_DifferentialEquation_ExponentialGrowth.md` | 微分方程指数增长 |
+| 133 | `SMP_ProofAnalysis_DifferenceEquation_ExponentialGrowth.md` | 差分方程指数增长 |
+| 134 | `SMPDL_Compare_DifferentialVsDifference_ExponentialGrowth_PrePostFix.md` | 微分 vs 差分指数增长对比 |
+| 135 | `SMP_ProofAnalysis_ClassicalAnalysis_IntermediateValue.md` | 经典分析中间值定理 |
+| 136 | `SMP_ProofAnalysis_ComputableAnalysis_IntermediateValue.md` | 可计算分析中间值定理 |
+| 137 | `SMPDL_Compare_ClassicalVsComputable_IntermediateValue_PrePostFix.md` | 经典 vs 可计算分析中间值定理对比 |
+| 138 | `SMPDL_HistoricalOrder_Index.md` | 数学史顺序索引 |
+| 139 | `SMPDL_HistoricalAssumption_CognitiveLogic.md` | 假设基础认知历史逻辑 |
+| 140 | `SMPDL_TuningParameter_Matrix.md` | 调参来源矩阵 |
+| 141 | `SMPDL_HistoricalMigration_Skeleton.md` | 数学史迁移骨架分析 |
 ---
 
 ## 使用声明
@@ -237,12 +281,56 @@ cat \
   SMP_ProofAnalysis_OpenAI_StrongThinSpanningTrees.md \
   SMP_ProofAnalysis_OpenAI_Tingley_SphereIsometry.md \
   SMPDL_HistoryRetrospective_10PromisingSamples.md \
+  SMP_ProofAnalysis_OpenAI_DeligneDrinfeld_Conjecture.md \
+  SMP_ProofAnalysis_OpenAI_ErdosPomerance_JointDickman.md \
+  SMP_ProofAnalysis_OpenAI_LargePrimeGaps_PositiveDensity.md \
+  SMP_ProofAnalysis_OpenAI_RieszTransform_Rectifiability.md \
+  SMP_ProofAnalysis_OpenAI_ErdosSimilarity_Dyadic.md \
+  SMP_ProofAnalysis_OpenAI_LogBrunnMinkowski.md \
+  SMP_ProofAnalysis_OpenAI_UniqueGames_Conjecture.md \
+  SMP_ProofAnalysis_OpenAI_PlanarDistinctDistances.md \
+  SMP_ProofAnalysis_OpenAI_BenjaminiSchramm_Nonuniqueness.md \
+  SMP_ProofAnalysis_OpenAI_ConnesBicentralizer.md \
+  SMP_ProofAnalysis_Euclidean_TriangleAngleSum.md \
+  SMP_ProofAnalysis_Spherical_TriangleAngleSum.md \
+  SMPDL_Compare_EuclideanVsSpherical_TriangleAngleSum_PrePostFix.md \
+  SMP_ProofAnalysis_ClassicalLogic_ExistenceWitness.md \
+  SMP_ProofAnalysis_IntuitionisticLogic_ExistenceWitness.md \
+  SMPDL_Compare_ClassicalVsIntuitionistic_ExistenceWitness_PrePostFix.md \
+  SMP_ProofAnalysis_Characteristic0_FreshmanDream.md \
+  SMP_ProofAnalysis_CharacteristicP_FreshmanDream.md \
+  SMPDL_Compare_Char0vsCharP_FreshmanDream_PrePostFix.md \
+  SMP_ProofAnalysis_CommutativeRing_BinomialPower.md \
+  SMP_ProofAnalysis_NonCommutativeRing_BinomialPower.md \
+  SMPDL_Compare_CommutativeVsNonCommutative_BinomialPower_PrePostFix.md \
+  SMP_ProofAnalysis_ZFC_VectorSpaceBasis.md \
+  SMP_ProofAnalysis_ZF_VectorSpaceBasis.md \
+  SMPDL_Compare_ZFCvsZF_VectorSpaceBasis_PrePostFix.md \
+  SMP_ProofAnalysis_StandardAnalysis_DerivativeLimit.md \
+  SMP_ProofAnalysis_NonstandardAnalysis_DerivativeInfinitesimal.md \
+  SMPDL_Compare_StandardVsNonstandard_Derivative_PrePostFix.md \
+  SMP_ProofAnalysis_FiniteGraph_CycleByMinDegree.md \
+  SMP_ProofAnalysis_InfiniteGraph_CycleByMinDegree.md \
+  SMPDL_Compare_FiniteVsInfinite_GraphCycle_PrePostFix.md \
+  SMP_ProofAnalysis_SetTheory_NatPlusZero.md \
+  SMP_ProofAnalysis_TypeTheory_NatPlusZero.md \
+  SMPDL_Compare_SetTheoryVsTypeTheory_NatPlusZero_PrePostFix.md \
+  SMP_ProofAnalysis_DifferentialEquation_ExponentialGrowth.md \
+  SMP_ProofAnalysis_DifferenceEquation_ExponentialGrowth.md \
+  SMPDL_Compare_DifferentialVsDifference_ExponentialGrowth_PrePostFix.md \
+  SMP_ProofAnalysis_ClassicalAnalysis_IntermediateValue.md \
+  SMP_ProofAnalysis_ComputableAnalysis_IntermediateValue.md \
+  SMPDL_Compare_ClassicalVsComputable_IntermediateValue_PrePostFix.md \
+  SMPDL_HistoricalOrder_Index.md \
+  SMPDL_HistoricalAssumption_CognitiveLogic.md \
+  SMPDL_TuningParameter_Matrix.md \
+  SMPDL_HistoricalMigration_Skeleton.md \
   | sha256sum
 ```
 
 预期输出：
 
 ```
-3a365aff1760cb0ed3e48502886ebba53c71174af2d4f4bad9c7834af3504be2  -
+9afb6a321d1164f1d62798ba8d1711ea947d3813fff297e7759b91861d47957c  -
 ```
 
