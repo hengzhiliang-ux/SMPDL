@@ -24,12 +24,12 @@
 
 | 项目 | 值 |
 |---|---|
-| 方法论版本 | v2.1 |
-| 论文版本 | v10 |
-| 页面版本 | v5.88 |
+| 方法论版本 | v2.2 |
+| 论文版本 | v11 |
+| 页面版本 | v5.89 |
 | DOI | [10.5281/zenodo.23335515](https://doi.org/10.5281/zenodo.23335515) |
-| curated 样本 | 86 份 |
-| 联合 SHA-256 | `be26f9d200470a8b3521ad667d633e04b23a3c83ef44e1140db3483a0e5bd624` |
+| curated 样本 | 96 份 |
+| 联合 SHA-256 | `b6ab5dfd9f0e5f469b8d67b02e6ceac20bcff58fd980f132667a85d2e3af10c8` |
 
 ---
 
@@ -52,13 +52,13 @@ SMPDL 将数学证明审查拆分为三层（语义 S / 数学 M / 编程 P）�
 - 已被人类数学家证伪/撤回的声明
 - 修复前后对比
 
-最新 5 份高危样本（第四批：已完成 Lean 形式化但仍高风险）：
+最新 5 份高危样本（第五批：结构相对完善但仍有补证需求）：
 
-1. [对数空间精确去随机化 L=RL=BPL](reports/SMP_ProofAnalysis_OpenAI_Logspace_Derandomization_L_RL_BPL.md)
-2. [矩阵乘法指数 ω≤9/4](reports/SMP_ProofAnalysis_OpenAI_MatrixMultiplication_Exponent_9_4.md)
-3. [Hilbert 第 16 问题极限环一致有界](reports/SMP_ProofAnalysis_OpenAI_Hilbert16_LimitCycles.md)
-4. [一般凸体 Mahler 猜想](reports/SMP_ProofAnalysis_OpenAI_Mahler_Conjecture_General.md)
-5. [Thompson 群 F 非可均化](reports/SMP_ProofAnalysis_OpenAI_ThompsonGroup_Nonamenable.md)
+1. [四次多项式无平方值与幂自由值](reports/SMP_ProofAnalysis_OpenAI_Squarefree_Quartics.md)
+2. [Jacobsthal 函数二次上界](reports/SMP_ProofAnalysis_OpenAI_Jacobsthal_QuadraticBound.md)
+3. [totient 原像数目渐近公式](reports/SMP_ProofAnalysis_OpenAI_Totient_Asymptotic.md)
+4. [高斯素数图有界连通分支](reports/SMP_ProofAnalysis_OpenAI_GaussianPrime_BoundedComponents.md)
+5. [平面图与有界树宽图 L1 嵌入](reports/SMP_ProofAnalysis_OpenAI_Planar_L1_Embeddings.md)
 
 完整样本清单见 [reports/SMPDL_Audit_SampleSuite.md](reports/SMPDL_Audit_SampleSuite.md)。
 
@@ -66,7 +66,8 @@ SMPDL 将数学证明审查拆分为三层（语义 S / 数学 M / 编程 P）�
 
 ## 下载归档
 
-- [SMPDL_v2.1_sample_reports_86files.zip](archives/SMPDL_v2.1_sample_reports_86files.zip) — 86 份 curated 报告官方归档
+- [SMPDL_v2.2_sample_reports_96files.zip](archives/SMPDL_v2.2_sample_reports_96files.zip) — 96 份 curated 报告官方归档
+- [SMPDL_v2.1_sample_reports_86files.zip](archives/SMPDL_v2.1_sample_reports_86files.zip) — 86 份 curated 报告历史归档
 - [SMPDL_v2.0_sample_reports_76files.zip](archives/SMPDL_v2.0_sample_reports_76files.zip) — 76 份 curated 报告历史归档
 - [Zenodo 记录](https://zenodo.org/records/23335515) — 持久 DOI 与元数据
 

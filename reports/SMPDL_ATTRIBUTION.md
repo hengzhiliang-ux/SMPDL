@@ -7,30 +7,29 @@
 ## 基本信息
 
 - **方法论名称**：Göttingen S/M/P × D/L 数学证明审查方法论
-- **版本**：v2.1
+- **版本**：v2.2
 - **作者**：CAMPANASILVAE · fecit · MMXXVI
 - **首发时间**：2026-10-12 GMT+8
 - **许可协议**：[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)（署名-非商用-相同方式共享）
 - **Zenodo 记录**：https://zenodo.org/records/23335515
 - **DOI**：10.5281/zenodo.23335515
 - **Concept DOI**：10.5281/zenodo.23318734
-- **论文版本**：v10（同步扩展 SMPDL 文献引用纪律至全部 86 份报告；新增 10 份已完成 Lean 形式化但仍高风险的 OpenAI 700+ 库高危抽样审计）
+- **论文版本**：v11（同步扩展 SMPDL 文献引用纪律至全部 96 份报告；新增 10 份结构相对完善但仍有补证需求的 Lean 形式化 OpenAI 700+ 库抽样审计）
 
 ---
 
 ## 联合内容指纹
 
-以下 86 份报告内容拼接后的 SHA-256 摘要：
+以下 96 份报告内容拼接后的 SHA-256 摘要：
 
 ```
-be26f9d200470a8b3521ad667d633e04b23a3c83ef44e1140db3483a0e5bd624
+8aa5b1f92d4be2fae0e0878bf88e6e2f32af448ecc04e55e955f7ea372071d8b
 ```
 
 ### 纳入指纹计算的文件清单
 
 | 序号 | 文件名 | 说明 |
-|---|---|---|
-| 1 | `SMP_Isomorphism_Checklist.md` | 检查标准总清单 v1.3 |
+|---| 1 | `SMP_Isomorphism_Checklist.md` | 检查标准总清单 v1.3 |
 | 2 | `SMPDL_Framework.md` | S/M/P × D/L 统一框架 |
 | 3 | `SMPDL_ResearchProof_AppelHaken_FourColor.md` | 研究级证明审查：Appel–Haken 四色定理 |
 | 4 | `SMPDL_Retro_Review.md` | 旧案例重审：欧几里得 / 等腰 / Kempe / RH |
@@ -116,6 +115,16 @@ be26f9d200470a8b3521ad667d633e04b23a3c83ef44e1140db3483a0e5bd624
 | 84 | `SMP_ProofAnalysis_OpenAI_Ostmann_InverseGoldbach.md` | OpenAI Ostmann 逆 Goldbach 猜想 |
 | 85 | `SMP_ProofAnalysis_OpenAI_ReciprocalSum_Szemeredi.md` | OpenAI Erdős 倒数和与拟多项式 Szemerédi 界 |
 | 86 | `SMP_ProofAnalysis_OpenAI_ShortEgyptianFractions.md` | OpenAI 短 Egyptian 分数 |
+| 87 | `SMP_ProofAnalysis_OpenAI_Squarefree_Quartics.md` | OpenAI 四次多项式无平方值与幂自由值 |
+| 88 | `SMP_ProofAnalysis_OpenAI_Jacobsthal_QuadraticBound.md` | OpenAI Jacobsthal 函数二次上界 |
+| 89 | `SMP_ProofAnalysis_OpenAI_Totient_Asymptotic.md` | OpenAI totient 原像数目渐近公式 |
+| 90 | `SMP_ProofAnalysis_OpenAI_GaussianPrime_BoundedComponents.md` | OpenAI 高斯素数图有界连通分支 |
+| 91 | `SMP_ProofAnalysis_OpenAI_Planar_L1_Embeddings.md` | OpenAI 平面图与有界树宽图 L1 嵌入 |
+| 92 | `SMP_ProofAnalysis_OpenAI_GraphSwitch_Mixing.md` | OpenAI 图切换链多项式混合 |
+| 93 | `SMP_ProofAnalysis_OpenAI_PeriodicTiling_Counterexample.md` | OpenAI 三维周期镶嵌反例 |
+| 94 | `SMP_ProofAnalysis_OpenAI_KazhdanLusztig_CombinatorialInvariance.md` | OpenAI Kazhdan–Lusztig 组合不变性 |
+| 95 | `SMP_ProofAnalysis_OpenAI_StrongThinSpanningTrees.md` | OpenAI 强瘦生成树确定性构造 |
+| 96 | `SMP_ProofAnalysis_OpenAI_Tingley_SphereIsometry.md` | OpenAI Tingley 球面等距问题 |
 ---
 
 ## 使用声明
@@ -216,12 +225,22 @@ cat \
   SMP_ProofAnalysis_OpenAI_Ostmann_InverseGoldbach.md \
   SMP_ProofAnalysis_OpenAI_ReciprocalSum_Szemeredi.md \
   SMP_ProofAnalysis_OpenAI_ShortEgyptianFractions.md \
+  SMP_ProofAnalysis_OpenAI_Squarefree_Quartics.md \
+  SMP_ProofAnalysis_OpenAI_Jacobsthal_QuadraticBound.md \
+  SMP_ProofAnalysis_OpenAI_Totient_Asymptotic.md \
+  SMP_ProofAnalysis_OpenAI_GaussianPrime_BoundedComponents.md \
+  SMP_ProofAnalysis_OpenAI_Planar_L1_Embeddings.md \
+  SMP_ProofAnalysis_OpenAI_GraphSwitch_Mixing.md \
+  SMP_ProofAnalysis_OpenAI_PeriodicTiling_Counterexample.md \
+  SMP_ProofAnalysis_OpenAI_KazhdanLusztig_CombinatorialInvariance.md \
+  SMP_ProofAnalysis_OpenAI_StrongThinSpanningTrees.md \
+  SMP_ProofAnalysis_OpenAI_Tingley_SphereIsometry.md \
   | sha256sum
 ```
 
 预期输出：
 
 ```
-be26f9d200470a8b3521ad667d633e04b23a3c83ef44e1140db3483a0e5bd624  -
+8aa5b1f92d4be2fae0e0878bf88e6e2f32af448ecc04e55e955f7ea372071d8b  -
 ```
 

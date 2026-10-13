@@ -14,7 +14,7 @@
 | **GitHub Pages 首页** | `https://hengzhiliang-ux.github.io/SMPDL` |
 | **Zenodo 论文/数据记录** | https://zenodo.org/records/23335515 |
 | **WorkBuddy 交互页面** | https://riemann-lecturer-04390.app.workbuddy.host/ |
-| **86 份报告联合 SHA-256** | `be26f9d200470a8b3521ad667d633e04b23a3c83ef44e1140db3483a0e5bd624` |
+| **96 份报告联合 SHA-256** | `b6ab5dfd9f0e5f469b8d67b02e6ceac20bcff58fd980f132667a85d2e3af10c8` |
 
 ---
 
@@ -39,8 +39,8 @@
 ├── LICENSE                                # CC BY-NC-SA 4.0
 ├── DISCLAIMER.md                          # OpenAI 原始内容引用声明
 ├── _config.yml                            # GitHub Pages / Jekyll 配置
-├── reports/                               # 89 份 Markdown 报告
-│   ├── SMPDL_Framework.md                 # 方法论框架 v2.1
+├── reports/                               # 99 份 Markdown 报告
+│   ├── SMPDL_Framework.md                 # 方法论框架 v2.2
 │   ├── SMPDL_Audit_SampleSuite.md           # 样本总览表
 │   ├── SMPDL_ATTRIBUTION.md                 # 署名、指纹、DOI
 │   ├── SMPDL_Citation_Discipline.md         # 文献引用纪律
@@ -50,10 +50,12 @@
 │   └── SMPDL_Compare_OpenAI_*_PrePostFix.md # 修复前后对比
 ├── archives/                              # 官方归档 zip
 │   ├── SMPDL_v2.0_sample_reports_76files.zip
-│   └── SMPDL_v2.1_sample_reports_86files.zip
+│   ├── SMPDL_v2.1_sample_reports_86files.zip
+│   └── SMPDL_v2.2_sample_reports_96files.zip
 └── zenodo/                                # Zenodo metadata
     ├── zenodo_metadata_v2.0.json
-    └── zenodo_metadata_v2.1.json
+    ├── zenodo_metadata_v2.1.json
+    └── zenodo_metadata_v2.2.json
 ```
 
 ---

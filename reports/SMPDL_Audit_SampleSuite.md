@@ -1,6 +1,6 @@
 # SMPDL 结构审查样本总览
 
-> 基于 Göttingen S/M/P × D/L v2.1  
+> 基于 Göttingen S/M/P × D/L v2.2  
 > 日期：2026-10-13
 
 ---
@@ -68,6 +68,16 @@
 | OpenAI Ostmann 逆 Goldbach 猜想 | AI 生成研究级声明，已完成 Lean 形式化 | 🔴 高风险 | S*L/M*L 加性数论难题 | 「有限修改」量化与筛法一致性未披露 |
 | OpenAI Erdős 倒数和与拟多项式 Szemerédi 界 | AI 生成研究级声明，已完成 Lean 形式化 | 🔴 高风险 | S*L/M*L 声明远超 Green–Tao 类结果 | 密度增量/正则性新工具未披露；形式化范围待查 |
 | OpenAI 短 Egyptian 分数 | AI 生成研究级声明，已完成 Lean 形式化 | 🔴 高风险 | M*D/M*L 数论长期问题 | O(log log b) 构造与匹配下界未披露 |
+| OpenAI 四次多项式无平方值与幂自由值 | AI 生成研究级声明，已完成 Lean 形式化 | 🟡 中风险 | M*D/M*L 筛法余项 | 多项式次数/退化条件/误差项未披露 |
+| OpenAI Jacobsthal 函数二次上界 | AI 生成研究级声明，已完成 Lean 形式化 | 🟡 中风险 | S*L/M*L 常数有效性 | 常数是否有效/是否对所有 n 成立未披露 |
+| OpenAI totient 原像数目渐近公式 | AI 生成研究级声明，已完成 Lean 形式化 | 🟡 中风险 | M*D/M*L 重数控制 | Ford 结构定理/重数尾部未披露 |
+| OpenAI 高斯素数图有界连通分支 | AI 生成研究级声明，已完成 Lean 形式化 | 🟡 中风险 | S*D/S*L 图定义 | 步长集/图范围/是否依赖未证分布未披露 |
+| OpenAI 平面图与有界树宽图 L1 嵌入 | AI 生成研究级声明，已完成 Lean 形式化 | 🟡 中风险 | S*L/T2 量词滑移 | 平面常数畸变 vs 树宽常数畸变未拆分 |
+| OpenAI 图切换链多项式混合 | AI 生成研究级声明，已完成 Lean 形式化 | 🟡 中风险 | S*L/M*L 量词范围 | 所有度序列 vs P-stable/有界度未说明 |
+| OpenAI 三维周期镶嵌反例 | AI 生成研究级声明，已完成 Lean 形式化 | 🟡 中风险 | S*D/S*L 定义 | tile 形状/允许等距变换/完全周期性未披露 |
+| OpenAI Kazhdan–Lusztig 组合不变性 | AI 生成研究级声明，已完成 Lean 形式化 | 🟡 中风险 | S*L/M*D 范围 | Coxeter 群类/区间同构定义未说明 |
+| OpenAI 强瘦生成树确定性构造 | AI 生成研究级声明，已完成 Lean 形式化 | 🟡 中风险 | S*L/M*D 构造 | 确定性算法/thinness 常数/运行时间未披露 |
+| OpenAI Tingley 球面等距问题 | AI 生成研究级声明，已完成 Lean 形式化 | 🟡 中风险 | S*L/S*D 适用范围 | Banach 空间类/延拓构造/非严格凸情形未披露 |
 
 ---
 
@@ -399,6 +409,72 @@
 
 ---
 
+### 5.11 第五批：结构相对完善但仍有补证需求的 Lean 形式化样本
+
+本批 10 份样本选自 OpenAI 700+ 库中**已完成 Lean 形式化、数学声明边界相对清晰**的族，重点不是「能否成立」，而是「即便 Lean 编译通过，人类科学家仍可能在何处需要补充证明或验证」。
+
+#### 5.11.1 四次多项式无平方值与幂自由值
+
+- **文件**：`SMP_ProofAnalysis_OpenAI_Squarefree_Quartics.md`
+- **声明**：给出四次多项式取无平方值及一般幂自由值的密度公式。
+- **审计要点**：🟡 中风险。Hooley/Poonen 方法可推广，但需披露：多项式退化条件、局部密度 Euler 积、四次筛法余项控制、Lean 主定理是否含误差项。
+
+#### 5.11.2 Jacobsthal 函数二次上界
+
+- **文件**：`SMP_ProofAnalysis_OpenAI_Jacobsthal_QuadraticBound.md`
+- **声明**：Jacobsthal 函数 $g(n)$ 满足二次上界。
+- **审计要点**：🟡 中风险。Iwaniec 已有接近结果；需补充：常数是否有效、是否对所有 $n$ 成立、小 $n$ 验证、Lean 定理量词。
+
+#### 5.11.3 totient 原像数目渐近公式
+
+- **文件**：`SMP_ProofAnalysis_OpenAI_Totient_Asymptotic.md`
+- **声明**：给出 totient 值计数函数 $V(x)$ 的显式渐近公式。
+- **审计要点**：🟡 中风险。Ford 结构定理是核心；需补充：主项公式、误差项、重数 $A(m)$ 尾部控制、Lean 范围。
+
+#### 5.11.4 高斯素数图的有界连通分支
+
+- **文件**：`SMP_ProofAnalysis_OpenAI_GaussianPrime_BoundedComponents.md`
+- **声明**：高斯素数图的连通分支一致有界。
+- **审计要点**：🟡 中风险。结构清晰但**图定义是关键**：步长集有限还是所有高斯素数、有界常数、是否依赖未证高斯素数对分布。
+
+#### 5.11.5 平面图与有界树宽图的 L1 常数畸变嵌入
+
+- **文件**：`SMP_ProofAnalysis_OpenAI_Planar_L1_Embeddings.md`
+- **声明**：平面图与有界树宽图均可嵌入 $L_1$ 且畸变为常数。
+- **审计要点**：🟡 中风险。**两篇手稿结论可能不同**：有界树宽部分是经典结果；平面常数畸变若成立是重大突破。需拆分两个定理并给出畸变常数。
+
+#### 5.11.6 图切换链的多项式混合
+
+- **文件**：`SMP_ProofAnalysis_OpenAI_GraphSwitch_Mixing.md`
+- **声明**：对所有可图示度序列，switch chain 快速混合。
+- **审计要点**：🟡 中风险。"every degree sequence" 是强声明；需补充：混合时间依赖、是否绕过 P-stability、已知慢混合序列如何处理。
+
+#### 5.11.7 三维周期镶嵌反例
+
+- **文件**：`SMP_ProofAnalysis_OpenAI_PeriodicTiling_Counterexample.md`
+- **声明**：存在三维 translational tile 可镶嵌但不允许完全周期镶嵌。
+- **审计要点**：🟡 中风险。具体构造性问题；需补充：tile 显式几何描述、允许等距变换群、非周期性严格证明、与 Greenfeld–Tao 方法的衔接。
+
+#### 5.11.8 Kazhdan–Lusztig 多项式的组合不变性
+
+- **文件**：`SMP_ProofAnalysis_OpenAI_KazhdanLusztig_CombinatorialInvariance.md`
+- **声明**：KL 多项式只依赖 Bruhat 区间同构类型。
+- **审计要点**：🟡 中风险。范围是关键：对所有 Coxeter 群、有限/仿射型、还是仅对称群？需明确区间同构定义（偏序集 vs Bruhat 图）。
+
+#### 5.11.9 强瘦生成树的确定性构造
+
+- **文件**：`SMP_ProofAnalysis_OpenAI_StrongThinSpanningTrees.md`
+- **声明**：对 $k$-边连通图，存在确定性多项式时间构造的强瘦生成树。
+- **审计要点**：🟡 中风险。需区分**存在性**（概率方法）与**确定性算法**；补充 thinness 常数、运行时间、是否对所有边权成立。
+
+#### 5.11.10 Tingley 球面等距问题
+
+- **文件**：`SMP_ProofAnalysis_OpenAI_Tingley_SphereIsometry.md`
+- **声明**：球面等距可延拓为全空间实线性等距，肯定回答 Tingley 问题。
+- **审计要点**：🟡 中风险。**适用范围**是核心：对所有 Banach 空间、有限维、严格凸、还是光滑？需给出延拓映射显式构造并在非严格凸空间验证。
+
+---
+
 ## 6. 语料级审计方法论
 
 ### 6.1 OpenAI 700+ 数学证明库
@@ -456,6 +532,16 @@
 | 展示「Lean 形式化 ≠ 纸面主定理」scope gap 风险（加性数论） | OpenAI Ostmann 逆 Goldbach 猜想 |
 | 展示「Lean 形式化 ≠ 纸面主定理」scope gap 风险（组合/解析数论） | OpenAI Erdős 倒数和与拟多项式 Szemerédi 界 |
 | 展示「Lean 形式化 ≠ 纸面主定理」scope gap 风险（数论） | OpenAI 短 Egyptian 分数 |
+| 展示「结构清晰但需补充：局部密度/余项/退化条件」风险 | OpenAI 四次多项式无平方值 |
+| 展示「结构清晰但需补充：常数有效性/小 cases/量词范围」风险 | OpenAI Jacobsthal 函数二次上界 |
+| 展示「结构清晰但需补充：主项/误差项/重数尾部」风险 | OpenAI totient 原像数目渐近公式 |
+| 展示「结构清晰但核心对象定义未披露」风险 | OpenAI 高斯素数图有界连通分支 |
+| 展示「同族多手稿结论被混为一谈」风险 | OpenAI 平面图与有界树宽图 L1 嵌入 |
+| 展示「every 量词范围过宽」风险（组合 MCMC） | OpenAI 图切换链多项式混合 |
+| 展示「具体构造需人工验证几何/非周期性」风险 | OpenAI 三维周期镶嵌反例 |
+| 展示「适用范围定义不清」风险（代数组合） | OpenAI Kazhdan–Lusztig 组合不变性 |
+| 展示「存在性 vs 确定性算法混淆」风险 | OpenAI 强瘦生成树确定性构造 |
+| 展示「适用范围定义不清」风险（泛函分析） | OpenAI Tingley 球面等距问题 |
 
 ---
 
@@ -468,7 +554,7 @@
 
 ## 9. 署名与许可
 
-**Göttingen S/M/P × D/L 数学证明审查方法论** · v2.1  
+**Göttingen S/M/P × D/L 数学证明审查方法论** · v2.2  
 **作者**：CAMPANASILVAE · fecit · MMXXVI  
 **首发时间**：2026-10-12 GMT+8 · **更新**：2026-10-13  
 **许可协议**：[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)（署名-非商用-相同方式共享）  
