@@ -10,38 +10,35 @@
 - **版本**：v2.8
 - **作者**：CAMPANASILVAE · fecit · MMXXVI
 - **首发时间**：2026-10-12 GMT+8
-- **最后更新**：2026-10-14 GMT+8（v3.1 发布同步）
+- **最后更新**：2026-10-14 GMT+8（v3.2 发布同步）
 - **许可协议**：[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)（署名-非商用-相同方式共享）
-- **Zenodo 记录**：https://zenodo.org/records/23358578（v3.1 · 最新）
-- **DOI**：10.5281/zenodo.23358578
+- **Zenodo 记录**：https://zenodo.org/records/23359509（v3.2 · 最新）
+- **DOI**：10.5281/zenodo.23359509
 - **Concept DOI**：10.5281/zenodo.23318734
-- **论文版本**：v22（curated 268 份 = v21 的 259 份 + 新增 9 份：**B4 LLM 盲判报告**（三轮并读定稿）+ 三份冻结盲答卷（R1 试点/R2 正式/R3 B4b 变体）+ 盲判最小上下文 + 判据注入材料 + 预测机器 C-4 脚本 + C-4 登记簿 `SMPDL_Prediction_Registry.csv`（随包发布、不入指纹）。内容：P2-④ B4 工单收官 + C-4 预测机器自动化落地，与压测报告 §B4 / 预测方法论 v1.2 联动。）
+- **论文版本**：v23（curated 269 份 = v22 的 268 份 + 新增 1 份：**SMPDL_HumanAI_InteractionModes.md**（人机交互六模式目录 v1.0：人工层三模式/协作层三模式/四条接口契约/B4 校准机制，六模式全部回贴案例库证据）。内容：B4 三轮实证 + C-4 落地的模式学固化，与 HumanMachine_Division / LawHistoryRefinement / B4 报告 / C-4 脚本四线联动。）
 
 ---
 
-## 联合内容指纹（v22 候选，待 Zenodo 发布）
+## 联合内容指纹（v23 候选，待 Zenodo 发布）
 
-以下 268 份报告内容拼接后的 SHA-256 摘要：
+以下 269 份报告内容拼接后的 SHA-256 摘要：
 
 ```
-6b41bcde536a6731b5a1039f3b80b16a27c051c4366382d7428a8707d55c9286
+32f8596a3cb296a713921bd392695a79a43cfc12ea7f74231ffc510555b700d4
 ```
 
-**顺序规范（自 v22 起固定）**：v3.0 归档 zip 内序（SMP/SMPL/SML 前缀 md+py）+ 新文件按入库序追加（完整清单见工作区 `_v22_filelist.txt`）。
+**顺序规范（自 v22 起固定）**：v3.0 归档 zip 内序（SMP/SMPL/SML 前缀 md+py）+ 新文件按入库序追加（v22 清单见 `_v22_filelist.txt`；v23 追加 `SMPDL_HumanAI_InteractionModes.md`，完整清单见 `_v23_filelist.txt`）。
 **诚实披露**：v21 及更早版本的指纹计算顺序未存档，无法复算（历史指纹仅作记录）；v22 起顺序规范固定，可复现。
 
-### v22 新增文件清单（9 份）
+### v23 新增文件清单（1 份）
 
-- `SMPDL_B4_LLMBlindJudge_Report.md`（B4 执行报告 v3.0：三轮盲判并读，Q1 文档化可机器化 / Q2 裸机预填 / Q3 人工必填）
-- `SMPDL_B4_BlindAnswers_R1_Pilot.md` / `SMPDL_B4_BlindAnswers_R2_Official.md` / `SMPDL_B4_BlindAnswers_R3_B4b.md`（三轮盲答卷，冻结存证）
-- `SMPDL_B4_MinimalContext.md`（去污染最小上下文）/ `SMPDL_B4_CriteriaInjection.md`（判据注入材料）
-- `SMPDL_PredictionMachine_C4.py`（预测机器 checklist 脚本）+ `SMPDL_Prediction_Registry.csv`（登记簿，随包发布不入指纹）
+- `SMPDL_HumanAI_InteractionModes.md`（人机交互六模式目录 v1.0：概念奇点留白 / 语义忠实审查 / 验证解读拍板 / 预测机器协作 / 对抗红队 / 律史元研究 × 机器层会计系统；含 B4 三层预填契约与校准轮次表）
 
-### v22 归档
+### v23 归档
 
 | 归档 | 大小 | MD5 |
 |---|---|---|
-| `SMPDL_v22_archive.zip` | 1,088,356 bytes | `4bf071fdb35d112d8f4e9dee57e4babb` |
+| `SMPDL_v23_archive.zip` | 1,094,230 bytes | `1367560ba7dd3fbd877e6f0beee07d18` |
 
 ---
 
@@ -79,9 +76,10 @@
 | v20 | 2026-10-14 | 258 | `64172c5a02320710f3be02b9b8b283c697f1f3029b757f691e8f1aa991850878` | ✅ 10.5281/zenodo.23357097（v2.9） |
 | v21 | 2026-10-14 | 259 | `4157e06ae3467fc7173ad8ea821a22adbf7add00ca27dd3702d640b255cdd7ba` | ✅ **已发布：10.5281/zenodo.23357269**（v3.0 · + OpenAI 700+ 库结构统计 · 归档 1,071,299 bytes · 公开已验证） |
 | v22 | 2026-10-14 | 268 | `6b41bcde536a6731b5a1039f3b80b16a27c051c4366382d7428a8707d55c9286` | ✅ **已发布：10.5281/zenodo.23358578**（Zenodo v3.1 · + B4 LLM 盲判三轮并读 + 预测机器 C-4 · 归档 1,088,356 bytes · MD5 `4bf071fb…`） |
+| v23 | 2026-10-14 | 269 | `32f8596a3cb296a713921bd392695a79a43cfc12ea7f74231ffc510555b700d4` | ✅ **已发布：10.5281/zenodo.23359509**（Zenodo v3.2 · + 人机交互六模式目录 v1.0 · 归档 1,094,230 bytes · MD5 `1367560b…`） |
 
-> 版本号对照：Zenodo v3.0 = curated 清单版本 v21；Zenodo v3.1 = curated v22。Concept DOI 不变：10.5281/zenodo.23318734。
-> ⚠️ 指纹顺序披露：v21 及更早的顺序未存档不可复算；v22 起固定为「v3.0 归档 zip 内序 + 追加序」（`_v22_filelist.txt`）。指纹快照字节（DOI 回填前定稿版）存 `_v22_fp_snapshots/SMPDL_ATTRIBUTION.md`，SHA-256 `28a48deec3ed24ab95649c92acd9eb4e108435da7c760e8846f492b7c535a2b0`——发布行 DOI 回填与归档 zip 重建属发布后行政性补丁，不参与 v22 指纹迭代（沿袭 v21 快照惯例）。
+> 版本号对照：Zenodo v3.0 = curated 清单版本 v21；Zenodo v3.1 = curated v22；Zenodo v3.2 = curated v23。Concept DOI 不变：10.5281/zenodo.23318734。
+> ⚠️ 指纹顺序披露：v21 及更早的顺序未存档不可复算；v22 起固定为「v3.0 归档 zip 内序 + 追加序」（`_v22_filelist.txt`）。指纹快照字节（DOI 回填前定稿版）存 `_v22_fp_snapshots/SMPDL_ATTRIBUTION.md`，SHA-256 `28a48deec3ed24ab95649c92acd9eb4e108435da7c760e8846f492b7c535a2b0`——发布行 DOI 回填与归档 zip 重建属发布后行政性补丁，不参与 v22 指纹迭代（沿袭 v21 快照惯例）。v23 同惯例：v23 指纹的可复算字节 = `SMPDL_v23_archive.zip` 内 `SMPDL_ATTRIBUTION.md`（占位符版，抽存 `_v23_fp_snapshots/`），按 `_v23_filelist.txt` 顺序拼接即得 `32f8596a…`。
 
 ### 纳入指纹计算的文件清单
 

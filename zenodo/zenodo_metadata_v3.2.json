@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "title": "Göttingen S/M/P x D/L: Mathematical Proof Audit Methodology — SMPDL curated reports v23 (H1-H43 + Prediction Machine + B4 Blind Judgment + Human-AI Interaction Modes)",
+    "upload_type": "dataset",
+    "publication_date": "2026-10-14",
+    "description": "Göttingen S/M/P x D/L mathematical proof audit framework: 269 curated reports (H1-H43 isomorphic-proof cross-foundation case library, law-science meta documents, OpenAI 700+ corpus statistics). v3.2 adds: Human-AI Interaction Modes catalogue (six modes across human/collaborative/machine layers, four interface contracts, B4-calibrated layered prefill protocol). Joint SHA-256 (v23, order-fixed): 32f8596a3cb296a713921bd392695a79a43cfc12ea7f74231ffc510555b700d4. Concept DOI: 10.5281/zenodo.23318734. License CC BY-NC-SA 4.0.",
+    "access_right": "open",
+    "license": "CC-BY-NC-SA-4.0",
+    "version": "v23 (Zenodo v3.2)",
+    "language": "zho",
+    "keywords": [
+      "mathematical proof audit",
+      "AI-generated proofs",
+      "SMPDL",
+      "human-AI interaction",
+      "removal-emergence",
+      "law migration",
+      "prediction machine",
+      "LLM blind judgment"
+    ],
+    "creators": [
+      {
+        "name": "CAMPANASILVAE",
+        "affiliation": "Göttingen SMPDL Project"
+      }
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "10.5281/zenodo.23318734",
+        "relation": "isVersionOf",
+        "resource_type": "dataset"
+      }
+    ]
+  }
+}

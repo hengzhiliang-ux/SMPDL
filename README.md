@@ -2,7 +2,7 @@
 
 This repository contains mathematical manuscripts and supporting proof artifacts produced by an internal OpenAI model. 
 
-[![DOI](https://zenodo.org/badge/DOI-10.5281/zenodo.23358578.svg)](https://doi.org/10.5281/zenodo.23358578)
+[![DOI](https://zenodo.org/badge/DOI-10.5281/zenodo.23359509.svg)](https://doi.org/10.5281/zenodo.23359509)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
 
 This collection includes results at different stages of verification. Not all have accompanying Lean formalizations. We will continue to update this repository with Lean formalizations as we obtain them. 
@@ -27,9 +27,9 @@ We are also releasing abridged summaries of the model's reasoning, covering the 
 | Family | Subject |
 |---|---|
 | **GitHub Pages 首页** | `https://hengzhiliang-ux.github.io/SMPDL` |
-| **Zenodo 论文/数据记录** | https://zenodo.org/records/23358578（v3.1 · Concept DOI 10.5281/zenodo.23318734） |
+| **Zenodo 论文/数据记录** | https://zenodo.org/records/23359509（v3.2 · Concept DOI 10.5281/zenodo.23318734） |
 | **WorkBuddy 交互页面** | https://riemann-lecturer-04390.app.workbuddy.host/ |
-| **268 份报告联合 SHA-256（v22，顺序固定）** | `6b41bcde536a6731b5a1039f3b80b16a27c051c4366382d7428a8707d55c9286` |
+| **269 份报告联合 SHA-256（v23，顺序固定）** | `32f8596a3cb296a713921bd392695a79a43cfc12ea7f74231ffc510555b700d4` |
 
 
 ## How the results were produced
@@ -50,7 +50,7 @@ We will preserve the public release history of this collection. Corrections and 
 ├── LICENSE                                # CC BY-NC-SA 4.0
 ├── DISCLAIMER.md                          # OpenAI 原始内容引用声明
 ├── _config.yml                            # GitHub Pages / Jekyll 配置
-├── reports/                               # 269 份 Markdown 报告 + 脚本（curated 268 入指纹 + 登记簿）
+├── reports/                               # 270 份 Markdown 报告 + 脚本（curated 269 入指纹 + 登记簿）
 │   ├── SMPDL_Framework.md                 # 方法论框架 v2.8
 │   ├── SMPDL_Audit_SampleSuite.md           # 样本总览表
 │   ├── SMPDL_ATTRIBUTION.md                 # 署名、指纹、DOI
@@ -63,7 +63,7 @@ We will preserve the public release history of this collection. Corrections and 
 │   ├── SMPDL_B4_*.md                        # B4 LLM 盲判（三轮并读）
 │   └── SMPDL_PredictionMachine_C4.py        # 预测机器 C-4 脚本
 ├── archives/                              # 官方归档 zip
-│   └── SMPDL_v22_archive.zip               # 268 份 curated 归档（最新 · Zenodo v3.1 镜像）
+│   └── SMPDL_v23_archive.zip               # 269 份 curated 归档（最新 · Zenodo v3.2 镜像）
 └── zenodo/                                # Zenodo metadata
     └── zenodo_metadata_v3.1.json
 ```
@@ -165,11 +165,11 @@ We will preserve the public release history of this collection. Corrections and 
 | 项目 | 当前值 |
 |---|---|
 | 方法论版本 | v2.8 |
-| 论文版本 | v22（curated 268 份） |
+| 论文版本 | v23（curated 269 份） |
 | 页面版本 | v5.93 |
-| DOI | [10.5281/zenodo.23358578](https://doi.org/10.5281/zenodo.23358578)（Zenodo v3.1 · Concept 10.5281/zenodo.23318734） |
-| 报告数量 | 268 份 curated |
-| 联合 SHA-256 | `6b41bcde536a6731b5a1039f3b80b16a27c051c4366382d7428a8707d55c9286`（v22 · 顺序固定） |
+| DOI | [10.5281/zenodo.23359509](https://doi.org/10.5281/zenodo.23359509)（Zenodo v3.2 · Concept 10.5281/zenodo.23318734） |
+| 报告数量 | 269 份 curated |
+| 联合 SHA-256 | `32f8596a3cb296a713921bd392695a79a43cfc12ea7f74231ffc510555b700d4`（v23 · 顺序固定） |
 
 ---
 
@@ -192,8 +192,8 @@ We will preserve the public release history of this collection. Corrections and 
   title={A Three-Layer Dependency-and-Logic Audit for Mathematical Proofs and AI-Generated Claims: The S/M/P × D/L Framework},
   author={CAMPANASILVAE},
   year={2026},
-  howpublished={\url{https://doi.org/10.5281/zenodo.23358578}},
-  doi={10.5281/zenodo.23358578}
+  howpublished={\url{https://doi.org/10.5281/zenodo.23359509}},
+  doi={10.5281/zenodo.23359509}
 }
 ```
 
