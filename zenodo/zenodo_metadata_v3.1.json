@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "title": "Göttingen S/M/P x D/L: Mathematical Proof Audit Methodology — SMPDL curated reports v22 (H1-H43 + Prediction Machine + B4 LLM Blind Judgment)",
+    "upload_type": "dataset",
+    "publication_date": "2026-10-14",
+    "description": "Göttingen S/M/P x D/L mathematical proof audit framework: 268 curated reports (H1-H43 isomorphic-proof cross-foundation case library, law-science meta documents, OpenAI 700+ corpus statistics). v3.1 adds: B4 LLM blind-judgment report (three rounds: pilot / clean / criteria-injection; per-question machine-readiness verdict) + frozen blind answer sheets + Prediction Machine C-4 executable checklist script + prediction registry. Joint SHA-256 (v22, order-fixed): 6b41bcde536a6731b5a1039f3b80b16a27c051c4366382d7428a8707d55c9286. Concept DOI: 10.5281/zenodo.23318734. License CC BY-NC-SA 4.0.",
+    "access_right": "open",
+    "license": "CC-BY-NC-SA-4.0",
+    "version": "v22 (Zenodo v3.1)",
+    "language": "zho",
+    "keywords": [
+      "mathematical proof audit",
+      "AI-generated proofs",
+      "SMPDL",
+      "removal-emergence",
+      "law migration",
+      "prediction machine",
+      "LLM blind judgment",
+      "formal verification"
+    ],
+    "creators": [
+      {
+        "name": "CAMPANASILVAE",
+        "affiliation": "Göttingen SMPDL Project"
+      }
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "10.5281/zenodo.23318734",
+        "relation": "isVersionOf",
+        "resource_type": "dataset"
+      }
+    ]
+  }
+}

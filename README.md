@@ -2,7 +2,8 @@
 
 This repository contains mathematical manuscripts and supporting proof artifacts produced by an internal OpenAI model. 
 
-As part of model development, we evaluate our models on open research problems. We expanded these evaluations after performance on our existing mathematical evaluations saturated. Some outputs build upon earlier results produced by the models.
+[![DOI](https://zenodo.org/badge/DOI-10.5281/zenodo.23358578.svg)](https://doi.org/10.5281/zenodo.23358578)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
 
 This collection includes results at different stages of verification. Not all have accompanying Lean formalizations. We will continue to update this repository with Lean formalizations as we obtain them. 
 
@@ -26,9 +27,9 @@ We are also releasing abridged summaries of the model's reasoning, covering the 
 | Family | Subject |
 |---|---|
 | **GitHub Pages 首页** | `https://hengzhiliang-ux.github.io/SMPDL` |
-| **Zenodo 论文/数据记录** | https://zenodo.org/records/23339747 |
+| **Zenodo 论文/数据记录** | https://zenodo.org/records/23358578（v3.1 · Concept DOI 10.5281/zenodo.23318734） |
 | **WorkBuddy 交互页面** | https://riemann-lecturer-04390.app.workbuddy.host/ |
-| **107 份报告联合 SHA-256** | `055a1154abae60bd2dfd6a4b6b48c492b6ee23c69458f0da036fc20fc581e870` |
+| **268 份报告联合 SHA-256（v22，顺序固定）** | `6b41bcde536a6731b5a1039f3b80b16a27c051c4366382d7428a8707d55c9286` |
 
 
 ## How the results were produced

@@ -1,7 +1,8 @@
 # SMPDL 结构审查样本总览
 
-> 基于 Göttingen S/M/P × D/L v2.4  
-> 日期：2026-10-13
+> 基于 Göttingen S/M/P × D/L v2.6  
+> 日期：2026-10-14  
+> **项目入口**：`SMPDL_PROJECT_README.md`（总 README + 工单台账）
 
 ---
 
@@ -89,6 +90,47 @@
 | OpenAI Benjamini–Schramm 非唯一性猜想 | AI 生成研究级声明，已完成 Lean 形式化 | 🔴 高风险 | S*D/M*D 阈值等价 | p_u 与 p_{2→2} 关系/定量依赖待补 |
 | OpenAI Connes 双中心化子猜想 | AI 生成研究级声明，已完成 Lean 形式化 | 🔴 高风险 | S*L/M*L 主定理 gap | 形式化仅为有界恢复引理，非双中心化子猜想 |
 | 十个最有希望样本数学史回溯 | 方法论扩展 · 历史谱系 | 🟢 通过 | 全绿 | 为 10 份 Lean 形式化样本定位最接近的经典构造与证明方法 |
+| H1 · 欧氏 ↔ 球面几何三角形内角和 | 同构-异基础 · 几何 | 🟢 通过 | 全绿 | 曲率 K 改变平行公设与角度和结论 |
+| H2 · 微分 ↔ 差分方程指数增长 | 同构-异基础 · 分析离散化 | 🟢 通过 | 全绿 | 步长 h 连接连续指数与几何序列 |
+| H3 · 有限 ↔ 无限图环存在性 | 同构-异基础 · 组合 | 🟢 通过 | 全绿 | 有限性假设失效导致结论反转 |
+| H4 · 交换 ↔ 非交换环二项式幂 | 同构-异基础 · 代数 | 🟢 通过 | 全绿 | 乘法交换律决定 (ab)ⁿ 展开形式 |
+| H5 · 特征 0 ↔ 特征 p Freshman Dream | 同构-异基础 · 域论 | 🟢 通过 | 全绿 | char(R) 改变二项式展开中间项 |
+| H6 · 标准 ↔ 非标准分析导数 | 同构-异基础 · 分析基础 | 🟢 通过 | 全绿 | ε-δ 极限与无穷小量等价表述 |
+| H7 · 经典 ↔ 直觉主义存在性证明 | 同构-异基础 · 逻辑 | 🟢 通过 | 全绿 | LEM 决定“存在”的构造性语义 |
+| H8 · ZFC ↔ ZF 向量空间基 | 同构-异基础 · 集合论 | 🟢 通过 | 全绿 | AC 决定任意向量空间基的存在性 |
+| H9 · 集合论 ↔ 类型论 n+0=n | 同构-异基础 · 计算基础 | 🟢 通过 | 全绿 | 外延相等与 identity type 证明结构不同 |
+| H10 · 经典 ↔ 可计算分析 IVT | 同构-异基础 · 可计算性 | 🟢 通过 | 全绿 | 可计算性约束把存在性证明升级为算法 |
+| H11 · 紧致 ↔ 非紧致空间最值定理 | 同构-异基础 · 拓扑学 | 🟢 通过 | 全绿 | 紧致性假设决定连续函数最值定理是否成立 |
+| H12 · 同构 ↔ 范畴等价 ↔ 同伦等价 | 同构-异基础 · 范畴论/代数拓扑 | 🟢 通过 | 全绿 | “相同”概念的三种强度分层 |
+| H13 · 频率主义 ↔ 贝叶斯 | 同构-异基础 · 概率论 | 🟢 通过 | 全绿 | 概率解释框架决定置信/可信区间语义 |
+| H14 · 经典代数簇 ↔ 概形 | 同构-异基础 · 代数几何 | 🟢 通过 | 全绿 | 幂零信息与结构层决定几何对象升级 |
+| H15 · 解析数论 ↔ 代数数论 | 同构-异基础 · 数论 | 🟢 通过 | 全绿 | 同一素数定理的解析/代数双路径 |
+| H16 · 欧氏 ↔ 球面 ↔ 双曲 | 同构-异基础 · 非欧几何 | 🟢 通过 | 全绿 | 曲率 K 统一三种几何的内角和公式 |
+| H17 · Riemann ↔ Lebesgue 积分 | 同构-异基础 · 实分析 | 🟢 通过 | 全绿 | 分划方向翻转换来极限封闭性（DCT） |
+| H18 · 经典解 ↔ 弱解 | 同构-异基础 · PDE | 🟢 通过 | 全绿 | 存在性↔正则性双向交换（Lax–Milgram/Weyl） |
+| H19 · 单复变 ↔ 多复变 | 同构-异基础 · 复分析 | 🟢 通过 | 全绿 | Hartogs 维度阈值相变（域自由性消失） |
+| H20 · 有限 ↔ 无限 Ramsey | 同构-异基础 · 组合 | 🟢 通过 | 全绿 | 公理依赖加深（ZF→DC）+ 结论强度分层 |
+| H21 · 一阶 ↔ 二阶逻辑 | 同构-异基础 · 模型论 | 🟢 通过 | 全绿 | 紧致性/LS/范畴性双向反转（无免费午餐） |
+| H22 · Hilbert ↔ 自然演绎 | 同构-异基础 · 证明论 | 🟢 通过 | 全绿 | 切消去/子公式性质从无到有（分析力反转） |
+| H23 · Hilbert ↔ Banach | 同构-异基础 · 泛函分析 | 🟢 通过 | 全绿 | 移除内积引发投影/自对偶双重坍塌 |
+| H24 · 线性 ↔ 置换表示 | 同构-异基础 · 表示论 | 🟢 通过 | 全绿 | 特征标完备性 vs Burnside 环（单向桥） |
+| H25 · 连续流 ↔ 离散映射 | 同构-异基础 · 动力系统 | 🟢 通过 | 全绿 | P–B 二分 vs Sharkovsky/混沌（定理群替换） |
+| H26 · 正则 ↔ 上下文无关 | 同构-异基础 · 自动机 | 🟢 通过 | 全绿 | 封闭性/判定性反转 + 隐藏 DCFL 层 |
+| H27 · 布尔 ↔ 量子逻辑 | 同构-异基础 · 逻辑/量子基础 | 🟢 通过 | 全绿 | 分配律移除引发真值/概率/表示三重坍塌（KS/Gleason） |
+| H28 · 结合 ↔ 非结合代数 | 同构-异基础 · 代数（律减法第二辑） | 🟢 通过 | 全绿 | aⁿ 失义 + Frobenius→Hurwitz 换价 + Artin/雅可比残存律 |
+| H29 · ℚ ↔ ℝ 完备律 | 同构-异基础 · 分析基础（上游律） | 🟢 通过 | 全绿 | IVT/单调收敛/HB(ℝ) 定理群整体生根；回溯串联 H10/H11/H17/H6 |
+| H30 · 条件收敛 ↔ 绝对可积 | 同构-异基础 · 测度论（交换律定价） | 🟢 通过 | 全绿 | ±π/4 反例 → Tonelli/Fubini 三档定价；与 H17 姊妹篇；首轮回验组 |
+| H34 · 阿氏 ↔ 非阿域 | 同构-异基础 · 代数/非阿分析 | 🟢 通过 | 全绿 | 无穷小解禁三实现；Ostrowski 回收；T 分类前向首验全中 |
+| H35 · 保守 ↔ 耗散流 | 同构-异基础 · 动力系统（几何力学） | 🟢 通过 | 全绿 | 吸引子解禁 + T3 二验全中（亚型发现） |
+| H36 · 经典结构 ↔ 线性逻辑 | 同构-异基础 · 证明论（资源敏感） | 🟢 通过 | 全绿 | bang 教科书命中；T2 修正二验全中；no-cloning 物理锚 |
+| H37 · Desarguesian ↔ 非 Desargues | 同构-异基础 · 射影几何 | 🟢 通过 | 全绿 | 三元环降档 + 平面 zoo；γ 表征型（即时） |
+| H38 · 整环 ↔ 含零因子环 | 同构-异基础 · 交换代数 | 🟢 通过 | 全绿 | 理想论因果回收（γ 因果型）；正交假说二验通过 |
+| H39 · 经典半环 ↔ tropical | 同构-异基础 · tropical 代数 | 🟢 通过 | 全绿 | 六项同名异义 + dequantization（γ 渐近型）；H2 联动 |
+| H40 · 可消 ↔ 非可消半群 | 同构-异基础 · 半群理论 | 🟢 通过 | 全绿 | Burnside 百年工程 + 逆半群因果 γ；降档阶梯三连 |
+| H41 · Hausdorff ↔ 非 Hausdorff | 同构-异基础 · 点集拓扑/谱理论 | 🟢 通过 | 全绿 | 特殊化序 + 三重表征链；旋钮族确证；H31 同型对 |
+| H42 · 拓扑荷禁闭 ↔ 解绑相变 | 同构-异基础 · 拓扑相变/数学物理 | 🟢 通过 | 全绿 | BKT 诺奖级 β + AS 指标链 γ；守恒三分定型；绕开式失效 |
+| H43 · 对称度量 ↔ 拟度量 | 同构-异基础 · 拟度量几何 | 🟢 通过 | 全绿 | γ 三形态齐聚（全库首例）；对称隐藏功能；收官组 |
+| H-Meta · 历史/认知/调参/迁移/律筛选/移除-涌现分析 | 方法论扩展 · 基础元分析 | 🟢 通过 | 全绿 | 八份文档支撑 H1–H30 的审校与教学 |
 
 ---
 
@@ -641,21 +683,441 @@
 | 展示「同族多定理中部分未形式化」风险（组合几何） | OpenAI 平面不同距离与单位距离界 |
 | 展示「临界阈值等价性与定量依赖待补」风险（概率渗流） | OpenAI Benjamini–Schramm 非唯一性猜想 |
 | 展示「技术性引理通过 ≠ 核心猜想得证」风险（算子代数） | OpenAI Connes 双中心化子猜想 |
+| 展示「单条公理改变恒等式结构」风险 | H4 交换 ↔ 非交换环二项式幂 |
+| 展示「域特征改变系数可除性」风险 | H5 特征 0 ↔ 特征 p Freshman's Dream |
+| 展示「逻辑规则改变存在语义」风险 | H7 经典 ↔ 直觉主义存在性证明 |
+| 展示「选择公理决定存在性可证性」风险 | H8 ZFC ↔ ZF 向量空间基 |
+| 展示「基础框架改变证明结构」风险 | H9 集合论 ↔ 类型论 n+0=n |
+| 展示「可计算性约束升级存在性证明」价值 | H10 经典 ↔ 可计算分析 IVT |
+| 展示「论域有限性反转组合结论」风险 | H3 有限 ↔ 无限图环存在性 |
+| 展示「连续-离散参数迁移」教学方法 | H2 微分 ↔ 差分方程指数增长 |
+| 展示「几何曲率改变角度和」直观案例 | H1 欧氏 ↔ 球面三角形内角和 |
 
 ---
 
-## 8. 高风险 / 中风险声明的人类科学家审查指南
+## 8. 同构-异基础案例组（H1–H43）
+
+本组收录 43 组"同证明骨架、异数学基础"的 SMPDL 审计案例（H1–H43，候选池清零收官），覆盖几何、非欧几何、分析、分析基础、测度论、组合、代数、拓扑、范畴论、代数几何、概率论、数论、逻辑、集合论、计算基础、可计算性、实分析、PDE、复分析、Ramsey 理论、模型论、证明论、泛函分析、表示论、动力系统、自动机理论、量子基础与非结合代数等领域。每组按 S/M/P × D/L v1.5 框架完成。
+
+### 8.1 几何：欧氏 ↔ 球面（H1）
+
+- **文件**：
+  - `SMP_ProofAnalysis_Euclidean_TriangleAngleSum.md` —— 欧氏三角形内角和 = 180°
+  - `SMP_ProofAnalysis_Spherical_TriangleAngleSum.md` —— 球面三角形内角和 = π + Area/R²
+  - `SMPDL_Compare_EuclideanVsSpherical_TriangleAngleSum_PrePostFix.md` —— 对比审计
+- **调参旋钮**：曲率 K（欧氏 K=0，球面 K=1/R²）
+- **迁移类型**：参数迁移
+- **SMPDL 标签**：`S-ISO / M-ISO / P-BISIM`
+
+### 8.2 分析离散化：微分 ↔ 差分方程（H2）
+
+- **文件**：
+  - `SMP_ProofAnalysis_DifferentialEquation_ExponentialGrowth.md` —— dP/dt = kP
+  - `SMP_ProofAnalysis_DifferenceEquation_ExponentialGrowth.md` —— Pₙ₊₁ = (1+hk)Pₙ
+  - `SMPDL_Compare_DifferentialVsDifference_ExponentialGrowth_PrePostFix.md` —— 对比审计
+- **调参旋钮**：步长 h
+- **迁移类型**：参数迁移
+- **SMPDL 标签**：`S-ISO / M-BISIM / P-BISIM`
+
+### 8.3 组合：有限 ↔ 无限图（H3）
+
+- **文件**：
+  - `SMP_ProofAnalysis_FiniteGraph_CycleByMinDegree.md` —— δ≥2 ⇒ 存在环
+  - `SMP_ProofAnalysis_InfiniteGraph_CycleByMinDegree.md` —— δ≥2 ⇏ 存在环
+  - `SMPDL_Compare_FiniteVsInfinite_GraphCycle_PrePostFix.md` —— 对比审计
+- **调参旋钮**：论域有限性
+- **迁移类型**：断裂迁移
+- **SMPDL 标签**：`S-ISO / M-BISIM / P-BISIM`
+
+### 8.4 代数：交换 ↔ 非交换环（H4）
+
+- **文件**：
+  - `SMP_ProofAnalysis_CommutativeRing_BinomialPower.md` —— (ab)ⁿ = aⁿbⁿ
+  - `SMP_ProofAnalysis_NonCommutativeRing_BinomialPower.md` —— (ab)ⁿ = a(ba)ⁿ⁻¹b
+  - `SMPDL_Compare_CommutativeVsNonCommutative_BinomialPower_PrePostFix.md` —— 对比审计
+- **调参旋钮**：乘法交换律
+- **迁移类型**：公理迁移
+- **SMPDL 标签**：`S-BISIM / M-BISIM / P-BISIM`
+
+### 8.5 域论：特征 0 ↔ 特征 p（H5）
+
+- **文件**：
+  - `SMP_ProofAnalysis_Characteristic0_FreshmanDream.md` —— 完整二项式展开
+  - `SMP_ProofAnalysis_CharacteristicP_FreshmanDream.md` —— Freshman's Dream
+  - `SMPDL_Compare_Char0vsCharP_FreshmanDream_PrePostFix.md` —— 对比审计
+- **调参旋钮**：char(R)
+- **迁移类型**：参数迁移
+- **SMPDL 标签**：`S-ISO / M-ISO / P-BISIM`
+
+### 8.6 分析基础：标准 ↔ 非标准分析（H6）
+
+- **文件**：
+  - `SMP_ProofAnalysis_StandardAnalysis_DerivativeLimit.md` —— ε-δ 导数
+  - `SMP_ProofAnalysis_NonstandardAnalysis_DerivativeInfinitesimal.md` —— 无穷小导数
+  - `SMPDL_Compare_StandardVsNonstandard_Derivative_PrePostFix.md` —— 对比审计
+- **调参旋钮**：数系 / 无穷小量
+- **迁移类型**：语义迁移
+- **SMPDL 标签**：`S-ISO / M-ISO / P-BISIM`
+
+### 8.7 逻辑：经典 ↔ 直觉主义（H7）
+
+- **文件**：
+  - `SMP_ProofAnalysis_ClassicalLogic_ExistenceWitness.md` —— LEM 非构造性存在
+  - `SMP_ProofAnalysis_IntuitionisticLogic_ExistenceWitness.md` —— 构造性 witness
+  - `SMPDL_Compare_ClassicalVsIntuitionistic_ExistenceWitness_PrePostFix.md` —— 对比审计
+- **调参旋钮**：排中律 LEM
+- **迁移类型**：公理迁移
+- **SMPDL 标签**：`S-BISIM / M-ISO / P-ISO`
+
+### 8.8 集合论：ZFC ↔ ZF（H8）
+
+- **文件**：
+  - `SMP_ProofAnalysis_ZFC_VectorSpaceBasis.md` —— AC ⇒ 任意向量空间有基
+  - `SMP_ProofAnalysis_ZF_VectorSpaceBasis.md` —— 无 AC 不可证
+  - `SMPDL_Compare_ZFCvsZF_VectorSpaceBasis_PrePostFix.md` —— 对比审计
+- **调参旋钮**：选择公理 AC
+- **迁移类型**：公理迁移 / 断裂迁移
+- **SMPDL 标签**：`S-BISIM / M-BISIM / P-BISIM`
+
+### 8.9 计算基础：集合论 ↔ 类型论（H9）
+
+- **文件**：
+  - `SMP_ProofAnalysis_SetTheory_NatPlusZero.md` —— n+0=n（外延相等）
+  - `SMP_ProofAnalysis_TypeTheory_NatPlusZero.md` —— n+0=n（identity type）
+  - `SMPDL_Compare_SetTheoryVsTypeTheory_NatPlusZero_PrePostFix.md` —— 对比审计
+- **调参旋钮**：基础框架
+- **迁移类型**：语义迁移
+- **SMPDL 标签**：`S-ISO / M-BISIM / P-BISIM`
+
+### 8.10 可计算性：经典 ↔ 可计算分析（H10）
+
+- **文件**：
+  - `SMP_ProofAnalysis_ClassicalAnalysis_IntermediateValue.md` —— IVT 纯存在性
+  - `SMP_ProofAnalysis_ComputableAnalysis_IntermediateValue.md` —— 可计算 IVT + 二分法
+  - `SMPDL_Compare_ClassicalVsComputable_IntermediateValue_PrePostFix.md` —— 对比审计
+- **调参旋钮**：可计算性约束
+- **迁移类型**：升级迁移
+- **SMPDL 标签**：`S-ISO / M-BISIM / P-BISIM`
+
+### 8.11 拓扑学：紧致 ↔ 非紧致空间（H11）
+
+- **文件**：
+  - `SMPDL_Compare_CompactVsNoncompact_ExtremeValue_PrePostFix.md` —— 对比审计
+- **调参旋钮**：紧致性
+- **迁移类型**：参数迁移 / 断裂迁移
+- **SMPDL 标签**：`S-ISO / M-BISIM / P-BISIM`
+
+### 8.12 范畴论与代数拓扑：同构 ↔ 范畴等价 ↔ 同伦等价（H12）
+
+- **文件**：
+  - `SMP_ProofAnalysis_Category_Isomorphism.md` —— 范畴同构
+  - `SMP_ProofAnalysis_Category_Equivalence.md` —— 范畴等价
+  - `SMP_ProofAnalysis_Category_HomotopyEquivalence.md` —— 同伦等价
+  - `SMPDL_Compare_IsomorphismVsEquivalenceVsHomotopy_PrePostFix.md` —— 对比审计
+- **调参旋钮**：逆映射的严格性（严格相等 / 自然同构 / 同伦）
+- **迁移类型**：语义迁移 / 升级迁移
+- **SMPDL 标签**：`S-BISIM / M-BISIM / P-BISIM`
+
+### 8.13 概率论：频率主义 ↔ 贝叶斯（H13，预留）
+
+- **状态**：预留待补。
+- **预期调参旋钮**：概率解释 / 先验分布
+- **预期迁移类型**：语义迁移
+- **预期 SMPDL 标签**：`S-BISIM / M-BISIM / P-BISIM`
+
+### 8.14 代数几何：经典代数簇 ↔ 概形（H14）
+
+- **文件**：
+  - `SMP_ProofAnalysis_AlgebraicGeometry_ClassicalVariety.md` —— 经典簇视角 Nullstellensatz
+  - `SMP_ProofAnalysis_AlgebraicGeometry_Scheme.md` —— 概形视角 Nullstellensatz
+  - `SMPDL_Compare_VarietyVsScheme_AffineNullstellensatz_PrePostFix.md` —— 对比审计
+- **调参旋钮**：几何对象是否携带结构层与幂零信息
+- **迁移类型**：升级迁移
+- **SMPDL 标签**：`S-BISIM / M-BISIM / P-BISIM`
+
+### 8.13 概率论：频率主义 ↔ 贝叶斯（H13）
+
+- **文件**：
+  - `SMP_ProofAnalysis_Frequentist_BinomialProportion.md` —— 频率主义二项比例估计
+  - `SMP_ProofAnalysis_Bayesian_BinomialProportion.md` —— 贝叶斯二项比例估计
+  - `SMPDL_Compare_FrequentistVsBayesian_BinomialProportion_PrePostFix.md` —— 对比审计
+- **调参旋钮**：概率解释框架（频率 / 信念度）
+- **迁移类型**：语义迁移
+- **SMPDL 标签**：`S-BISIM / M-ISO / P-BISIM`
+
+### 8.14 代数几何：经典代数簇 ↔ 概形（H14）
+
+- **文件**：
+  - `SMP_ProofAnalysis_AlgebraicGeometry_ClassicalVariety.md` —— 经典簇视角 Nullstellensatz
+  - `SMP_ProofAnalysis_AlgebraicGeometry_Scheme.md` —— 概形视角 Nullstellensatz
+  - `SMPDL_Compare_VarietyVsScheme_AffineNullstellensatz_PrePostFix.md` —— 对比审计
+- **调参旋钮**：几何对象是否携带结构层与幂零信息
+- **迁移类型**：升级迁移
+- **SMPDL 标签**：`S-BISIM / M-BISIM / P-BISIM`
+
+### 8.15 数论：解析数论 ↔ 代数数论（H15）
+
+- **文件**：
+  - `SMP_ProofAnalysis_NumberTheory_Analytic_DirichletAP.md` —— 解析方法 Dirichlet 定理
+  - `SMP_ProofAnalysis_NumberTheory_Algebraic_DirichletAP.md` —— 代数方法 Dirichlet 定理
+  - `SMPDL_Compare_AnalyticVsAlgebraic_DirichletAP_PrePostFix.md` —— 对比审计
+- **调参旋钮**：证明路径（解析 L-函数 / 代数 Galois 结构）
+- **迁移类型**：方法骨架迁移
+- **SMPDL 标签**：`S-ISO / M-BISIM / P-BISIM`
+
+### 8.16 非欧几何：欧氏 ↔ 球面 ↔ 双曲（H16）
+
+- **文件**：
+  - `SMP_ProofAnalysis_Euclidean_TriangleAngleSum.md` —— 欧氏三角形内角和
+  - `SMP_ProofAnalysis_Spherical_TriangleAngleSum.md` —— 球面三角形内角和
+  - `SMP_ProofAnalysis_Hyperbolic_TriangleAngleSum.md` —— 双曲三角形内角和
+  - `SMPDL_Compare_EuclideanVsSphericalVsHyperbolic_TriangleAngleSum_PrePostFix.md` —— 对比审计
+- **调参旋钮**：曲率 K（0 / 正 / 负）与平行公设状态
+- **迁移类型**：参数迁移 / 公理迁移
+- **SMPDL 标签**：`S-ISO / M-ISO / P-BISIM`
+
+### 8.17 实分析：Riemann ↔ Lebesgue 积分（H17）
+
+- **文件**：
+  - `SMP_ProofAnalysis_RiemannIntegral_LimitInterchange.md` —— Riemann 交换反例
+  - `SMP_ProofAnalysis_LebesgueIntegral_DominatedConvergence.md` —— Lebesgue DCT
+  - `SMPDL_Compare_RiemannVsLebesgue_DominatedConvergence_PrePostFix.md` —— 对比审计
+- **调参旋钮**：分划方向（定义域 vs 值域）+ 可积判据
+- **迁移类型**：升级迁移 + 结论反转
+- **SMPDL 标签**：`S-BISIM / M-BISIM / P-BISIM`
+
+### 8.18 PDE：经典解 ↔ 弱解（H18）
+
+- **文件**：
+  - `SMP_ProofAnalysis_PDE_ClassicalSolution_Laplace.md` —— C² 经典解
+  - `SMP_ProofAnalysis_PDE_WeakSolution_Laplace.md` —— H¹ 弱解
+  - `SMPDL_Compare_ClassicalVsWeak_LaplaceEquation_PrePostFix.md` —— 对比审计
+- **调参旋钮**：解的定义强度（逐点 vs 变分）
+- **迁移类型**：升级迁移 + 存在性↔正则性交换
+- **SMPDL 标签**：`S-BISIM / M-BISIM / P-BISIM`
+
+### 8.19 复分析：单复变 ↔ 多复变（H19）
+
+- **文件**：
+  - `SMP_ProofAnalysis_ComplexAnalysis_OneVariable.md` —— 单复变延拓景观
+  - `SMP_ProofAnalysis_ComplexAnalysis_SeveralVariables.md` —— Hartogs 现象
+  - `SMPDL_Compare_OneVsSeveralComplexVariables_Hartogs_PrePostFix.md` —— 对比审计
+- **调参旋钮**：复维数 n（1 vs ≥2）
+- **迁移类型**：参数迁移引发结论反转（维度阈值相变）
+- **SMPDL 标签**：`S-ISO / M-BISIM / P-BISIM`
+
+### 8.20 组合：有限 ↔ 无限 Ramsey（H20）
+
+- **文件**：
+  - `SMP_ProofAnalysis_Ramsey_Finite.md` —— 归纳+鸽巢
+  - `SMP_ProofAnalysis_Ramsey_Infinite.md` —— 无限递归+紧致性
+  - `SMPDL_Compare_FiniteVsInfinite_Ramsey_PrePostFix.md` —— 对比审计
+- **调参旋钮**：论域基数 + 公理强度（ZF vs ZF+DC）
+- **迁移类型**：参数迁移 + 公理迁移
+- **SMPDL 标签**：`S-ISO / M-BISIM / P-BISIM`
+
+### 8.21 模型论：一阶 ↔ 二阶逻辑（H21）
+
+- **文件**：
+  - `SMP_ProofAnalysis_FirstOrderLogic_Compactness.md` —— 一阶元定理群
+  - `SMP_ProofAnalysis_SecondOrderLogic_FailureOfCompactness.md` —— 二阶失效+范畴性
+  - `SMPDL_Compare_FirstVsSecondOrder_Compactness_PrePostFix.md` —— 对比审计
+- **调参旋钮**：量词域（元素 vs 子集）+ 语义档位（全/Henkin）
+- **迁移类型**：语义迁移引发元定理反转
+- **SMPDL 标签**：`S-BISIM / M-BISIM / P-BISIM`
+
+### 8.22 证明论：Hilbert ↔ 自然演绎（H22）
+
+- **文件**：
+  - `SMP_ProofAnalysis_ProofTheory_HilbertSystem.md` —— 公理化风格
+  - `SMP_ProofAnalysis_ProofTheory_NaturalDeduction.md` —— 规则对偶+规范化
+  - `SMPDL_Compare_HilbertVsNaturalDeduction_CutElimination_PrePostFix.md` —— 对比审计
+- **调参旋钮**：公理化风格（公理+MP vs intro/elim 对）
+- **迁移类型**：框架迁移引发元定理从无到有
+- **SMPDL 标签**：`S-BISIM / M-BISIM / P-BISIM`
+
+### 8.23 泛函分析：Hilbert ↔ Banach（H23）
+
+- **文件**：
+  - `SMP_ProofAnalysis_FunctionalAnalysis_HilbertProjection.md` —— 投影+Riesz
+  - `SMP_ProofAnalysis_FunctionalAnalysis_BanachProjection.md` —— 失效+HB 替代
+  - `SMPDL_Compare_HilbertVsBanach_OrthogonalProjection_PrePostFix.md` —— 对比审计
+- **调参旋钮**：空间结构（内积 vs 仅范数）
+- **迁移类型**：公理移除引发定理坍塌
+- **SMPDL 标签**：`S-BISIM / M-BISIM / P-BISIM`
+
+### 8.24 表示论：线性 ↔ 置换表示（H24）
+
+- **文件**：
+  - `SMP_ProofAnalysis_RepresentationTheory_Linear.md` —— 特征标正交完备
+  - `SMP_ProofAnalysis_RepresentationTheory_Permutation.md` —— 轨道计数+单向桥
+  - `SMPDL_Compare_LinearVsPermutationRepresentation_CharacterTheory_PrePostFix.md` —— 对比审计
+- **调参旋钮**：表示载体（向量空间 vs 集合）
+- **迁移类型**：语义迁移 + 信息单向桥
+- **SMPDL 标签**：`S-BISIM / M-BISIM / P-BISIM`
+
+### 8.25 动力系统：连续流 ↔ 离散映射（H25）
+
+- **文件**：
+  - `SMP_ProofAnalysis_DynamicalSystems_ContinuousFlow.md` —— P–B 二分+Dulac
+  - `SMP_ProofAnalysis_DynamicalSystems_DiscreteMap.md` —— Sharkovsky+混沌
+  - `SMPDL_Compare_ContinuousVsDiscreteDynamics_PoincareMap_PrePostFix.md` —— 对比审计
+- **调参旋钮**：时间结构（ℝ vs ℕ）
+- **迁移类型**：参数迁移引发定理群替换
+- **SMPDL 标签**：`S-BISIM / M-BISIM / P-BISIM`
+
+### 8.26 自动机：正则 ↔ 上下文无关（H26）
+
+- **文件**：
+  - `SMP_ProofAnalysis_Automata_RegularLanguages.md` —— 布尔完满+全判定
+  - `SMP_ProofAnalysis_Automata_ContextFreeLanguages.md` —— 封闭缺口+判定降档
+  - `SMPDL_Compare_RegularVsContextFree_ClosureProperties_PrePostFix.md` —— 对比审计
+- **调参旋钮**：机器资源（有限状态 vs +无界栈）
+- **迁移类型**：升级迁移引发封闭性/判定性反转
+- **SMPDL 标签**：`S-BISIM / M-BISIM / P-BISIM`
+
+### 8.27 逻辑/量子基础：布尔 ↔ 量子逻辑（H27）
+
+- **文件**：
+  - `SMP_ProofAnalysis_QuantumLogic_BooleanAlgebra.md` —— 布尔代数（分配律完备）
+  - `SMP_ProofAnalysis_QuantumLogic_OrthomodularLattice.md` —— 正交模格（KS/Gleason）
+  - `SMPDL_Compare_BooleanVsQuantumLogic_DistributiveLaw_PrePostFix.md` —— 对比审计
+- **调参旋钮**：分配律（甲级律：全局成立 vs dim≥3 失效）
+- **迁移类型**：公理迁移引发真值/概率/表示三重坍塌
+- **SMPDL 标签**：`S-BISIM / M-BISIM / P-BISIM`
+- **律登记**：甲级（分配律）· D/E 跨档 · 模式一+二，已录入 `SMPDL_LawStructure_MigrationScreening.md`
+
+### 8.28 代数：结合 ↔ 非结合（H28）
+
+- **文件**：
+  - `SMP_ProofAnalysis_AssociativeAlgebra_PowerLaws.md` —— 结合代数幂律
+  - `SMP_ProofAnalysis_NonAssociativeAlgebra_OctonionsLie.md` —— 八元数/李代数
+  - `SMPDL_Compare_AssociativeVsNonAssociative_BracketLaws_PrePostFix.md` —— 对比审计
+- **调参旋钮**：结合律（甲级律：括号可压扁 vs 括号即语义）
+- **迁移类型**：公理迁移引发记号坍塌 + 数系封顶换价
+- **SMPDL 标签**：`S-BISIM / M-BISIM / P-BISIM`
+- **律登记**：甲级（结合律）· F1 族 · D 档 · 模式一+二（E′ = 交错律/雅可比），已录入 `SMPDL_LawStructure_MigrationScreening.md`
+
+### 8.29 分析基础：ℚ ↔ ℝ 完备律（H29）
+
+- **文件**：
+  - `SMP_ProofAnalysis_RationalsQ_SupremumGap.md` —— ℚ 确界缺口
+  - `SMP_ProofAnalysis_CompleteOrderedField_TheoremGroup.md` —— ℝ 定理群生根
+  - `SMPDL_Compare_QvsR_DedekindCompleteness_PrePostFix.md` —— 对比审计（含上游回溯串联 §5）
+- **调参旋钮**：Dedekind 完备律（乙级律：sup 存在与否）
+- **迁移类型**：公理加入引发定理群整体生根（全库唯一"加法断裂"）
+- **SMPDL 标签**：`S-BISIM / M-BISIM / P-BISIM`
+- **律登记**：乙级（完备律）· F5 族 · D+E 双档 · 模式一+二；**上游律**，串联 H10/H11/H17/H6，已录入 `SMPDL_LawStructure_MigrationScreening.md`
+
+### 8.30 测度论：条件收敛 ↔ 绝对可积（H30）
+
+- **文件**：
+  - `SMP_ProofAnalysis_IteratedIntegrals_ConditionalConvergence.md` —— ±π/4 反例
+  - `SMP_ProofAnalysis_FubiniTonelli_AbsoluteIntegrability.md` —— Tonelli/Fubini 定价
+  - `SMPDL_Compare_ConditionalVsAbsolute_IteratedIntegral_PrePostFix.md` —— 对比审计（含 §7 移除-涌现回验）
+- **调参旋钮**：Fubini 交换律（乙级律：可积性档位 + σ-有限性）
+- **迁移类型**：框架迁移引发交换律从失效到三档定价恢复
+- **SMPDL 标签**：`S-BISIM / M-BISIM / P-BISIM`
+- **律登记**：乙级（Fubini 交换律）· F5 族 · E 档 · 模式一+二；**移除-涌现首轮回验组**（α 主 + γ 辅），已录入 `SMPDL_LawStructure_MigrationScreening.md` / `SMPDL_RemovalEmergence_Synthesis.md`
+
+### 8.34 代数/非阿分析：阿氏 ↔ 非阿域（H34）
+
+- **文件**：
+  - `SMP_ProofAnalysis_Archimedean_ExhaustionEmbedding.md` —— 穷竭与嵌入
+  - `SMP_ProofAnalysis_NonArchimedean_InfinitesimalRevival.md` —— 无穷小复活双实现
+  - `SMPDL_Compare_ArchimedeanVsNonArchimedean_Infinitesimals_PrePostFix.md` —— 对比（含 T 前向检验 §7）
+- **调参旋钮**：Archimedes 律（甲级：T1 主体 + T3 面）
+- **迁移类型**：公理移除引发尺度分层 + 无穷小解禁 + 赋值论回收
+- **SMPDL 标签**：`S-BISIM / M-BISIM / P-BISIM`
+- **律登记**：甲级 · T1+T3 双面 · E 档 + Ostrowski E′；**T 分类学前向首验样本**（全中）
+- **对应文件补充**：`SMPDL_FunctionalType_Reclassification.md`（T 分类学主文档）
+
+### 8.35 动力系统：保守 ↔ 耗散流（H35）
+
+- **文件**：`SMP_ProofAnalysis_Hamiltonian_LiouvilleConfinement.md` / `SMP_ProofAnalysis_DissipativeFlow_AttractorEmergence.md` / `SMPDL_Compare_ConservativeVsDissipative_Liouville_PrePostFix.md`
+- **调参旋钮**：Liouville 禁闭律（乙级：T3 禁闭亚型）
+- **律登记**：乙级 · T3（n=2）· E 档；T3 二验全中 + 亚型发现（守恒/禁闭可独立失效）
+- **三律轴**：H25（时间）×H33（守恒）×H35（禁闭）——动力系统域正交分解
+
+### 8.36 证明论：经典结构 ↔ 线性逻辑（H36）
+
+- **文件**：`SMP_ProofAnalysis_ClassicalStructure_ContractionWeakening.md` / `SMP_ProofAnalysis_LinearLogic_BangOperator.md` / `SMPDL_Compare_ClassicalVsLinear_StructuralRules_PrePostFix.md`
+- **调参旋钮**：收缩律+弱化律（丙级：T2 行为保证）
+- **律登记**：丙级 · T2（修正二验）· E 档 + bang E′；**T2 修正预测三项全中（bang 教科书命中）**
+- **跨域锚**：no-cloning（H27×H36 逻辑-物理交汇）；Rust 所有权 = 产业界独立再发明
+
+### 8.37 射影几何：Desarguesian ↔ 非 Desargues（H37）
+
+- **文件**：`SMP_ProofAnalysis_Desarguesian_Coordinatization.md` / `SMP_ProofAnalysis_NonDesargues_TernaryRings.md` / `SMPDL_Compare_DesarguesianVsNonDesargues_Coordinatization_PrePostFix.md`
+- **律登记**：乙级 · T1 · E 档；T1 三验全中（即时 γ：表征型）；第四跨域锚（几何-代数镜像 H37×H28，P²(𝕆) 交点）
+
+### 8.38 交换代数：整环 ↔ 含零因子环（H38）
+
+- **文件**：`SMP_ProofAnalysis_Domain_CancellationEmbedding.md` / `SMP_ProofAnalysis_ZeroDivisors_CRTIdeals.md` / `SMPDL_Compare_DomainVsZeroDivisors_IdealTheory_PrePostFix.md`
+- **律登记**：乙级 · T1 · E 档；T1 四验全中（γ 因果型：主动/被动二分）；正交假说二验通过；交换代数三律轴（H5×H14×H38）
+
+### 8.39 tropical 代数：经典半环 ↔ tropical（H39）
+
+- **文件**：`SMP_ProofAnalysis_ClassicalSemiring_AccumulatingAddition.md` / `SMP_ProofAnalysis_TropicalSemiring_IdempotentDuality.md` / `SMPDL_Compare_ClassicalVsTropical_IdempotentLaw_PrePostFix.md`
+- **律登记**：甲级 · T1 · E 档；T1 五验全中（γ 渐近型：极限影子）；六项同名异义全库之最；H2×H39 离散化-算术面联动；算法先于理论数十年（L1 算法版）
+
+### 8.40 半群理论：可消 ↔ 非可消（H40）
+
+- **文件**：`SMP_ProofAnalysis_Cancellation_GroupWorld.md` / `SMP_ProofAnalysis_NonCancellable_BurnsideInverse.md` / `SMPDL_Compare_CancellableVsNonCancellable_BurnsideWorld_PrePostFix.md`
+- **律登记**：甲级 · T1（n=6）· E 档；β 主 + γ 因果（Wagner 动机在案）；降档阶梯三连（H28×H37×H40）
+
+### 8.41 点集拓扑：Hausdorff ↔ 非 Hausdorff（H41）
+
+- **文件**：`SMP_ProofAnalysis_Hausdorff_UniqueLimits.md` / `SMP_ProofAnalysis_NonHausdorff_SpectralTopology.md` / `SMPDL_Compare_HausdorffVsNonHausdorff_SeparationLaw_PrePostFix.md`
+- **律登记**：甲级 · T1（n=7）· E 档；β + γ 表征超额（三链）；旋钮族确证（滑杆首例）；H31×H41 极限↔范式同型对；"病即信息"三连
+
+### 8.42 拓扑相变：禁闭 ↔ 解绑（H42）
+
+- **文件**：`SMP_ProofAnalysis_HomotopyCharge_Confinement.md` / `SMP_ProofAnalysis_TopologicalPhase_UnbindingEmergence.md` / `SMPDL_Compare_ConfinementVsUnbinding_TopologicalCharge_PrePostFix.md`
+- **律登记**：乙级 · T3（n=3 达成）· E 档；β-现象（BKT 诺奖级）+ γ 表征（Gauss-Bonnet→CW→AS 链）；**守恒机制三分定型**（对称 H33/几何 H35/拓扑 H42）；"绕开式失效"第三形态
+- **T 类学里程碑**：三大功能类型 T1 n=7 / T2 n=2+ / T3 n=3——预测矩阵各列样本齐备
+
+### 8.43 拟度量几何：对称 ↔ 拟度量（H43 · 收官组）
+
+- **文件**：`SMP_ProofAnalysis_SymmetricMetric_QuotientCompletion.md` / `SMP_ProofAnalysis_QuasiMetric_DirectedDistances.md` / `SMPDL_Compare_SymmetricVsQuasi_DistanceSymmetry_PrePostFix.md`
+- **律登记**：甲级 · T1（n=8）· E 档；β 主 + γ 三形态齐聚（对称化因果/Lawvere 表征/OT 渐近——全库首例单组三形态）；对称律隐藏功能显影（T2 分离内含——H43×H41 锚）
+- **收官注记**：候选池 14 条全部入库（H28–H43 十六律连发）；前向回验 10/10；T1 n=8 / T2 n=2+ / T3 n=3
+
+### 8.31 元分析文档
+
+- **历史顺序索引**：`SMPDL_HistoricalOrder_Index.md`
+- **认知历史逻辑**：`SMPDL_HistoricalAssumption_CognitiveLogic.md`
+- **调参来源矩阵**：`SMPDL_TuningParameter_Matrix.md`
+- **迁移骨架分析**：`SMPDL_HistoricalMigration_Skeleton.md`
+- **认知/逻辑结构树图**：`SMPDL_CognitiveLogic_TreeMap.md`
+- **迁移×参数关联分析**：`SMPDL_MigrationParameter_Correlation.md`
+- **律伴随结构迁移筛选**：`SMPDL_LawStructure_MigrationScreening.md`
+- **律的组别研究与档位迁移时间线**：`SMPDL_LawGrouping_TierMigrationTimeline.md`
+- **律史细化与人机分工**：`SMPDL_LawHistoryRefinement_HumanMachineDivision.md`
+- **律档位形式化证据表（P1-①）**：`SMPDL_LawTier_FormalizationEvidence.md`
+- **Cabello KS 验证报告（P2-①）**：`SMPDL_P2_1_CabelloKS_VerificationReport.md` + 脚本 `ks_cabello18_verify.py`
+- **移除-涌现现象汇总分析**：`SMPDL_RemovalEmergence_Synthesis.md`
+- **律的功能类型重分类（T 分类学）**：`SMPDL_FunctionalType_Reclassification.md`
+- **总纲：结构与律的迁移与升降档位方法论**：`SMPDL_MasterMethodology_Synthesis.md`（体系收口文档）
+- **B 线理论压测报告**：`SMPDL_StressTest_BLine_Report.md`（三支柱反例搜索 + B4 实验设计）
+- **升级后理论样本重测报告**：`SMPDL_RetroTest_UpgradedTheory.md`（v3 判据回溯检验：零矛盾 + 三项新资产）
+- **理论全链回顾（单卷）**：`SMPDL_TheoryEvolution_Retrospective.md`（SMP 备忘包 → 律迁移预测学：八阶段演化弧线 + 终态资产地图 + 十二条结论）
+- **OpenAI 700+ 库结构统计**：`SMPDL_OpenAI_Corpus_StructureStatistics.md`（372 族全分类 + 三重高危证据 + 人类分布对照）
+
+---
+
+## 9. 高风险 / 中风险声明的人类科学家审查指南
 
 - **文件**：`SMPDL_HumanReview_HighMidRisk_Guide.md`
 - **要点**：五岗位（A/B/C/D/E）针对高风险与中低风险声明的具体审查动作；TRAP-CHECK 七类陷阱的专项扫描；针对本批次 OpenAI 六个样本的逐条审查建议。
 
 ---
 
-## 9. 署名与许可
+## 10. 署名与许可
 
-**Göttingen S/M/P × D/L 数学证明审查方法论** · v2.2  
+**Göttingen S/M/P × D/L 数学证明审查方法论** · v2.5  
 **作者**：CAMPANASILVAE · fecit · MMXXVI  
-**首发时间**：2026-10-12 GMT+8 · **更新**：2026-10-13  
+**首发时间**：2026-10-12 GMT+8 · **更新**：2026-10-14  
 **许可协议**：[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)（署名-非商用-相同方式共享）  
 **完整清单与内容指纹**：见 `SMPDL_ATTRIBUTION.md`
 
