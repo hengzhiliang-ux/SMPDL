@@ -168,12 +168,12 @@ We will preserve the public release history of this collection. Corrections and 
 
 | 项目 | 当前值 |
 |---|---|
-| 方法论版本 | v2.3 |
-| 论文版本 | v12 |
-| 页面版本 | v5.91 |
-| DOI | [10.5281/zenodo.23339747](https://doi.org/10.5281/zenodo.23339747) |
-| 报告数量 | 97 份 curated |
-| 联合 SHA-256 | `3a365aff1760cb0ed3e48502886ebba53c71174af2d4f4bad9c7834af3504be2` |
+| 方法论版本 | v2.8 |
+| 论文版本 | v22（curated 268 份） |
+| 页面版本 | v5.93 |
+| DOI | [10.5281/zenodo.23358578](https://doi.org/10.5281/zenodo.23358578)（Zenodo v3.1 · Concept 10.5281/zenodo.23318734） |
+| 报告数量 | 268 份 curated |
+| 联合 SHA-256 | `6b41bcde536a6731b5a1039f3b80b16a27c051c4366382d7428a8707d55c9286`（v22 · 顺序固定） |
 
 ---
 
@@ -196,8 +196,8 @@ We will preserve the public release history of this collection. Corrections and 
   title={A Three-Layer Dependency-and-Logic Audit for Mathematical Proofs and AI-Generated Claims: The S/M/P × D/L Framework},
   author={CAMPANASILVAE},
   year={2026},
-  howpublished={\url{https://doi.org/10.5281/zenodo.23339747}},
-  doi={10.5281/zenodo.23339747}
+  howpublished={\url{https://doi.org/10.5281/zenodo.23358578}},
+  doi={10.5281/zenodo.23358578}
 }
 ```
 
