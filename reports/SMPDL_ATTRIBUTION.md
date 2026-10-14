@@ -2,6 +2,8 @@
 
 > 本文件记录方法论报告群的联合指纹与许可信息，避免把指纹嵌入每份报告正文导致的自指问题。
 
+
+
 ---
 
 ## 基本信息
@@ -12,32 +14,47 @@
 - **首发时间**：2026-10-12 GMT+8
 - **最后更新**：2026-10-14 GMT+8（v3.2 发布同步）
 - **许可协议**：[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)（署名-非商用-相同方式共享）
-- **Zenodo 记录**：https://zenodo.org/records/23359509（v3.2 · 最新）
+- **Zenodo 记录**：<https://zenodo.org/records/23359509（v3.2> · 最新）
 - **DOI**：10.5281/zenodo.23359509
 - **Concept DOI**：10.5281/zenodo.23318734
-- **论文版本**：v23（curated 269 份 = v22 的 268 份 + 新增 1 份：**SMPDL_HumanAI_InteractionModes.md**（人机交互六模式目录 v1.0：人工层三模式/协作层三模式/四条接口契约/B4 校准机制，六模式全部回贴案例库证据）。内容：B4 三轮实证 + C-4 落地的模式学固化，与 HumanMachine_Division / LawHistoryRefinement / B4 报告 / C-4 脚本四线联动。）
+- **论文版本**：v24（curated 287 份 = v23 的 269 份 + 新增 18 份：**OpenAI 700 库审计扩容批次**——Lean 形式化高危审计索引、未形式化 Top20 选题、族 034/014 族级全量审计、族 364/270/225/304/310/338/349/352 全风险位置审计（枚举格式 v2）、族 036/046/069/074/086/178/193/286/300/335 十族合订、排名 A 12 定案、第一梯队三动作、Day-1 复核更正、审计错误模式清单 v1.0、全量重审报告。核心成果：深度审计 80 份、8 类审计通道/风险形态、15 个 PDF 级定案、C-4 候选卡 8 张。）
 
 ---
 
-## 联合内容指纹（v23 候选，待 Zenodo 发布）
+## 联合内容指纹（v24 候选，待 Zenodo 发布）
 
-以下 269 份报告内容拼接后的 SHA-256 摘要：
+以下 287 份报告内容拼接后的 SHA-256 摘要：
 
 ```
-32f8596a3cb296a713921bd392695a79a43cfc12ea7f74231ffc510555b700d4
+a5b11a178c4a088fc8b366d03e38d667153f51958dc833ad6de0ea14a2cb1a0a
 ```
 
-**顺序规范（自 v22 起固定）**：v3.0 归档 zip 内序（SMP/SMPL/SML 前缀 md+py）+ 新文件按入库序追加（v22 清单见 `_v22_filelist.txt`；v23 追加 `SMPDL_HumanAI_InteractionModes.md`，完整清单见 `_v23_filelist.txt`）。
+**顺序规范（自 v22 起固定）**：v3.0 归档 zip 内序（SMP/SMPL/SML 前缀 md+py）+ 新文件按入库序追加（v22 清单见 `_v22_filelist.txt`；v23 追加 `SMPDL_HumanAI_InteractionModes.md`，完整清单见 `_v23_filelist.txt`；v24 追加 18 份审计批次，完整清单见 `_v24_filelist.txt`）。  
 **诚实披露**：v21 及更早版本的指纹计算顺序未存档，无法复算（历史指纹仅作记录）；v22 起顺序规范固定，可复现。
 
 ### v23 新增文件清单（1 份）
 
 - `SMPDL_HumanAI_InteractionModes.md`（人机交互六模式目录 v1.0：概念奇点留白 / 语义忠实审查 / 验证解读拍板 / 预测机器协作 / 对抗红队 / 律史元研究 × 机器层会计系统；含 B4 三层预填契约与校准轮次表）
 
+### v24 新增文件清单（18 份）
+
+| # | 文件 | 内容 |
+|---|---|---|
+| 1 | SMPDL_OpenAI_LeanFormalized_HighRiskAudit.md | Lean 形式化高危审计索引（200 main_results × 60 审计交叉 + 9 主文件直审） |
+| 2 | SMPDL_OpenAI_Unformalized_Top20_Selection.md | 未形式化高关注度 Top20 选题（三向交叉筛选） |
+| 3 | SMP_ProofAnalysis_OpenAI_LogAbundance_Kahler_Family034.md | 族 034 全量审计（14 篇五层拓扑） |
+| 4 | SMP_ProofAnalysis_OpenAI_RestrictedGL_Family014.md | 族 014 全量审计（8 篇 + 纪律对照） |
+| 5-13 | SMP_ProofAnalysis_OpenAI_{Boltzmann364, BFSS270, SixVertex225, HilbertSmith304, Quillen310, YauUniformization338, SolomonYau349, CalabiFlow352, Batch4TenFamilies}_*.md | 九份全风险位置审计（枚举格式 v2：证明分段 + 逐段全部风险位） |
+| 14 | SMPDL_RankA_12Verdicts_Report.md | 排名 A：12 个分钟级定案（10 绿/1 解除/1 修正） |
+| 15 | SMPDL_Tier1_ThreeActions_Report.md | 第一梯队三动作（352 脚本三过等） |
+| 16 | SMPDL_AuditReview_Day1_Corrections.md | Day-1 复核（2 实错修正） |
+| 17 | SMPDL_AuditErrorPatterns_Checklist.md | 审计错误模式清单 v1.0（8 类 16 条前置规程） |
+| 18 | SMPDL_FullReaudit_Report.md | 全量重审（204 份扫描，旧审计零实错） |
+
 ### v23 归档
 
-| 归档 | 大小 | MD5 |
-|---|---|---|
+| 归档                      | 大小              | MD5                                |
+| ----------------------- | --------------- | ---------------------------------- |
 | `SMPDL_v23_archive.zip` | 1,094,230 bytes | `1367560ba7dd3fbd877e6f0beee07d18` |
 
 ---
@@ -55,6 +72,7 @@
 **H11–H33 案例组报告（69 份）**：覆盖紧致性、范畴论、代数几何、概率论、数论、非欧几何三几何、实分析、PDE、复分析、Ramsey、模型论、证明论、泛函分析、表示论、动力系统、自动机、量子逻辑、非结合代数、分析基础、测度论、重写理论、均衡理论、数学物理等 23 个领域。
 
 **律体系元文档（6 份）**：
+
 - `SMPDL_Isomorphism_Taxonomy.md`（同构标签判定标准）
 - `SMPDL_CognitiveLogic_TreeMap.md`（认知/逻辑结构树图，五簇 + 簇 0 上游律锚）
 - `SMPDL_MigrationParameter_Correlation.md`（迁移×参数关联，旋钮簇 A–H）
@@ -68,18 +86,20 @@
 
 ### 历史版本指纹
 
-| 版本 | 日期 | 报告数 | SHA-256 | Zenodo 状态 |
-|---|---|---|---|---|
-| v15 | 2026-10-13 | 146 | `3f1a4c6c1ee04b3c67ed129ffa58aed02c2c3ca53a34583f292a70d31cecb7fe` | ✅ 10.5281/zenodo.23353609 |
-| v17 | 2026-10-14 | 222 | `5adeba221fa242e0d7615580c956e7a7f3b9e91165b26e37a9efe1e2700df634` | ✅ 10.5281/zenodo.23355872（v2.7） |
-| v19 | 2026-10-14 | 243 | `404d995e50eb56c3a21cd4604e44115b230e5041ca92b3d769e2c9629f1dcc38` | ✅ 10.5281/zenodo.23356485（v2.8） |
-| v20 | 2026-10-14 | 258 | `64172c5a02320710f3be02b9b8b283c697f1f3029b757f691e8f1aa991850878` | ✅ 10.5281/zenodo.23357097（v2.9） |
-| v21 | 2026-10-14 | 259 | `4157e06ae3467fc7173ad8ea821a22adbf7add00ca27dd3702d640b255cdd7ba` | ✅ **已发布：10.5281/zenodo.23357269**（v3.0 · + OpenAI 700+ 库结构统计 · 归档 1,071,299 bytes · 公开已验证） |
+| 版本  | 日期         | 报告数 | SHA-256                                                            | Zenodo 状态                                                                                                          |
+| --- | ---------- | --- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| v15 | 2026-10-13 | 146 | `3f1a4c6c1ee04b3c67ed129ffa58aed02c2c3ca53a34583f292a70d31cecb7fe` | ✅ 10.5281/zenodo.23353609                                                                                          |
+| v17 | 2026-10-14 | 222 | `5adeba221fa242e0d7615580c956e7a7f3b9e91165b26e37a9efe1e2700df634` | ✅ 10.5281/zenodo.23355872（v2.7）                                                                                    |
+| v19 | 2026-10-14 | 243 | `404d995e50eb56c3a21cd4604e44115b230e5041ca92b3d769e2c9629f1dcc38` | ✅ 10.5281/zenodo.23356485（v2.8）                                                                                    |
+| v20 | 2026-10-14 | 258 | `64172c5a02320710f3be02b9b8b283c697f1f3029b757f691e8f1aa991850878` | ✅ 10.5281/zenodo.23357097（v2.9）                                                                                    |
+| v21 | 2026-10-14 | 259 | `4157e06ae3467fc7173ad8ea821a22adbf7add00ca27dd3702d640b255cdd7ba` | ✅ **已发布：10.5281/zenodo.23357269**（v3.0 · + OpenAI 700+ 库结构统计 · 归档 1,071,299 bytes · 公开已验证）                         |
 | v22 | 2026-10-14 | 268 | `6b41bcde536a6731b5a1039f3b80b16a27c051c4366382d7428a8707d55c9286` | ✅ **已发布：10.5281/zenodo.23358578**（Zenodo v3.1 · + B4 LLM 盲判三轮并读 + 预测机器 C-4 · 归档 1,088,356 bytes · MD5 `4bf071fb…`） |
-| v23 | 2026-10-14 | 269 | `32f8596a3cb296a713921bd392695a79a43cfc12ea7f74231ffc510555b700d4` | ✅ **已发布：10.5281/zenodo.23359509**（Zenodo v3.2 · + 人机交互六模式目录 v1.0 · 归档 1,094,230 bytes · MD5 `1367560b…`） |
+| v23 | 2026-10-14 | 269 | `32f8596a3cb296a713921bd392695a79a43cfc12ea7f74231ffc510555b700d4` | ✅ **已发布：10.5281/zenodo.23359509**（Zenodo v3.2 · + 人机交互六模式目录 v1.0 · 归档 1,094,230 bytes · MD5 `1367560b…`）           |
+| v24 | 2026-10-14 | 287 | `a5b11a178c4a088fc8b366d03e38d667153f51958dc833ad6de0ea14a2cb1a0a` | ⏳ 待发布（OpenAI 700 库审计扩容：80 份审计 + 15 定案 + 错误模式清单） |
 
-> 版本号对照：Zenodo v3.0 = curated 清单版本 v21；Zenodo v3.1 = curated v22；Zenodo v3.2 = curated v23。Concept DOI 不变：10.5281/zenodo.23318734。
+> 版本号对照：Zenodo v3.0 = curated 清单版本 v21；Zenodo v3.1 = curated v22；Zenodo v3.2 = curated v23。Concept DOI 不变：10.5281/zenodo.23318734。  
 > ⚠️ 指纹顺序披露：v21 及更早的顺序未存档不可复算；v22 起固定为「v3.0 归档 zip 内序 + 追加序」（`_v22_filelist.txt`）。指纹快照字节（DOI 回填前定稿版）存 `_v22_fp_snapshots/SMPDL_ATTRIBUTION.md`，SHA-256 `28a48deec3ed24ab95649c92acd9eb4e108435da7c760e8846f492b7c535a2b0`——发布行 DOI 回填与归档 zip 重建属发布后行政性补丁，不参与 v22 指纹迭代（沿袭 v21 快照惯例）。v23 同惯例：v23 指纹的可复算字节 = `SMPDL_v23_archive.zip` 内 `SMPDL_ATTRIBUTION.md`（占位符版，抽存 `_v23_fp_snapshots/`），按 `_v23_filelist.txt` 顺序拼接即得 `32f8596a…`。
+
 
 ### 纳入指纹计算的文件清单
 
@@ -239,6 +259,7 @@
 搬运、改写或教学引用请注明来源与本页面链接。
 
 ---
+
 
 ## 指纹验证方法
 

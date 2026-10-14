@@ -1,0 +1,4 @@
+SMPDL v24r reproducible baseline fingerprint
+algorithm: SHA-256 over concatenated raw bytes of the 287 files, in _v24_filelist.txt order
+value: cfb4b21f8ea7414da5c4deae8b4a3a08e45a0f8d05884510908f558d82a629a2
+computed: 2026-10-15 GMT+8

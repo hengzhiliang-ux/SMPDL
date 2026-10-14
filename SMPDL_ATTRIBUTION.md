@@ -95,7 +95,7 @@ a5b11a178c4a088fc8b366d03e38d667153f51958dc833ad6de0ea14a2cb1a0a
 | v21 | 2026-10-14 | 259 | `4157e06ae3467fc7173ad8ea821a22adbf7add00ca27dd3702d640b255cdd7ba` | ✅ **已发布：10.5281/zenodo.23357269**（v3.0 · + OpenAI 700+ 库结构统计 · 归档 1,071,299 bytes · 公开已验证）                         |
 | v22 | 2026-10-14 | 268 | `6b41bcde536a6731b5a1039f3b80b16a27c051c4366382d7428a8707d55c9286` | ✅ **已发布：10.5281/zenodo.23358578**（Zenodo v3.1 · + B4 LLM 盲判三轮并读 + 预测机器 C-4 · 归档 1,088,356 bytes · MD5 `4bf071fb…`） |
 | v23 | 2026-10-14 | 269 | `32f8596a3cb296a713921bd392695a79a43cfc12ea7f74231ffc510555b700d4` | ✅ **已发布：10.5281/zenodo.23359509**（Zenodo v3.2 · + 人机交互六模式目录 v1.0 · 归档 1,094,230 bytes · MD5 `1367560b…`）           |
-| v24 | 2026-10-14 | 287 | `a5b11a178c4a088fc8b366d03e38d667153f51958dc833ad6de0ea14a2cb1a0a`（占位符快照值） | ✅ **已发布：10.5281/zenodo.23362944**（Zenodo v3.3 · + OpenAI 700 库审计扩容 18 份 · 归档 1,170,412 bytes · MD5 `e944a0f4…`） |
+| v24 | 2026-10-14 | 287 | `a5b11a178c4a088fc8b366d03e38d667153f51958dc833ad6de0ea14a2cb1a0a` | ⏳ 待发布（OpenAI 700 库审计扩容：80 份审计 + 15 定案 + 错误模式清单） |
 
 > 版本号对照：Zenodo v3.0 = curated 清单版本 v21；Zenodo v3.1 = curated v22；Zenodo v3.2 = curated v23。Concept DOI 不变：10.5281/zenodo.23318734。  
 > ⚠️ 指纹顺序披露：v21 及更早的顺序未存档不可复算；v22 起固定为「v3.0 归档 zip 内序 + 追加序」（`_v22_filelist.txt`）。指纹快照字节（DOI 回填前定稿版）存 `_v22_fp_snapshots/SMPDL_ATTRIBUTION.md`，SHA-256 `28a48deec3ed24ab95649c92acd9eb4e108435da7c760e8846f492b7c535a2b0`——发布行 DOI 回填与归档 zip 重建属发布后行政性补丁，不参与 v22 指纹迭代（沿袭 v21 快照惯例）。v23 同惯例：v23 指纹的可复算字节 = `SMPDL_v23_archive.zip` 内 `SMPDL_ATTRIBUTION.md`（占位符版，抽存 `_v23_fp_snapshots/`），按 `_v23_filelist.txt` 顺序拼接即得 `32f8596a…`。
