@@ -50,26 +50,22 @@ We will preserve the public release history of this collection. Corrections and 
 ├── LICENSE                                # CC BY-NC-SA 4.0
 ├── DISCLAIMER.md                          # OpenAI 原始内容引用声明
 ├── _config.yml                            # GitHub Pages / Jekyll 配置
-├── reports/                               # 100 份 Markdown 报告
-│   ├── SMPDL_Framework.md                 # 方法论框架 v2.4
+├── reports/                               # 269 份 Markdown 报告 + 脚本（curated 268 入指纹 + 登记簿）
+│   ├── SMPDL_Framework.md                 # 方法论框架 v2.8
 │   ├── SMPDL_Audit_SampleSuite.md           # 样本总览表
 │   ├── SMPDL_ATTRIBUTION.md                 # 署名、指纹、DOI
 │   ├── SMPDL_Citation_Discipline.md         # 文献引用纪律
 │   ├── SMPDL_HistoryRetrospective_10PromisingSamples.md # 十个最有希望样本数学史回溯
-│   ├── SMP_ProofAnalysis_*.md               # 经典证明/猜想审计
+│   ├── SMP_ProofAnalysis_*.md               # 经典证明/猜想审计（H1–H43 同构对案例库）
 │   ├── SMPDL_Construct_*.md                 # 构造尝试（含反前视）
 │   ├── SMP_ProofAnalysis_OpenAI_*.md        # OpenAI 样本审计
-│   └── SMPDL_Compare_OpenAI_*_PrePostFix.md # 修复前后对比
+│   ├── SMPDL_Compare_*_PrePostFix.md        # 修复前后对比
+│   ├── SMPDL_B4_*.md                        # B4 LLM 盲判（三轮并读）
+│   └── SMPDL_PredictionMachine_C4.py        # 预测机器 C-4 脚本
 ├── archives/                              # 官方归档 zip
-│   ├── SMPDL_v2.0_sample_reports_76files.zip
-│   ├── SMPDL_v2.1_sample_reports_86files.zip
-│   ├── SMPDL_v2.2_sample_reports_96files.zip
-│   ├── SMPDL_v2.3_sample_reports_97files.zip
-│   └── SMPDL_v2.4_sample_reports_107files.zip
+│   └── SMPDL_v22_archive.zip               # 268 份 curated 归档（最新 · Zenodo v3.1 镜像）
 └── zenodo/                                # Zenodo metadata
-    ├── zenodo_metadata_v2.0.json
-    ├── zenodo_metadata_v2.1.json
-    └── zenodo_metadata_v2.2.json
+    └── zenodo_metadata_v3.1.json
 ```
 
 ---
@@ -78,7 +74,7 @@ We will preserve the public release history of this collection. Corrections and 
 
 ### 方法论与指南
 
-- [SMPDL_Framework.md](reports/SMPDL_Framework.md) — 方法论框架 v2.4
+- [SMPDL_Framework.md](reports/SMPDL_Framework.md) — 方法论框架 v2.8
 - [SMPDL_Audit_SampleSuite.md](reports/SMPDL_Audit_SampleSuite.md) — 样本总览与教学分组
 - [SMPDL_ATTRIBUTION.md](reports/SMPDL_ATTRIBUTION.md) — 署名、许可、指纹、DOI
 - [SMPDL_Citation_Discipline.md](reports/SMPDL_Citation_Discipline.md) — 文献引用纪律
