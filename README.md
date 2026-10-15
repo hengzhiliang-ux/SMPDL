@@ -5,6 +5,22 @@ This repository contains mathematical manuscripts and supporting proof artifacts
 [![DOI](https://zenodo.org/badge/DOI-10.5281/zenodo.23362944.svg)](https://doi.org/10.5281/zenodo.23362944)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
 
+## 术语与协作记录说明（Terminology & Collaboration Records）
+
+本仓库为活跃研究工作区，`reports/` 内文档保留了**内部协作会话的原始用语**，包括：
+
+| 内部术语 | 含义 |
+|---|---|
+| **咖啡** | 项目负责人（决策者）的工作代号；文中「咖啡指令/裁定/拍板」= 项目负责人的指令与决策 |
+| **工单** | 任务工单（work order）——项目的任务登记与排期单位，编号如 P1-③、C-5 |
+| **会话 / 判定会话 / 隔离上下文** | AI 协作代理的独立工作上下文；「判定者 ≠ 登记者」等会话分离纪律用于保证判定的独立性（防同源污染） |
+| **team-lead** | 协调会话（负责汇总，不参与盲判） |
+| **WorkBuddy** | 所用 AI 协作平台的名称 |
+
+这些用语是审计方法论自身纪律（预注册、会话分离、勘误留痕）的运行痕迹，**保留原文以保证证据链的完整性与可复核性**——修改它们等于修改实验记录。读者在引用具体判定时应连同其会话语境一起理解。
+
+---
+
 This collection includes results at different stages of verification. Not all have accompanying Lean formalizations. We will continue to update this repository with Lean formalizations as we obtain them. 
 
 Some of the unformalized results could have issues. We will endeavor to fix any such issues quickly.
