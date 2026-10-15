@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMPDL 律集群时间线 · 四集群 + G1–G6 + 43 组律</title>
+<style>
+  :root{
+    --ink:#2b2b28; --paper:#fdfaf4; --page:#f0ece4; --line:#e2ddd0;
+    --c1:#b82e57; --c2:#5a6b7d; --c3:#8a7540; --c4:#3d6e58; --c5:#9e3b32; --none:#9a968c;
+    --wine:#b82e57; --soft:#f6f1e6;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--page);color:var(--ink);font-family:"IBM Plex Sans","Microsoft YaHei",system-ui,sans-serif;font-size:14px;line-height:1.6}
+  .wrap{max-width:1280px;margin:0 auto;padding:28px 20px 60px}
+  header{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:22px 26px;margin-bottom:18px}
+  h1{font-family:"Playfair Display","Noto Serif SC",serif;font-size:24px;margin:0 0 6px}
+  h1 .lv{color:var(--wine)}
+  .sub{color:#6b675e;font-size:13px}
+  .meta-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .chip{background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:2px 12px;font-size:12px}
+  .panel{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:20px 24px;margin-bottom:18px}
+  h2{font-family:"Playfair Display","Noto Serif SC",serif;font-size:18px;margin:0 0 4px;border-bottom:2px solid var(--wine);display:inline-block;padding-bottom:2px}
+  .note{font-size:12.5px;color:#6b675e;margin:6px 0 14px}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;margin:10px 0 4px;font-size:12.5px;align-items:center}
+  .sw{display:inline-block;width:22px;height:10px;border-radius:2px;margin-right:5px;vertical-align:middle}
+  button.f{background:#fff;border:1px solid var(--line);border-radius:6px;padding:3px 12px;font-size:12.5px;cursor:pointer;color:var(--ink)}
+  button.f.on{background:var(--wine);color:#fff;border-color:var(--wine)}
+  svg text{font-family:"IBM Plex Sans","Microsoft YaHei",sans-serif}
+  .tt{position:fixed;background:#2b2b28;color:#fdfaf4;border-radius:6px;padding:8px 12px;font-size:12px;max-width:340px;pointer-events:none;z-index:50;display:none;box-shadow:0 2px 10px rgba(0,0,0,.25);line-height:1.5}
+  table{border-collapse:collapse;width:100%;font-size:12.5px;margin-top:8px}
+  th{background:#f6f5f3;text-align:left;padding:7px 10px;border:1px solid var(--line);font-weight:600}
+  td{padding:6px 10px;border:1px solid var(--line);vertical-align:top}
+  tr:nth-child(even) td{background:#fafaf9}
+  .g6{background:#f9ecf1}
+  .hyp{border-left:3px dashed var(--c5)}
+  footer{color:#8a857a;font-size:12px;text-align:center;margin-top:26px}
+  .rule-box{background:var(--soft);border-left:4px solid var(--wine);padding:10px 16px;border-radius:0 8px 8px 0;margin:12px 0;font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>SMPDL 律集群时间线 <span class="lv">· Cluster Timeline</span></h1>
+    <div class="sub">四大质疑集群 C1–C4（+C5 假说）× 裁决工具代际 G1–G6 × 案例库 43 组律（H1–H43）——「今日体系唯一未被看见的出口」首次可视化</div>
+    <div class="meta-chips">
+      <span class="chip">工单 P1-③</span><span class="chip">canonical 数据：reports/data/SMPDL_LawTimeline.json</span>
+      <span class="chip">源：律史精修 §2.1/§2.2 + 档位迁移时间线 + 历史序索引</span><span class="chip">CC BY-NC-SA 4.0 · MMXXVI</span>
+    </div>
+  </header>
+
+  <div class="panel">
+    <h2>一 · 集群带 + 工具代际 + 律泳道总图</h2>
+    <div class="note">悬停律条看详情；点击集群按钮过滤。时间轴分段压缩（−300 → 1800 压缩为 15%）。C5 为假说态（虚线带）。</div>
+    <div class="legend" id="legend"></div>
+    <div class="legend" id="filters" style="margin-top:6px"></div>
+    <svg id="tl" width="1220" height="640" viewBox="0 0 1220 640" role="img" aria-label="律集群时间线"></svg>
+  </div>
+
+  <div class="panel">
+    <h2>二 · 四集群 + C5 假说</h2>
+    <div class="rule-box"><b>集群规律</b>：间隔约 30 年（1843 / 1899 / 1931 / 1963），每集群由<b>一种新裁决工具的发明</b>驱动——工具先于质疑对象存在，律的危机是工具的「应用潮」；集群内成员律跨族共振（工具不挑族）。</div>
+    <table id="tCluster"></table>
+  </div>
+
+  <div class="panel">
+    <h2>三 · 裁决工具代际 G1–G6</h2>
+    <div class="note">G6 = 进行中：Univalence 在 HoTT 书（2013）为公理（D 档），在 Cubical（2016+）成为可计算证明的定理（E 档化）——人类首次<b>实时观察</b>律的档位迁移（活体样本，P2-② 工单追踪）。</div>
+    <table id="tGen"></table>
+  </div>
+
+  <div class="panel">
+    <h2>四 · 主时间线事件流</h2>
+    <table id="tEvents"></table>
+  </div>
+
+  <footer>SMPDL · Göttingen S/M/P × D/L · CAMPANASILVAE · fecit · MMXXVI · CC BY-NC-SA 4.0 · 数据 v1.0（2026-10-15）</footer>
+</div>
+<div class="tt" id="tt"></div>
+
+<script>
+const DATA = {
+ "clusters":[
+  {"id":"C1","name":"代数解放","period":"1843–1870s","span":[1843,1875],"driver":"「定义新对象」零成本","members":["交换律（四元数 1843）","交换律再击（矩阵 1858）","结合律触碰（Grassmann 1844；李代数 1870s）"],"status":"已确立"},
+  {"id":"C2","name":"几何-集合危机","period":"1899–1908","span":[1899,1908],"driver":"公理化方法 + 模型法系统化","members":["平行公设收官（Hilbert 1899）","集合律危机（Russell 1901）","AC（1904–08）","LEM（Brouwer 1907）"],"status":"已确立"},
+  {"id":"C3","name":"元数学裁决","period":"1931–1938","span":[1931,1938],"driver":"算术化/编码技术","members":["不完备定理（1931）","切消去（1935）","分配律量子侧（1936）","Gödel L（1938）"],"status":"已确立"},
+  {"id":"C4","name":"forcing 与语境","period":"1963–1967","span":[1963,1967],"driver":"forcing + 语义发明","members":["AC/CH 独立（1963）","Kripke 语义成熟","KS 语境性（1967）"],"status":"已确立"},
+  {"id":"C5","name":"构造性类型论浪潮（假说）","period":"2000s–","span":[2000,2026],"driver":"构造性类型论 + 证明助手（cubical、Lean）","members":["HoTT/cubical（Univalence 档位迁移）","量子计算（语境性实用化）","Lean/mathlib 形式化浪潮"],"status":"假说检验中（P2-③ 计量工单）"}],
+ "generations":[
+  {"id":"G1","tool":"几何模型构造（Beltrami/Klein/Poincaré）","era":"1868–1880s","adjudicated":"平行公设","cluster":"前奏"},
+  {"id":"G2","tool":"公理独立性方法（Hilbert 1899）","era":"1899","adjudicated":"几何公理族","cluster":"C2"},
+  {"id":"G3","tool":"算术化/构造宇宙（Gödel 编码、L）","era":"1931–1938","adjudicated":"CH 相对一致、完备性","cluster":"C3"},
+  {"id":"G4","tool":"forcing（Cohen 1963）","era":"1963","adjudicated":"AC、CH、Suslin 假设","cluster":"C4"},
+  {"id":"G5","tool":"语义发明（Kripke/Henkin/量子语境）","era":"1930s–1960s","adjudicated":"LEM、量词域、分配律","cluster":"C3/C4"},
+  {"id":"G6","tool":"构造性类型论 + 证明助手（cubical、Lean）","era":"2013–","adjudicated":"Univalence：D 档公理 → E 档定理（活体档位迁移，首次实时观察）","cluster":"C5?"}],
+ "timeline_events":[
+  {"year":-300,"label":"Euclid 公理化；平行公设 E₀ 默认"},
+  {"year":1843,"label":"Hamilton 四元数 ★ 交换律 E→D（史上第一次意识到「律是选择」）","cluster":"C1"},
+  {"year":1847,"label":"Boole《逻辑的数学分析》分配律以 D 档进入逻辑"},
+  {"year":1868,"label":"Beltrami 伪球面模型：平行公设 E→I 裁决完成（G1）"},
+  {"year":1872,"label":"Dedekind 分割：完备律成为分析的构成公理"},
+  {"year":1899,"label":"Hilbert《几何基础》独立性方法化（G2，C2 开启）","cluster":"C2"},
+  {"year":1904,"label":"Zermelo 良序定理：AC 以 D 档登场即争议","cluster":"C2"},
+  {"year":1907,"label":"Brouwer 直觉主义：LEM E₀→Q","cluster":"C2"},
+  {"year":1931,"label":"Gödel 不完备定理：「独立性」可操作化（C3 开启，G3）","cluster":"C3"},
+  {"year":1935,"label":"Gentzen Hauptsatz ★ 双档事件：规则对 D + 切消去 E","cluster":"C3"},
+  {"year":1936,"label":"Birkhoff–von Neumann 投影格 ★ 跨档事件","cluster":"C3"},
+  {"year":1938,"label":"Gödel L：CH 相对一致（C3 收官）","cluster":"C3"},
+  {"year":1956,"label":"Gauss–Bonnet 统一：平行公设 E′ 再定理化"},
+  {"year":1957,"label":"Gleason 定理：量子语义 E′ 再定理化"},
+  {"year":1963,"label":"Cohen forcing：AC E→I 裁决完成（C4 开启，G4）","cluster":"C4"},
+  {"year":1967,"label":"Kochen–Specker 语境性定理（C4 收官）","cluster":"C4"},
+  {"year":1975,"label":"Li–Yorke「周期三即混沌」"},
+  {"year":2013,"label":"HoTT 书：Univalence 为公理（D 档）——G6 活体样本起点","cluster":"C5"},
+  {"year":2026,"label":"本库：H1–H46 / 前向 13/13 / D-5 二轮收档"}],
+ "lanes":["几何","代数","分析","逻辑与集合","拓扑与范畴","数论与代数几何","概率与组合","计算与物理"],
+ "laws":[
+  {"h":"H1","period":"古典几何","lane":"几何","figures":"Euclid, Gauss, Riemann, Lobachevsky","years":[-300,1850],"pair":"欧氏几何 ↔ 球面几何","proposition":"三角形内角和","tag":"S-ISO/M-ISO/P-BISIM","cluster":null},
+  {"h":"H2","period":"古典分析","lane":"分析","figures":"Newton, Leibniz, Euler","years":[1650,1750],"pair":"微分方程 ↔ 差分方程","proposition":"指数增长模型","tag":"S-ISO/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H3","period":"组合数学","lane":"概率与组合","figures":"Euler, König, Erdős","years":[1736,1950],"pair":"有限图 ↔ 无限图","proposition":"最小度 ≥ 2 是否保证有环","tag":"S-ISO/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H4","period":"抽象代数","lane":"代数","figures":"Hamilton, Cayley, Noether","years":[1843,1900],"pair":"交换环 ↔ 非交换环","proposition":"(ab)ⁿ 的展开","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":["C1"]},
+  {"h":"H5","period":"域论与特征","lane":"代数","figures":"Galois, Dedekind, Steinitz","years":[1870,1910],"pair":"特征 0 ↔ 特征 p","proposition":"(a+b)ᵖ 的展开","tag":"S-ISO/M-ISO/P-BISIM","cluster":null},
+  {"h":"H6","period":"分析严格化","lane":"分析","figures":"Weierstrass, Robinson","years":[1850,1961],"pair":"标准分析 ↔ 非标准分析","proposition":"导数定义","tag":"S-ISO/M-ISO/P-BISIM","cluster":null},
+  {"h":"H7","period":"数理逻辑","lane":"逻辑与集合","figures":"Brouwer, Heyting","years":[1907,1930],"pair":"经典逻辑 ↔ 直觉主义逻辑","proposition":"存在性证明","tag":"S-BISIM/M-ISO/P-ISO","cluster":["C2","C4"]},
+  {"h":"H8","period":"公理化集合论","lane":"逻辑与集合","figures":"Zermelo, Fraenkel, von Neumann","years":[1908,1920],"pair":"ZFC ↔ ZF","proposition":"任意向量空间有基","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":["C2","C4"]},
+  {"h":"H9","period":"基础多元竞争","lane":"逻辑与集合","figures":"Russell, Church, Martin-Löf","years":[1908,1980],"pair":"集合论 ↔ 类型论","proposition":"n + 0 = n","tag":"S-ISO/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H10","period":"可计算数学","lane":"计算与物理","figures":"Turing, Weihrauch, Bishop","years":[1936,1980],"pair":"经典分析 ↔ 可计算分析","proposition":"中间值定理","tag":"S-ISO/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H11","period":"拓扑学","lane":"拓扑与范畴","figures":"Weierstrass, Heine, Borel","years":[1850,1910],"pair":"紧致空间 ↔ 非紧致空间","proposition":"连续函数的最值定理","tag":"S-ISO/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H12","period":"范畴论与代数拓扑","lane":"拓扑与范畴","figures":"Eilenberg, Mac Lane, Grothendieck","years":[1945,1960],"pair":"同构 ↔ 范畴等价 ↔ 同伦等价","proposition":"「相同」概念的三种强度","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H13","period":"概率论","lane":"概率与组合","figures":"Bayes, Laplace, Fisher, N-P, Jeffreys","years":[1763,1990],"pair":"频率主义 ↔ 贝叶斯","proposition":"二项比例估计与区间解释","tag":"S-BISIM/M-ISO/P-BISIM","cluster":null},
+  {"h":"H14","period":"代数几何","lane":"数论与代数几何","figures":"Hilbert, Grothendieck","years":[1890,1960],"pair":"经典代数簇 ↔ 概形","proposition":"仿射 Nullstellensatz","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H15","period":"数论","lane":"数论与代数几何","figures":"Dirichlet, Dedekind, Artin, Chebotarev","years":[1837,1990],"pair":"解析数论 ↔ 代数数论","proposition":"算术级数中的素数","tag":"S-ISO/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H16","period":"非欧几何","lane":"几何","figures":"Euclid, Gauss, Lobachevsky, Bolyai, Riemann","years":[-300,1850],"pair":"欧氏 ↔ 球面 ↔ 双曲","proposition":"三角形内角和与曲率","tag":"S-ISO/M-ISO/P-BISIM","cluster":["C2"]},
+  {"h":"H17","period":"实分析/测度论","lane":"分析","figures":"Riemann, Lebesgue","years":[1854,1902],"pair":"Riemann ↔ Lebesgue 积分","proposition":"极限-积分交换（DCT）","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H18","period":"偏微分方程","lane":"分析","figures":"Green, Sobolev, Lax–Milgram","years":[1830,1954],"pair":"经典解 ↔ 弱解","proposition":"Laplace 方程存在性与正则性","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H19","period":"复分析","lane":"分析","figures":"Cauchy, Hartogs","years":[1830,1906],"pair":"单复变 ↔ 多复变","proposition":"Hartogs 现象与全纯域","tag":"S-ISO/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H20","period":"组合/Ramsey 理论","lane":"概率与组合","figures":"Ramsey, Erdős–Szekeres","years":[1930,1935],"pair":"有限 ↔ 无限 Ramsey","proposition":"单色集存在性","tag":"S-ISO/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H21","period":"模型论","lane":"逻辑与集合","figures":"Löwenheim, Skolem, Gödel, Henkin","years":[1915,1950],"pair":"一阶 ↔ 二阶逻辑","proposition":"紧致性与 LS 定理","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H22","period":"证明论","lane":"逻辑与集合","figures":"Hilbert, Gentzen, Prawitz","years":[1917,1965],"pair":"Hilbert ↔ 自然演绎","proposition":"切消去与规范化","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":["C3"]},
+  {"h":"H23","period":"泛函分析","lane":"分析","figures":"Hilbert, Riesz, Banach","years":[1900,1932],"pair":"Hilbert ↔ Banach 空间","proposition":"投影与对偶（平行四边形律）","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H24","period":"表示论","lane":"代数","figures":"Frobenius, Burnside, Pólya","years":[1896,1937],"pair":"线性 ↔ 置换表示","proposition":"特征标与不变量","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H25","period":"动力系统","lane":"计算与物理","figures":"Poincaré, Sharkovsky, Li–Yorke","years":[1880,1975],"pair":"连续流 ↔ 离散映射","proposition":"P–B 定理与混沌","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H26","period":"自动机理论","lane":"计算与物理","figures":"Kleene, Chomsky","years":[1956,1956],"pair":"正则 ↔ 上下文无关","proposition":"封闭性与判定性","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H27","period":"逻辑/量子基础","lane":"逻辑与集合","figures":"Boole, Stone, BvN, Gleason, KS","years":[1847,1967],"pair":"布尔逻辑 ↔ 量子逻辑","proposition":"分配律与真值语义","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":["C3","C4"]},
+  {"h":"H28","period":"代数（律减法第二辑）","lane":"代数","figures":"Graves, Cayley, Frobenius, Hurwitz, Lie, Artin","years":[1843,1950],"pair":"结合代数 ↔ 非结合代数","proposition":"结合律与括号语义","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":["C1"]},
+  {"h":"H29","period":"分析基础（上游律）","lane":"分析","figures":"毕达哥拉斯, Dedekind, Cantor, Hilbert","years":[1858,1872],"pair":"ℚ ↔ ℝ","proposition":"Dedekind 完备律与定理群生根","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H30","period":"测度论（交换律定价）","lane":"分析","figures":"Cauchy, Riemann, Fubini, Tonelli","years":[1821,1909],"pair":"条件收敛 ↔ 绝对可积","proposition":"积分次序交换律","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H31","period":"重写理论/λ 演算","lane":"计算与物理","figures":"Church, Rosser, Tait, Knuth–Bendix","years":[1936,1970],"pair":"非汇合重写 ↔ λ 演算","proposition":"Church–Rosser 汇合律","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":["C3"]},
+  {"h":"H32","period":"序理论/非线性分析","lane":"计算与物理","figures":"Knaster, Tarski, Kakutani, Nash, Minty","years":[1928,1964],"pair":"单调 ↔ 非单调集值","proposition":"单调律与均衡理论","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H33","period":"数学物理（守恒）","lane":"计算与物理","figures":"Noether, Lorenz, Ward","years":[1918,1963],"pair":"耗散系统 ↔ 变分对称系统","proposition":"守恒律与对称对偶","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H34","period":"代数/非阿分析","lane":"分析","figures":"Eudoxus, Stolz, Levi-Civita, Ostrowski, Robinson","years":[-350,1960],"pair":"阿氏域 ↔ 非阿域","proposition":"Archimedes 律与无穷小","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H35","period":"动力系统（几何力学）","lane":"计算与物理","figures":"Liouville, Poincaré, Lorenz, Smale, Ruelle","years":[1838,1976],"pair":"保守流 ↔ 耗散流","proposition":"Liouville 禁闭与吸引子","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H36","period":"证明论（资源敏感）","lane":"逻辑与集合","figures":"Gentzen, Girard, Wadler","years":[1935,1990],"pair":"经典结构 ↔ 线性逻辑","proposition":"收缩/弱化律与 bang","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H37","period":"射影几何","lane":"几何","figures":"Desargues, Hilbert, Hall, Moufang","years":[1648,1951],"pair":"Desarguesian ↔ 非 Desargues","proposition":"Desargues 律与三元环","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H38","period":"交换代数","lane":"代数","figures":"Gauss, Kummer, Dedekind","years":[1801,1871],"pair":"整环 ↔ 含零因子环","proposition":"零因子律与理想论","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H39","period":"tropical 代数","lane":"代数","figures":"Cuninghame-Green, Maslov, Viro","years":[1960,2000],"pair":"经典半环 ↔ tropical 半环","proposition":"幂等律与优化代数化","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H40","period":"半群理论","lane":"代数","figures":"Burnside, Wagner, Novikov–Adian","years":[1902,1968],"pair":"可消 ↔ 非可消半群","proposition":"消去律与逆半群","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H41","period":"点集拓扑/谱理论","lane":"拓扑与范畴","figures":"Hausdorff, Zariski, Stone, Hochster, Scott","years":[1914,1970],"pair":"Hausdorff ↔ 非 Hausdorff","proposition":"T2 分离律与谱拓扑","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H42","period":"拓扑相变/数学物理","lane":"计算与物理","figures":"Brouwer, Hopf, BKT, Atiyah–Singer","years":[1911,1973],"pair":"拓扑荷禁闭 ↔ 解绑相变","proposition":"同伦不变律与指标定理","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":null},
+  {"h":"H43","period":"拟度量几何","lane":"几何","figures":"Fréchet, Wilson, Lawvere, Künzi","years":[1906,1990],"pair":"对称度量 ↔ 拟度量","proposition":"距离对称律与富集范畴","tag":"S-BISIM/M-BISIM/P-BISIM","cluster":null}]
+};
+
+const CCOL = {C1:"#b82e57",C2:"#5a6b7d",C3:"#8a7540",C4:"#3d6e58",C5:"#9e3b32",null:"#9a968c"};
+const CNAME = {C1:"C1 代数解放",C2:"C2 几何-集合危机",C3:"C3 元数学裁决",C4:"C4 forcing 与语境",C5:"C5 类型论浪潮（假说）","null":"无集群归属"};
+const svg = document.getElementById("tl"), NS = "http://www.w3.org/2000/svg";
+const M = {l:150, r:30, t:96, b:56}, W = 1220, H = 640;
+const IW = W - M.l - M.r, laneH = (H - M.t - M.b) / DATA.lanes.length;
+
+// piecewise scale: [-300,1800] -> [0,0.15], [1800,2030] -> [0.15,1]
+function x(year){
+  const y0=-350, y1=1800, y2=2030;
+  if(year<=1800) return M.l + ((year-y0)/(y1-y0))*0.15*IW;
+  return M.l + (0.15 + (year-y1)/(y2-y1)*0.85)*IW;
+}
+function el(tag, attrs, parent){ const e=document.createElementNS(NS,tag); for(const k in attrs) e.setAttribute(k,attrs[k]); (parent||svg).appendChild(e); return e; }
+function txt(t, attrs){ const e=el("text",attrs); e.textContent=t; return e; }
+
+// ---- cluster band ----
+const bandY = 58;
+DATA.clusters.forEach(c=>{
+  const x0=x(c.span[0]), x1=x(c.span[1]);
+  const g = el("g",{});
+  el("rect",{x:x0,y:bandY,width:Math.max(x1-x0,6),height:M.t+ (H-M.t-M.b) - 8,fill:CCOL[c.id],opacity:c.id==="C5"?0.05:0.07, "pointer-events":"none"});
+  if(c.id==="C5") el("rect",{x:x0,y:bandY,width:Math.max(x1-x0,6),height:M.t+(H-M.t-M.b)-8,fill:"none",stroke:CCOL[c.id],"stroke-dasharray":"4 3","stroke-width":1,opacity:.5,"pointer-events":"none"});
+  const t = txt(c.id+" "+c.name.split("（")[0], {x:(x0+x1)/2, y:bandY-6, "text-anchor":"middle","font-size":11.5,"font-weight":700,fill:CCOL[c.id]});
+  if(x1-x0<90) t.setAttribute("x", x1+4), t.setAttribute("text-anchor","start");
+});
+
+// ---- lanes ----
+DATA.lanes.forEach((ln,i)=>{
+  const y = M.t + i*laneH;
+  if(i%2===0) el("rect",{x:M.l,y:y,width:IW,height:laneH,fill:"#faf9f5","pointer-events":"none"});
+  el("line",{x1:M.l,y1:y,x2:W-M.r,y2:y,stroke:"#e2ddd0","stroke-width":1});
+  txt(ln,{x:M.l-10,y:y+laneH/2+4,"text-anchor":"end","font-size":12.5,"font-weight":600,fill:"#2b2b28"});
+});
+el("line",{x1:M.l,y1:M.t,x2:M.l,y2:H-M.b,stroke:"#2b2b28","stroke-width":1.5});
+
+// ---- axis ticks ----
+[-300,0,500,1000,1500,1700,1800,1850,1900,1950,2000,2026].forEach(yr=>{
+  const xx=x(yr);
+  el("line",{x1:xx,y1:M.t,x2:xx,y2:H-M.b,stroke:"#e2ddd0","stroke-width":.6});
+  el("line",{x1:xx,y1:H-M.b,x2:xx,y2:H-M.b+5,stroke:"#2b2b28","stroke-width":1});
+  const lab = yr<0 ? "−300" : String(yr);
+  txt(lab,{x:xx+ (yr===2026? -4:4),y:H-M.b+20,"text-anchor":yr===2026?"end":"middle","font-size":11,fill:"#6b675e"});
+});
+txt("（时间轴 −300 → 1800 压缩为 15%）",{x:W-M.r,y:H-M.b+38,"text-anchor":"end","font-size":10.5,fill:"#8a857a"});
+
+// ---- events on axis ----
+DATA.timeline_events.forEach((ev,i)=>{
+  const xx=x(ev.year); if(xx<M.l||xx>W-M.r) return;
+  const col = ev.cluster? CCOL[ev.cluster] : "#2b2b28";
+  el("circle",{cx:xx,cy:H-M.b,r:3,fill:col});
+  const ty = H-M.b+34 + (i%2)*13;
+  const t = txt(String(ev.year).replace("-","−"),{x:xx,y:ty,"text-anchor":"middle","font-size":9.5,fill:col,"font-weight":600});
+});
+
+// ---- law bars ----
+const tt = document.getElementById("tt");
+let filter = "ALL";
+function lawColor(l){ return l.cluster ? CCOL[l.cluster[0]] : CCOL.null; }
+function drawLaws(){
+  svg.querySelectorAll(".lawbar").forEach(n=>n.remove());
+  DATA.lanes.forEach((ln,li)=>{
+    const inLane = DATA.laws.filter(l=>l.lane===ln);
+    inLane.forEach((l,j)=>{
+      const show = filter==="ALL" || (filter==="NONE" && !l.cluster) || (l.cluster&&l.cluster.includes(filter));
+      if(!show) return;
+      const y = M.t + li*laneH + laneH/2 - 7 + 0;
+      const x0 = x(l.years[0]), x1 = Math.max(x(l.years[1]), x0+10);
+      const g = el("g",{class:"lawbar",cursor:"pointer"});
+      el("rect",{x:x0,y:y,width:x1-x0,height:14,rx:3,fill:lawColor(l),opacity:.88});
+      // cluster badge strip
+      if(l.cluster&&l.cluster.length>1) el("rect",{x:x0,y:y,width:Math.min(6,(x1-x0)/3),height:14,rx:2,fill:CCOL[l.cluster[1]],opacity:.9});
+      txt(l.h,{x:x0+ (x1-x0)/2,y:y+10.5,"text-anchor":"middle","font-size":9.5,fill:"#fff","font-weight":700});
+      const r = el("rect",{x:x0,y:y-4,width:x1-x0,height:22,fill:"transparent"});
+      r.addEventListener("mousemove",e=>{
+        tt.style.display="block";
+        tt.innerHTML = "<b>"+l.h+" · "+l.period+"</b><br>"+l.pair+"<br>◆ "+l.proposition+"<br>"+l.figures+"<br><span style='opacity:.75'>"+l.tag+" · "+(l.cluster?("集群 "+l.cluster.join("+")):"无集群")+" · "+l.years[0].toString().replace("-","−")+"–"+l.years[1]+"</span>";
+        tt.style.left=(e.clientX+14)+"px"; tt.style.top=(e.clientY+14)+"px";
+      });
+      r.addEventListener("mouseleave",()=>tt.style.display="none");
+    });
+  });
+}
+drawLaws();
+
+// ---- legend & filters ----
+const lg = document.getElementById("legend");
+ [["C1"],["C2"],["C3"],["C4"],["C5"],["null"]].forEach(([k])=>{
+   const s=document.createElement("span");
+   s.innerHTML = "<span class='sw' style='background:"+CCOL[k]+(k==="C5"?";background-image:linear-gradient(45deg,transparent 45%,"+CCOL.C5+" 45%,"+CCOL.C5+" 55%,transparent 55%)":"")+"'></span>"+CNAME[k];
+   lg.appendChild(s);
+ });
+ s2=document.createElement("span"); s2.innerHTML="<span class='sw' style='background:linear-gradient(90deg,"+CCOL.C1+" 50%,"+CCOL.C3+" 50%)'></span>双集群律（双色条）"; lg.appendChild(s2);
+const fl = document.getElementById("filters");
+ [["ALL","全部"],["C1","C1"],["C2","C2"],["C3","C3"],["C4","C4"],["C5","C5"],["NONE","无集群"]].forEach(([k,n])=>{
+   const b=document.createElement("button"); b.className="f"+(k==="ALL"?" on":""); b.textContent=n;
+   b.onclick=()=>{ filter=k; fl.querySelectorAll("button").forEach(x=>x.classList.remove("on")); b.classList.add("on"); drawLaws(); };
+   fl.appendChild(b);
+ });
+
+// ---- tables ----
+document.getElementById("tCluster").innerHTML = "<tr><th>集群</th><th>时段</th><th>成员律</th><th>驱动工具</th><th>状态</th></tr>"+
+ DATA.clusters.map(c=>"<tr"+(c.id==="C5"?" class='hyp'":"")+"><td><b style='color:"+CCOL[c.id]+"'>"+c.id+"</b> "+c.name+"</td><td>"+c.period+"</td><td>"+c.members.join("<br>")+"</td><td>"+c.driver+"</td><td>"+c.status+"</td></tr>").join("");
+document.getElementById("tGen").innerHTML = "<tr><th>代</th><th>裁决工具</th><th>年代</th><th>裁决过的律</th><th>对应集群</th></tr>"+
+ DATA.generations.map(g=>"<tr"+(g.id==="G6"?" class='g6'":"")+"><td><b>"+g.id+"</b></td><td>"+g.tool+"</td><td>"+g.era+"</td><td>"+g.adjudicated+"</td><td>"+g.cluster+"</td></tr>").join("");
+document.getElementById("tEvents").innerHTML = "<tr><th>年份</th><th>事件</th><th>集群</th></tr>"+
+ DATA.timeline_events.map(e=>"<tr><td>"+String(e.year).replace("-","−")+"</td><td>"+e.label+"</td><td>"+(e.cluster?("<b style='color:"+CCOL[e.cluster]+"'>"+e.cluster+"</b>"):"—")+"</td></tr>").join("");
+</script>
+</body>
+</html>

@@ -12,6 +12,7 @@
 | 项目 | 链接 |
 |---|---|
 | **完整报告总览** | [reports/SMPDL_Audit_SampleSuite.md](reports/SMPDL_Audit_SampleSuite.md) |
+| **律集群时间线可视化** 🆕 | [reports/SMPDL_LawTimeline_Visual.html](reports/SMPDL_LawTimeline_Visual.html)（P1-③ · 四集群 + G1–G6 + 43 组律 · canonical 数据 [reports/data/SMPDL_LawTimeline.json](reports/data/SMPDL_LawTimeline.json)） |
 | **方法论框架** | [reports/SMPDL_Framework.md](reports/SMPDL_Framework.md) |
 | **文献引用纪律** | [reports/SMPDL_Citation_Discipline.md](reports/SMPDL_Citation_Discipline.md) |
 | **署名与指纹** | [reports/SMPDL_ATTRIBUTION.md](reports/SMPDL_ATTRIBUTION.md) |
