@@ -38,8 +38,7 @@
 ## 四、可复现命令
 
 ```bash
-C:/Users/hengz/.workbuddy/binaries/python/versions/3.13.12/python.exe \
-  C:/Users/hengz/WorkBuddy/2026-10-12-11-14-04/ks_cabello18_verify.py
+python3 ks_cabello18_verify.py  # 脚本随仓库分发：reports/ks_cabello18_verify.py
 # 期望输出: ✅ KS 不可指派性成立（穷举 + 奇偶双确认）
 ```
 

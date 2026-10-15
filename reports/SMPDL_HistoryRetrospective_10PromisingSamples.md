@@ -514,7 +514,7 @@ OpenAI 若声称 `O(1/k)`-瘦树，意味着它解决了强猜想，并可能给
 
 ## 6. 归档说明
 
-- **文件位置 File location**: `C:/Users/hengz/Desktop/SMPDL_Paper_and_Data/reports/SMPDL_HistoryRetrospective_10PromisingSamples.md`
+- **文件位置 File location**: `reports/SMPDL_HistoryRetrospective_10PromisingSamples.md`（本仓库内相对路径）
 - **对应 HTML**: `SMPDL_HistoryRetrospective_10PromisingSamples.html`（同目录，由本 md 生成）
 - **版本链 Version chain**: SMPDL v2.2 → v2.3（若纳入主样本集）
 - **引用纪律 Citation discipline**: 本报告中所有年份、作者、结果均来自已公开的数学文献或 arXiv；关键断言已给出可追溯来源（如 Erdős 1953、Heath-Brown 2006、Smith et al. 2023 等）。
