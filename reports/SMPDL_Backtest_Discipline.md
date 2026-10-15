@@ -117,10 +117,6 @@
 - **并列**：与 `SMPDL_Citation_Discipline.md`（引用纪律）同为项目级硬纪律；
 - **下游**：C-1 arXiv 升版战绩章按 §五执行；B4-3 扩样按十关 checklist 开跑。
 
-### 六.1 先行者引用注（2026-10-15 原创性检索补登，见 `SMPDL_Novelty_Search_2026-10-15.md`）
-
-本纪律与 LLM 研究方法学近邻工作并存且互补：**Thomas, Gligorić & Shah (2026)**《Mitigating LLM-based p-Hacking by Preregistering for the Next LLM》（arXiv:2606.27687）提出未来模型作 holdout 的预注册协议；**PRML 规范**（OECD AI 目录登记）以 SHA-256 清单哈希锁定评估声明。本纪律的独占组件：判定者-登记者**会话分离**（J1）、**勘误生命周期**（E1–E5）、**术语首现 git 取证**（F2 条款）、以及两次真实自纠案例的全记录（T3-B 对象错位四小时反转 + 诚实审查过度概括撤回）。对外引用本纪律时应并列引用上述先行者。
-
 ---
 
 **Göttingen S/M/P × D/L · 回测纪律 v2.0 · CAMPANASILVAE · fecit · MMXXVI · CC BY-NC-SA 4.0**

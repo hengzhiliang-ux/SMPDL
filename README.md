@@ -43,7 +43,7 @@ We are also releasing abridged summaries of the model's reasoning, covering the 
 | Family | Subject |
 |---|---|
 | **GitHub Pages 首页** | `https://hengzhiliang-ux.github.io/SMPDL` |
-| **Zenodo 论文/数据记录** | https://zenodo.org/records/23362944（v3.3 · Concept DOI 10.5281/zenodo.23318734） |
+| **Zenodo 论文/数据记录** | https://zenodo.org/records/23394249（v3.4 · 334 份已发布 2026-10-15 · Concept DOI 10.5281/zenodo.23318734） |
 | **WorkBuddy 交互页面** | https://riemann-lecturer-04390.app.workbuddy.host/ |
 | **287 份报告联合 SHA-256（v24，顺序固定）** | `a5b11a178c4a088fc8b366d03e38d667153f51958dc833ad6de0ea14a2cb1a0a` |
 
