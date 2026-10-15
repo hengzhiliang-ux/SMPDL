@@ -90,6 +90,18 @@ We will preserve the public release history of this collection. Corrections and 
 - [SMP_RH_Diagnostic_ProofDirections.md](reports/SMP_RH_Diagnostic_ProofDirections.md) — RH 证明方向诊断
 - [SMP_NearestProven_Theorems_UnsolvedConjectures.md](reports/SMP_NearestProven_Theorems_UnsolvedConjectures.md) — 邻近定理与开放猜想
 
+### 四结构理论与剂量学（2026-10-15 新增系列）
+
+- [SMPDL_FourStructures_TheoryReview.md](reports/SMPDL_FourStructures_TheoryReview.md) — 四结构理论综述 v1.0（认知/语言/数学/逻辑四轴重组全部理论发现）
+- [SMPDL_FS_Paper1_Cognitive.md](reports/SMPDL_FS_Paper1_Cognitive.md) — FS-1 认知结构小论文（准入制度论 + 可见性节律）
+- [SMPDL_FS_Paper2_Linguistic.md](reports/SMPDL_FS_Paper2_Linguistic.md) — FS-2 语言学结构小论文（同名异义载体论 + F2 取证论）
+- [SMPDL_FS_Paper3_Mathematical.md](reports/SMPDL_FS_Paper3_Mathematical.md) — FS-3 数学结构小论文（律学三维坐标 + 两阶段涌现 + 13/13，旗舰）
+- [SMPDL_FS_Paper4_Logic.md](reports/SMPDL_FS_Paper4_Logic.md) — FS-4 逻辑学结构小论文（E/D/I 档位 + 元层 G1–G6 + 自反性）
+- [SMPDL_FS_TreeDiagrams_Index.md](reports/SMPDL_FS_TreeDiagrams_Index.md) — 四结构树状图存档索引（SVG 源 + 视觉语法说明）
+- [SMPDL_HoldingSide_Evolution.md](reports/SMPDL_HoldingSide_Evolution.md) — 成立侧演化：定型化五形态 P0–P4（移除-涌现的镜像补篇）
+- [SMPDL_RemovalDosimetry.md](reports/SMPDL_RemovalDosimetry.md) — 移除剂量学 v1.0（承重图/存活函数/临界剂量 + 降解四型 + 七条剂量阶梯）
+- [reports/d5/](reports/d5/) — D-5 工单系列：预注册猜测冻结（`407598b`）→ 42 样本开跑（`0f201a5`）→ 二轮预注册 F1–F4（`6b2d48f`）
+
 ### 经典证明审计
 
 - [SMP_ProofAnalysis_Euclid_Primes.md](reports/SMP_ProofAnalysis_Euclid_Primes.md) — 欧几里得素数无限
@@ -164,12 +176,14 @@ We will preserve the public release history of this collection. Corrections and 
 
 | 项目 | 当前值 |
 |---|---|
-| 方法论版本 | v2.8 |
-| 论文版本 | v23（curated 287 份） |
-| 页面版本 | v5.93 |
+| 方法论版本 | v2.9（+四结构/剂量学层） |
+| 论文版本 | v24 候选（curated 287 + 本日新增 8 份待编入） |
+| 页面版本 | v5.94 |
+| 案例库 | H1–H46 / 132 份（B4-3 扩样 +3） · 前向回验 13/13 |
+| 回测纪律 | v2.0 十关制（B4-3 首例全程执行 ✅） |
 | DOI | [10.5281/zenodo.23362944](https://doi.org/10.5281/zenodo.23362944)（Zenodo v3.3 · Concept 10.5281/zenodo.23318734） |
-| 报告数量 | 287 份 curated |
-| 联合 SHA-256 | `a5b11a178c4a088fc8b366d03e38d667153f51958dc833ad6de0ea14a2cb1a0a`（v23 · 顺序固定） |
+| 报告数量 | 287 份 curated + 8 份新增候选 |
+| 联合 SHA-256 | `a5b11a178c4a088fc8b366d03e38d667153f51958dc833ad6de0ea14a2cb1a0a`（v24r 可复现基准不变；新增文件下版编入） |
 
 ---
 
