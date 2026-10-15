@@ -100,7 +100,7 @@ We will preserve the public release history of this collection. Corrections and 
 - [SMPDL_FS_TreeDiagrams_Index.md](reports/SMPDL_FS_TreeDiagrams_Index.md) — 四结构树状图存档索引（SVG 源 + 视觉语法说明）
 - [SMPDL_HoldingSide_Evolution.md](reports/SMPDL_HoldingSide_Evolution.md) — 成立侧演化：定型化五形态 P0–P4（移除-涌现的镜像补篇）
 - [SMPDL_RemovalDosimetry.md](reports/SMPDL_RemovalDosimetry.md) — 移除剂量学 v1.0（承重图/存活函数/临界剂量 + 降解四型 + 七条剂量阶梯）
-- [reports/d5/](reports/d5/) — D-5 工单系列：预注册猜测冻结（`407598b`）→ 42 样本开跑（`0f201a5`）→ 二轮预注册 F1–F4（`6b2d48f`）
+- [reports/d5/](reports/d5/) — D-5 工单系列：预注册猜测冻结（`407598b`）→ 42 样本开跑（`0f201a5`）→ 二轮预注册 F1–F4（`6b2d48f`）→ prior-art 校验（`57a8fdb`）→ **二轮数据征集完成（`33356c6`，F1 双读数全披露 + F2 30 例档案 + F3 六例 + F4 十行，零判定内容）→ 待独立会话裁定**（裁定工单 = 桌面 `工单_D5-二轮独立裁定_2026-10-15.md`）
 
 ### 经典证明审计
 
