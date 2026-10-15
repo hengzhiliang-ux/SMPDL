@@ -100,7 +100,7 @@ We will preserve the public release history of this collection. Corrections and 
 - [SMPDL_FS_TreeDiagrams_Index.md](reports/SMPDL_FS_TreeDiagrams_Index.md) — 四结构树状图存档索引（SVG 源 + 视觉语法说明）
 - [SMPDL_HoldingSide_Evolution.md](reports/SMPDL_HoldingSide_Evolution.md) — 成立侧演化：定型化五形态 P0–P4（移除-涌现的镜像补篇）
 - [SMPDL_RemovalDosimetry.md](reports/SMPDL_RemovalDosimetry.md) — 移除剂量学 v1.0（承重图/存活函数/临界剂量 + 降解四型 + 七条剂量阶梯）
-- [reports/d5/](reports/d5/) — D-5 工单系列：预注册猜测冻结（`407598b`）→ 42 样本开跑（`0f201a5`）→ 二轮预注册 F1–F4（`6b2d48f`）→ prior-art 校验（`57a8fdb`）→ 二轮数据征集（`33356c6`）→ **二轮独立裁定收档（`5a2ca36`：F1/F3/F4 ✅ + F2 ✅ 含量化修正；咖啡 17:06 A 裁定——F2 判读基轴 = 二分方向性，Fisher p=0.0131 + 构造组 15/15 零脆性，约束组 5/15 阈值落差收窄为不等式/归纳/遗传亚型并转 run 3 分层采样；四条全 ✅ 收档，run 3 候选池五项待领）**
+- [reports/d5/](reports/d5/) — D-5 工单系列：预注册猜测冻结（`407598b`）→ 42 样本开跑（`0f201a5`）→ 二轮预注册 F1–F4（`6b2d48f`）→ prior-art 校验（`57a8fdb`）→ 二轮数据征集（`33356c6`）→ 二轮独立裁定收档（`5a2ca36`：F1–F4 全 ✅，F2 咖啡 A 裁定二分方向性）→ 理论解读 + 工单存档（`2e38685`）→ F4 循环评估（`83f7ef4`）→ 算子内窥七文法（`5872ea6`）→ G-0 层优先协议（`a510528`）→ G-0 T1–T3 首测（`95cccb8`→`c7c62f0`：κ 0.631/0.878、对角 11/16、T3-B 曾误判）→ 逻辑再阐释（`b9a1cb3`：PABAK 0.719/0.906、对角 91.7% vs 机遇 54.9%、coercion calculus）→ **T3-B 勘误重测（对象错位撤回 Park 证伪，标准定义 semimetric 重测 P-B1/B2/B3 三✅，H-G0-3 修正为 ✅ 支持 2/2，JMS 1995 反例为证；frag 占位 + weak 空位）**
 
 ### 经典证明审计
 
