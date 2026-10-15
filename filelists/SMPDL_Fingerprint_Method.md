@@ -45,6 +45,16 @@ print(h.hexdigest())
 - **基准**：`archives/SMPDL_v24_archive.zip` 与 `SMPDL_Paper_and_Data/reports/`（287/287 与 zip 字节一致，2026-10-15 已验）。
 - **注意**：git 仓库工作区受 `core.autocrlf` 转换影响（检出 CRLF / 入库 LF），**不用于逐字节判定**，只作版本史与快速比对；任何完整性裁定以 zip + Paper_and_Data 副本为准。
 
+### 四.1 分叉登记（2026-10-15 19:0x 审查发现）
+
+上述「287/287 字节一致」声明的有效时窗 = **2026-10-15 P1-⑧ 修复批次之前**。该批次（08:11–11:16，独立审计 16 缺陷三批收口）修订了 5 份核心元文档，使其**领先于** v24 zip（打包于 10-14 17:26）：
+
+`SMPDL_FunctionalType_Reclassification.md` / `SMPDL_LawStructure_MigrationScreening.md` / `SMPDL_MasterMethodology_Synthesis.md` / `SMPDL_RemovalEmergence_Synthesis.md` / `SMPDL_TheoryEvolution_Retrospective.md`
+
+- **方向**：本地（修复后）→ 领先归档（修复前）；非数据事故，属版本滞后；
+- **后果**：Paper_and_Data 副本复算指纹 = `3226c582…` ≠ v24r `cfb4b21f…`（预期内）；**v24r 基准仍以 zip 本体为唯一有效锚点**；
+- **收口路径**：v25 版本向前（修复 5 份 + 未入档新文件池一并重算指纹上传），不回改已发布 zip。见 `reports/SMPDL_Zenodo_Audit_2026-10-15.md` Z1。
+
 ## 五、维护条款
 
 - 新版权限：发布脚本必须调用本文档第一节流程；发布记录（版号/指纹/清单名）回写 ATTRIBUTION 与 README 台账。

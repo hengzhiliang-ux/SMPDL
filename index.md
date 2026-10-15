@@ -25,12 +25,12 @@
 
 | 项目 | 值 |
 |---|---|
-| 方法论版本 | v2.8 |
-| 论文版本 | v23（curated 287 份 = H1–H43 案例库 + 元文档 + B4 盲判 + C-4 + 人机交互六模式） |
+| 方法论版本 | v2.9 |
+| 论文版本 | v24（curated 287 份 = H1–H46 案例库 + 元文档 + B4 盲判 + C-4 + 人机交互六模式 + OpenAI 审计扩容批次）· **本地演进领先归档**（P1-⑧ 修复 5 份 + D-5/G-0/FS 系列未入档，v25 候选池累积中，见 `reports/SMPDL_Zenodo_Audit_2026-10-15.md`） |
 | 页面版本 | v5.94 |
 | DOI | [10.5281/zenodo.23362944](https://doi.org/10.5281/zenodo.23362944)（Zenodo v3.3 · Concept DOI 10.5281/zenodo.23318734） |
 | curated 样本 | 287 份 |
-| 联合 SHA-256 | `a5b11a178c4a088fc8b366d03e38d667153f51958dc833ad6de0ea14a2cb1a0a`（v23 · 顺序规范见 `reports/SMPDL_ATTRIBUTION.md`） |
+| 联合 SHA-256 | v24 候选 `a5b11a17…`（算法未存档、不可复算，见 ATTRIBUTION 诚实披露）；**完整性锚 = v24r `cfb4b21f…`**（raw bytes、filelist 序，可复算基准，见 `filelists/v24r_baseline.txt`） |
 
 ---
 
