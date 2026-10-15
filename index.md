@@ -2,7 +2,7 @@
 
 > Göttingen S/M/P × D/L 数学证明审查方法论
 
-[![DOI](https://zenodo.org/badge/DOI-10.5281/zenodo.23362944.svg)](https://doi.org/10.5281/zenodo.23362944)
+[![DOI](https://zenodo.org/badge/DOI-10.5281/zenodo.23394249.svg)](https://doi.org/10.5281/zenodo.23394249)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
 
 ---
@@ -16,7 +16,7 @@
 | **方法论框架** | [reports/SMPDL_Framework.md](reports/SMPDL_Framework.md) |
 | **文献引用纪律** | [reports/SMPDL_Citation_Discipline.md](reports/SMPDL_Citation_Discipline.md) |
 | **署名与指纹** | [reports/SMPDL_ATTRIBUTION.md](reports/SMPDL_ATTRIBUTION.md) |
-| **Zenodo 记录** | https://zenodo.org/records/23362944（v3.3 · 最新） |
+| **Zenodo 记录** | https://zenodo.org/records/23394249（v3.4 · 最新 · 334 份） |
 | **WorkBuddy 交互页** | https://riemann-lecturer-04390.app.workbuddy.host/ |
 
 ---
@@ -26,11 +26,11 @@
 | 项目 | 值 |
 |---|---|
 | 方法论版本 | v2.9 |
-| 论文版本 | v24（curated 287 份 = H1–H46 案例库 + 元文档 + B4 盲判 + C-4 + 人机交互六模式 + OpenAI 审计扩容批次）· **本地演进领先归档**（P1-⑧ 修复 5 份 + D-5/G-0/FS 系列未入档，v25 候选池累积中，见 `reports/SMPDL_Zenodo_Audit_2026-10-15.md`） |
+| 论文版本 | v25（curated **334 份** = v24 287 + 新增 47：D-5 剂量学 17 / B4-2·B4-3 工件 6 / 理论综述 5 / Operator Lens 3 / 剂量-参数-守恒 3 / 保律算子 1 / 纪律 2 / 治理评估 10）· 2026-10-15 发布 |
 | 页面版本 | v5.94 |
-| DOI | [10.5281/zenodo.23362944](https://doi.org/10.5281/zenodo.23362944)（Zenodo v3.3 · Concept DOI 10.5281/zenodo.23318734） |
-| curated 样本 | 287 份 |
-| 联合 SHA-256 | v24 候选 `a5b11a17…`（算法未存档、不可复算，见 ATTRIBUTION 诚实披露）；**完整性锚 = v24r `cfb4b21f…`**（raw bytes、filelist 序，可复算基准，见 `filelists/v24r_baseline.txt`） |
+| DOI | [10.5281/zenodo.23394249](https://doi.org/10.5281/zenodo.23394249)（Zenodo v3.4 · Concept DOI 10.5281/zenodo.23318734） |
+| curated 样本 | **334 份** |
+| 联合 SHA-256 | **v25 `ce28839337b33f0aa5272187c6f68265bc92c1b35e03bdeac234f72aa8a1d451`**（raw bytes、`_v25_filelist.txt` 序、官方脚本复算 PASS）；历史锚 v24r `cfb4b21f…` |
 
 ---
 
