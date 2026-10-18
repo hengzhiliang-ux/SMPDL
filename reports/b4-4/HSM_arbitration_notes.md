@@ -56,8 +56,29 @@
 - 更微妙：Litvinov–Maslov 纲领的自我表述是**对应原理**（dequantization = 传统数学取极限 → 幂等数学为其「影子」）——**纲领层面是 γ 回收叙事**（旧数学被参数极限化），而非 β 解禁叙事；β 侧（新对象族合法化）在应用端同样真实。**J-A 的 γ 主读法在纲领层获得正面文本支持**；
 - 二手可引：AMS CONM 616 + Litvinov 综述（arXiv:1001.4247）——卷末明说「the origins of modern tropical mathematics are much more diverse」，直接可用于 §7.5/§6 的 R10 归因段。
 
-### 2.3 帖 1（史学锚定惯例）——仍开放
-两轮检索无直接命中（该问题确实没人系统问过）。**唯一真正需要发帖的残余**；或走文献路线查 Kuhn 派数学史（如 Corry《Modern Algebra and the Rise of Mathematical Structures》的「认知点」处理）后再定。
+### 2.4 帖 1 实质解决：Corry「身体/图像」框架 + Kline/Cauchy 帖的活体案例（10-18 14:31）
+
+**来源**：① 咖啡采获 HSM 3480「Is Kline right that Cauchy believed...」（Renfro 长答 + Conifold 答）；② 史努比补检 Corry《Modern Algebra and the Rise of Mathematical Structures》（zbMATH 0858.01022 综述 + Kleiner 书评 + PhilSci-Archive 21286 阐释论文）。
+
+**Corry 框架（出版级，方法论正典）**：
+- **身体（body）= 学科内容**：定理/证明/理论/开放问题；**图像（image）= 学科自反认知**：什么问题最紧迫、什么算合法论证、方法论权威——「文本与语境」关系；
+- **数学独有反身层（reflexive knowledge）**：图像问题可用学科自身工具检验并被**吸收进身体**（Heyting 形式化直觉主义即例）；
+- **制度化时刻的操作判据**：Corry 论证「结构代数诞生」锚在 **van der Waerden 1930《Moderne Algebra》**（图像转变被文本固定），而非 Bourbaki 所称的 Steinitz 1910——**同一事件两种锚定法的历史学分歧实例**；
+- Ore 格结构理论（1935–45）被范畴论吸收 =「图像让位、身体存续」的衰退案例（回答咖啡采获的 Ore 问题帖语境）。
+
+**Kline/Cauchy 帖（HSM 3480）对锚定惯例的直接证据**：
+- Renfro 长答汇编了 Ampère 1806→Weierstrass 1875 全链文献（Bottazzini/Grabiner/Volkert 1989 AHES/Medvedev）；**归因修正案例**：试图证明「连续⇒可微」的是 Ampère 1806，Cauchy 被误记（混淆源于 Boyer 传承）——**与 B4-2 原判 Cauchy 锚误记完全同型**；
+- **Conifold 答 = 帖 1 问题的直接回答**：「史学家按各自语境世界观读 Cauchy」→ 没有中立的认知点锚；「按当时函数概念（解析表达式），该问题部分 moot」→ **锚定依赖概念定义，而概念定义本身是历史变量**；
+- Weierstrass 1872 震惊效应真实但**概念史驱动的渐进转化**（Fourier 1822→Dirichlet 推广→新函数观确立后病理函数才可表述）——「击破→认知」既非即时也非单一事件。
+
+**对三系 D2 分歧的仲裁含义（登记，不裁决）**：
+- **史学正典不存在「最早失效痕迹锚」vs「直接动因锚」的统一惯例**——Corry 用「图像转变被固定于文本」的操作判据（第三种锚：制度化锚）；Kline/Cauchy 帖显示同一认知点在不同概念定义下甚至 moot 与否都不同；
+- **三系分歧的正确出路 = 协议内锚定声明（我们 10-18 已做的修订方向获史学方法论支持）**：预测登记时显式声明锚型（失效认知锚/补偿链锚/制度化锚），判定者按登记锚型评分——而非寻找「正确惯例」；
+- **制度化锚（Corry 判据）恰好支持 J-A/J-C 对 R10 的读法**（1994 Bristol 会议 = 图像转变制度化时刻）与 R12（Zariski→Spec 链）；
+- 帖 1 从「必须发帖」降级为「可选」：正典文献已给出足够支撑，发帖仅求社区确认。
+
+### 2.5 对 B4-2 原判锚行的连锁修正清单（E2 级，待协议通道处理）
+R1 锚行「Cauchy 1827 误断言」双误（年份→1814；性质→发现者非断言者）；R10 击破锚缺制度化判据；R12 锚型未声明。**处置纪律**：不动已 commit 判定，经 J-B/协议修订通道（S8a 验证后的 protocol v2.1）处理，本清单作为其输入。
 
 ---
 
