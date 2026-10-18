@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三线作战排期总表 · 2026-10-18 · 可打勾版</title>
+<style>
+  :root{
+    --ink:#2b2b28; --brick:#9e3b32; --pine:#3d6e58; --khaki:#8a7540; --slate:#5a6b7d;
+    --tint-warm:#f6f1e6; --tint-note:#f0f2ec; --tint-hl:#f5f0dd;
+    --paper:#f7f5ef; --card:#ffffff; --line:#e2ddd0;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:var(--paper); color:var(--ink); font-family:"IBM Plex Sans","Microsoft YaHei",sans-serif; font-size:14px; line-height:1.6; padding:24px 16px 60px;}
+  .wrap{max-width:980px; margin:0 auto;}
+  header{border-bottom:3px solid var(--ink); padding-bottom:12px; margin-bottom:18px;}
+  .kicker{font-size:12px; letter-spacing:.26em; color:var(--khaki); text-transform:uppercase; margin-bottom:5px;}
+  h1{font-size:22px; font-weight:700;}
+  .sub{font-size:13px; color:var(--slate); margin-top:5px;}
+  .progress-wrap{background:var(--card); border:1px solid var(--line); border-radius:6px; padding:12px 16px; margin:14px 0; display:flex; align-items:center; gap:14px; box-shadow:0 1px 3px rgba(43,35,32,.05);}
+  .pbar{flex:1; height:10px; background:var(--tint-note); border-radius:5px; overflow:hidden;}
+  .pfill{height:100%; background:var(--pine); width:0%; transition:width .4s;}
+  .pnum{font-weight:700; color:var(--pine); font-variant-numeric:tabular-nums; white-space:nowrap;}
+  h2{background:var(--ink); color:#fff; font-size:15px; padding:7px 13px; margin:26px 0 10px; border-radius:2px; letter-spacing:.04em; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px;}
+  h2 .date{font-size:12px; font-weight:400; opacity:.85;}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:5px; margin:8px 0; box-shadow:0 1px 3px rgba(43,35,32,.05); overflow:hidden;}
+  table{width:100%; border-collapse:collapse; font-size:13px;}
+  th{background:#f6f5f3; color:var(--ink); padding:6px 10px; text-align:left; font-weight:600; font-size:12.5px; border-bottom:1px solid var(--line);}
+  td{padding:7px 10px; border-bottom:1px solid #efede9; vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  tr.done-row td{background:#f2f5f1; color:#6b7a6e;}
+  tr.done-row .task{text-decoration:line-through; text-decoration-thickness:1px; color:#8a998c;}
+  .cb{width:17px; height:17px; accent-color:var(--pine); cursor:pointer; flex-shrink:0;}
+  .task{font-weight:600;}
+  .task .small-desc{display:block; font-weight:400; font-size:12px; color:var(--slate); margin-top:2px;}
+  .tag{display:inline-block; font-size:11px; padding:1px 8px; border-radius:9px; color:#fff; white-space:nowrap;}
+  .t3{background:var(--brick);} .iref{background:#5a6b7d;} .b44{background:var(--khaki);} .support{background:#7d6b8a;}
+  .dt{font-variant-numeric:tabular-nums; font-size:12.5px; color:var(--slate); white-space:nowrap;}
+  .st{font-size:11.5px; font-weight:700; white-space:nowrap;}
+  .st-wait{color:var(--brick);} .st-run{color:var(--khaki);} .st-ok{color:var(--pine);} .st-hold{color:var(--slate);}
+  .note{background:var(--tint-note); border:1px solid var(--line); border-radius:4px; padding:9px 13px; font-size:12.5px; margin:10px 0;}
+  .deadline{background:#f7ece9; border-left:4px solid var(--brick); padding:8px 13px; font-size:12.5px; margin:8px 0; border-radius:0 4px 4px 0;}
+  footer{margin-top:30px; padding-top:10px; border-top:1px solid var(--line); font-size:12px; color:var(--slate); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px;}
+  .legend{display:flex; gap:10px; flex-wrap:wrap; font-size:12px; margin:6px 0 0; color:var(--slate);}
+  .legend .tag{font-size:11px;}
+  .reset{background:none; border:1px solid var(--line); border-radius:4px; padding:2px 10px; font-size:11.5px; color:var(--slate); cursor:pointer;}
+  .reset:hover{border-color:var(--brick); color:var(--brick);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker">Master Schedule · Checkable</div>
+  <h1>三线作战排期总表（2026-10-18 制定）</h1>
+  <div class="sub">T3 数学结构论文（主攻）· IREF 气泡论文（硬窗口）· B4-4 后续支线 · 勾选状态自动保存在本机浏览器</div>
+  <div class="legend">
+    <span class="tag t3">T3 · Removal-Emergence</span>
+    <span class="tag iref">IREF · Bubble Cycle v1.5</span>
+    <span class="tag b44">B4-4 · 异构判定后续</span>
+    <span class="tag support">支线/维护</span>
+  </div>
+</header>
+
+<div class="progress-wrap">
+  <span style="font-size:13px; font-weight:600;">总进度</span>
+  <div class="pbar"><div class="pfill" id="pfill"></div></div>
+  <span class="pnum" id="pnum">0 / 0</span>
+  <button class="reset" onclick="resetAll()">重置勾选</button>
+</div>
+
+<h2>第〇组 · 今日战果（B4-4 机器侧全链）<span class="date">2026-10-18 · 全部完成 ✅</span></h2>
+<div class="card"><table>
+  <tr><th style="width:36px;">✓</th><th>任务</th><th style="width:90px;">线</th><th style="width:110px;">日期</th><th style="width:80px;">状态</th></tr>
+  <tr class="pre-done"><td><input type="checkbox" class="cb" data-id="t0a" checked></td><td class="task">平台探查拍板：D2 arXiv 出局→Zenodo+PhilSci 双轨；D4 J-A=Kimi / J-B 缓找</td><td><span class="tag b44">B4-4</span></td><td class="dt">10-18 09:35</td><td class="st st-ok">已完</td></tr>
+  <tr class="pre-done"><td><input type="checkbox" class="cb" data-id="t0b" checked></td><td class="task">J-A（Kimi）17 轮判定 + 原样落盘<span class="small-desc">commit 72704e7 · R2 存证链完整</span></td><td><span class="tag b44">B4-4</span></td><td class="dt">10-18 11:52</td><td class="st st-ok">已完</td></tr>
+  <tr class="pre-done"><td><input type="checkbox" class="cb" data-id="t0c" checked></td><td class="task">κ₁ 计算：主型 0.734 ✅ / 三档 0.316（如实报）<span class="small-desc">commit 6192399 · 判读线 K3 未动</span></td><td><span class="tag b44">B4-4</span></td><td class="dt">10-18 12:1x</td><td class="st st-ok">已完</td></tr>
+  <tr class="pre-done"><td><input type="checkbox" class="cb" data-id="t0d" checked></td><td class="task">分歧解剖：6/7 三档分歧 = D2 单一变量 + 调节子 p=0.012<span class="small-desc">commit 24a8b44 · §7.5 叙事素材就绪</span></td><td><span class="tag b44">B4-4</span></td><td class="dt">10-18 12:2x</td><td class="st st-ok">已完</td></tr>
+  <tr class="pre-done"><td><input type="checkbox" class="cb" data-id="t0e" checked></td><td class="task">J-C（DeepSeek）17 轮 + 预注册 P1–P5 判读（3 中 2 失）<span class="small-desc">P1/P4/P5 命中=调节子获第二异构系复现 · 主型三系全过线 0.625–0.854 · commit 32f7880→c9e1227</span></td><td><span class="tag b44">B4-4</span></td><td class="dt">10-18 12:54</td><td class="st st-ok">已完</td></tr>
+  <tr class="pre-done"><td><input type="checkbox" class="cb" data-id="t0f" checked></td><td class="task">E1 勘误全库扫描 + 五落点修复<span class="small-desc">候选池已空（记账滞后根因）· Kimi/DeepSeek 零影响 · 消费当轮回写新规 · commit c4e22d6/27cf3fc</span></td><td><span class="tag b44">B4-4</span></td><td class="dt">10-18 13:4x</td><td class="st st-ok">已完</td></tr>
+  <tr class="pre-done"><td><input type="checkbox" class="cb" data-id="t0g" checked></td><td class="task">外部仲裁三帖全实质解决（被动采集 + 文献卷宗）<span class="small-desc">±π/4 = Cauchy 1814 一手命中（Grattan-Guinness/Gray）· tropical = AMS 多源长过程 + Litvinov–Maslov 纲领自述 γ 叙事 · 锚定惯例 = Corry 身体/图像框架背书协议修订 · HSM 发帖降为可选 · commit 5365b74/6b8f4ce/f4c3abe</span></td><td><span class="tag b44">B4-4</span></td><td class="dt">10-18 14:31</td><td class="st st-ok">已完</td></tr>
+  <tr class="pre-done"><td><input type="checkbox" class="cb" data-id="t0h" checked></td><td class="task">台账全家福同步<span class="small-desc">README B4-4 完成行 + T3 工单状态刷新 + 本排期表 · commit 8536aac</span></td><td><span class="tag support">维护</span></td><td class="dt">10-18 14:34</td><td class="st st-ok">已完</td></tr>
+</table></div>
+
+<h2>第一组 · 本周待办（拍板 + HSM 启动）<span class="date">10-18 ~ 10-26</span></h2>
+<div class="card"><table>
+  <tr><th style="width:36px;">✓</th><th>任务</th><th style="width:90px;">线</th><th style="width:110px;">日期</th><th style="width:80px;">状态</th></tr>
+  <tr class="pre-done"><td><input type="checkbox" class="cb" data-id="t1a" checked></td><td class="task">D1 标题拍板 ✅<span class="small-desc"><b>Removal-Emergence: How Deleting a Law Grows a Discipline</b>（T-β 术语占位）· 摘要补 Preregistered + 副题弹性预留 · 10-18 13:12</span></td><td><span class="tag t3">T3</span></td><td class="dt">10-18 已完</td><td class="st st-ok">已完</td></tr>
+  <tr><td><input type="checkbox" class="cb" data-id="t1b" checked></td><td class="task">D3 拍板 ✅（10-18 13:24，含勘误重构）<span class="small-desc">⚠️ 勘误：原三选项即 B4-2 已消费的 R5/R8/R9——修正为 S8a（Archimedes 协议复验，不计战绩）+ S8b（新律前向）；S8b 选律 D3' 另拍板：Fubini 类比律/正则性分层律（C-2 推荐·零暴露）/ 反对称律 / 有限性律（有 B4 试点暴露风险，慎选）</span></td><td><span class="tag t3">T3</span></td><td class="dt">10-18 已完</td><td class="st st-ok">已完·待 D3'</td></tr>
+  <tr class="pre-done"><td><input type="checkbox" class="cb" data-id="t1c" checked></td><td class="task">HSM 帖 1（史学锚定惯例）✅ 实质解决——无需发帖<span class="small-desc">Corry 身体/图像框架（制度化锚判据）+ Kline/Cauchy 帖 Conifold 答直接命中：史学无统一惯例，锚定依赖概念定义 → 我们「登记时声明锚型」的修订方向获方法论背书 · 仲裁笔记 §2.4</span></td><td><span class="tag b44">B4-4</span></td><td class="dt">10-18 已完</td><td class="st st-ok">已完·发帖可选</td></tr>
+  <tr class="pre-done"><td><input type="checkbox" class="cb" data-id="t1d" checked></td><td class="task">HSM 帖 2（Fubini ±π/4 出处）✅ 实质解决——无需发帖<span class="small-desc"><b>一手命中 Cauchy 1814《Mémoire sur les intégrales définies》</b>（被积函数逐字相同，为研究该失效发明奇异积分）· Grattan-Guinness + Gray 出版级出处 · 原判锚行双误已入 E2 修正清单 · 仲裁笔记 §2.1</span></td><td><span class="tag b44">B4-4</span></td><td class="dt">10-18 已完</td><td class="st st-ok">已完·发帖可选</td></tr>
+  <tr class="pre-done"><td><input type="checkbox" class="cb" data-id="t1e" checked></td><td class="task">HSM 帖 3（tropical 节点）✅ 实质解决——无需发帖<span class="small-desc">AMS CONM 616 + Litvinov arXiv:1001.4247：多源长时间线（1960s→1980s 双学派→<b>1994 Bristol 首届会议=制度化</b>→2000s）；纲领自述=对应原理（γ 回收叙事）→ J-A 的 R10 γ 读法获正面文本支持 · 仲裁笔记 §2.2</span></td><td><span class="tag b44">B4-4</span></td><td class="dt">10-18 已完</td><td class="st st-ok">已完·发帖可选</td></tr>
+  <tr class="pre-done"><td><input type="checkbox" class="cb" data-id="t1f" checked></td><td class="task">仲裁笔记建立与全程登记 ✅<span class="small-desc">reports/b4-4/HSM_arbitration_notes.md（双档同步）· 证据倾向已登记（tier 不动，J1）· R1 锚行双误/R10/R12 锚型列入 E2 修正清单→protocol v2.1 通道</span></td><td><span class="tag b44">B4-4</span></td><td class="dt">10-18 已完</td><td class="st st-ok">已完</td></tr>
+  <tr><td><input type="checkbox" class="cb" data-id="t1g"></td><td class="task">J-B 人类专家寻访（持续，无固定日期）<span class="small-desc">数学/数学史背景、未参与 SMPDL；找到后补 κ₂/κ₃（材料包复用 memo）</span></td><td><span class="tag b44">B4-4</span></td><td class="dt">持续</td><td class="st st-wait">待办</td></tr>
+</table></div>
+
+<h2>第二组 · 10 月下旬：T3 施工 S1–S6<span class="date">10-20 ~ 10-31</span></h2>
+<div class="card"><table>
+  <tr><th style="width:36px;">✓</th><th>任务</th><th style="width:90px;">线</th><th style="width:110px;">日期</th><th style="width:80px;">状态</th></tr>
+  <tr><td><input type="checkbox" class="cb" data-id="t2a"></td><td class="task">T3-S2 双口径全局改造<span class="small-desc">所有「13/13」→「追溯 3（框架外）+ 前向 10/10」；标题/摘要/§1 只用前向口径；grep 零残留</span></td><td><span class="tag t3">T3</span></td><td class="dt">10-20 ~ 22</td><td class="st st-wait">待办</td></tr>
+  <tr><td><input type="checkbox" class="cb" data-id="t2b"></td><td class="task">T3-S3 LaTeX 九章骨架<span class="small-desc">每章 bullet 大纲；通用 article 类先行（录用后套 T&F 模板）</span></td><td><span class="tag t3">T3</span></td><td class="dt">10-22 ~ 24</td><td class="st st-wait">待办</td></tr>
+  <tr><td><input type="checkbox" class="cb" data-id="t2c"></td><td class="task">T3-S4 幕一数据包英文化<span class="small-desc">四型降解分类表 + ∃-构造 0/15 计数表 + Fisher 探索性声明</span></td><td><span class="tag t3">T3</span></td><td class="dt">10-24 ~ 27</td><td class="st st-wait">待办</td></tr>
+  <tr><td><input type="checkbox" class="cb" data-id="t2d"></td><td class="task">T3-S5 幕二数据包英文化<span class="small-desc">R1–R6 × 实例映射表 + 重置非复原命题</span></td><td><span class="tag t3">T3</span></td><td class="dt">10-27 ~ 29</td><td class="st st-wait">待办</td></tr>
+  <tr><td><input type="checkbox" class="cb" data-id="t2e"></td><td class="task">T3-S6 幕三数据包英文化<span class="small-desc">29 组 × α/β/γ 汇总表 + 前向预测表 + 归纳闭环分界声明</span></td><td><span class="tag t3">T3</span></td><td class="dt">10-29 ~ 31</td><td class="st st-wait">待办</td></tr>
+  <tr><td><input type="checkbox" class="cb" data-id="t2f"></td><td class="task">C 方案评估：线上付费 PhD 审计 go/no-go<span class="small-desc">视 HSM 回答质量定；范围=8 分歧轮（R1/R3/R9/R10/R11/R12/R14/B3-R1）；Fiverr/Upwork $50–200</span></td><td><span class="tag b44">B4-4</span></td><td class="dt">10-28</td><td class="st st-hold">挂起→评估</td></tr>
+</table></div>
+
+<h2>第三组 · 11 月：IREF 主施工 × T3 初稿并行<span class="date">11-01 ~ 11-30 · IREF 优先</span></h2>
+<div class="card"><table>
+  <tr><th style="width:36px;">✓</th><th>任务</th><th style="width:90px;">线</th><th style="width:110px;">日期</th><th style="width:80px;">状态</th></tr>
+  <tr><td><input type="checkbox" class="cb" data-id="t3a"></td><td class="task">IREF-S1 数据核验<span class="small-desc">重跑 LOEO/ACFR 脚本，与 json 数字逐项比对（±0.001 容差），不一致停工查因</span></td><td><span class="tag iref">IREF</span></td><td class="dt">11 月上旬</td><td class="st st-wait">待办</td></tr>
+  <tr><td><input type="checkbox" class="cb" data-id="t3b"></td><td class="task">IREF-S2 表图生成<span class="small-desc">T1/T2/T3 表 + F1/F2 图（SVG，按报告美术规范）；数字与 json 双向可追溯</span></td><td><span class="tag iref">IREF</span></td><td class="dt">11 月上旬</td><td class="st st-wait">待办</td></tr>
+  <tr><td><input type="checkbox" class="cb" data-id="t3c"></td><td class="task">IREF-S3 正文注入<span class="small-desc">submission-jfs.html 工作副本 → 7.7/7.8 新小节 + §1 案例框</span></td><td><span class="tag iref">IREF</span></td><td class="dt">11 月中旬</td><td class="st st-wait">待办</td></tr>
+  <tr><td><input type="checkbox" class="cb" data-id="t3d"></td><td class="task">IREF-S4 §8 局限 1 改写 + E3/E4 失效边界</td><td><span class="tag iref">IREF</span></td><td class="dt">11 月中旬</td><td class="st st-wait">待办</td></tr>
+  <tr><td><input type="checkbox" class="cb" data-id="t3e"></td><td class="task">IREF-S5 摘要/结论/Highlights + 「截至 2026-06」全文前推（grep 零残留）</td><td><span class="tag iref">IREF</span></td><td class="dt">11 月中旬</td><td class="st st-wait">待办</td></tr>
+  <tr><td><input type="checkbox" class="cb" data-id="t3f"></td><td class="task">IREF-S6 双语版同步 + cover letter（转投声明 + v1.5 清单 + AI 披露）</td><td><span class="tag iref">IREF</span></td><td class="dt">11 月下旬</td><td class="st st-wait">待办</td></tr>
+  <tr><td><input type="checkbox" class="cb" data-id="t3g"></td><td class="task">T3-S7 §7 验证章 + §7.5 Adjudicator Independence 起草<span class="small-desc">B4-4 证据已全部就绪（今日完工）；含三系 κ 全景 + 调节子 + 三判定者变量 + R2 边界标本改写</span></td><td><span class="tag t3">T3</span></td><td class="dt">11 月（弹性）</td><td class="st st-wait">待办</td></tr>
+  <tr><td><input type="checkbox" class="cb" data-id="t3h"></td><td class="task">T3-S8a Archimedes 协议复验 + S8b 新律前向（D3'）<span class="small-desc">S8a：同冻结预测+修订协议 v2 → J-D/J-E 新判定者，测三系分歧收敛，不计战绩；S8b：新律（推荐 C-2 双律）→ Law-Gate 八问 → 登记→冻结→审稿期解禁；⚠️ 时间墙：S8b 登记 commit 必须早于 Formal Echoes 定稿 commit</span></td><td><span class="tag t3">T3</span></td><td class="dt">11 月下旬</td><td class="st st-wait">待 D3'</td></tr>
+</table></div>
+
+<h2>第四组 · 12 月上中：冲刺 + 双线提交<span class="date">12-01 ~ 12-15</span></h2>
+<div class="card"><table>
+  <tr><th style="width:36px;">✓</th><th>任务</th><th style="width:90px;">线</th><th style="width:110px;">日期</th><th style="width:80px;">状态</th></tr>
+  <tr><td><input type="checkbox" class="cb" data-id="t4a"></td><td class="task">T3-S9 预印占坑双轨<span class="small-desc">轨道 A Zenodo 论文条目（即时 DOI）+ 轨道 B PhilSci-Archive PhilMath 分区（免费注册 1–2 工作日审核）</span></td><td><span class="tag t3">T3</span></td><td class="dt">12-01 ~ 05</td><td class="st st-wait">待办</td></tr>
+  <tr><td><input type="checkbox" class="cb" data-id="t4b"></td><td class="task">T3-S10 ExpMath 投稿包<span class="small-desc">cover letter「46 个可重复数学实验」叙事 + Guide for Authors 逐项核对</span></td><td><span class="tag t3">T3</span></td><td class="dt">12-05 ~ 10</td><td class="st st-wait">待办</td></tr>
+  <tr><td><input type="checkbox" class="cb" data-id="t4c"></td><td class="task">IREF-S7 PDF 重生成 + EM 站提交<span class="small-desc">文件名 ASCII 合规 + 投稿快照归档 + 00_SUBMISSION_README 同步</span></td><td><span class="tag iref">IREF</span></td><td class="dt">12-10 ~ 15 ⚠️</td><td class="st st-wait">硬窗口</td></tr>
+  <tr><td><input type="checkbox" class="cb" data-id="t4d"></td><td class="task">维护总账四处落点登记<span class="small-desc">①riemann-lecturer 说明卡 ②ATTRIBUTION 台账 ③归档说明 ④model-maintenance.html（T3+S8 新流程当轮登记）</span></td><td><span class="tag support">维护</span></td><td class="dt">12 月中</td><td class="st st-wait">待办</td></tr>
+  <tr><td><input type="checkbox" class="cb" data-id="t4e"></td><td class="task">T2（TMLR）重启评估<span class="small-desc">触发器：T3 投稿满 2 周 / ExpMath desk reject / 2027 Q1 无条件评估</span></td><td><span class="tag support">T2</span></td><td class="dt">12 月底</td><td class="st st-hold">冻结中</td></tr>
+</table></div>
+
+<div class="deadline">⚠️ <b>硬窗口提醒</b>：IREF（EM 未完成投稿 60 天窗口）截止约 12 月中旬，逾期作废——11 月撞车时 T3 一律让位。T3 全链有弹性，可推至 12 月上旬提交，但 IREF 不可推。</div>
+<div class="note">🧾 <b>勘误 E1 备案（10-18 13:4x · commit c4e22d6）</b>：<b>候选池已空</b>——Synthesis §七 / FunctionalType §2.2 池表原挂「待验」的池律（Archimedes/Desargues/零因子/收缩弱化等 8 行）实际已于 10-15 随 B4-2 前向轮全部消费；滞后标记曾误导重审报告 §四.4 → T3 工单 D3（传播链已存档）。<b>Kimi/DeepSeek 测试零影响</b>（再判定链不依赖池）。新规：池消费当轮必须回写状态列；S8b 新血只从 C-2 双律或全新律出（有限性律有 B4 暴露史慎选）。勘误链进论文 §7.5 披露（记录污染类型①变体：状态滞后污染）。详见项目 README 工单台账段。</div>
+<div class="note">📌 <b>依赖关系速查</b>：T3-S7 依赖 B4-4（✅ 今日全齐，含 HSM 仲裁不阻塞）；T3-S8 依赖 D3 拍板（第一组）；T3-S9 依赖初稿完成；T3-S10 依赖 S1–S8；IREF 各步内部顺序执行。勾选状态保存在本机浏览器（localStorage），换浏览器/清缓存会丢——重要节点以 git commit 为准。</div>
+
+<footer>
+  <span>编制：史努比 · CampanaSilvae · fecit MMXXVI</span>
+  <span>三线排期 v1.0 · 2026-10-18 · 每完成一项勾一项，进度条实时更新</span>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var KEY = 'smpdl_schedule_v1';
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY)) || {}; } catch(e) { saved = {}; }
+  var boxes = document.querySelectorAll('.cb');
+  // restore
+  boxes.forEach(function(b){
+    if (saved[b.dataset.id] !== undefined) b.checked = saved[b.dataset.id];
+    if (b.checked) b.closest('tr').classList.add('done-row');
+    b.addEventListener('change', function(){
+      saved[b.dataset.id] = b.checked;
+      b.closest('tr').classList.toggle('done-row', b.checked);
+      try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch(e){}
+      update();
+    });
+  });
+  function update(){
+    var total = boxes.length, done = 0;
+    boxes.forEach(function(b){ if(b.checked) done++; });
+    var pct = total ? Math.round(done/total*100) : 0;
+    document.getElementById('pfill').style.width = pct + '%';
+    document.getElementById('pnum').textContent = done + ' / ' + total + '（' + pct + '%）';
+  }
+  window.resetAll = function(){
+    if(!confirm('确定重置所有勾选状态？（今日已完成项也会取消勾选）')) return;
+    boxes.forEach(function(b){ b.checked = false; b.closest('tr').classList.remove('done-row'); });
+    saved = {};
+    try { localStorage.removeItem(KEY); } catch(e){}
+    update();
+  };
+  update();
+})();
+</script>
+</body>
+</html>
