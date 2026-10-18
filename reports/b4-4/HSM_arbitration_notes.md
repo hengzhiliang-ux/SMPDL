@@ -22,11 +22,42 @@
 - ⚠️ ±π/4 具体反例的最早出处仍未解决（本轮检索未命中一手文献）——帖 2 的核心问题保留，若发帖仍值得问。
 - **影响预测（登记）**：若 J-B 复核，R1 三档大概率落 🟡（与 J-A 同档）而非 ✅（原判档）——主型层（α vs γ）不受影响，仍是判定者归类偏好问题。
 
-## 二、帖 1 相关（锚定惯例 historiography）——待采
-未开始。被动采集候选关键词：recognition point / crisis historiography / Kuhn mathematics / problem-provenance dating。
+## 二、C 路线文献采集（10-18 14:19 史努比检索 · 出版级来源）
 
-## 三、帖 3 相关（tropical 合法化节点）——待采
-未开始。被动采集候选：history of tropical mathematics / idempotent analysis Maslov / Simon tropical semiring naming。
+### 2.1 帖 2 核心问题已解决：±π/4 反例 = **Cauchy 1814** 🔥
+
+**来源**：HSM「Did Cauchy ever deal with double or triple integrals?」（hsm.stackexchange.com/questions/11042）引 **Grattan-Guinness** 与 **Gray《The Real and the Complex: A History of Analysis in the 19th Century》**：
+
+> Cauchy 在 **《Mémoire sur les intégrales définies》（1814）** 中研究了为什么交换双重积分次序会得到不同结果，并为此引入「奇异积分」（intégrales singulières）概念。对 **K = z/(x²+z²)**，他证明 ∫₀¹∫₀¹ (∂K/∂z) dzdx = **π/4**，换序积分 = **−π/4**。
+
+**关键验证**：Cauchy 的 ∂K/∂z = (x²−z²)/(x²+z²)² ——**与现代 ±π/4 教科书反例的被积函数逐字相同**（x²−y²)/(x²+y²)²）。反例不是 Fubini 1907 构造，也非 Harnack 1880s——**一手源头 = Cauchy 1814**。
+
+**对 R1 的证据分量（登记，不裁决）**：
+- 失效认知锚从「Pringsheim 1898/99（problem space）」再前推至 **Cauchy 1814（显式研究 + 命名概念）**——「击破→补偿」全链 = 1814 → Fubini 1907/Tonelli 1909 = **93–95 年**；
+- 原判 B4-2 击破锚「Cauchy 1827 误断言」有两处需修正：年份（1814 非 1827）+ 性质（Cauchy 不是误断言者，恰是**失效的发现与命名者**——introduced "singular integrals"）；
+- 中继站确认：Pringsheim 1898《Zur Theorie des Doppel-Integrals》/1899（Sitzungsberichte München, Heft I, 39-61）——开头即今日 Fubini 定理的恒等式，以 Riemann 框架探其成立/失效条件，并引 **Stolz 1886** 指出双重积分可积性条件的错误主张（更早的失效认知痕迹）；Levi 猜想（可积而非有界）→ Fubini 1907 证明（Wikipedia History 节）；
+- **三判定者 D2 读法全部失准**：J-A 的 Lebesgue-1904 锚（补偿链口径）仍可辩护，但「失效认知→补偿结构」的完整历史 = 93 年长周期；若按「认知锚」纪律，R1 的 D2 长间隔与 R9（Kummer→Dedekind）同构——J-A/J-C 的严读方向获文献支持；
+- 二手文献可引：Grattan-Guinness《The Entry of Cauchy》+ Gray《The Real and the Complex》——**出版级出处，直接可进论文脚注**。
+
+### 2.2 帖 3 核心问题基本解决：tropical 合法化时间线 = **AMS 官方叙事**
+
+**来源**：AMS Contemporary Mathematics 616 卷末 matter（ams.org/books/conm/616/conm616-endmatter.pdf）+ Litvinov 本人综述（ESI preprint 1588 / arXiv:1001.4247）：
+
+| 节点 | 年代 | 内容 |
+|---|---|---|
+| 线性代数地基 | **1960s** | Cuninghame-Green（英）+ Vorobyev（苏）max-plus 线性代数；更早应用史可追 Kleene（自动机） |
+| 理论凝聚 | **1980s–90s** | Maslov 莫斯科学派「idempotent analysis」+ 法国 max-plus 工作组（离散优化/最优控制/HJB）**独立并行** |
+| 纲领定名 | 1980s–90s | **Litvinov–Maslov dequantization + 对应原理**（Bohr 类比：幂等数学 = 传统数学的「经典极限/影子」） |
+| **制度化首标志** | **1994** | **第一届国际 Idempotency 会议（Bristol，Gunawardena 编文集）**；后续 Vienna 2003 / Moscow 2007 / Montreal 2009 |
+| 几何爆发 | 2000s | tropical geometry（Mikhalkin/Passare/Sturmfels/Viro；灵感源 GKZ amoeba——「经典问题 19 世纪已提出」） |
+
+**对 R10 的证据分量（登记，不裁决）**：
+- 「击破锚→定名显影 ≤5 年」确无对应物：AMS 官方叙事本身就是**多源长过程**（1960s 地基→1980s 理论→1994 制度化→2000s 爆发）——J-A「找不到干净锚」与 J-C「结构选择型长期理论化」**两个异构判定者的 D2 判定同时获得出版级支持**；
+- 更微妙：Litvinov–Maslov 纲领的自我表述是**对应原理**（dequantization = 传统数学取极限 → 幂等数学为其「影子」）——**纲领层面是 γ 回收叙事**（旧数学被参数极限化），而非 β 解禁叙事；β 侧（新对象族合法化）在应用端同样真实。**J-A 的 γ 主读法在纲领层获得正面文本支持**；
+- 二手可引：AMS CONM 616 + Litvinov 综述（arXiv:1001.4247）——卷末明说「the origins of modern tropical mathematics are much more diverse」，直接可用于 §7.5/§6 的 R10 归因段。
+
+### 2.3 帖 1（史学锚定惯例）——仍开放
+两轮检索无直接命中（该问题确实没人系统问过）。**唯一真正需要发帖的残余**；或走文献路线查 Kuhn 派数学史（如 Corry《Modern Algebra and the Rise of Mathematical Structures》的「认知点」处理）后再定。
 
 ---
 
