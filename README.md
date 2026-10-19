@@ -111,7 +111,7 @@ We will preserve the public release history of this collection. Corrections and 
 - [SMPDL_FourStructures_TheoryReview.md](reports/SMPDL_FourStructures_TheoryReview.md) — 四结构理论综述 v1.0（认知/语言/数学/逻辑四轴重组全部理论发现）
 - [SMPDL_FS_Paper1_Cognitive.md](reports/SMPDL_FS_Paper1_Cognitive.md) — FS-1 认知结构小论文（准入制度论 + 可见性节律）
 - [SMPDL_FS_Paper2_Linguistic.md](reports/SMPDL_FS_Paper2_Linguistic.md) — FS-2 语言学结构小论文（同名异义载体论 + F2 取证论）
-- [SMPDL_FS_Paper3_Mathematical.md](reports/SMPDL_FS_Paper3_Mathematical.md) — FS-3 数学结构小论文（律学三维坐标 + 两阶段涌现 + 13/13，旗舰）
+- [SMPDL_FS_Paper3_Mathematical.md](reports/SMPDL_FS_Paper3_Mathematical.md) — FS-3 数学结构小论文（律学三维坐标 + 两阶段涌现 + 前向 10/10，旗舰）
 - [SMPDL_FS_Paper4_Logic.md](reports/SMPDL_FS_Paper4_Logic.md) — FS-4 逻辑学结构小论文（E/D/I 档位 + 元层 G1–G6 + 自反性）
 - [SMPDL_FS_TreeDiagrams_Index.md](reports/SMPDL_FS_TreeDiagrams_Index.md) — 四结构树状图存档索引（SVG 源 + 视觉语法说明）
 - [SMPDL_HoldingSide_Evolution.md](reports/SMPDL_HoldingSide_Evolution.md) — 成立侧演化：定型化五形态 P0–P4（移除-涌现的镜像补篇）
@@ -195,7 +195,7 @@ We will preserve the public release history of this collection. Corrections and 
 | 方法论版本 | v2.9（+四结构/剂量学层） |
 | 论文版本 | v24 候选（curated 287 + 本日新增 8 份待编入） |
 | 页面版本 | v5.94 |
-| 案例库 | H1–H46 / 132 份（B4-3 扩样 +3） · 前向回验 13/13 |
+| 案例库 | H1–H46 / 132 份（B4-3 扩样 +3） · 前向 10/10（B4-2）+ 扩样 3/3（B4-3）分列 |
 | 回测纪律 | v2.0 十关制（B4-3 首例全程执行 ✅） |
 | DOI | [10.5281/zenodo.23362944](https://doi.org/10.5281/zenodo.23362944)（Zenodo v3.3 · Concept 10.5281/zenodo.23318734） |
 | 报告数量 | 287 份 curated + 8 份新增候选 |
