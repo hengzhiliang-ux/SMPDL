@@ -1,0 +1,178 @@
+% =====================================================================
+% §7 VALIDATION CHAPTER + §7.5 ADJUDICATOR INDEPENDENCE (T3-S7 · 2026-10-19)
+% Sources (all adjudicated files, numbers verbatim):
+%   * Protocol chain + ten-gate: SMPDL_Backtest_Discipline.md v2.0
+%   * B4-2 forensics: b4-2/SMPDL_B4-2_独立盲判判定报告 §八 (E1–E6)
+%   * κ1 (J-A Kimi): b4-4/SMPDL_B4-4_Kappa1_Report.md (0.734/0.316/0.338)
+%   * J-C DeepSeek + P1–P5: b4-4/SMPDL_B4-4_JC_调节子复现报告.md
+%     (three-lineage main-type κ 0.625–0.854; three-tier 0.09–0.32)
+%   * Caliber rules: T3-S2 (forward 10/10 title-only; this §7 heading
+%     follows; full breakdown restated inside)
+% Loaded by main.tex §7 via \input{sec7_validation}
+% =====================================================================
+
+\subsection{The Preregistered Protocol Chain}\label{sec:val-chain}
+
+Every scored round passes a ten-gate checklist (Appendix~A) before
+adjudication: registration commit (R2), zero result-side content in
+the registered text (R3), third-party or scripted freeze (F1--F4),
+material-package self-assessment physically deleted (M1/M3),
+adjudication in a fresh isolated session (J1), frozen preregistered
+scoring standard (J2: three questions D1 scale / D2 time $\le$5
+years / D3 function, D1-priority, rule~H for immediate emergence,
+compound events judged whole), tier separation + baseline sync +
+dual-layer $\kappa$ + preregistered reading rule (J3/J4/K2/K3).
+
+\subsection{Forward Record and Dual Caliber}\label{sec:val-record}
+
+The full breakdown (dual-caliber, S2 rule): \textbf{retrospective 3}
+(H27--H29; no registered prediction or additive control;
+out-of-framework, never scored as hits) $+$ \textbf{forward 10/10}
+(B4-2 rounds R5--R14; registered, frozen at commit \texttt{b0fb213},
+blind-adjudicated, dual $\kappa=1.00$ same-lineage) $+$
+\textbf{extension 3/3} (B4-3, H44--H46; ten-gate first full run,
+single adjudicator disclosed) $+$ post-hoc pool rounds R1--R4
+(H30--H33; 4/5 with the H31 miss feeding revision~B) reported
+separately and never merged into the forward count. Only the forward
+10/10 enters the title, abstract, and §1.
+
+\subsection{$\kappa$ Tables}\label{sec:val-kappa}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{llcl}
+\toprule
+\textbf{Pair} & \textbf{Layer} & \textbf{$\kappa$} & \textbf{Reading} \\
+\midrule
+Original vs itself (B4-2) & main-type & 1.00 & same-lineage blind \\
+ & three-tier & 1.00 & same-lineage blind \\
+\midrule
+J-A (Kimi) vs original & \textbf{main-type} & \textbf{0.734} & $\ge$0.6:
+cross-lineage holds \\
+ & three-tier & 0.316 & $<$0.4: not reproduced (honest, E4) \\
+ & binary-hit & 0.338 & skew-paradox zone; raw 82.4\% reported \\
+\midrule
+J-C (DeepSeek) vs original & main-type & \textbf{0.854} (12/13 scored
+subset) & $\ge$0.6: holds \\
+ & three-tier & 0.091 & far looser tier calibration \\
+\midrule
+J-C vs J-A (heterogeneous) & main-type & \textbf{0.625} (10/13) &
+$\ge$0.6: converges \\
+ & three-tier & 0.177 & tier calibration is judge-specific \\
+\bottomrule
+\end{tabular}
+\caption{Cross-lineage $\kappa$ panorama (17 scored rounds; H46
+quadratic-control side excluded by protocol). Main-type functional
+classification replicates across \textbf{three} lineages (GLM-lineage
+original / Kimi / DeepSeek), pairwise 0.625--0.854; three-tier
+severity does not (0.09--0.32) --- severity is a judge free
+parameter.}
+\label{tab:kappa-panorama}
+\end{table}
+
+\subsection{B4-2 Forensics, One Page}\label{sec:val-forensics}
+
+The protocol demonstrably has teeth. During v1.2 adjudication, a
+forensic audit (triggered by a direct inspection order) exposed the
+frozen file's \emph{operator column} as a back-fill: the
+operator-trichotomy terminology first appeared 17 hours
+\emph{after} prediction registration (E1: \texttt{0ba5b7b},
+07:23:30 on adjudication day, vs E2: registration
+\texttt{c62ffaa} the prior day); a full-corpus search at the
+registration commit returns zero hits for all five operator terms
+(E3); the original prediction rows contain no operator content (E4);
+the freeze itself carries a self-incriminating note ``operator not
+separately registered at the time'' (E5); and all 14 back-filled
+values are mechanically derivable from the lens pairing table (E6).
+Adjudication under the preregistered earliest-version rule
+(§2.4.3) struck the column entirely: R6 reverted $\circlearrowleft$
+to \checkmark, three-tier $\kappa$ corrected $0.641 \to 1.00$, main
+conclusions unchanged but strengthened. Institutional consequence:
+freezes now require third-party generation plus a term-first-use
+scan (gate F2, this case as precedent).
+
+\subsection{Adjudicator Independence (\S7.5)}\label{sec:val-independence}
+
+\textbf{Same-lineage disclosure.} All B4-2/B4-3 adjudications were
+performed by isolated sessions of the same model lineage as the
+registration pipeline; dual $\kappa=1.00$ cannot exclude shared
+training bias. This was disclosed at registration time and motivated
+B4-4.
+
+\textbf{Cross-lineage design.} J-A = Kimi (different vendor), J-C =
+DeepSeek (different vendor, live web retrieval, process rows
+retained as evidence), each re-adjudicated the same 17 frozen rounds
+under the same preregistered three-question standard; the
+coordinator (same lineage as registration) is barred from judging
+(J1 variant) and performed only mechanical steps.
+
+\textbf{Results, both directions.} (i) The direction-discrimination
+core of the two-stage law --- \emph{which functional class does the
+emergent structure belong to} --- replicates across all three
+lineages (pairwise main-type $\kappa$ 0.625--0.854, all
+$\ge$0.6). (ii) Three-tier severity does not replicate (0.09--0.32);
+every divergence localizes to one of three \emph{named adjudicator
+variables}: D2 anchor discipline (historiographic vs rule-based
+anchoring; flipped 5 rounds, all in the tier layer, zero in the
+main-type layer), $\alpha/\gamma$ main-vs-auxiliary classification
+preference (3 rounds), and D1 causal-threshold strictness (J-C's
+extreme-strict reading killed 4 rounds at the D1 gate) ---
+severity scoring is a judge free parameter, and protocol design must
+anchor it via registration fields (S8 revision clause: D1 threshold
+explicitly fixed in prompts).
+
+\textbf{Moderator replication (preregistered P1--P5).} The claim
+``registration fields, not ruler anchoring, drive tier severity''
+was itself forward-tested: P1 (B4-3 rounds with time-tendency
+registered reproduce original tiers, 3/3), P4 (no-registration
+long-gap rounds cluster at the disagreement edge, 4/5), P5
+(main-type agreement $\ge$14/17, observed 12/13 = 92.3\%) \textbf{
+hit}; P2 (R2 natural anchor double-❌) and P3 (short-interval rounds
+$\ge$5/6) \textbf{missed}, both misses attributing to the newly
+visible D1 variable rather than moderator failure --- reported as
+registered, E4.
+
+\textbf{R2, rewritten as a boundary specimen.} The Church--Rosser
+round was designed as a natural anchor (baseline ``every removal is
+$\beta$'' should fail there); the three adjudicators instead split
+three ways (original $\alpha$ / J-A $\alpha$ on different grounds /
+J-C $\beta$ --- the only one matching the registered prediction).
+The round is therefore rewritten in this paper not as an anchor of
+agreement but as a \emph{live boundary specimen of the functional
+taxonomy itself}: genuine reading ambiguity of what
+Church--Rosser's removal functionally is. This rewrite is itself a
+criterion-evolution event, disclosed in the same register as H31.
+
+\textbf{External arbitration.} Three historiographic questions
+arising from divergent D2 anchors were resolved by literature:
+$\pm\pi/4$ traces to \textbf{Cauchy 1814} (\emph{M\'emoire sur les
+int\'egrales d\'efinies}; integrand identical to the modern textbook
+example; Cauchy invented singular integrals to study exactly this
+order-swap failure --- the original anchor line's ``Cauchy 1827
+false assertion'' was doubly wrong: year, and role); tropical
+mathematics institutionalization anchors at the 1994 Bristol
+conference (AMS CONM 616 endmatter + Litvinov--Maslov program
+self-description), supporting the dequantization $\gamma$-reading;
+and no canonical historiographic anchoring convention exists ---
+Corry's body/image framework supplies the operational criterion
+(institutionalization anchor fixed in text), endorsing our
+registration-time anchor-type declaration revision. All three
+registered as evidence leanings; committed verdicts untouched.
+
+\textbf{Erratum disclosure (E1, type-1 staleness variant).} The
+candidate-pool ledger lagged its own consumption by one day
+(pool rows marked ``pending'' though consumed by B4-2 rounds),
+which mis-led one downstream decision into proposing
+already-consumed rounds as fresh samples. Caught by full-repo
+scan, fixed same day, and routed into this section as a disclosed
+bookkeeping-contamination event; new rule: pool consumption writes
+back its status column in the same round.
+
+\textbf{What remains open.} Human adjudication ($\kappa_2$
+human-vs-original, $\kappa_3$ human-vs-heterogeneous) is the
+standing gap; recruitment (mathematics / history of mathematics,
+no prior SMPDL exposure) is ongoing, with the material package
+reusing the adjudicator memo. Until then, three-tier conclusions
+carry the qualifier ``same-lineage consistent, cross-lineage
+divergent'' and main-type conclusions carry ``three-lineage
+replicated, no human calibration point yet''.
