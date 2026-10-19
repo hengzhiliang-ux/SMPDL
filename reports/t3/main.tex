@@ -25,6 +25,9 @@
 \usepackage[colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black]{hyperref}
 \usepackage{enumitem}
 \setlist{itemsep=2pt,topsep=4pt}
+% --- Citation engineering (2026-10-19): natbib author-year, references.bib wired ---
+\usepackage[round]{natbib}
+\bibliographystyle{plainnat}
 
 \newtheorem{conjecture}{Conjecture}
 \newtheorem{proposition}{Proposition}
@@ -65,7 +68,8 @@ adjudication
         three grew an entire discipline where a law was deleted --
         convex analysis (after removing unrestricted duality), Sobolev
         theory (after removing regularity presuppositions), measure
-        theory (after removing the Riemann integral's founders). The
+        theory (after removing the Riemann integral's founders
+        \citealp{hawkins1975lebesgue}). The
         wound does not stay blank.
   \item \textbf{Three acts in one sentence}: collapse has a syntax
         (§4); recovery is parameter reset (§5); emergence type is locked
@@ -90,7 +94,9 @@ adjudication
         \end{itemize}
   \item \textbf{Preregistration statement}: forward predictions
         registered and frozen before adjudication; adjudicators blind
-        to predictions' provenance; full protocol in §7 and Appendix.
+        to predictions' provenance; full protocol in §7 and Appendix,
+        following open-science preregistration practice
+        \citep{nosek2018preregistration}.
 \end{itemize}
 
 % =====================================================================
@@ -103,7 +109,8 @@ adjudication
         recap.
   \item E/D/I epistemic tiers (endogenous / definitional /
         independent) -- one paragraph each; the I-tier silent-failure
-        hazard motivates the Law-Gate checklist.
+        hazard motivates the Law-Gate checklist
+        \citep[cf.][]{corry2004modern}.
   \item Division of labor with the companion framework paper (T1):
         cited, not restated.
   \item How the instrument acts as the ``meter'' of removal experiments:
@@ -122,8 +129,8 @@ adjudication
         \emph{(selective sampling; not extrapolable -- qualifier
         locked)}.
   \item Data availability: corpus, scripts, frozen predictions public
-        (Zenodo Concept DOI 10.5281/zenodo.23318734; paper entry to be
-        registered separately per S9 dual-track).
+        \citep{zenodo2026smpdl, github2026smpdl}; paper entry to be
+        registered separately per S9 dual-track.
 \end{itemize}
 
 % =====================================================================
@@ -181,11 +188,13 @@ adjudication
 \section{Discussion}\label{sec:discussion}
 \begin{itemize}
   \item Mirror of reverse mathematics (theorems $\to$ axioms vs
-        axioms $\to$ emergence; Friedman--Simpson cited).
+        axioms $\to$ emergence; \citealp{simpson2009subsystems}).
   \item Implications for AI mathematical reasoning: after a constraint
         is removed, an LLM should be able to \emph{predict the type} of
         what grows -- this framework supplies the criteria; adjudication
-        pipeline as reusable protocol.
+        pipeline as reusable protocol \citep{wei2022chain, romera2024funsearch};
+        the regularity-stratification case connects to the
+        $\bar{\partial}$-Neumann regularity wall \citep{kohn1963harmonic}.
   \item Limitations, four items, verbatim from Memo §5 (not softened):
         same-lineage adjudication (mitigated, not eliminated, by §7.5
         cross-lineage); $n=10$ forward rounds (+3 extension);
@@ -215,8 +224,10 @@ adjudication
 \section{Data and Reproducibility}
 % Zenodo entries, frozen-prediction files, adjudication transcripts;
 % maintenance/validation clauses per project convention (rolling
-% forward-update obligations stated).
-TODO(S10): final artifact list + version alignment check
-(Zenodo--PhilSci--submission three-way alignment, one-time at submit).
+% forward-update obligations stated). Software cited per venue norms
+% \citep{python2024}.
+\bibliography{references}
+% TODO(S10): final artifact list + version alignment check
+% (Zenodo--PhilSci--submission three-way alignment, one-time at submit).
 
 \end{document}
