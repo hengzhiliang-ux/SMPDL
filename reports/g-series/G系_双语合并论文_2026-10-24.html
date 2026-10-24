@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMPDL：律的档位迁移理论与结构生成盲重建试验 · 双语合并论文</title>
+<style>
+  :root{
+    --ink:#2b2b28; --brick:#9e3b32; --pine:#3d6e58; --khaki:#8a7540; --slate:#5a6b7d;
+    --tint-warm:#f6f1e6; --tint-note:#f0f2ec; --tint-hl:#f5f0dd;
+    --paper:#f7f5ef; --card:#ffffff; --line:#e2ddd0;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:var(--paper); color:var(--ink); font-family:"IBM Plex Sans","Noto Sans SC","Microsoft YaHei",sans-serif; font-size:14px; line-height:1.68; padding:28px 16px 60px;}
+  .wrap{max-width:1000px; margin:0 auto;}
+  header{border-bottom:3px solid var(--ink); padding-bottom:16px; margin-bottom:10px;}
+  .kicker{font-size:12px; letter-spacing:.26em; color:var(--khaki); text-transform:uppercase; margin-bottom:8px;}
+  h1{font-size:25px; font-weight:700; line-height:1.35;}
+  .sub{font-size:13px; color:var(--slate); margin-top:8px;}
+  .langnav{display:flex; gap:8px; margin:14px 0 0; flex-wrap:wrap;}
+  .langnav a{font-size:12px; color:#fff; background:var(--slate); text-decoration:none; padding:3px 12px; border-radius:12px;}
+  .langnav a:hover{background:var(--ink);}
+  h2{background:var(--ink); color:#fff; font-size:16.5px; padding:9px 15px; margin:34px 0 14px; border-radius:2px; letter-spacing:.04em;}
+  h2.en{background:var(--slate);}
+  h3{font-size:14.5px; margin:20px 0 8px; border-left:4px solid var(--khaki); padding-left:10px;}
+  h4{font-size:13.5px; margin:14px 0 6px; color:var(--ink);}
+  p{margin:8px 0;}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:4px; padding:14px 16px; margin:10px 0; box-shadow:0 1px 3px rgba(43,35,32,.05);}
+  .tldr{background:var(--tint-warm); border:1px solid var(--line); border-radius:4px; padding:14px 18px; margin:14px 0;}
+  .tldr b{color:var(--brick);}
+  table{width:100%; border-collapse:collapse; background:var(--card); font-size:12.5px; margin:10px 0;}
+  th{background:var(--ink); color:#fff; padding:7px 9px; text-align:left; font-weight:600; font-size:12px;}
+  td{padding:6px 9px; border-bottom:1px solid var(--line); vertical-align:top;}
+  tr:nth-child(even) td{background:#fafaf8;}
+  tr.hl td{background:var(--tint-hl);}
+  code{background:var(--tint-note); border:1px solid var(--line); border-radius:3px; padding:1px 5px; font-family:Consolas,monospace; font-size:11.5px;}
+  .note{background:var(--tint-note); border:1px solid var(--line); border-radius:4px; padding:10px 14px; font-size:12.5px; margin:10px 0;}
+  .warn{background:#f7ece9; border-left:4px solid var(--brick); padding:10px 14px; font-size:12.5px; margin:10px 0; border-radius:0 4px 4px 0;}
+  .okbox{background:#eef3ee; border-left:4px solid var(--pine); padding:10px 14px; font-size:12.5px; margin:10px 0; border-radius:0 4px 4px 0;}
+  ol,ul{margin:8px 0 8px 22px;}
+  li{margin:4px 0;}
+  .small{font-size:12px; color:var(--slate);}
+  .divider{border:none; border-top:3px double var(--khaki); margin:44px 0;}
+  .pass{color:var(--pine); font-weight:700;} .part{color:var(--khaki); font-weight:700;} .fail{color:var(--brick); font-weight:700;}
+  .tag{display:inline-block; font-size:11px; padding:1px 8px; border-radius:9px; color:#fff; margin:0 3px 3px 0; white-space:nowrap;}
+  .t1{background:var(--brick);} .t2{background:var(--khaki);} .t3{background:var(--slate);} .t4{background:var(--pine);}
+  footer{margin-top:40px; padding-top:12px; border-top:1px solid var(--line); font-size:12px; color:var(--slate);}
+  @media print{
+    body{background:#fff; padding:0; font-size:11.5px;}
+    .wrap{max-width:none;}
+    h2{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
+    table,th{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
+    .card,.tldr,.note,.warn,.okbox{box-shadow:none;}
+    .langnav{display:none;}
+    h2{page-break-after:avoid;} table{page-break-inside:avoid;} .card{page-break-inside:avoid;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ═══════════════ 封面 ═══════════════ -->
+<header>
+  <div class="kicker">SMPDL · Bilingual Merged Paper · 2026-10-24</div>
+  <h1>律的档位迁移与结构再生：SMPDL 方法论体系及结构生成盲重建首轮试验</h1>
+  <h1 style="font-size:18px; color:var(--slate); font-weight:600; margin-top:10px;">Gear Migration and Structural Regeneration: The SMPDL Methodology and the First-Round Structure-Generation Blind-Rebuild Experiment</h1>
+  <div class="sub">体系：SMPDL（Simulated Mathematical Practice with Dual-Lock）· G 系走廊 · 预注册工单 v1.3（J2 冻结）<br>
+  数据基座：H1–H43 律伴随组库 + G1 试运行 + G 系正式轮三靶 12 候选 · Zenodo v3.6 密封（DOI 10.5281/zenodo.23599041）<br>
+  执行窗口：2026-10-23 21:28 → 2026-10-24 · 设计：咖啡 · 协调：史努比（资格分离，禁判禁生成）· 版式：体系 F 纯白 v2</div>
+  <div class="langnav">
+    <a href="#zh">中文完整版 ↓</a><a href="#en">English Full Version ↓</a>
+  </div>
+</header>
+
+<div class="tldr">
+<b>TL;DR</b> — 本文合并三件为一：（一）SMPDL 方法论总纲——律学三维分类、生命周期、移除-涌现理论与 24 槽成分体系；（二）数学结构理论详细解释——三靶 24 槽解剖与结果的结构学解读；（三）G 系正式轮完整试验——预注册三区隔离下 12 候选盲重建的判定、对照与回验。核心发现一句话：<b>年代锁下的盲重建稳定抵达历史锚前一站（② 命中 83%）而锚核心零抵达；停点与错误形态双重贴合历史时序；人类出题 / 机器解题的分工画像获首轮实证。</b>
+</div>
+
+<!-- ═══════════════ 中文完整版 ═══════════════ -->
+<h2 id="zh">第一部分 · 中文完整版</h2>
+
+<h3>摘要</h3>
+<p>SMPDL（双锁模拟数学实践）把「数学结构的发现过程」变成可测量对象。本文首先给出其方法论体系：每条数学律携带三维身份证（强度分级 × 认识论档位 × 功能类型），律的档位迁移螺旋（E₀ 默认 → I/D 质疑 → E′ 再定理化）构成读数学史的主叙事；移除-涌现理论（α 补偿 / β 解禁 / γ 回收三型 + γ 五形态 + 两阶段定律）刻画结构再生的机制；24 槽成分词汇表与 A1 载体 / A2 算子二分把「分解一个数学结构」变成标准查表作业。在此体系上，我们执行了 G 系正式轮：在显式知识年代锁（T-lock）与免联网条件下，让 6 个商用 LLM 以「同代数学家」身份对三个被拆除关键结构的领域（G3' 撤 Desargues 命题锁 1899 / G4 撤 T₂ 分离公理锁 1914 / G5 撤变量绑定锁 1924 前）完成盲重建，经预注册的四判据时代忠实门（PFE）、四维机械评分卡、联网后见者四格判定（每靶 4 判定者）、一次性盲态微假说回验与五组对照臂检验。结果：12 候选中 10 个（83%）盲命中 T_L 锚后 T_S 锚前的真实历史结构（Hall 三元环骨架 / Kolmogorov 商与 US 层 / Tarski 柱状代数算子族），而三个锚核心全部零抵达（S/K 双构件基、Moulton 显式模型、Hochster 谱表征各 0/16）——「抵达锚前一站、不抵达锚核心」三靶一致；盲重建连错误形态都贴合历史时序；预测族 P1–P8 终局 6 过 2 半过，其中 P4（AI 取靶签名：具名 100% / 拆律 0%）与 P7（AI 补完动作与人类历史动作同格，四轮独立复现）联合成立，解锁「人类出题 / 机器解题」分工画像；退化基线 B1 实测暴露审查门对「换名请回」的正交失明，由评分卡非平凡性维度兜底。全部结论限定为「显式知识年代锁下的盲会话重建」首轮方向性记录。</p>
+
+<h3>§1 SMPDL 方法论体系</h3>
+
+<h4>1.1 框架底座：三层两维</h4>
+<p>一切分析在 S/M/P × D/L 网格中进行：<b>S 语义层</b>（概念含义与命名——同名是否异义）、<b>M 数学层</b>（定理群与证明骨架——承重墙在哪）、<b>P 编程层</b>（形式化与计算可及性——库/算法是否拦截）；两维为<b>依存维 D</b>（前驱是否在场）与<b>逻辑结构维 L</b>（推理链是否合法）。三层联合断言：跨层结论只有同时通过 S/M/P 三层检查才成立——单层「看起来没问题」是全库反复出现的假象来源。</p>
+
+<h4>1.2 律学三维：律的身份证</h4>
+<div class="card">
+<p><b>第一维 · 强度分级</b>：甲级（公理级，库内 11 条：交换/结合/分配/LEM/AC/DC/二阶归纳/平行公设×2/Archimedes/幂等）｜乙级（表征级，12 条：律 ⇔ 结构表征定理，拨它则伴随结构同生共死——「结构指纹」）｜丙级（规则级，2 条：intro/elim 规则对、收缩/弱化）。</p>
+<p><b>第二维 · 认识论档位</b>：E 档（定理律——数学内证明可裁，审计风险低）｜D 档（定义律——概念选择裁定）｜I 档（独立律——独立性证明裁定，<b>错用静默</b>，审计风险最高）。</p>
+<p><b>第三维 · 功能类型</b>：T1 定义律（对象构成——「这个对象是什么」）｜T2 保证律（行为构成——「过程如何运行」）｜T3 禁闭律（不变量——「什么保持不变」）。</p>
+</div>
+<div class="note"><b>档位迁移螺旋</b>（读数学史的主叙事）：降档 E₀ 默认 → I/D 质疑（平行公设 1868、交换律 1843、LEM 1930s、AC 1938/1963）；升档 I → E′ 再定理化（Gauss–Bonnet 回收平行公设后果、Zorn 定价回报、bang 收缩律定价回收）。审计风险随 E&lt;D&lt;I 递增；同律两侧可异档；档位迁移是高产地平线（启发式表述，已从「定律」降格）。</div>
+
+<h4>1.3 律的生命周期</h4>
+<p>七阶段：L1 潜默 → L2 命名默认 → L3 边界摩擦 → L4 显性质疑 → L5 准独立 → L6 档位裁决 → L7 后续演化。历史结构：四大质疑集群（1843 代数解放 / 1899–1908 几何-集合 / 1931–38 元数学 / 1963–67 forcing）间隔约 30 年且工具先于质疑；裁决工具六代（几何模型 → 独立性方法 → 算术化 → forcing → 语义发明 → 构造性类型论+证明助手，进行中）；L3 长停留是常态——「意识到需要独立性证明比证明它更难」。</p>
+
+<h4>1.4 移除-涌现理论：结构再生的机制</h4>
+<div class="card">
+<p><b>三型涌现</b>：α 补偿型（「谁顶班」——新结构接替旧律职责，Hahn–Banach/bang/正交模律）｜β 例外型（「被解禁」——被遮蔽对象族出现，四元数/例外李代数/平面 zoo）｜γ 统一回收型（「被回收」——旧律降格为新母结构特例，Gauss–Bonnet/概形）。</p>
+<p><b>两阶段定律</b>（前向 6/6 验证）：阶段一（移除时刻）涌现类型 ← 功能类型：T1→β、T2→α+元层、T3→β-现象；阶段二（回收时刻）γ ← 领域成熟度（与功能类型正交）。</p>
+<p><b>γ 五形态</b>：表征型（即时，乙级律天然自带）｜因果型（为修复而发明）｜渐近型（极限影子）｜成熟型（领域成熟后统一）｜翻译型（<b>失效模式本身对象化</b>——关键对/特殊化序，「病即信息」）。</p>
+<p><b>方法论金句</b>：伤口大小决定新生大小（乙级律移除长学科 ×3）｜定价优于禁止（bang/Tonelli/AC 三连）｜当对象背叛你，发明更大的结构（Dedekind/Lebesgue/Sobolev）｜减法倾向生结构、加法倾向生定理（审计降格为组织性观察）。</p>
+</div>
+
+<h4>1.5 24 槽成分体系与 A1/A2 二分</h4>
+<p><b>最简结构判定</b>：载体+算子+律束各一即成（magma 3 槽）；此后每加一个成分 = 一次升档。24 槽分五大类：A 骨架 7（载体/算子/律束/残存律/免费区/降档阶梯/镜像字典）｜B 定理 4（定理群/表征定理/补偿判据族/回收定理）｜C 对象 2（被禁族/病理族）｜D 过程 4（生命周期/档位迁移/锚点/迁移类型）｜E 涌现 5（对象/补偿结构/元层算法/跨组规律/构造性成本）。</p>
+<div class="card">
+<p><b>A1 载体大类（场侧）</b> vs <b>A2 算子大类（机器侧）</b>：「这个世界由什么组成」vs「在场上能做什么」；桥接类（定理层）把两侧钉在一起。<b>拆法谱系</b>：载体拆（换/弱化/升格载体）与算子拆（拆契约=律靶、拆机器=算子靶）。同构回声：泛代数「代数=(A;F)」、Bourbaki 母结构、范畴论对象/态射皆为此二分的变体。</p>
+</div>
+
+<h3>§2 三靶结构解剖（数学结构理论详细解释）</h3>
+
+<h4>2.1 三靶律身份证与结构画像</h4>
+<table>
+<tr><th>靶</th><th>拆除物</th><th>律身份证（三维）</th><th>历史涌现主型</th><th>关键结构锚</th></tr>
+<tr class="hl"><td><b>G3'</b> H37</td><td>Desargues 命题 D</td><td>乙级表征 × E₀→I→E′ 完整螺旋 × T1</td><td>β（非 D 平面解禁）+ γ-表征</td><td>Hilbert 1899 → Hall 1943（PTR + 归约定理）</td></tr>
+<tr class="hl"><td><b>G4</b> H41</td><td>T₂ 分离公理</td><td>乙级表征 × E₀→I→E′ 进行中 × T2</td><td>α+元层（US/商/网滤）+ γ-翻译</td><td>Hausdorff 1914 → Hochster 1969（谱表征）</td></tr>
+<tr class="hl"><td><b>G5</b></td><td>变量绑定机制</td><td>丙级规则 × E₀→I→E′ 完整螺旋 × T2</td><td>α（S/K）+ β（组合子）+ γ-表征</td><td>Schönfinkel 1924（U/V=S/K + 组合完备性）</td></tr>
+</table>
+
+<h4>2.2 G3' 二十四槽要点（射影平面 · 三元环）</h4>
+<div class="card">
+<p><b>残存律</b>：关联公理全体、局部调和构造。<b>免费区</b>：纯关联定理、对偶原理。<b>镜像字典</b>：D⇔结合律线性化；四点形对边点共线⇔1⊕1=0（Fano/特征 2）。<b>表征定理</b>：D ⟺ PTR 线性化为除环（乘法可不交换）。<b>补偿判据族</b>：Hall 五条三元环公理——以三元合成 T(m,p,q) 顶班二元乘加预设（α 型历史标本）。<b>回收</b>：γ-表征型即时（D 从公理变定理）。<b>被禁族</b>：非 Desargues 平面 zoo（Moulton）。<b>降档阶梯</b>：PTR → 线性 PTR（D 恢复）→ 除环 → 域（Pappus）。<b>档位螺旋</b>：D 走完 E₀→I（1899–1902）→E′（VW 1907/Hall 1943）全程。<b>构造性成本</b>：非 D 模型显式构造成本——盲候选 12/12 诚实留白处。</p>
+</div>
+
+<h4>2.3 G4 二十四槽要点（一般拓扑 · 谱空间）</h4>
+<div class="card">
+<p><b>免费区</b>：连续像紧致、紧空间闭子集紧、连通性——不需分离的全免费带（候选 C4 的存活清单正是此槽盲重填）。<b>降档阶梯</b>：T₂ → US（序列唯一）→ T₁ → T₀ → 无分离；Hochster 反向：谱空间 = 紧 T₀ + 特殊化序 + sober。<b>镜像字典</b>：分离公理 ⇔ 收敛行为（第一可数下 T₂⟺US；T₁⇔单点闭；T₀⇔可辨）。<b>补偿判据族</b>：US/KC 中间层 + Kolmogorov 商——候选盲重建主战场（C2/C3 独立造出 US 层）。<b>回收</b>：γ-翻译型（多极限对象化为极限集/归宿集 L(s)——「病即信息」）+ γ-渐近型（特殊化序把坏拓扑回收为代数几何默认舞台）。<b>元层算法</b>：网/滤子（关于序列的机器）——候选诚实指认缺口处。跨组规律：「伤口大小决定新生大小」标本（乙级大伤口 → 长出整个非 Hausdorff 世界）。</p>
+</div>
+
+<h4>2.4 G5 二十四槽要点（谓词逻辑 · 组合逻辑）</h4>
+<div class="card">
+<p><b>被拆机器</b>：变量绑定（约束变元/辖域/代入/捕获避免）。<b>免费区</b>：单称命题区、有限合取析取区（候选 C3 核心观察）。<b>镜像字典</b>：量词⇔算子代数（U_i/E_i ⇔ ∀/∃）；变元接线⇔参数置换/对角化（C/W ⇔ 换位/自复）。<b>补偿判据族</b>：位算子系统（量化代数化）与整体断言算子（量词原语化）两路。<b>回收</b>：γ-表征型（一阶逻辑 = 柱状代数方程理论）+ γ-翻译型（λ-项⇔组合子项）。<b>降档阶梯</b>：全量词语言 → 一元量词语言 → 无变元语言；Schönfinkel 反向：多元 → 一元连续作用（currying）——降档与升格同一枚硬币。<b>病理族</b>：复现模式无通用有限基（W/T_f 特例覆盖）；二阶墙（概念遍历不可表达——自建语言边界，历史补漏=加类型层）。</p>
+</div>
+
+<h4>2.5 结果的结构学解读（理论 × 试验对读）</h4>
+<ol>
+<li><b>锚前一站收敛律 = A6 降档阶梯的单步移动</b>：三靶盲候选抵达的都是阶梯上离拆除物最近的下一档（三元合成 / US 层 / 逐坐标算子）——盲会话能做档位内移动（保守范式延伸的极限 = 保留旧范式最多前提下的最小修改），不能做 D4 框架迁移（范式转换）。锚核心全部需要换桥接类填法，超出单步能力。</li>
+<li><b>错误保真 = 档位迁移的认知顺序</b>：候选「D⟺结合律」过强断言 = 1907 年 VW 分层前的 E₀ 默认态错觉（律=结构未分层直觉）；候选沿生命周期 L4（感到伤口）分布、停在 L5 门前——复现的不是知识缺口而是认知顺序。</li>
+<li><b>H-A2 证伪 = 槽位就近回填原理</b>：拆算子后涌现「算子的对象化版本」（位算子系统）而非仅向判据层逃逸——涌现以被拆槽位为原料重建，锚侧与涌现物同型。反馈结构理论：A2/C1 边界（机器 vs 机器构成的对象族）比预想更可渗透（E1-h 修订）。</li>
+<li><b>P7 同格 = 共享 24 槽深层语法</b>：LLM 与人类历史共享同一张填充语法；分工界面切在 A3 律束槽的「选择动手术」（人类问题意识）与「执行手术」（机器执行语法）之间——P4 显示 AI 从不自发选择拆律（0%），P7 显示被置于拆律情境后动作与人类同格。</li>
+<li><b>B1 部分抓获 = 复原不是涌现</b>：换名请回填满修复槽但非平凡性为 0——真重建必须出现 α/β/γ 之一机制，复原在 24 槽表上不是涌现（无新槽位填法）。E1-j 条款本质是把涌现判据提升到门的明文。</li>
+<li><b>三靶涌现同型性</b>：历史涌现主型与盲候选涌现主型全部同型（G5 换到柱状代数平行线但仍是 α-代数化）——「阶段一律律」（T 定涌现主型）在盲条件下依然成立，本试验对其最强支持；G5 换线测出「同型内多实现路径」的谱系宽度。</li>
+</ol>
+
+<h3>§3 试验设计（G 系正式轮）</h3>
+
+<h4>3.1 三区知识分区与预注册</h4>
+<p><b>三区制</b>：A 区（现代知识合法：取靶/冻结件撰写）→ B 区（T-lock 无前视：生成/扫描/审查）→ C 区（轮后集中：判定/评分/回验），区间以 git commit 单向门隔离，B 区产物 C 区永不回改。<b>资格分离</b>：协调方禁判禁生成；生成/审查/判定各为独立会话；判定者盲于审查轮。<b>预注册</b>：全部判据、权重（修复度 40% / PFE 可证性 25% / 自洽性 20% / 非平凡性 15%）、预测族 P1–P8、微假说 H-A1/A2 随工单 v1.3 commit 冻结。</p>
+
+<h4>3.2 三靶与 B 区流程</h4>
+<table>
+<tr><th>靶</th><th>拆面</th><th>双锚（T_L / T_S）</th><th>锚距</th><th>候选</th></tr>
+<tr><td>G3'</td><td>律（机器契约）</td><td>Hilbert 1899 / Hall 1943</td><td>44 年</td><td>4 厂牌（Gemini-Flash/DeepSeek/Kimi/ChatGPT-Flash）</td></tr>
+<tr><td>G4</td><td>结构（场约束）</td><td>Hausdorff 1914 / Hochster 1969</td><td>55 年</td><td>4 厂牌（Gemini/DeepSeek/Kimi/ChatGPT）</td></tr>
+<tr><td>G5</td><td>算子（机器本体）</td><td>1924 前默认 / Schönfinkel 1924</td><td>0 年</td><td>4 厂牌（Gemini-Flash/DeepSeek/Kimi/ChatGPT-免登）</td></tr>
+</table>
+<p>B 区流程：生成（免联网+自报+禁读描述性文件）→ 年代机械扫描（🟡旁注/🔴定义核心分级）→ PFE 四判据门（词汇/动机/机制/可证性；诚实降级保护；只判不改建议；门分级不淘汰）。每靶双异厂审查者；C 区判定每靶 4 判定者联网核验锚论文，按四格分类（① T_L 前命中 / ② T_S 后命中🔥 ≥2 规则级同构点 / ③ 新颖 / ④ 违规）。</p>
+
+<h3>§4 结果</h3>
+
+<h4>4.1 PFE 门与评分卡</h4>
+<p>12 候选 = <b>5 完整结构 + 6 方向性草案 + 1 双审分歧</b>（草案全保留进判定，G-L5）。待裁项闭合：滤子 🔴 / 结构组合子 🔴 / W·C 记号层 🔴（异议留档）。评分卡：G3' 胜者 C3 DeepSeek（1.00 唯一）；G4/G5 各三方并列 1.00（卡顶饱和发现，E1-c）。G1 回溯校准（D-18）：机械排序与预期一致 → <b>权重校准通过</b>。盲审纪律旁证：DeepSeek 判自厂候选 FAIL、Kimi 判自厂候选 FAIL——无自审豁免。</p>
+
+<h4>4.2 判定总表与三靶不变量</h4>
+<table>
+<tr><th>靶</th><th>①</th><th>② 🔥</th><th>③</th><th>④</th><th>最强命中</th></tr>
+<tr><td>G3'</td><td>—</td><td>C1/C3/C4 四方一致 + C2 分裂②×2</td><td>C2 ③×2</td><td>—</td><td>C3 规则级（≈Hall PTR 逐条同构）；C4 归约级（VW 1907 核心条款双盲命中）</td></tr>
+<tr><td>G4</td><td>1 票自矛盾</td><td>C1–C4 主判</td><td>C4 1 票异议</td><td>—</td><td>C2（Kolmogorov 商 + 第一可数 T₂⟺US 盲证 + 余可数反例；三家独立排第一）</td></tr>
+<tr><td>G5</td><td>C3 主判 2/4</td><td>C2/C4 四方一致</td><td>C1 分裂 2 票</td><td>—</td><td>C2/C4（柱状代数平行线：U_i↔柱化 c_i 精确对应）</td></tr>
+</table>
+<div class="okbox"><b>三靶不变量</b>：② 主判 10/12（83%）；三个锚核心全部零盲抵达（S/K 0/16、Moulton 0/16、Hochster 0/16）而锚前一站全部多人抵达——「<b>抵达锚前一站、不抵达锚核心</b>」。双构件旗标 0/16：G5 四候选全部流入量化代数化线、零流入组合子线。</div>
+
+<h4>4.3 微假说回验（一次性盲态）与对照臂</h4>
+<p><b>H-A1</b>（T 定涌现主型）：<span class="pass">✅ 支持</span>——T1 靶涌现对象族 / T2 靶涌现判据元层，三靶一致。<b>H-A2</b>（锚侧定落位）：<span class="part">⚠️ 载体侧全中；算子侧严格版证伪</span>——G5 双落位（算子对象化+元层），涌现物与锚同型 → E1-h 细化「锚侧→涌现物模态」。</p>
+<table>
+<tr><th>#</th><th>预测</th><th>结果</th><th>裁定</th></tr>
+<tr><td>P1</td><td>判据区分力 H≥80% vs R≤40%</td><td>88% vs 10%</td><td class="pass">✅</td></tr>
+<tr><td>P2</td><td>R 失败集中于平凡+致命</td><td>平凡 13/13 单侧（抽样框偏差）</td><td class="part">⚠️</td></tr>
+<tr><td>P3</td><td>H 聚带宽 vs R 双尾</td><td>成立</td><td class="pass">✅</td></tr>
+<tr><td>P4</td><td>AI 签名：具名≥90% 且拆律≈0</td><td>100% / 0%（46 族）</td><td class="pass">✅</td></tr>
+<tr><td>P5</td><td>认可↔验证器正相关</td><td>86% vs 33%（n=31 降档）</td><td class="pass">✅ 方向性</td></tr>
+<tr><td>P6</td><td>六型目录完备 25/25</td><td>型外 0</td><td class="pass">✅</td></tr>
+<tr><td>P7</td><td>AI 动作与人类同格</td><td>四轮独立复现</td><td class="pass">✅</td></tr>
+<tr><td>P8</td><td>退化基线被拦截</td><td>B0 ✅ / B1 部分抓获</td><td class="part">⚠️</td></tr>
+</table>
+<div class="okbox"><b>P4 ∧ P7 联合成立 → 「人机分工画像：人类出题 / 机器解题」正式解锁</b>（D-21 预注册条件满足）。</div>
+
+<h4>4.4 B1 退化基线实测</h4>
+<p>夹具 = T₂ 换名「双邻域相容条件」逐字请回（词汇层无懈可击）。三盲审者 PFE-1/2/3 全 PASS、<b>零复原指认</b>（ChatGPT 独家 PFE-4 FAIL 于断言过强）；机械评分卡：非平凡性 <b>0.00</b>（唯一抓 B1 的维度）、修复度 1.00 陷阱不采信、加权 0.18 &lt; 真候选地板 0.25。<b>结构性发现：PFE 门的判据轴（时代忠实）与作弊轴（复原）正交</b>——复原原条件恰是最 era-legal 的内容；兜底 = 非平凡性维度（15% 权重的意外英雄）→ E1-j 高优先。</p>
+
+<h3>§5 分析：三大发现</h3>
+<ol>
+<li><b>保守范式延伸吸引子</b>（三靶交叉验证）：盲修复直觉从现有范式的可运算化延伸出发——撤 D → 坐标运算整体化（保留「坐标化」范式）；撤 T₂ → 收敛行为分层（保留「邻域-序列」范式）；撤变元 → 量词代数化（保留「关系代数」范式）。三个历史锚核心全部需要范式转换，无一被盲触发。「抵达深度跟任务内在难度走、不跟锚距走」——G5 锚距 0 年反而未及 S/K。</li>
+<li><b>停点 + 错误双重历史保真</b>：候选非 D 模型零构造全诚实留白 = 1899 真实同代人状态（Hilbert 存在性论证 → Moulton 1902 显式模型）；候选错误 = 1907 前民间状态 / 前规范期术语混乱 / 1920s 谱系同款蕴含混乱。错误类型按时序分布——盲重建「走在历史的路上」。历史补漏比照：候选诚实指认的边界恰是历史实际越过的边界，且越过方式与 MR 建议一致。</li>
+<li><b>双轴解耦与分工画像</b>：忠实（PFE）× 质量（MR）三靶三模式（同冠/解耦/偏移）——「忠实于时代」与「逼近历史答案」可分离；P4∧P7 给出分工画像：AI 100% 具名取靶、0% 拆律，但被置于拆律情境后动作与人类四轮同格——人类出题 / 机器解题。F7（诚实悬置）为 AI 独有行为候选（人类史未见以诚实悬置为发表动作者，本试验 16/16 候选共现诚实降级层）。</li>
+</ol>
+
+<h3>§6 诚实披露与局限（八条）</h3>
+<div class="warn">
+<ol>
+<li><b>参数污染不可排除</b>：全部结论限定表述为「显式知识年代锁下的盲会话重建」，不声称「无知条件下的独立发现」；三靶不变量（锚核心零抵达）为该表述提供内部证据——若前视不受抑制，锚核心应如锚前一站一样被「回忆」出来。</li>
+<li><b>锚年 = 史学判断</b>（异议附记制；判定中两处史实校正已入 E1-f：Moulton 限定、Fano 溯源、Schönfinkel U≠S）。</li>
+<li><b>操作化旗标</b>：评分卡维度→公式未微预注册（协调方代拟透明登记）；卡顶饱和；G1 校准证据层级降档；PFE-4 诚实降级缺口；单字母记号判据优先序；② 门槛概念级二分（三靶三复现 E1-g）。</li>
+<li><b>样本量</b>：靶级 n=3(+1)、候选级 n=12——首轮方向性记录，不外推；防挖掘三锁下不做事后子集分析。</li>
+<li><b>M8 验证器自警</b>：PFE+判定侧本身是筛选——不可形式化靶系统性缺席；B1 实测正交失明加深此条。</li>
+<li><b>判定者侧边界</b>：结构命中 ≠ 优先权；判定者与候选厂牌同源（实测无自审豁免，仍全量登记）；一次未实时联网（降档）；一次厂牌内自不一致（按正文主判并档）。</li>
+<li><b>流程偏差</b>：G4 双审厂牌替换（被墙补位，追认）；超额审查者分列；B1 超单审配置——E4 双面台账全登记（正向：多审纪律两次实证防线价值）。</li>
+<li><b>MR 扩展轮地位</b>：C 区扩展非预注册，独立分列永不进算分（双轴防火墙）；v1.4 起瘦身为纯质量轴（E1-d）。</li>
+</ol>
+</div>
+
+<h3>§7 结论</h3>
+<ol>
+<li><b>能力</b>：年代锁下 LLM 盲重建稳定抵达真实历史的锚前一站（83% ② 命中）；锚核心零抵达——保守范式延伸吸引子三靶验证。</li>
+<li><b>路径</b>：停点与错误形态双重贴合历史时序——盲重建生态效度的结构性旁证。</li>
+<li><b>分工</b>：人类出题 / 机器解题画像获首轮实证（P4∧P7）；F7 诚实悬置为 AI 独有行为候选。</li>
+<li><b>方法论</b>：三区隔离 + 预注册 + 分歧即数据的「受控历史重演」范式可复用；B1 给出验证体系纵深刻画；E1 登记十项（a–j）构成 v1.4 修订底稿。SMPDL 结构体系同时充当实验设计语言、结果解释语言与验证体系设计依据——一套词汇表贯穿三层用途，方法论自洽性首轮实证。</li>
+</ol>
+
+<hr class="divider">
+
+<!-- ═══════════════ English Full Version ═══════════════ -->
+<h2 id="en" class="en">Part II · English Full Version</h2>
+
+<h3>Abstract</h3>
+<p>SMPDL (Simulated Mathematical Practice with Dual-Lock) turns the discovery process of mathematical structures into a measurable object. This paper merges three components: (i) the SMPDL methodology — the three-dimensional identity card of every mathematical law (strength grade × epistemic gear × function type), the gear-migration spiral (E₀ default → I/D challenge → E′ re-theorematization) as the master narrative for reading the history of mathematics, the removal–emergence theory (α compensation / β liberation / γ recycling, five γ-forms, two-stage law), and the 24-slot component taxonomy with the A1 carrier / A2 operator dichotomy; (ii) a detailed structural dissection of the three experimental targets on this framework; (iii) the G-series formal round — a preregistered, three-zone-isolated blind-rebuild experiment in which six commercial LLMs, placed under explicit knowledge date-locks (T-lock) with no network access, rebuilt three fields with key structures dismantled (G3′: Desargues proposition removed, locked 1899; G4: T₂ separation axiom removed, locked 1914; G5: variable binding removed, locked pre-1924). Twelve candidates passed a preregistered four-criterion period-faithfulness gate (PFE), a four-dimension mechanical scorecard, networked hindsight four-bin classification (four judges per target), a one-shot blind microhypothesis verification, and five control arms. Results: 10/12 candidates (83%) blindly hit real historical structures lying between the T_L and T_S anchors (Hall ternary-ring skeletons / Kolmogorov quotient &amp; US layer / Tarski cylindric-algebra operator family), while all three anchor cores saw zero blind arrivals (S/K two-primitive basis, Moulton explicit model, Hochster spectral representation: 0/16 each) — a tri-target invariant: <b>reach the station before the anchor, never the anchor core</b>. Blind rebuilds reproduced even the error morphology of history. Prediction family P1–P8 closed at six passes and two partials; P4 (AI targeting signature: 100% named-conjecture, 0% law-dismantling) and P7 (AI completion actions same-lattice as human history, four independent replications) jointly unlocked the “humans pose / machines solve” division-of-labor portrait. Degenerate baseline B1 exposed the review gate's structural blindness to renamed restoration (orthogonal axes), backstopped by the scorecard's non-triviality dimension. All conclusions are bounded as first-round directional records of “blind-session rebuilding under explicit knowledge date-locks.”</p>
+
+<h3>§1 The SMPDL Methodology</h3>
+
+<h4>1.1 Foundation: three layers, two dimensions</h4>
+<p>All analysis proceeds on an S/M/P × D/L grid: <b>Semantic layer</b> (meaning and naming — same name, different sense?), <b>Mathematical layer</b> (theorem groups and proof skeletons — where are the load-bearing walls?), <b>Programming layer</b> (formalizability and computational reach — do libraries intercept?). Two dimensions: <b>Dependency D</b> (are prerequisites present?) and <b>Logical structure L</b> (are inference chains legal?). Joint assertion: cross-layer conclusions require passing all three layers simultaneously.</p>
+
+<h4>1.2 The three-dimensional identity card of a law</h4>
+<div class="card">
+<p><b>Strength grade</b>: Grade-A (axiomatic; 11 in library: commutativity, associativity, distributivity, LEM, AC, DC, second-order induction, parallel postulate ×2, Archimedes, idempotence) | Grade-B (representational; 12: law ⇔ structure representation theorem — “structural fingerprints”; disturbing one kills the whole companion structure) | Grade-C (rule-level; 2: intro/elim pairs, contraction/weakening).</p>
+<p><b>Epistemic gear</b>: E (theorem-law, adjudicated by proof; low audit risk) | D (definition-law, adjudicated by concept choice) | I (independent-law, adjudicated by independence proofs — <b>misuse is silent</b>, highest audit risk).</p>
+<p><b>Function type</b>: T1 definitional (what the object <i>is</i>) | T2 guarantee (how processes <i>run</i>) | T3 confinement (what stays <i>invariant</i>).</p>
+</div>
+<div class="note"><b>Gear-migration spiral</b>: demotion E₀ default → I/D challenge (parallel postulate 1868, commutativity 1843, LEM 1930s, AC 1938/1963); promotion I → E′ re-theorematization (Gauss–Bonnet recovers parallel-postulate consequences; Zorn prices AC's return; bang prices contraction's return). Audit risk increases E&lt;D&lt;I; the same law can sit at different gears on two sides; gear migration is the productive horizon for reading mathematical history.</div>
+
+<h4>1.3 Life cycle of a law</h4>
+<p>Seven stages: L1 latent → L2 named-default → L3 boundary friction → L4 explicit challenge → L5 quasi-independence → L6 gear adjudication → L7 subsequent evolution. Historical texture: four challenge clusters (1843 algebraic liberation / 1899–1908 geometry–set theory / 1931–38 metamathematics / 1963–67 forcing) spaced ~30 years, tools preceding challenges; six generations of adjudication tools (geometric models → independence methods → arithmetization → forcing → semantic invention → constructive type theory + proof assistants, ongoing). Long L3 residence is the norm — realizing that an independence proof is needed is harder than proving it.</p>
+
+<h4>1.4 Removal–emergence theory</h4>
+<div class="card">
+<p><b>Three emergence types</b>: α compensation (“who takes the shift” — Hahn–Banach, bang, orthomodular law) | β exception (“liberated” — quaternions, exceptional Lie algebras, plane zoo) | γ unification-recycling (“recycled” — Gauss–Bonnet, schemes).</p>
+<p><b>Two-stage law</b> (forward 6/6): stage one (at removal) emergence type ← function type (T1→β, T2→α+metalayer, T3→β-phenomena); stage two (at recycling) γ ← field maturity (orthogonal).</p>
+<p><b>Five γ-forms</b>: representational (immediate; Grade-B laws carry them natively) | causal (invented for repair) | asymptotic (limit shadows) | maturity (late unification) | translational (<b>the failure mode itself is objectified</b> — critical pairs, specialization order; “pathology is information”).</p>
+<p><b>Methodological maxims</b>: wound size determines newborn size | pricing beats prohibition (bang/Tonelli/AC) | when objects betray you, invent larger structures (Dedekind/Lebesgue/Sobolev) | subtraction breeds structure, addition breeds theorems (demoted to organizational observation).</p>
+</div>
+
+<h4>1.5 The 24-slot taxonomy and the A1/A2 dichotomy</h4>
+<p><b>Minimal structure</b>: one carrier + one operator + one law-bundle (a magma, 3 slots); each added component is one gear-up. Five classes: A skeleton (7: carrier, operator, law-bundle, residual laws, free zone, demotion ladder, mirror dictionary) | B theorems (4: theorem group, representation theorem, compensation criteria, recycling theorem) | C objects (2: forbidden families, pathology families) | D process (4: life cycle, gear migration, anchors, transfer types) | E emergence (5: objects, compensation structures, metalayer algorithms, cross-group regularities, constructive cost).</p>
+<div class="card"><b>A1 carrier side</b> (“what the world is made of”) vs <b>A2 operator side</b> (“what can be done on the field”), bridged by the theorem layer. Dismantling genealogy: carrier-side removals (swap/weaken/upgrade the field) vs operator-side removals (contract-targets vs machine-targets). Isomorphic echo: universal algebra's (A;F), Bourbaki's mother structures, category theory's object/morphism.</div>
+
+<h3>§2 Structural Dissection of the Three Targets</h3>
+
+<h4>2.1 Law identity cards</h4>
+<table>
+<tr><th>Target</th><th>Dismantled</th><th>Identity card</th><th>Historical emergence</th><th>Structural anchors</th></tr>
+<tr class="hl"><td><b>G3′</b></td><td>Desargues proposition D</td><td>Grade-B representational × full E₀→I→E′ spiral × T1</td><td>β (non-D planes liberated) + γ-representational</td><td>Hilbert 1899 → Hall 1943 (PTR + reduction theorem)</td></tr>
+<tr class="hl"><td><b>G4</b></td><td>T₂ separation axiom</td><td>Grade-B × E₀→I→E′ in progress × T2</td><td>α + metalayer (US/quotient/nets) + γ-translational</td><td>Hausdorff 1914 → Hochster 1969 (spectral duality)</td></tr>
+<tr class="hl"><td><b>G5</b></td><td>Variable binding</td><td>Grade-C rule × full spiral × T2</td><td>α (S/K) + β (combinators) + γ-representational</td><td>Schönfinkel 1924 (U/V=S/K + combinatory completeness)</td></tr>
+</table>
+
+<h4>2.2–2.4 Key slots per target (condensed)</h4>
+<div class="card">
+<p><b>G3′</b> — Free zone: pure incidence theorems, duality. Mirror dictionary: D ⇔ associativity-linearization; quadrangle diagonal collinearity ⇔ 1⊕1=0 (Fano/char-2). Compensation: Hall's five PTR axioms — the ternary composition T(m,p,q) replaces binary ±× presuppositions (the historical α specimen). Recycling: γ-representational (D becomes a theorem). Forbidden family: non-Desarguesian plane zoo. Demotion ladder: PTR → linear PTR → division ring → field. Constructive cost: explicit non-D models — where all 12 blind candidates honestly suspended.</p>
+<p><b>G4</b> — Free zone: continuous images of compacta, closed subsets of compact spaces, connectedness (no separation needed — candidate C4's survival list blindly refilled this slot). Ladder: T₂ → US → T₁ → T₀; Hochster's reverse: spectral = compact T₀ + specialization order + sober. Mirror: separation ⇔ convergence behavior (first-countable T₂⟺US). Compensation: US/KC intermediate criteria + Kolmogorov quotient (the blind-rebuild battleground — C2/C3 independently reconstructed the US layer). Recycling: γ-translational (multi-limit objectified as limit sets L(s) — “pathology is information”). Metalayer: nets/filters — where candidates honestly identified the gap.</p>
+<p><b>G5</b> — Dismantled machine: variable binding. Free zone: singular propositions, finite connectives. Mirror: quantifiers ⇔ operator algebra (U_i/E_i ⇔ ∀/∃); variable wiring ⇔ permutation/diagonalization (C/W). Compensation: position-operator systems (quantifier algebraization) vs whole-concept assertion operators (primitive-ization) — two routes. Recycling: γ-representational (FOL = cylindric-algebra equational theory). Pathology: no finite basis for arbitrary recurrence patterns (W/T_f cover special cases only); second-order wall (concept traversal inexpressible — historical patch: type layers).</p>
+</div>
+
+<h4>2.5 Structural interpretation of results</h4>
+<ol>
+<li><b>Anchor-previous-station law = single-step moves on the A6 demotion ladder</b>: blind candidates reach the rung adjacent to the dismantled item (ternary composition / US layer / coordinate-wise operators). Blind sessions perform in-ladder moves (conservative paradigm extension = minimal modification preserving maximal old presuppositions), not D4 framework transfers (paradigm shifts). All three anchor cores require re-filling bridge-class slots — beyond single-step reach.</li>
+<li><b>Error fidelity = cognitive ordering of gear migration</b>: candidates' “D⇔associativity” overclaim is the pre-1907 E₀-default illusion (undifferentiated “law=structure” intuition); candidates distribute along L4 (feeling the wound), pausing before L5 — reproducing the cognitive order, not a knowledge gap.</li>
+<li><b>H-A2 falsification = slot-nearest-refill principle</b>: dismantling an operator yields its objectified version (operator-as-object-family), not merely criterion-layer escape — emergence refills the dismantled slot with same-type material. Feedback to theory: the A2/C1 boundary is more permeable than expected (E1-h).</li>
+<li><b>P7 same-lattice = shared 24-slot deep grammar</b>: the division-of-labor interface cuts exactly between “choosing which slot to operate on” (human problem-sense) and “executing the operation” (machine grammar) — P4: AI never spontaneously chooses law-dismantling (0%); P7: placed in such contexts, AI actions match human history four times over.</li>
+<li><b>B1 = restoration is not emergence</b>: renamed restoration fills repair slots with non-triviality zero — true rebuilds must instantiate one of α/β/γ; restoration fills no new slot. E1-j elevates this criterion into gate text.</li>
+<li><b>Tri-target same-type emergence</b>: historical and blind-candidate emergence types match on all three targets (G5 route-switched to the cylindric line but remained α-algebraization) — the strongest blind-condition support for the stage-one law; G5's switch measures the genealogy's width of multi-realization.</li>
+</ol>
+
+<h3>§3 Experimental Design</h3>
+<p><b>Three-zone architecture</b>: Zone A (modern knowledge legal: target selection, freeze-file drafting) → Zone B (T-locked no-foresight: generation/scanning/review) → Zone C (post-round centralized: judgment/scoring/verification), isolated by one-way git-commit gates; Zone-B artifacts never back-edited. <b>Role separation</b>: coordinator forbidden to judge or generate; generation, review, judgment in independent sessions; judges blind to review rounds. <b>Preregistration</b>: all criteria, weights (repair 40% / PFE-provability 25% / consistency 20% / non-triviality 15%), predictions P1–P8, microhypotheses H-A1/A2 frozen with work-order v1.3.</p>
+<table>
+<tr><th>Target</th><th>Facet</th><th>Anchors (T_L / T_S)</th><th>Span</th><th>Candidates</th></tr>
+<tr><td>G3′</td><td>Law (machine contract)</td><td>Hilbert 1899 / Hall 1943</td><td>44 yr</td><td>4 vendors</td></tr>
+<tr><td>G4</td><td>Structure (field constraint)</td><td>Hausdorff 1914 / Hochster 1969</td><td>55 yr</td><td>4 vendors</td></tr>
+<tr><td>G5</td><td>Operator (machine itself)</td><td>pre-1924 / Schönfinkel 1924</td><td>0 yr</td><td>4 vendors</td></tr>
+</table>
+<p>Zone-B pipeline: generation (offline, self-report, descriptive files forbidden) → mechanical era-scan (🟡 marginal / 🔴 definitional-core grading) → PFE four-criterion gate (vocabulary / motivation / mechanism / provability; honest-degradation protection; PASS/FAIL only, no suggestions; grading not elimination). Per-target dual-vendor reviewers; Zone-C: four networked judges per target, four-bin classification (① pre-T_L trivial / ② post-T_S hit 🔥 with ≥2 rule-level isomorphism points / ③ novel / ④ structural violation).</p>
+
+<h3>§4 Results</h3>
+<h4>4.1 Gate and scorecard</h4>
+<p>12 candidates = <b>5 complete structures + 6 directional drafts + 1 dual-review split</b> (all drafts retained, G-L5). Pending-item closures: filter 🔴, structural combinator 🔴, W/C notation-layer 🔴. Scorecard: G3′ winner C3-DeepSeek (sole 1.00); G4/G5 three-way ties at 1.00 (ceiling-saturation finding). G1 retrospective calibration (D-18): mechanical order matches expectation → <b>weights calibrated</b>. Blind-review discipline evidence: DeepSeek failed its own candidate's PFE-1; Kimi failed its own candidate's PFE-4 — no self-exemption.</p>
+
+<h4>4.2 Judgment matrix and the tri-target invariant</h4>
+<table>
+<tr><th>Target</th><th>①</th><th>② 🔥</th><th>③</th><th>④</th><th>Strongest hit</th></tr>
+<tr><td>G3′</td><td>—</td><td>C1/C3/C4 unanimous + C2 split</td><td>C2 ×2</td><td>—</td><td>C3 rule-level (≈ Hall PTR line-by-line); C4 reduction-level (VW 1907 core clause double blind-hit)</td></tr>
+<tr><td>G4</td><td>1 self-contradictory</td><td>C1–C4 majority</td><td>C4 ×1</td><td>—</td><td>C2 (Kolmogorov quotient + blind-proved first-countable T₂⟺US + cocountable counterexample; three judges independently rank first)</td></tr>
+<tr><td>G5</td><td>C3 (2/4)</td><td>C2/C4 unanimous</td><td>C1 ×2</td><td>—</td><td>C2/C4 (cylindric-algebra parallel: U_i ↔ cylindrification c_i exact)</td></tr>
+</table>
+<div class="okbox"><b>Tri-target invariant</b>: bin-② majority 10/12 (83%); all three anchor cores zero blind arrivals (S/K 0/16, Moulton 0/16, Hochster 0/16) while all three previous-stations multi-arrived — <b>reach the station before the anchor, never the anchor</b>. Dual-primitive flag 0/16: all four G5 candidates flowed into the quantifier-algebraization line, none into the combinator line.</div>
+
+<h4>4.3 Hypotheses and control arms</h4>
+<p><b>H-A1</b> (T determines emergence type): <span class="pass">supported</span> — T1 targets yield object-families, T2 target yields criteria+metalayer, tri-target consistent. <b>H-A2</b> (anchor side determines landing): <span class="part">carrier side fully hit; operator side strict version falsified</span> — G5 dual landing (operator objectification + metalayer), emergence same-typed as anchor → E1-h refinement.</p>
+<table>
+<tr><th>#</th><th>Prediction</th><th>Result</th><th>Verdict</th></tr>
+<tr><td>P1</td><td>Criterion discrimination H≥80% vs R≤40%</td><td>88% vs 10%</td><td class="pass">pass</td></tr>
+<tr><td>P2</td><td>R-failure concentration trivial+fatal</td><td>trivial 13/13 one-sided</td><td class="part">partial</td></tr>
+<tr><td>P3</td><td>H band vs R two-tail</td><td>held</td><td class="pass">pass</td></tr>
+<tr><td>P4</td><td>AI signature: named≥90%, dismantle≈0</td><td>100% / 0%</td><td class="pass">pass</td></tr>
+<tr><td>P5</td><td>Acceptance↔verifier</td><td>86% vs 33% (n=31)</td><td class="pass">directional</td></tr>
+<tr><td>P6</td><td>Six-type directory complete</td><td>25/25, zero outside</td><td class="pass">pass</td></tr>
+<tr><td>P7</td><td>AI actions same-lattice as humans</td><td>four replications</td><td class="pass">pass</td></tr>
+<tr><td>P8</td><td>Degenerate baselines intercepted</td><td>B0 pass / B1 partial</td><td class="part">partial</td></tr>
+</table>
+<div class="okbox"><b>P4 ∧ P7 jointly hold → “humans pose / machines solve” division-of-labor portrait formally unlocked</b> (D-21 condition met).</div>
+
+<h4>4.4 B1 degenerate-baseline live test</h4>
+<p>Fixture = T₂ renamed “double-neighborhood compatibility condition” reintroduced verbatim (vocabulary airtight). Three blind reviewers: PFE-1/2/3 all PASS, <b>zero restoration identifications</b> (ChatGPT alone failed PFE-4 on overclaim); scorecard: non-triviality <b>0.00</b> (the only B1-catching dimension), repair-degree 1.00 trap not credited, weighted 0.18 &lt; real-candidate floor 0.25. <b>Structural finding: the gate's era-faithfulness axis is orthogonal to the cheating axis</b> — restoring the dismantled condition is precisely the most era-legal content possible; backstop = the 15%-weight non-triviality dimension → E1-j high-priority.</p>
+
+<h3>§5 Analysis: three headline findings</h3>
+<ol>
+<li><b>Conservative-paradigm-extension attractor</b> (tri-target cross-validated): blind repair intuition starts from operable extensions of the existing paradigm (coordinate operations totalized; convergence behavior stratified; quantifiers algebraized). All three anchor cores require paradigm shifts; none was blindly triggered. Arrival depth tracks task-inherent difficulty, not anchor distance — G5's zero-year span still missed S/K.</li>
+<li><b>Stop-point + error double historical fidelity</b>: zero non-D model constructions with honest suspension = the actual 1899 contemporaneous state; candidate errors = pre-1907 folk state / pre-normalization terminology / 1920s hierarchy confusions. Error types are temporally distributed — blind rebuilds “walk the historical road.” Cross-reference: the boundaries candidates honestly identified are exactly those history later crossed, by the routes modern review suggested.</li>
+<li><b>Dual-axis decoupling and the division-of-labor portrait</b>: faithfulness × quality yields three patterns (concentric / decoupled / shifted) — “faithful to the era” and “approaching the historical answer” are separable. P4∧P7: AI never spontaneously dismantles laws (0%) yet matches human historical actions when placed in such contexts (4 replications) — humans pose, machines solve. F7 (honest suspension) remains an AI-unique behavioral candidate (16/16 candidates co-occur honest-degradation layers; human history shows no publication motivated by honest suspension).</li>
+</ol>
+
+<h3>§6 Honest Disclosure and Limitations (eight items)</h3>
+<div class="warn">
+<ol>
+<li><b>Parameter contamination cannot be excluded</b>: all conclusions phrased as “blind-session rebuilding under explicit knowledge date-locks”; the tri-target invariant (zero anchor-core arrivals) is internal evidence that date-locks suppress voluntary foresight (otherwise anchor cores would be “recalled” like previous stations).</li>
+<li><b>Anchor years are historiographic judgments</b> (dissent-appendix regime; three fact corrections filed: Moulton qualification, Fano 1892 provenance, Schönfinkel U≠S).</li>
+<li><b>Operationalization flags</b>: scorecard formula mapping not micro-preregistered (coordinator-drafted, transparently registered); ceiling saturation; G1 calibration evidence tier downgraded; PFE-4 honest-degradation gap; single-letter notation priority; bin-② threshold conceptual-dichotomy (three replications, E1-g).</li>
+<li><b>Sample size</b>: target-level n=3(+1), candidate-level n=12 — first-round directional records, no extrapolation; no post-hoc subset analysis under anti-mining three-locks.</li>
+<li><b>M8 verifier self-warning</b>: PFE + judgment sides are themselves filters — non-formalizable targets systematically absent; B1's orthogonal blindness deepens this.</li>
+<li><b>Judge-side boundaries</b>: structural hit ≠ priority claim; judge-candidate vendor co-sourcing (no self-exemption observed; fully registered); one judge offline-declared (downgraded); one vendor-internal inconsistency (body-text verdict filed).</li>
+<li><b>Process deviations</b>: G4 dual-review vendor substitution (walled, backfilled, ratified); extra reviewers segregated; B1 over-spec — all two-sided E4 ledger entries (positive side: multi-review discipline's defensive value twice demonstrated).</li>
+<li><b>MR extension status</b>: Zone-C extension, not preregistered — independently filed, never entering preregistered scoring (dual-axis firewall); from v1.4 slimmed to pure-quality axis (E1-d).</li>
+</ol>
+</div>
+
+<h3>§7 Conclusions</h3>
+<ol>
+<li><b>Capability</b>: under date-locks LLM blind rebuilds reliably reach the historical previous-station (83% bin-② hits); anchor cores see zero arrivals — the conservative-paradigm-extension attractor tri-target validated.</li>
+<li><b>Path</b>: stop points and error morphology both fit historical chronology — structural evidence for blind-rebuild ecological validity.</li>
+<li><b>Division of labor</b>: humans-pose / machines-solve portrait first-round empirically unlocked (P4∧P7); F7 honest suspension an AI-unique behavioral candidate.</li>
+<li><b>Methodology</b>: the three-zone isolation + preregistration + divergence-as-data “controlled historical re-enactment” paradigm is reusable; B1 characterizes the verification system's defense-in-depth; ten E1 entries (a–j) form the v1.4 revision base. The SMPDL structural system simultaneously served as experiment-design language, result-interpretation language, and verification-design basis — one vocabulary through three uses, a first-round demonstration of methodological self-consistency.</li>
+</ol>
+
+<hr class="divider">
+
+<h3>附录 · 执行链索引 / Appendix · Execution Chain</h3>
+<div class="card">
+<p class="small"><b>Git commits</b>（Zone-C 全链，仓库 SMPDL_GitHub_Pages）：475411b 轮闭合宣告 → 017cef4 PFE 提示词 → a5e20b6 PFE 归档+矩阵 → 2e4d710 MR 提示词 → f48eee7/a662e62/13af8a8 MR 三靶归档+比照 → de59453 分歧存档 → 7763094 评分卡 → 52a3b3a 判定提示词 → a563947/2dbdee1 判定两靶 → 8273355 G3' 判定+第 4 步回验 → 97631fd 对照臂 → 8d57dfd B1 执行卡 → 03cf6a6 B1 终局 → 539b007 E1 登记 → 701ad91 完整试验论文 → 2c43946 结构理论解释篇。<br>
+<b>Sealed artifacts</b>: Zenodo v3.6（B 区 12 候选，DOI 10.5281/zenodo.23599041）；v3.7 封装含 Zone-C 全部产物 + 本双语合并论文。<br>
+<b>Companion files</b>: G系_完整试验论文 / G系_数学结构理论详细解释 / 各靶判定汇总与历史对照 ×3 / 分歧存档与史学注记 / E1 勘误登记（皆在 reports/g-series/）。</p>
+</div>
+
+<footer>
+  <span>SMPDL G 系 · 双语合并论文 v1.0 · 2026-10-24</span>
+  <span>设计：咖啡 · 协调：史努比（禁判禁生成）· 预注册血统：工单 v1.3（J2）</span>
+  <span>防挖掘三锁适用 · 体系 F 纯白版式</span>
+</footer>
+
+</div>
+</body>
+</html>
