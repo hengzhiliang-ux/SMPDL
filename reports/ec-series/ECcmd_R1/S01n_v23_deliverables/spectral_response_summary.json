@@ -1,0 +1,104 @@
+{
+  "convention": {
+    "domain": "L^2((0,infty),dt)",
+    "left_boundary": "Dirichlet psi(0)=0",
+    "right_boundary": "L^2 / K-decaying",
+    "a": 1.2732395447351628,
+    "kappa": 2.0,
+    "z0": 0.6366197723675814,
+    "gaussian": "chi_sigma(u)=(2*pi*sigma^2)^(-1/2)*exp(-u^2/(2*sigma^2))",
+    "primary_sigma": 0.25,
+    "primary_R": 2000,
+    "k_range": [
+      5,
+      40
+    ],
+    "grid_step": 0.002
+  },
+  "primary": {
+    "rho": -0.9585815208055924,
+    "branch": "negative",
+    "mean_d": 39.23885097143682,
+    "mean_delta": 0.018352362937817137,
+    "positive_d_count": 36,
+    "positive_delta_count": 36,
+    "same_sign_count": 36,
+    "count": 36
+  },
+  "normalization_checks": [
+    {
+      "k": 1,
+      "ode_quadrature": 0.0008227633624448956,
+      "wronskian": 0.0008227633600896254,
+      "relative_error": 2.862633685651872e-09
+    },
+    {
+      "k": 5,
+      "ode_quadrature": 1.44757057027643e-10,
+      "wronskian": 1.447570603304594e-10,
+      "relative_error": 2.2816271649794828e-08
+    },
+    {
+      "k": 20,
+      "ode_quadrature": 3.0171300234967193e-28,
+      "wronskian": 3.0171301405016744e-28,
+      "relative_error": 3.878021481718008e-08
+    },
+    {
+      "k": 40,
+      "ode_quadrature": 8.460572322007764e-48,
+      "wronskian": 8.460577082129267e-48,
+      "relative_error": 5.626237379319221e-07
+    }
+  ],
+  "coarse_grid_check": {
+    "grid_step": 0.004,
+    "rho": -0.9585815207761709,
+    "rho_absolute_change": 2.9421576286381423e-11,
+    "max_abs_delta_change": 1.101892015131778e-11
+  },
+  "sensitivities": [
+    {
+      "sigma": 0.1,
+      "R": 2000,
+      "rho_k5_40": -0.9358419741543871,
+      "max_abs_delta_change_vs_primary": 0.01352756219627825
+    },
+    {
+      "sigma": 0.25,
+      "R": 250,
+      "rho_k5_40": -0.9585815208055924,
+      "max_abs_delta_change_vs_primary": 0.0
+    },
+    {
+      "sigma": 0.25,
+      "R": 500,
+      "rho_k5_40": -0.9585815208055924,
+      "max_abs_delta_change_vs_primary": 0.0
+    },
+    {
+      "sigma": 0.25,
+      "R": 1000,
+      "rho_k5_40": -0.9585815208055924,
+      "max_abs_delta_change_vs_primary": 0.0
+    },
+    {
+      "sigma": 0.25,
+      "R": 2000,
+      "rho_k5_40": -0.9585815208055924,
+      "max_abs_delta_change_vs_primary": 0.0
+    },
+    {
+      "sigma": 0.5,
+      "R": 2000,
+      "rho_k5_40": -0.958002248264397,
+      "max_abs_delta_change_vs_primary": 0.01545302676401391
+    },
+    {
+      "sigma": 1.0,
+      "R": 2000,
+      "rho_k5_40": -0.9519878925312039,
+      "max_abs_delta_change_vs_primary": 0.043076922478327596
+    }
+  ]
+}
